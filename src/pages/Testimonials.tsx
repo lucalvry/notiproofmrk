@@ -3,6 +3,7 @@ import { ArrowRight, Star, Video, MessageSquare } from "lucide-react";
 import { motion } from "framer-motion";
 import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
+import SEOHead from "@/components/SEOHead";
 
 const testimonials = [
   { name: "Jessica M.", role: "E-commerce Director, StyleHouse", quote: "NotiProof increased our checkout conversions by 28% in the first month. The ROI paid for the annual plan in the first week.", rating: 5 },
