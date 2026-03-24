@@ -4,6 +4,7 @@ import { CheckCircle2, Minus, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
+import SEOHead from "@/components/SEOHead";
 
 const plans = [
   {
