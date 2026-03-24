@@ -1,8 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ShoppingCart, Monitor, Building2, Palette, Briefcase } from "lucide-react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
+import SEOHead from "@/components/SEOHead";
 
 const useCases = [
   {
