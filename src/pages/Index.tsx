@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import NotificationDemo from "@/components/NotificationDemo";
 import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
+import SEOHead from "@/components/SEOHead";
 
 const features = [
   { icon: Bell, title: "Real-Time Notifications", description: "Show live purchase alerts, signups, and activity to create urgency and trust." },
