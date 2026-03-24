@@ -55,8 +55,20 @@ const useCases = [
 ];
 
 export default function UseCasesPage() {
+  const useCaseLinks: Record<string, string> = {
+    "E-commerce": "/use-cases/ecommerce/",
+    SaaS: "/use-cases/saas-social-proof-tools-drive-sign-ups/",
+    Agencies: "/use-cases/social-proof-for-marketing-agencies-impress-clients/",
+    "Service Businesses": "/use-cases/local-business-social-proof-convert-website-visitors/",
+  };
+
   return (
     <>
+      <SEOHead
+        title="NotiProof Use Cases – Social Proof for E-commerce, SaaS, Agencies & More"
+        description="See how NotiProof drives conversions for e-commerce stores, SaaS platforms, marketing agencies, creators, and service businesses."
+        canonical="https://notiproof.com/use-cases/"
+      />
       <section className="section-padding">
         <div className="container-tight">
           <SectionHeading
