@@ -152,12 +152,25 @@ export default function Navbar() {
           <MobileSection title="Resources" links={resourceLinks} close={() => setMobileOpen(false)} />
           <MobileSection title="Company" links={companyLinks} close={() => setMobileOpen(false)} />
           <div className="flex gap-2 pt-2">
-            <Button variant="ghost" size="sm" className="flex-1" asChild>
-              <a href="https://app.notiproof.com/login">Log In</a>
-            </Button>
-            <Button size="sm" className="flex-1" asChild>
-              <a href="https://app.notiproof.com/signup">Start Free</a>
-            </Button>
+            {user ? (
+              <>
+                <Button variant="ghost" size="sm" className="flex-1" asChild>
+                  <a href="https://app.notiproof.com">Dashboard</a>
+                </Button>
+                <Button variant="outline" size="sm" className="flex-1" onClick={() => { signOut(); setMobileOpen(false); }}>
+                  Sign Out
+                </Button>
+              </>
+            ) : (
+              <>
+                <Button variant="ghost" size="sm" className="flex-1" asChild>
+                  <Link to="/login" onClick={() => setMobileOpen(false)}>Log In</Link>
+                </Button>
+                <Button size="sm" className="flex-1" asChild>
+                  <Link to="/signup" onClick={() => setMobileOpen(false)}>Start Free</Link>
+                </Button>
+              </>
+            )}
           </div>
         </div>
       )}

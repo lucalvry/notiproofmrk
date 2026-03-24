@@ -153,12 +153,19 @@ const App = () => (
             <Route path="/privacy-policy/" element={<SuspenseWrap><PrivacyPolicy /></SuspenseWrap>} />
             <Route path="/terms-of-service/" element={<SuspenseWrap><TermsOfService /></SuspenseWrap>} />
 
+            {/* Auth */}
+            <Route path="/login" element={<SuspenseWrap><Login /></SuspenseWrap>} />
+            <Route path="/signup" element={<SuspenseWrap><Signup /></SuspenseWrap>} />
+            <Route path="/forgot-password" element={<SuspenseWrap><ForgotPassword /></SuspenseWrap>} />
+            <Route path="/reset-password" element={<SuspenseWrap><ResetPassword /></SuspenseWrap>} />
+
             {/* Redirect */}
             <Route path="/home/" element={<Navigate to="/" replace />} />
             <Route path="/home" element={<Navigate to="/" replace />} />
           </Route>
           <Route path="*" element={<NotFound />} />
         </Routes>
+        </AuthProvider>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
