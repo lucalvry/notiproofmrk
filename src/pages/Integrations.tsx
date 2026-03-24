@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { Search } from "lucide-react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
+import SEOHead from "@/components/SEOHead";
 
 const categories = ["All", "E-commerce", "CMS", "Marketing", "Analytics", "CRM", "Payment", "Automation"];
 
