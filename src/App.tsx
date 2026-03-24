@@ -87,6 +87,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <AuthProvider>
         <Routes>
           <Route element={<Layout />}>
             <Route path="/" element={<Index />} />
