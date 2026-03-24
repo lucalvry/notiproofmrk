@@ -1,8 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ShoppingCart, Monitor, Building2, Palette, Briefcase } from "lucide-react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
+import SEOHead from "@/components/SEOHead";
 
 const useCases = [
   {
@@ -53,8 +55,20 @@ const useCases = [
 ];
 
 export default function UseCasesPage() {
+  const useCaseLinks: Record<string, string> = {
+    "E-commerce": "/use-cases/ecommerce/",
+    SaaS: "/use-cases/saas-social-proof-tools-drive-sign-ups/",
+    Agencies: "/use-cases/social-proof-for-marketing-agencies-impress-clients/",
+    "Service Businesses": "/use-cases/local-business-social-proof-convert-website-visitors/",
+  };
+
   return (
     <>
+      <SEOHead
+        title="NotiProof Use Cases – Social Proof for E-commerce, SaaS, Agencies & More"
+        description="See how NotiProof drives conversions for e-commerce stores, SaaS platforms, marketing agencies, creators, and service businesses."
+        canonical="https://notiproof.com/use-cases/"
+      />
       <section className="section-padding">
         <div className="container-tight">
           <SectionHeading
@@ -95,11 +109,18 @@ export default function UseCasesPage() {
                       <span key={int} className="text-xs font-medium bg-secondary text-secondary-foreground px-3 py-1 rounded-full">{int}</span>
                     ))}
                   </div>
-                  <Button asChild>
-                    <a href="https://app.notiproof.com/signup">
-                      Start Free <ArrowRight className="w-4 h-4" />
-                    </a>
-                  </Button>
+                  <div className="flex gap-3">
+                    <Button asChild>
+                      <a href="https://app.notiproof.com/signup">
+                        Start Free <ArrowRight className="w-4 h-4" />
+                      </a>
+                    </Button>
+                    {useCaseLinks[uc.title] && (
+                      <Button variant="outline" asChild>
+                        <Link to={useCaseLinks[uc.title]}>Learn More</Link>
+                      </Button>
+                    )}
+                  </div>
                 </div>
                 <div className={i % 2 === 1 ? "lg:order-1" : ""}>
                   <div className="bg-card border border-border rounded-xl p-6 shadow-lg">

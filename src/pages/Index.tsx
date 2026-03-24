@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import NotificationDemo from "@/components/NotificationDemo";
 import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
+import SEOHead from "@/components/SEOHead";
 
 const features = [
   { icon: Bell, title: "Real-Time Notifications", description: "Show live purchase alerts, signups, and activity to create urgency and trust." },
@@ -18,10 +19,10 @@ const features = [
 ];
 
 const useCases = [
-  { title: "E-commerce", description: "Show recent purchases and stock alerts to drive sales.", href: "/use-cases" },
-  { title: "SaaS", description: "Display signup activity and trial conversions to build trust.", href: "/use-cases" },
-  { title: "Agencies", description: "Offer social proof as a value-add service for your clients.", href: "/use-cases" },
-  { title: "Creators", description: "Showcase course enrollments and community growth.", href: "/use-cases" },
+  { title: "E-commerce", description: "Show recent purchases and stock alerts to drive sales.", href: "/use-cases/ecommerce/" },
+  { title: "SaaS", description: "Display signup activity and trial conversions to build trust.", href: "/use-cases/saas-social-proof-tools-drive-sign-ups/" },
+  { title: "Agencies", description: "Offer social proof as a value-add service for your clients.", href: "/use-cases/social-proof-for-marketing-agencies-impress-clients/" },
+  { title: "Creators", description: "Showcase course enrollments and community growth.", href: "/use-cases/" },
 ];
 
 const integrations = [
@@ -50,8 +51,56 @@ const fadeUp = {
 };
 
 export default function HomePage() {
+  const homepageSchema = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      name: "NotiProof",
+      url: "https://notiproof.com",
+      logo: "https://notiproof.com/notiproof-logo.png",
+      description: "Social proof and testimonial platform that increases website conversions by 10–35%.",
+      sameAs: ["https://twitter.com/notiproof"],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      name: "NotiProof",
+      url: "https://notiproof.com",
+      potentialAction: {
+        "@type": "SearchAction",
+        target: "https://notiproof.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string",
+      },
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      name: "NotiProof",
+      applicationCategory: "BusinessApplication",
+      operatingSystem: "Web",
+      offers: {
+        "@type": "AggregateOffer",
+        lowPrice: "0",
+        highPrice: "380",
+        priceCurrency: "USD",
+        offerCount: "5",
+      },
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "4.9",
+        reviewCount: "127",
+      },
+    },
+  ];
+
   return (
     <>
+      <SEOHead
+        title="NotiProof – Increase Website Conversions by 10–35% With Real-Time Social Proof"
+        description="NotiProof is the social proof and testimonial platform trusted by thousands of businesses. Show real-time notifications, collect testimonials, and boost conversions instantly."
+        canonical="https://notiproof.com/"
+        schema={homepageSchema}
+      />
       {/* Hero */}
       <section className="section-padding overflow-hidden">
         <div className="container-tight">

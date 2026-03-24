@@ -3,6 +3,7 @@ import { ArrowRight, Star, Video, MessageSquare } from "lucide-react";
 import { motion } from "framer-motion";
 import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
+import SEOHead from "@/components/SEOHead";
 
 const testimonials = [
   { name: "Jessica M.", role: "E-commerce Director, StyleHouse", quote: "NotiProof increased our checkout conversions by 28% in the first month. The ROI paid for the annual plan in the first week.", rating: 5 },
@@ -19,6 +20,11 @@ const testimonials = [
 export default function TestimonialsPage() {
   return (
     <>
+      <SEOHead
+        title="NotiProof Testimonials – What Customers Say About Our Social Proof Platform"
+        description="Read real testimonials from businesses using NotiProof to boost conversions. See how e-commerce stores, SaaS companies, and agencies achieve results."
+        canonical="https://notiproof.com/testimonials/"
+      />
       <section className="section-padding">
         <div className="container-tight">
           <SectionHeading
