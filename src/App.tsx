@@ -65,6 +65,12 @@ const ConversionOptimizationTools = lazy(() => import("./pages/ConversionOptimiz
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 const TermsOfService = lazy(() => import("./pages/TermsOfService"));
 
+// Auth
+const Login = lazy(() => import("./pages/auth/Login"));
+const Signup = lazy(() => import("./pages/auth/Signup"));
+const ForgotPassword = lazy(() => import("./pages/auth/ForgotPassword"));
+const ResetPassword = lazy(() => import("./pages/auth/ResetPassword"));
+
 const queryClient = new QueryClient();
 
 function SuspenseWrap({ children }: { children: React.ReactNode }) {
