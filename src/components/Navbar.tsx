@@ -110,12 +110,29 @@ export default function Navbar() {
         </div>
 
         <div className="hidden lg:flex items-center gap-3">
-          <Button variant="ghost" size="sm" asChild>
-            <a href="https://app.notiproof.com/login">Log In</a>
-          </Button>
-          <Button size="sm" asChild>
-            <a href="https://app.notiproof.com/signup">Start Free</a>
-          </Button>
+          {user ? (
+            <>
+              <span className="text-sm text-muted-foreground flex items-center gap-1.5">
+                <User className="w-3.5 h-3.5" />
+                {profile?.name || user.email}
+              </span>
+              <Button variant="ghost" size="sm" asChild>
+                <a href="https://app.notiproof.com">Dashboard</a>
+              </Button>
+              <Button variant="outline" size="sm" onClick={signOut} className="gap-1.5">
+                <LogOut className="w-3.5 h-3.5" /> Sign Out
+              </Button>
+            </>
+          ) : (
+            <>
+              <Button variant="ghost" size="sm" asChild>
+                <Link to="/login">Log In</Link>
+              </Button>
+              <Button size="sm" asChild>
+                <Link to="/signup">Start Free</Link>
+              </Button>
+            </>
+          )}
         </div>
 
         {/* Mobile toggle */}
