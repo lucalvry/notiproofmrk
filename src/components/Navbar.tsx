@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, LogOut, User } from "lucide-react";
 import logo from "@/assets/notiproof-logo.png";
+import { useAuth } from "@/contexts/AuthContext";
 
 const productLinks = [
   { label: "Product Overview", href: "/product/", desc: "Everything NotiProof offers" },
@@ -86,6 +87,7 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [dropdown, setDropdown] = useState<string | null>(null);
   const location = useLocation();
+  const { user, profile, signOut } = useAuth();
 
   const isActive = (prefix: string) => location.pathname.startsWith(prefix);
 
@@ -108,12 +110,29 @@ export default function Navbar() {
         </div>
 
         <div className="hidden lg:flex items-center gap-3">
-          <Button variant="ghost" size="sm" asChild>
-            <a href="https://app.notiproof.com/login">Log In</a>
-          </Button>
-          <Button size="sm" asChild>
-            <a href="https://app.notiproof.com/signup">Start Free</a>
-          </Button>
+          {user ? (
+            <>
+              <span className="text-sm text-muted-foreground flex items-center gap-1.5">
+                <User className="w-3.5 h-3.5" />
+                {profile?.name || user.email}
+              </span>
+              <Button variant="ghost" size="sm" asChild>
+                <a href="https://app.notiproof.com">Dashboard</a>
+              </Button>
+              <Button variant="outline" size="sm" onClick={signOut} className="gap-1.5">
+                <LogOut className="w-3.5 h-3.5" /> Sign Out
+              </Button>
+            </>
+          ) : (
+            <>
+              <Button variant="ghost" size="sm" asChild>
+                <Link to="/login">Log In</Link>
+              </Button>
+              <Button size="sm" asChild>
+                <Link to="/signup">Start Free</Link>
+              </Button>
+            </>
+          )}
         </div>
 
         {/* Mobile toggle */}
@@ -133,12 +152,25 @@ export default function Navbar() {
           <MobileSection title="Resources" links={resourceLinks} close={() => setMobileOpen(false)} />
           <MobileSection title="Company" links={companyLinks} close={() => setMobileOpen(false)} />
           <div className="flex gap-2 pt-2">
-            <Button variant="ghost" size="sm" className="flex-1" asChild>
-              <a href="https://app.notiproof.com/login">Log In</a>
-            </Button>
-            <Button size="sm" className="flex-1" asChild>
-              <a href="https://app.notiproof.com/signup">Start Free</a>
-            </Button>
+            {user ? (
+              <>
+                <Button variant="ghost" size="sm" className="flex-1" asChild>
+                  <a href="https://app.notiproof.com">Dashboard</a>
+                </Button>
+                <Button variant="outline" size="sm" className="flex-1" onClick={() => { signOut(); setMobileOpen(false); }}>
+                  Sign Out
+                </Button>
+              </>
+            ) : (
+              <>
+                <Button variant="ghost" size="sm" className="flex-1" asChild>
+                  <Link to="/login" onClick={() => setMobileOpen(false)}>Log In</Link>
+                </Button>
+                <Button size="sm" className="flex-1" asChild>
+                  <Link to="/signup" onClick={() => setMobileOpen(false)}>Start Free</Link>
+                </Button>
+              </>
+            )}
           </div>
         </div>
       )}
