@@ -87,6 +87,7 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [dropdown, setDropdown] = useState<string | null>(null);
   const location = useLocation();
+  const { user, profile, signOut } = useAuth();
 
   const isActive = (prefix: string) => location.pathname.startsWith(prefix);
 
