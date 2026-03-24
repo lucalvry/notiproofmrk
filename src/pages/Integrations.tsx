@@ -59,8 +59,19 @@ export default function IntegrationsPage() {
     return matchSearch && matchCat;
   });
 
+  const integrationLinks: Record<string, string> = {
+    Shopify: "/integrations/shopify/",
+    WordPress: "/integrations/wordpress/",
+    Zapier: "/integrations/zapier/",
+  };
+
   return (
     <>
+      <SEOHead
+        title="NotiProof Integrations – 38+ Platforms | Shopify, WordPress, Zapier & More"
+        description="NotiProof integrates with 38+ platforms including Shopify, WooCommerce, WordPress, Stripe, Zapier, and more. All integrations included on every plan."
+        canonical="https://notiproof.com/integrations/"
+      />
       <section className="section-padding">
         <div className="container-tight">
           <SectionHeading
