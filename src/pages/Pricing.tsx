@@ -76,8 +76,42 @@ const faqs = [
 export default function PricingPage() {
   const [yearly, setYearly] = useState(false);
 
+  const pricingSchema = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      name: "NotiProof",
+      description: "Social proof and testimonial platform for increasing website conversions.",
+      brand: { "@type": "Brand", name: "NotiProof" },
+      offers: plans.map((p) => ({
+        "@type": "Offer",
+        name: p.name,
+        price: yearly ? p.yearly : p.monthly,
+        priceCurrency: "USD",
+        priceValidUntil: "2027-12-31",
+        availability: "https://schema.org/InStock",
+        url: "https://notiproof.com/pricing/",
+      })),
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: faqs.map((f) => ({
+        "@type": "Question",
+        name: f.q,
+        acceptedAnswer: { "@type": "Answer", text: f.a },
+      })),
+    },
+  ];
+
   return (
     <>
+      <SEOHead
+        title="NotiProof Pricing – Plans Starting Free | Social Proof Platform"
+        description="Compare NotiProof pricing plans. Free, Starter ($19), Standard ($49), Pro ($119), and Business ($380). All integrations included. No feature paywalls."
+        canonical="https://notiproof.com/pricing/"
+        schema={pricingSchema}
+      />
       <section className="section-padding">
         <div className="container-tight">
           <SectionHeading

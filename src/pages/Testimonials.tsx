@@ -20,6 +20,11 @@ const testimonials = [
 export default function TestimonialsPage() {
   return (
     <>
+      <SEOHead
+        title="NotiProof Testimonials – What Customers Say About Our Social Proof Platform"
+        description="Read real testimonials from businesses using NotiProof to boost conversions. See how e-commerce stores, SaaS companies, and agencies achieve results."
+        canonical="https://notiproof.com/testimonials/"
+      />
       <section className="section-padding">
         <div className="container-tight">
           <SectionHeading

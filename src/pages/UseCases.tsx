@@ -109,11 +109,18 @@ export default function UseCasesPage() {
                       <span key={int} className="text-xs font-medium bg-secondary text-secondary-foreground px-3 py-1 rounded-full">{int}</span>
                     ))}
                   </div>
-                  <Button asChild>
-                    <a href="https://app.notiproof.com/signup">
-                      Start Free <ArrowRight className="w-4 h-4" />
-                    </a>
-                  </Button>
+                  <div className="flex gap-3">
+                    <Button asChild>
+                      <a href="https://app.notiproof.com/signup">
+                        Start Free <ArrowRight className="w-4 h-4" />
+                      </a>
+                    </Button>
+                    {useCaseLinks[uc.title] && (
+                      <Button variant="outline" asChild>
+                        <Link to={useCaseLinks[uc.title]}>Learn More</Link>
+                      </Button>
+                    )}
+                  </div>
                 </div>
                 <div className={i % 2 === 1 ? "lg:order-1" : ""}>
                   <div className="bg-card border border-border rounded-xl p-6 shadow-lg">

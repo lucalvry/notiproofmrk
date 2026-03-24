@@ -120,16 +120,33 @@ export default function IntegrationsPage() {
                 transition={{ duration: 0.3, delay: i * 0.02 }}
                 className="bg-card border border-border rounded-xl p-5 hover:shadow-md hover:border-primary/20 transition-all"
               >
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary font-bold text-sm">
-                    {integration.name.slice(0, 2)}
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-sm">{integration.name}</h3>
-                    <span className="text-xs text-muted-foreground">{integration.category}</span>
-                  </div>
-                </div>
-                <p className="text-xs text-muted-foreground">{integration.desc}</p>
+                {integrationLinks[integration.name] ? (
+                  <Link to={integrationLinks[integration.name]} className="block">
+                    <div className="flex items-center gap-3 mb-2">
+                      <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary font-bold text-sm">
+                        {integration.name.slice(0, 2)}
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-sm">{integration.name}</h3>
+                        <span className="text-xs text-muted-foreground">{integration.category}</span>
+                      </div>
+                    </div>
+                    <p className="text-xs text-muted-foreground">{integration.desc}</p>
+                  </Link>
+                ) : (
+                  <>
+                    <div className="flex items-center gap-3 mb-2">
+                      <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary font-bold text-sm">
+                        {integration.name.slice(0, 2)}
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-sm">{integration.name}</h3>
+                        <span className="text-xs text-muted-foreground">{integration.category}</span>
+                      </div>
+                    </div>
+                    <p className="text-xs text-muted-foreground">{integration.desc}</p>
+                  </>
+                )}
               </motion.div>
             ))}
           </div>

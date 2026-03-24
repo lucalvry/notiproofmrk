@@ -51,8 +51,56 @@ const fadeUp = {
 };
 
 export default function HomePage() {
+  const homepageSchema = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      name: "NotiProof",
+      url: "https://notiproof.com",
+      logo: "https://notiproof.com/notiproof-logo.png",
+      description: "Social proof and testimonial platform that increases website conversions by 10–35%.",
+      sameAs: ["https://twitter.com/notiproof"],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      name: "NotiProof",
+      url: "https://notiproof.com",
+      potentialAction: {
+        "@type": "SearchAction",
+        target: "https://notiproof.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string",
+      },
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      name: "NotiProof",
+      applicationCategory: "BusinessApplication",
+      operatingSystem: "Web",
+      offers: {
+        "@type": "AggregateOffer",
+        lowPrice: "0",
+        highPrice: "380",
+        priceCurrency: "USD",
+        offerCount: "5",
+      },
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "4.9",
+        reviewCount: "127",
+      },
+    },
+  ];
+
   return (
     <>
+      <SEOHead
+        title="NotiProof – Increase Website Conversions by 10–35% With Real-Time Social Proof"
+        description="NotiProof is the social proof and testimonial platform trusted by thousands of businesses. Show real-time notifications, collect testimonials, and boost conversions instantly."
+        canonical="https://notiproof.com/"
+        schema={homepageSchema}
+      />
       {/* Hero */}
       <section className="section-padding overflow-hidden">
         <div className="container-tight">
