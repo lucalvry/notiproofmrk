@@ -19,10 +19,10 @@ const features = [
 ];
 
 const useCases = [
-  { title: "E-commerce", description: "Show recent purchases and stock alerts to drive sales.", href: "/use-cases" },
-  { title: "SaaS", description: "Display signup activity and trial conversions to build trust.", href: "/use-cases" },
-  { title: "Agencies", description: "Offer social proof as a value-add service for your clients.", href: "/use-cases" },
-  { title: "Creators", description: "Showcase course enrollments and community growth.", href: "/use-cases" },
+  { title: "E-commerce", description: "Show recent purchases and stock alerts to drive sales.", href: "/use-cases/ecommerce/" },
+  { title: "SaaS", description: "Display signup activity and trial conversions to build trust.", href: "/use-cases/saas-social-proof-tools-drive-sign-ups/" },
+  { title: "Agencies", description: "Offer social proof as a value-add service for your clients.", href: "/use-cases/social-proof-for-marketing-agencies-impress-clients/" },
+  { title: "Creators", description: "Showcase course enrollments and community growth.", href: "/use-cases/" },
 ];
 
 const integrations = [
