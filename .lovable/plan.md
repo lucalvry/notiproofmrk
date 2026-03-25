@@ -1,52 +1,52 @@
 
 
-## Authentication Implementation Plan
+## Hero Notification Demo — Make It Unmissable
 
-### What Exists
-- **Database**: `profiles` table (id, name, role, account_type, business_type, status, onboarding_progress), `user_roles` table with `app_role` enum, `user_subscriptions` table
-- **Security functions**: `has_role()`, `is_admin()`, `is_superadmin()`, `prevent_role_self_modification()` trigger
-- **Frontend**: No auth pages, no auth context, no protected routes. Navbar has hardcoded "Login" link to `https://app.notiproof.com/login`
+### Problem
+The current `NotificationDemo` is a single small card (`max-w-sm`) cycling through notifications with subtle fade animations. On a wide hero layout it's tiny, lacks visual context, and doesn't convey what the product actually does on a real website.
 
-### What to Build
+### Solution
+Replace the simple cycling card with a **mock website browser frame** that shows notifications appearing in context — like they would on an actual e-commerce site. This gives visitors an instant "aha moment."
 
-**1. Auth Context Provider** (`src/contexts/AuthContext.tsx`)
-- Wraps app with auth state via `onAuthStateChange` (set up BEFORE `getSession()`)
-- Exposes `user`, `session`, `loading`, `signOut`
-- Fetches profile from `profiles` table when authenticated
+### Design
 
-**2. Auth Pages**
-- `/login` — Email + password login form, link to signup and forgot password
-- `/signup` — Email + password signup with name field, creates profile via existing trigger
-- `/forgot-password` — Email input, calls `resetPasswordForEmail` with redirect to `/reset-password`
-- `/reset-password` — Checks for `type=recovery` in URL hash, form to set new password via `updateUser`
+```text
+┌─────────────────────────────────────────┐
+│ ● ● ●    yourstore.com                  │  ← Browser chrome
+├─────────────────────────────────────────┤
+│                                         │
+│   [Mock website content]                │
+│   Hero image / product grid placeholder │
+│                                         │
+│  ┌──────────────────────────┐           │
+│  │ 🛒 Sarah from NYC        │ ← Toast  │
+│  │ just purchased Premium    │  slides  │
+│  │ 2 minutes ago             │  in from │
+│  └──────────────────────────┘  bottom-  │
+│                                 left    │
+└─────────────────────────────────────────┘
+```
 
-**3. Protected Route Component** (`src/components/ProtectedRoute.tsx`)
-- Redirects unauthenticated users to `/login`
-- Used for future dashboard/account pages
+### Changes
 
-**4. Update Navbar**
-- Replace hardcoded "Login" link with dynamic auth state
-- Show user name + "Dashboard" + "Sign Out" when logged in
-- Show "Login" + "Start Free" when logged out
+**1. Rewrite `NotificationDemo.tsx`**
+- Wrap in a **browser mockup frame** (rounded corners, dot traffic lights, URL bar showing "yourstore.com")
+- Inside the frame: a subtle mock website background (gradient or simple product grid silhouette)
+- Notification toasts slide in from the bottom-left corner of the frame, exactly like they'd appear on a real site
+- Make notifications larger and bolder with a subtle glow/shadow
+- Add a small "Powered by NotiProof" badge on the notification
+- Add a progress bar or dot indicators showing notification rotation
+- Keep the 4 notification types but increase cycle to 3.5s
 
-**5. Update App.tsx**
-- Wrap with `AuthProvider`
-- Add routes: `/login`, `/signup`, `/forgot-password`, `/reset-password`
-- These auth pages use Layout but skip breadcrumbs
+**2. Update hero layout in `Index.tsx`**
+- Remove `max-w-sm` constraint — let the demo take more space
+- On desktop: demo fills the right column fully
+- Add a subtle label above or below: "See it in action" or "Live Preview"
 
-### Files to Create/Edit
-- `src/contexts/AuthContext.tsx` — new
-- `src/pages/auth/Login.tsx` — new
-- `src/pages/auth/Signup.tsx` — new
-- `src/pages/auth/ForgotPassword.tsx` — new
-- `src/pages/auth/ResetPassword.tsx` — new
-- `src/components/ProtectedRoute.tsx` — new
-- `src/components/Navbar.tsx` — update login/signup buttons
-- `src/App.tsx` — add AuthProvider + auth routes
-
-### Security Notes
-- Roles checked via server-side `has_role()` security definer function (already exists)
-- No client-side role checks for authorization decisions
-- RLS policies already in place on the database
-- Password reset requires dedicated `/reset-password` page with `updateUser` call
+### Technical Details
+- All changes contained to `NotificationDemo.tsx` and the hero section of `Index.tsx` (line 132)
+- Browser frame built with Tailwind (rounded-xl, bg-gray-100 header bar, colored dots)
+- Mock site content is a simple gradient + placeholder shapes (no images needed)
+- Notifications animate from bottom-left with slide-up + fade-in via framer-motion
+- Add dot indicators below the frame showing which notification is active
 
