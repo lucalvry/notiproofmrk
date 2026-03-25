@@ -129,7 +129,7 @@ export default function HomePage() {
               </div>
               <p className="text-sm text-muted-foreground mt-4">No credit card required · Setup in 60 seconds</p>
             </motion.div>
-            <motion.div {...fadeUp} transition={{ duration: 0.5, delay: 0.2 }} className="flex justify-center lg:justify-end">
+            <motion.div {...fadeUp} transition={{ duration: 0.5, delay: 0.2 }} className="flex justify-center lg:justify-end w-full">
               <NotificationDemo />
             </motion.div>
           </div>
