@@ -104,35 +104,35 @@ export default function HomePage() {
       {/* Hero */}
       <section className="section-padding overflow-hidden">
         <div className="container-tight">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <motion.div {...fadeUp}>
-              <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-primary bg-primary/10 px-3 py-1.5 rounded-full mb-6">
-                <TrendingUp className="w-3.5 h-3.5" /> Conversion Optimization Platform
-              </span>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
-                Increase Conversions by{" "}
-                <span className="text-gradient">10–35%</span>{" "}
-                With Real-Time Social Proof
-              </h1>
-              <p className="text-lg text-muted-foreground mb-8 max-w-lg">
-                NotiProof helps businesses boost conversions by showing real-time purchase activity, testimonials, and engagement notifications — installed in under 5 minutes.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button variant="hero" size="xl" asChild>
-                  <a href="https://app.notiproof.com/signup">
-                    Start Free 14-Day Trial <ArrowRight className="w-5 h-5" />
-                  </a>
-                </Button>
-                <Button variant="hero-outline" size="xl" asChild>
-                  <Link to="/pricing">View Pricing</Link>
-                </Button>
-              </div>
-              <p className="text-sm text-muted-foreground mt-4">No credit card required · Setup in 60 seconds</p>
-            </motion.div>
-            <motion.div {...fadeUp} transition={{ duration: 0.5, delay: 0.2 }} className="flex justify-center lg:justify-end w-full">
-              <NotificationDemo />
-            </motion.div>
-          </div>
+          <motion.div {...fadeUp} className="flex flex-col items-center text-center max-w-3xl mx-auto">
+            <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-primary bg-primary/10 px-3 py-1.5 rounded-full mb-6">
+              <TrendingUp className="w-3.5 h-3.5" /> Conversion Optimization Platform
+            </span>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
+              Increase Conversions by{" "}
+              <span className="text-gradient">10–35%</span>{" "}
+              With Real-Time Social Proof
+            </h1>
+            <p className="text-lg text-muted-foreground mb-8 max-w-xl">
+              NotiProof helps businesses boost conversions by showing real-time purchase activity, testimonials, and engagement notifications — installed in under 5 minutes.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button variant="hero" size="xl" asChild>
+                <a href="https://app.notiproof.com/signup">
+                  Start Free 14-Day Trial <ArrowRight className="w-5 h-5" />
+                </a>
+              </Button>
+              <Button variant="hero-outline" size="xl" asChild>
+                <Link to="/pricing">View Pricing</Link>
+              </Button>
+            </div>
+            <p className="text-sm text-muted-foreground mt-4">No credit card required · Setup in 60 seconds</p>
+          </motion.div>
+
+          <motion.div {...fadeUp} transition={{ duration: 0.5, delay: 0.2 }} className="mt-14 w-full max-w-4xl mx-auto">
+            <p className="text-sm font-medium text-muted-foreground text-center mb-4">↓ See it in action</p>
+            <NotificationDemo />
+          </motion.div>
         </div>
       </section>
 
