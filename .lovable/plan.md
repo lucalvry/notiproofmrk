@@ -1,52 +1,39 @@
 
 
-## Hero Notification Demo — Make It Unmissable
+## Hero Section — Single Column Centered Layout
 
-### Problem
-The current `NotificationDemo` is a single small card (`max-w-sm`) cycling through notifications with subtle fade animations. On a wide hero layout it's tiny, lacks visual context, and doesn't convey what the product actually does on a real website.
-
-### Solution
-Replace the simple cycling card with a **mock website browser frame** that shows notifications appearing in context — like they would on an actual e-commerce site. This gives visitors an instant "aha moment."
-
-### Design
-
-```text
-┌─────────────────────────────────────────┐
-│ ● ● ●    yourstore.com                  │  ← Browser chrome
-├─────────────────────────────────────────┤
-│                                         │
-│   [Mock website content]                │
-│   Hero image / product grid placeholder │
-│                                         │
-│  ┌──────────────────────────┐           │
-│  │ 🛒 Sarah from NYC        │ ← Toast  │
-│  │ just purchased Premium    │  slides  │
-│  │ 2 minutes ago             │  in from │
-│  └──────────────────────────┘  bottom-  │
-│                                 left    │
-└─────────────────────────────────────────┘
-```
+### Rationale
+A centered single-column hero creates a stronger visual flow: badge → headline → subtext → CTAs → demo. The visitor reads top-to-bottom without splitting attention. The browser mockup becomes a full-width showpiece rather than being cramped into half the grid.
 
 ### Changes
 
-**1. Rewrite `NotificationDemo.tsx`**
-- Wrap in a **browser mockup frame** (rounded corners, dot traffic lights, URL bar showing "yourstore.com")
-- Inside the frame: a subtle mock website background (gradient or simple product grid silhouette)
-- Notification toasts slide in from the bottom-left corner of the frame, exactly like they'd appear on a real site
-- Make notifications larger and bolder with a subtle glow/shadow
-- Add a small "Powered by NotiProof" badge on the notification
-- Add a progress bar or dot indicators showing notification rotation
-- Keep the 4 notification types but increase cycle to 3.5s
+**`src/pages/Index.tsx` (hero section, lines 105-136)**
+- Replace `grid lg:grid-cols-2` with a single centered column layout
+- Center-align all text (badge, H1, subtitle, CTA buttons, disclaimer)
+- Constrain headline/subtitle width with `max-w-3xl mx-auto`
+- Center the CTA button group
+- Move `NotificationDemo` below the text block, full width (capped at `max-w-4xl`)
+- Add "See it in action" micro-label above the demo
 
-**2. Update hero layout in `Index.tsx`**
-- Remove `max-w-sm` constraint — let the demo take more space
-- On desktop: demo fills the right column fully
-- Add a subtle label above or below: "See it in action" or "Live Preview"
+**`src/components/NotificationDemo.tsx`**
+- No structural changes needed — the browser mockup already scales to its container width
 
-### Technical Details
-- All changes contained to `NotificationDemo.tsx` and the hero section of `Index.tsx` (line 132)
-- Browser frame built with Tailwind (rounded-xl, bg-gray-100 header bar, colored dots)
-- Mock site content is a simple gradient + placeholder shapes (no images needed)
-- Notifications animate from bottom-left with slide-up + fade-in via framer-motion
-- Add dot indicators below the frame showing which notification is active
+### Result Layout
+```text
+         [Badge: Conversion Optimization Platform]
+    Increase Conversions by 10–35% With Real-Time
+                  Social Proof
+  NotiProof helps businesses boost conversions by...
+
+     [Start Free 14-Day Trial]  [View Pricing]
+       No credit card required · Setup in 60s
+
+              ↓ See it in action
+
+  ┌─────────────────────────────────────────────┐
+  │ ● ● ●    yourstore.com                      │
+  ├─────────────────────────────────────────────┤
+  │         [Mock website + notifications]       │
+  └─────────────────────────────────────────────┘
+```
 
