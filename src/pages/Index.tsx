@@ -102,18 +102,18 @@ export default function HomePage() {
         schema={homepageSchema}
       />
       {/* Hero */}
-      <section className="section-padding overflow-hidden">
+      <section className="py-12 md:py-16 overflow-hidden">
         <div className="container-tight">
           <motion.div {...fadeUp} className="flex flex-col items-center text-center max-w-3xl mx-auto">
-            <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-primary bg-primary/10 px-3 py-1.5 rounded-full mb-6">
+            <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-primary bg-primary/10 px-3 py-1.5 rounded-full mb-4">
               <TrendingUp className="w-3.5 h-3.5" /> Conversion Optimization Platform
             </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight mb-4">
               Increase Conversions by{" "}
               <span className="text-gradient">10–35%</span>{" "}
               With Real-Time Social Proof
             </h1>
-            <p className="text-lg text-muted-foreground mb-8 max-w-xl">
+            <p className="text-lg text-muted-foreground mb-6 max-w-xl">
               NotiProof helps businesses boost conversions by showing real-time purchase activity, testimonials, and engagement notifications — installed in under 5 minutes.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -126,11 +126,10 @@ export default function HomePage() {
                 <Link to="/pricing">View Pricing</Link>
               </Button>
             </div>
-            <p className="text-sm text-muted-foreground mt-4">No credit card required · Setup in 60 seconds</p>
+            <p className="text-sm text-muted-foreground mt-3">No credit card required · Setup in 60 seconds</p>
           </motion.div>
 
-          <motion.div {...fadeUp} transition={{ duration: 0.5, delay: 0.2 }} className="mt-14 w-full max-w-4xl mx-auto">
-            <p className="text-sm font-medium text-muted-foreground text-center mb-4">↓ See it in action</p>
+          <motion.div {...fadeUp} transition={{ duration: 0.5, delay: 0.2 }} className="mt-10 w-full max-w-5xl mx-auto">
             <NotificationDemo />
           </motion.div>
         </div>
