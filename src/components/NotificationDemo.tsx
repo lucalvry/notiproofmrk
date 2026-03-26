@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ShoppingCart, UserPlus, Eye, Star, Lock, Search } from "lucide-react";
+import { ShoppingCart, UserPlus, Eye, Star, Lock, Search, PlayCircle, Megaphone, ThumbsUp } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
 
 const notifications = [
@@ -40,6 +40,33 @@ const notifications = [
     iconBg: "bg-accent/20",
     iconColor: "text-accent-foreground",
   },
+  {
+    icon: PlayCircle,
+    name: "Emma from Toronto",
+    action: "shared a",
+    item: "video testimonial",
+    time: "12 minutes ago",
+    iconBg: "bg-purple-100 dark:bg-purple-900/30",
+    iconColor: "text-purple-600 dark:text-purple-400",
+  },
+  {
+    icon: Megaphone,
+    name: "🔥 Flash Sale",
+    action: "30% off ends",
+    item: "tonight!",
+    time: "announcement",
+    iconBg: "bg-red-100 dark:bg-red-900/30",
+    iconColor: "text-red-600 dark:text-red-400",
+  },
+  {
+    icon: ThumbsUp,
+    name: "4.9★ average",
+    action: "from 2,847 reviews on",
+    item: "Google",
+    time: "verified",
+    iconBg: "bg-blue-100 dark:bg-blue-900/30",
+    iconColor: "text-blue-600 dark:text-blue-400",
+  },
 ];
 
 const CYCLE_MS = 3500;
@@ -73,7 +100,7 @@ export default function NotificationDemo() {
   const Icon = notif.icon;
 
   return (
-    <div className="w-full max-w-lg">
+    <div className="w-full">
       {/* Label */}
       <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-3 text-center">
         ▶ Live Preview
@@ -96,7 +123,7 @@ export default function NotificationDemo() {
         </div>
 
         {/* Mock Website Content */}
-        <div className="relative h-72 sm:h-80 bg-gradient-to-br from-muted/30 via-background to-muted/50 p-5 overflow-hidden">
+        <div className="relative h-80 sm:h-96 bg-gradient-to-br from-muted/30 via-background to-muted/50 p-5 overflow-hidden">
           {/* Mock nav */}
           <div className="flex items-center justify-between mb-6">
             <div className="w-20 h-4 rounded bg-muted" />
@@ -127,7 +154,7 @@ export default function NotificationDemo() {
           </div>
 
           {/* Notification Toast — bottom-left, like on a real site */}
-          <div className="absolute bottom-4 left-4 right-4 sm:right-auto sm:w-72">
+          <div className="absolute bottom-4 left-4 right-4 sm:right-auto sm:w-80">
             <AnimatePresence mode="wait">
               <motion.div
                 key={current}
