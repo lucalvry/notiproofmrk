@@ -74,27 +74,35 @@ const CYCLE_MS = 3500;
 export default function NotificationDemo() {
   const [current, setCurrent] = useState(0);
   const [progress, setProgress] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
+  const elapsedRef = useRef(0);
+  const lastTickRef = useRef(Date.now());
 
   useEffect(() => {
+    if (isHovered) return;
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % notifications.length);
       setProgress(0);
+      elapsedRef.current = 0;
     }, CYCLE_MS);
     return () => clearInterval(interval);
-  }, []);
+  }, [isHovered]);
 
-  // Progress bar animation
+  // Progress bar animation — freezes on hover, resumes on leave
   useEffect(() => {
-    const start = Date.now();
+    if (isHovered) return;
+    lastTickRef.current = Date.now();
     let raf: number;
     const tick = () => {
-      const elapsed = Date.now() - start;
-      setProgress(Math.min((elapsed / CYCLE_MS) * 100, 100));
-      if (elapsed < CYCLE_MS) raf = requestAnimationFrame(tick);
+      const now = Date.now();
+      elapsedRef.current += now - lastTickRef.current;
+      lastTickRef.current = now;
+      setProgress(Math.min((elapsedRef.current / CYCLE_MS) * 100, 100));
+      if (elapsedRef.current < CYCLE_MS) raf = requestAnimationFrame(tick);
     };
     raf = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(raf);
-  }, [current]);
+  }, [current, isHovered]);
 
   const notif = notifications[current];
   const Icon = notif.icon;
