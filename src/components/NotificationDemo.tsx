@@ -162,15 +162,20 @@ export default function NotificationDemo() {
           </div>
 
           {/* Notification Toast — bottom-left, like on a real site */}
-          <div className="absolute bottom-4 left-4 right-4 sm:right-auto sm:w-80">
+          <div
+            className="absolute bottom-8 left-4 right-4 sm:right-auto sm:w-80 cursor-pointer"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+          >
             <AnimatePresence mode="wait">
               <motion.div
                 key={current}
                 initial={{ opacity: 0, y: 30, scale: 0.9 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, y: -10, scale: 0.95 }}
+                whileHover={{ scale: 1.03 }}
                 transition={{ duration: 0.4, ease: "easeOut" }}
-                className="bg-card border border-border rounded-xl p-3.5 shadow-xl flex items-center gap-3"
+                className="bg-card border border-border rounded-xl p-3.5 shadow-2xl ring-1 ring-primary/10 flex items-center gap-3"
               >
                 <div className={`w-10 h-10 rounded-lg flex items-center justify-center shrink-0 ${notif.iconBg}`}>
                   <Icon className={`w-5 h-5 ${notif.iconColor}`} />
