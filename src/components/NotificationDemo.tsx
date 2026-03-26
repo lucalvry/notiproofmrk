@@ -163,7 +163,7 @@ export default function NotificationDemo() {
 
           {/* Notification Toast — bottom-left, like on a real site */}
           <div
-            className="absolute bottom-8 left-4 right-4 sm:right-auto sm:w-80 cursor-pointer"
+            className="absolute bottom-10 left-4 right-4 sm:right-auto sm:w-80 cursor-pointer"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           >
