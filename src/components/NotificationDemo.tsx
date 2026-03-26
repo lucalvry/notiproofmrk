@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ShoppingCart, UserPlus, Eye, Star, Lock, Search, PlayCircle, Megaphone, ThumbsUp } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
@@ -74,27 +74,35 @@ const CYCLE_MS = 3500;
 export default function NotificationDemo() {
   const [current, setCurrent] = useState(0);
   const [progress, setProgress] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
+  const elapsedRef = useRef(0);
+  const lastTickRef = useRef(Date.now());
 
   useEffect(() => {
+    if (isHovered) return;
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % notifications.length);
       setProgress(0);
+      elapsedRef.current = 0;
     }, CYCLE_MS);
     return () => clearInterval(interval);
-  }, []);
+  }, [isHovered]);
 
-  // Progress bar animation
+  // Progress bar animation — freezes on hover, resumes on leave
   useEffect(() => {
-    const start = Date.now();
+    if (isHovered) return;
+    lastTickRef.current = Date.now();
     let raf: number;
     const tick = () => {
-      const elapsed = Date.now() - start;
-      setProgress(Math.min((elapsed / CYCLE_MS) * 100, 100));
-      if (elapsed < CYCLE_MS) raf = requestAnimationFrame(tick);
+      const now = Date.now();
+      elapsedRef.current += now - lastTickRef.current;
+      lastTickRef.current = now;
+      setProgress(Math.min((elapsedRef.current / CYCLE_MS) * 100, 100));
+      if (elapsedRef.current < CYCLE_MS) raf = requestAnimationFrame(tick);
     };
     raf = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(raf);
-  }, [current]);
+  }, [current, isHovered]);
 
   const notif = notifications[current];
   const Icon = notif.icon;
@@ -154,15 +162,20 @@ export default function NotificationDemo() {
           </div>
 
           {/* Notification Toast — bottom-left, like on a real site */}
-          <div className="absolute bottom-4 left-4 right-4 sm:right-auto sm:w-80">
+          <div
+            className="absolute bottom-8 left-4 right-4 sm:right-auto sm:w-80 cursor-pointer"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+          >
             <AnimatePresence mode="wait">
               <motion.div
                 key={current}
                 initial={{ opacity: 0, y: 30, scale: 0.9 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, y: -10, scale: 0.95 }}
+                whileHover={{ scale: 1.03 }}
                 transition={{ duration: 0.4, ease: "easeOut" }}
-                className="bg-card border border-border rounded-xl p-3.5 shadow-xl flex items-center gap-3"
+                className="bg-card border border-border rounded-xl p-3.5 shadow-2xl ring-1 ring-primary/10 flex items-center gap-3"
               >
                 <div className={`w-10 h-10 rounded-lg flex items-center justify-center shrink-0 ${notif.iconBg}`}>
                   <Icon className={`w-5 h-5 ${notif.iconColor}`} />
