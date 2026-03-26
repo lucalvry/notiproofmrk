@@ -131,7 +131,7 @@ export default function NotificationDemo() {
         </div>
 
         {/* Mock Website Content */}
-        <div className="relative h-80 sm:h-96 bg-gradient-to-br from-muted/30 via-background to-muted/50 p-5 overflow-hidden">
+        <div className="relative h-96 sm:h-[28rem] bg-gradient-to-br from-muted/30 via-background to-muted/50 p-5 overflow-hidden">
           {/* Mock nav */}
           <div className="flex items-center justify-between mb-6">
             <div className="w-20 h-4 rounded bg-muted" />
@@ -163,7 +163,7 @@ export default function NotificationDemo() {
 
           {/* Notification Toast — bottom-left, like on a real site */}
           <div
-            className="absolute bottom-8 left-4 right-4 sm:right-auto sm:w-80 cursor-pointer"
+            className="absolute bottom-10 left-4 right-4 sm:right-auto sm:w-80 cursor-pointer"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           >
