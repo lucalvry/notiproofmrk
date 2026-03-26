@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ShoppingCart, UserPlus, Eye, Star, Lock, Search, PlayCircle, Megaphone, ThumbsUp } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
