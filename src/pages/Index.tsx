@@ -105,16 +105,13 @@ export default function HomePage() {
       <section className="py-12 md:py-16 overflow-hidden">
         <div className="container-tight">
           <motion.div {...fadeUp} className="flex flex-col items-center text-center max-w-3xl mx-auto">
-            <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-primary bg-primary/10 px-3 py-1.5 rounded-full mb-4">
-              <TrendingUp className="w-3.5 h-3.5" /> Conversion Optimization Platform
-            </span>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight mb-4">
               Increase Conversions by{" "}
               <span className="text-gradient">10–35%</span>{" "}
               With Real-Time Social Proof
             </h1>
-            <p className="text-lg text-muted-foreground mb-6 max-w-xl">
-              NotiProof helps businesses boost conversions by showing real-time purchase activity, testimonials, and engagement notifications — installed in under 5 minutes.
+            <p className="text-lg text-muted-foreground mb-6 max-w-lg">
+              Boost conversions with real-time purchase alerts, testimonials, and engagement notifications. Set up in under 5 minutes.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button variant="hero" size="xl" asChild>
