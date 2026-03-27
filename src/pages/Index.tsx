@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Bell, Users, BarChart3, MessageSquare, Zap, Code, Target, TestTube, Palette, Shield, TrendingUp, ChevronRight, CheckCircle2 } from "lucide-react";
+import { ArrowRight, Bell, Users, BarChart3, MessageSquare, Zap, Code, Target, TestTube, Palette, Shield, ChevronRight, CheckCircle2 } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import NotificationDemo from "@/components/NotificationDemo";
