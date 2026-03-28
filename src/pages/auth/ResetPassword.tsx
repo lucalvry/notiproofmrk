@@ -60,7 +60,7 @@ export default function ResetPassword() {
   if (!isRecovery) {
     return (
       <>
-        <SEOHead title="Reset Password – NotiProof" description="Reset your NotiProof password." canonical="https://notiproof.com/reset-password" />
+        <SEOHead title="Reset Password – NotiProof" description="Reset your NotiProof password." canonical="https://notiproof.com/reset-password" noindex={true} />
         <section className="py-20 md:py-28">
           <div className="container-tight max-w-md mx-auto text-center">
             <p className="text-muted-foreground">Loading recovery session…</p>
