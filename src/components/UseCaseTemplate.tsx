@@ -41,7 +41,7 @@ const fadeUp = {
 
 export default function UseCaseTemplate({
   metaTitle, metaDescription, canonical, badge, headline, description, icon: Icon,
-  painPoints, benefits, stats, notification, integrations, faqs, relatedUseCases,
+  painPoints, benefits, stats, notification, integrations, faqs, relatedUseCases, resourceLinks,
 }: UseCasePageProps) {
   const faqSchema = {
     "@context": "https://schema.org",
