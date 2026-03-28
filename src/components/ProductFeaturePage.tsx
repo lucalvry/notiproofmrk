@@ -11,6 +11,12 @@ interface FAQ {
   a: string;
 }
 
+interface ResourceLink {
+  label: string;
+  href: string;
+  context: string;
+}
+
 interface ProductFeaturePageProps {
   title: string;
   metaTitle: string;
@@ -24,6 +30,7 @@ interface ProductFeaturePageProps {
   useCases: { title: string; desc: string; href: string }[];
   faqs: FAQ[];
   relatedProducts: { label: string; href: string }[];
+  resourceLinks?: ResourceLink[];
 }
 
 const fadeUp = {
