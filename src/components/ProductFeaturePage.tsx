@@ -52,6 +52,7 @@ export default function ProductFeaturePage({
   useCases,
   faqs,
   relatedProducts,
+  resourceLinks,
 }: ProductFeaturePageProps) {
   const faqSchema = {
     "@context": "https://schema.org",
