@@ -169,6 +169,23 @@ export default function ProductFeaturePage({
         </div>
       </section>
 
+      {/* Related Resources - contextual internal links */}
+      {resourceLinks && resourceLinks.length > 0 && (
+        <section className="section-padding bg-surface">
+          <div className="container-tight">
+            <h2 className="text-2xl font-bold mb-6 text-center">Related Reading</h2>
+            <div className="max-w-3xl mx-auto prose prose-sm">
+              {resourceLinks.map((rl) => (
+                <p key={rl.href}>
+                  {rl.context}{" "}
+                  <Link to={rl.href} className="text-primary font-semibold hover:underline">{rl.label}</Link>.
+                </p>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Related */}
       <section className="py-12 bg-surface">
         <div className="container-tight">
