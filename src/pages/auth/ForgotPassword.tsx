@@ -43,6 +43,7 @@ export default function ForgotPassword() {
         title="Forgot Password – NotiProof"
         description="Reset your NotiProof account password."
         canonical="https://notiproof.com/forgot-password"
+        noindex={true}
       />
       <section className="py-20 md:py-28">
         <div className="container-tight max-w-md mx-auto">

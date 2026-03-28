@@ -46,6 +46,7 @@ export default function Login() {
         title="Log In – NotiProof"
         description="Log in to your NotiProof account to manage social proof notifications, testimonials, and conversion campaigns."
         canonical="https://notiproof.com/login"
+        noindex={true}
       />
       <section className="py-20 md:py-28">
         <div className="container-tight max-w-md mx-auto">

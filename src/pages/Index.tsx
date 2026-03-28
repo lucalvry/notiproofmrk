@@ -82,7 +82,10 @@ export default function HomePage() {
       url: "https://notiproof.com",
       logo: "https://notiproof.com/notiproof-logo.png",
       description: "Social proof and testimonial platform that increases website conversions by 10–35%.",
-      sameAs: ["https://twitter.com/notiproof"],
+      foundingDate: "2024",
+      areaServed: "Worldwide",
+      knowsAbout: ["Social Proof", "Conversion Rate Optimization", "Testimonial Management", "FOMO Marketing", "Real-Time Notifications", "A/B Testing", "Customer Reviews", "Website Trust Signals"],
+      sameAs: ["https://twitter.com/notiproof", "https://linkedin.com/company/notiproof"],
     },
     {
       "@context": "https://schema.org",
@@ -354,6 +357,35 @@ export default function HomePage() {
             <Button variant="link" asChild>
               <Link to="/pricing">See full pricing comparison <ChevronRight className="w-4 h-4" /></Link>
             </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Social Proof Resources - contextual internal links */}
+      <section className="section-padding">
+        <div className="container-tight">
+          <SectionHeading
+            badge="Resources"
+            title="Learn About Social Proof"
+            description="Explore our in-depth guides on how social proof increases trust, urgency, and conversions."
+          />
+          <div className="max-w-3xl mx-auto prose prose-sm text-muted-foreground">
+            <p>
+              Social proof is the psychological principle that people follow the actions of others when making decisions. Our comprehensive{" "}
+              <Link to="/resources/social-proof/" className="text-primary font-semibold hover:underline">social proof guide</Link>{" "}
+              covers everything from the science behind why it works to practical implementation strategies for your website.
+            </p>
+            <p>
+              Not sure where to start? Learn{" "}
+              <Link to="/resources/social-proof/what-is-social-proof/" className="text-primary font-semibold hover:underline">what social proof is</Link>{" "}
+              and explore{" "}
+              <Link to="/resources/social-proof/social-proof-example/" className="text-primary font-semibold hover:underline">real-world social proof examples</Link>{" "}
+              from top-converting websites. Discover the{" "}
+              <Link to="/resources/social-proof/types-of-social-proof/" className="text-primary font-semibold hover:underline">different types of social proof</Link>{" "}
+              and how to apply{" "}
+              <Link to="/resources/social-proof/social-proof-for-websites/" className="text-primary font-semibold hover:underline">social proof on your website</Link>{" "}
+              for maximum impact.
+            </p>
           </div>
         </div>
       </section>

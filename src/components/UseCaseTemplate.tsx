@@ -8,6 +8,12 @@ import CTASection from "@/components/CTASection";
 
 interface FAQ { q: string; a: string; }
 
+interface ResourceLink {
+  label: string;
+  href: string;
+  context: string;
+}
+
 interface UseCasePageProps {
   metaTitle: string;
   metaDescription: string;
@@ -23,6 +29,7 @@ interface UseCasePageProps {
   integrations: string[];
   faqs: FAQ[];
   relatedUseCases: { label: string; href: string }[];
+  resourceLinks?: ResourceLink[];
 }
 
 const fadeUp = {
@@ -34,7 +41,7 @@ const fadeUp = {
 
 export default function UseCaseTemplate({
   metaTitle, metaDescription, canonical, badge, headline, description, icon: Icon,
-  painPoints, benefits, stats, notification, integrations, faqs, relatedUseCases,
+  painPoints, benefits, stats, notification, integrations, faqs, relatedUseCases, resourceLinks,
 }: UseCasePageProps) {
   const faqSchema = {
     "@context": "https://schema.org",
@@ -162,6 +169,23 @@ export default function UseCaseTemplate({
           </div>
         </div>
       </section>
+
+      {/* Related Resources - contextual internal links */}
+      {resourceLinks && resourceLinks.length > 0 && (
+        <section className="section-padding">
+          <div className="container-tight">
+            <h2 className="text-2xl font-bold mb-6 text-center">Related Reading</h2>
+            <div className="max-w-3xl mx-auto prose prose-sm">
+              {resourceLinks.map((rl) => (
+                <p key={rl.href}>
+                  {rl.context}{" "}
+                  <Link to={rl.href} className="text-primary font-semibold hover:underline">{rl.label}</Link>.
+                </p>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Related */}
       <section className="py-12 bg-surface">

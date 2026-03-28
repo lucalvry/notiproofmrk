@@ -11,6 +11,12 @@ interface FAQ {
   a: string;
 }
 
+interface ResourceLink {
+  label: string;
+  href: string;
+  context: string;
+}
+
 interface ProductFeaturePageProps {
   title: string;
   metaTitle: string;
@@ -24,6 +30,7 @@ interface ProductFeaturePageProps {
   useCases: { title: string; desc: string; href: string }[];
   faqs: FAQ[];
   relatedProducts: { label: string; href: string }[];
+  resourceLinks?: ResourceLink[];
 }
 
 const fadeUp = {
@@ -45,6 +52,7 @@ export default function ProductFeaturePage({
   useCases,
   faqs,
   relatedProducts,
+  resourceLinks,
 }: ProductFeaturePageProps) {
   const faqSchema = {
     "@context": "https://schema.org",
@@ -160,6 +168,23 @@ export default function ProductFeaturePage({
           </div>
         </div>
       </section>
+
+      {/* Related Resources - contextual internal links */}
+      {resourceLinks && resourceLinks.length > 0 && (
+        <section className="section-padding bg-surface">
+          <div className="container-tight">
+            <h2 className="text-2xl font-bold mb-6 text-center">Related Reading</h2>
+            <div className="max-w-3xl mx-auto prose prose-sm">
+              {resourceLinks.map((rl) => (
+                <p key={rl.href}>
+                  {rl.context}{" "}
+                  <Link to={rl.href} className="text-primary font-semibold hover:underline">{rl.label}</Link>.
+                </p>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Related */}
       <section className="py-12 bg-surface">
