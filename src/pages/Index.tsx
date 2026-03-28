@@ -82,7 +82,10 @@ export default function HomePage() {
       url: "https://notiproof.com",
       logo: "https://notiproof.com/notiproof-logo.png",
       description: "Social proof and testimonial platform that increases website conversions by 10–35%.",
-      sameAs: ["https://twitter.com/notiproof"],
+      foundingDate: "2024",
+      areaServed: "Worldwide",
+      knowsAbout: ["Social Proof", "Conversion Rate Optimization", "Testimonial Management", "FOMO Marketing", "Real-Time Notifications", "A/B Testing", "Customer Reviews", "Website Trust Signals"],
+      sameAs: ["https://twitter.com/notiproof", "https://linkedin.com/company/notiproof"],
     },
     {
       "@context": "https://schema.org",
