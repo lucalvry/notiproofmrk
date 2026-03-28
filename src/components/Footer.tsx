@@ -82,8 +82,8 @@ export default function Footer() {
             © {new Date().getFullYear()} NotiProof. All rights reserved.
           </p>
           <div className="flex gap-6">
-            <a href="https://twitter.com/notiproof" className="text-sm text-dark-foreground/40 hover:text-dark-foreground/80 transition-colors" rel="noopener noreferrer">Twitter</a>
-            <a href="https://linkedin.com/company/notiproof" className="text-sm text-dark-foreground/40 hover:text-dark-foreground/80 transition-colors" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://twitter.com/notiproof" target="_blank" className="text-sm text-dark-foreground/40 hover:text-dark-foreground/80 transition-colors" rel="noopener noreferrer">Twitter</a>
+            <a href="https://linkedin.com/company/notiproof" target="_blank" className="text-sm text-dark-foreground/40 hover:text-dark-foreground/80 transition-colors" rel="noopener noreferrer">LinkedIn</a>
           </div>
         </div>
       </div>

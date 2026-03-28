@@ -73,7 +73,7 @@ export default function ResetPassword() {
 
   return (
     <>
-      <SEOHead title="Set New Password – NotiProof" description="Set a new password for your NotiProof account." canonical="https://notiproof.com/reset-password" />
+      <SEOHead title="Set New Password – NotiProof" description="Set a new password for your NotiProof account." canonical="https://notiproof.com/reset-password" noindex={true} />
       <section className="py-20 md:py-28">
         <div className="container-tight max-w-md mx-auto">
           <div className="bg-card border border-border rounded-2xl p-8 shadow-sm">

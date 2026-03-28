@@ -16,6 +16,7 @@ interface ResourceArticleProps {
   canonical: string;
   title: string;
   readingTime?: string;
+  publishDate?: string;
   content: React.ReactNode;
   relatedArticles: ArticleLink[];
   pillarLink?: { label: string; href: string };
@@ -23,12 +24,13 @@ interface ResourceArticleProps {
 
 export default function ResourceArticle({
   metaTitle, metaDescription, canonical, title, readingTime = "8 min read",
-  content, relatedArticles, pillarLink,
+  publishDate, content, relatedArticles, pillarLink,
 }: ResourceArticleProps) {
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: title,
+    ...(publishDate && { datePublished: publishDate }),
     author: { "@type": "Organization", name: "NotiProof" },
     publisher: { "@type": "Organization", name: "NotiProof", url: "https://notiproof.com" },
     url: canonical,
@@ -38,7 +40,7 @@ export default function ResourceArticle({
     <>
       <SEOHead title={metaTitle} description={metaDescription} canonical={canonical} schema={articleSchema} />
 
-      <article className="section-padding">
+      <article className="section-padding" itemScope itemType="https://schema.org/Article">
         <div className="container-tight">
           <div className="max-w-3xl mx-auto">
             <header className="mb-12">
@@ -47,15 +49,21 @@ export default function ResourceArticle({
                   ← {pillarLink.label}
                 </Link>
               )}
-              <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-4">{title}</h1>
+              <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-4" itemProp="headline">{title}</h1>
               <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                <span>By NotiProof Team</span>
+                <address className="not-italic" rel="author">By <span itemProp="author">NotiProof Team</span></address>
                 <span>·</span>
                 <span>{readingTime}</span>
+                {publishDate && (
+                  <>
+                    <span>·</span>
+                    <time dateTime={publishDate} itemProp="datePublished">{new Date(publishDate).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}</time>
+                  </>
+                )}
               </div>
             </header>
 
-            <div className="prose prose-lg max-w-none">
+            <div className="prose prose-lg max-w-none" itemProp="articleBody">
               {content}
             </div>
 
@@ -70,7 +78,7 @@ export default function ResourceArticle({
           </div>
 
           {/* Related */}
-          <div className="max-w-3xl mx-auto mt-12">
+          <nav className="max-w-3xl mx-auto mt-12" aria-label="Related articles">
             <h2 className="text-2xl font-bold mb-6">Related Articles</h2>
             <div className="grid gap-4">
               {relatedArticles.map((a) => (
@@ -83,7 +91,7 @@ export default function ResourceArticle({
                 </Link>
               ))}
             </div>
-          </div>
+          </nav>
         </div>
       </article>
 

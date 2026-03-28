@@ -53,6 +53,7 @@ export default function Signup() {
         title="Sign Up Free – NotiProof"
         description="Create your free NotiProof account and start boosting website conversions with social proof notifications and testimonials."
         canonical="https://notiproof.com/signup"
+        noindex={true}
       />
       <section className="py-20 md:py-28">
         <div className="container-tight max-w-md mx-auto">
