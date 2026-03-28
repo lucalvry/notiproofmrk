@@ -8,6 +8,12 @@ import CTASection from "@/components/CTASection";
 
 interface FAQ { q: string; a: string; }
 
+interface ResourceLink {
+  label: string;
+  href: string;
+  context: string;
+}
+
 interface UseCasePageProps {
   metaTitle: string;
   metaDescription: string;
@@ -23,6 +29,7 @@ interface UseCasePageProps {
   integrations: string[];
   faqs: FAQ[];
   relatedUseCases: { label: string; href: string }[];
+  resourceLinks?: ResourceLink[];
 }
 
 const fadeUp = {
