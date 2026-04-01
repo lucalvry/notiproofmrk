@@ -5,21 +5,36 @@ import { Menu, X, ChevronDown, LogOut, User } from "lucide-react";
 import logo from "@/assets/notiproof-logo.png";
 import { useAuth } from "@/contexts/AuthContext";
 
-const productLinks = [
-  { label: "Product Overview", href: "/product/", desc: "Everything NotiProof offers" },
-  { label: "Social Proof Notifications", href: "/product/social-proof-notifications/", desc: "Real-time purchase & signup alerts" },
-  { label: "Testimonials Collection", href: "/product/testimonials-collection-text-image-video/", desc: "Text, image & video testimonials" },
-  { label: "Video Testimonial Recorder", href: "/product/video-testimonial-recorder/", desc: "Record customer video reviews" },
-  { label: "Review Aggregation", href: "/product/review-aggregation-showcase-system/", desc: "Aggregate & showcase reviews" },
-  { label: "Campaign Builder", href: "/product/campaign-builder/", desc: "Create targeted campaigns" },
-  { label: "Analytics & Insights", href: "/product/analytics-conversion-insights/", desc: "Conversion tracking dashboard" },
-  { label: "Visitor Counter", href: "/product/visitor-counter-live-visitors/", desc: "Live visitor count widget" },
-  { label: "Recent Activity", href: "/product/recent-activity-notifications/", desc: "Real-time activity feed" },
-  { label: "Testimonials Widget", href: "/product/testimonials-widget-reviews-widget/", desc: "Embeddable review widgets" },
+/* ─── Grouped Product dropdown ─── */
+const productGroups = [
+  {
+    group: "Social Proof",
+    items: [
+      { label: "Social Proof Notifications", href: "/product/social-proof-notifications/", desc: "Real-time purchase & signup alerts" },
+      { label: "Visitor Counter", href: "/product/visitor-counter-live-visitors/", desc: "Live visitor count widget" },
+      { label: "Recent Activity", href: "/product/recent-activity-notifications/", desc: "Real-time activity feed" },
+    ],
+  },
+  {
+    group: "Testimonials",
+    items: [
+      { label: "Testimonials Collection", href: "/product/testimonials-collection-text-image-video/", desc: "Text, image & video testimonials" },
+      { label: "Video Testimonial Recorder", href: "/product/video-testimonial-recorder/", desc: "Record customer video reviews" },
+      { label: "Testimonials Widget", href: "/product/testimonials-widget-reviews-widget/", desc: "Embeddable review widgets" },
+    ],
+  },
+  {
+    group: "Platform",
+    items: [
+      { label: "Campaign Builder", href: "/product/campaign-builder/", desc: "Create targeted campaigns" },
+      { label: "Analytics & Insights", href: "/product/analytics-conversion-insights/", desc: "Conversion tracking dashboard" },
+      { label: "Review Aggregation", href: "/product/review-aggregation-showcase-system/", desc: "Aggregate & showcase reviews" },
+      { label: "Integrations", href: "/product/integrations-ecosystem/", desc: "38+ platform integrations" },
+    ],
+  },
 ];
 
-const useCaseLinks = [
-  { label: "All Use Cases", href: "/use-cases/", desc: "Browse by industry" },
+const solutionLinks = [
   { label: "E-commerce", href: "/use-cases/ecommerce/", desc: "Online stores & marketplaces" },
   { label: "SaaS", href: "/use-cases/saas-social-proof-tools-drive-sign-ups/", desc: "Drive trial signups" },
   { label: "Agencies", href: "/use-cases/social-proof-for-marketing-agencies-impress-clients/", desc: "CRO as a service" },
@@ -27,35 +42,82 @@ const useCaseLinks = [
 ];
 
 const resourceLinks = [
-  { label: "Resource Hub", href: "/resources/", desc: "Guides, articles & insights" },
   { label: "Social Proof Guide", href: "/resources/social-proof/", desc: "Complete pillar guide" },
   { label: "Reviews", href: "/resources/reviews/", desc: "Collecting & using reviews" },
-  { label: "Conversion Analytics", href: "/resources/conversion-analytics/", desc: "Measuring conversion lifts" },
   { label: "Website Trust", href: "/resources/website-trust/", desc: "Building online trust signals" },
+  { label: "Testimonials", href: "/resources/testimonials/", desc: "Customer testimonial strategies" },
+  { label: "Conversion Analytics", href: "/resources/conversion-analytics/", desc: "Measuring conversion lifts" },
 ];
 
-const companyLinks = [
-  { label: "About NotiProof", href: "/company/about/", desc: "Our mission & story" },
-  { label: "Contact", href: "/company/contact/", desc: "Get in touch" },
-  { label: "Careers", href: "/company/careers/", desc: "Join our team" },
-];
+/* ─── Product mega dropdown (2 col) ─── */
+function ProductDropdown({ onClose }: { onClose: () => void }) {
+  return (
+    <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[640px] bg-card border border-border rounded-xl shadow-xl p-5 z-50">
+      <div className="flex items-center justify-between mb-3 pb-3 border-b border-border">
+        <Link to="/product/" onClick={onClose} className="text-sm font-bold text-primary hover:underline">
+          Product Overview →
+        </Link>
+      </div>
+      <div className="grid grid-cols-3 gap-6">
+        {productGroups.map((g) => (
+          <div key={g.group}>
+            <p className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground/60 mb-2">{g.group}</p>
+            <div className="space-y-1">
+              {g.items.map((item) => (
+                <Link
+                  key={item.href}
+                  to={item.href}
+                  onClick={onClose}
+                  className="block px-2 py-2 rounded-lg hover:bg-secondary transition-colors"
+                >
+                  <span className="text-sm font-medium">{item.label}</span>
+                  <span className="block text-[11px] text-muted-foreground mt-0.5">{item.desc}</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
 
-interface DropdownProps {
+/* ─── Simple dropdown ─── */
+function SimpleDropdown({ links, onClose }: { links: { label: string; href: string; desc: string }[]; onClose: () => void }) {
+  return (
+    <div className="absolute top-full left-0 mt-2 w-72 bg-card border border-border rounded-xl shadow-lg p-2 z-50">
+      {links.map((l) => (
+        <Link
+          key={l.href}
+          to={l.href}
+          onClick={onClose}
+          className="block px-3 py-2.5 rounded-lg hover:bg-secondary transition-colors"
+        >
+          <span className="text-sm font-medium">{l.label}</span>
+          <span className="block text-xs text-muted-foreground mt-0.5">{l.desc}</span>
+        </Link>
+      ))}
+    </div>
+  );
+}
+
+/* ─── Nav item ─── */
+function NavItem({
+  label,
+  active,
+  open,
+  setOpen,
+  children,
+}: {
   label: string;
-  links: { label: string; href: string; desc: string }[];
   active: boolean;
   open: string | null;
   setOpen: (v: string | null) => void;
-}
-
-function Dropdown({ label, links, active, open, setOpen }: DropdownProps) {
+  children: React.ReactNode;
+}) {
   const isOpen = open === label;
   return (
-    <div
-      className="relative"
-      onMouseEnter={() => setOpen(label)}
-      onMouseLeave={() => setOpen(null)}
-    >
+    <div className="relative" onMouseEnter={() => setOpen(label)} onMouseLeave={() => setOpen(null)}>
       <button
         className={`flex items-center gap-1 text-sm font-medium transition-colors hover:text-primary ${
           active ? "text-primary" : "text-muted-foreground"
@@ -64,25 +126,30 @@ function Dropdown({ label, links, active, open, setOpen }: DropdownProps) {
         {label}
         <ChevronDown className={`w-3.5 h-3.5 transition-transform ${isOpen ? "rotate-180" : ""}`} />
       </button>
-      {isOpen && (
-        <div className="absolute top-full left-0 mt-2 w-72 bg-card border border-border rounded-xl shadow-lg p-2 z-50 max-h-[70vh] overflow-y-auto">
-          {links.map((sub) => (
-            <Link
-              key={sub.href}
-              to={sub.href}
-              onClick={() => setOpen(null)}
-              className="block px-3 py-2.5 rounded-lg hover:bg-secondary transition-colors"
-            >
-              <span className="text-sm font-medium">{sub.label}</span>
-              <span className="block text-xs text-muted-foreground mt-0.5">{sub.desc}</span>
-            </Link>
-          ))}
-        </div>
-      )}
+      {isOpen && children}
     </div>
   );
 }
 
+/* ─── Mobile section ─── */
+function MobileSection({ title, children, close }: { title: string; children: React.ReactNode; close: () => void }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <div>
+      <button onClick={() => setOpen(!open)} className="flex items-center justify-between w-full py-2 text-sm font-medium text-muted-foreground hover:text-primary">
+        {title}
+        <ChevronDown className={`w-4 h-4 transition-transform ${open ? "rotate-180" : ""}`} />
+      </button>
+      {open && <div className="pl-4 space-y-1">{children}</div>}
+    </div>
+  );
+}
+
+function MobileLink({ href, label, close }: { href: string; label: string; close: () => void }) {
+  return <Link to={href} onClick={close} className="block py-1.5 text-sm text-muted-foreground hover:text-primary">{label}</Link>;
+}
+
+/* ─── Navbar ─── */
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [dropdown, setDropdown] = useState<string | null>(null);
@@ -90,6 +157,8 @@ export default function Navbar() {
   const { user, profile, signOut } = useAuth();
 
   const isActive = (prefix: string) => location.pathname.startsWith(prefix);
+  const closeMobile = () => setMobileOpen(false);
+  const closeDropdown = () => setDropdown(null);
 
   return (
     <nav className="sticky top-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border/50">
@@ -100,13 +169,18 @@ export default function Navbar() {
 
         {/* Desktop */}
         <div className="hidden lg:flex items-center gap-6">
-          <Dropdown label="Product" links={productLinks} active={isActive("/product")} open={dropdown} setOpen={setDropdown} />
-          <Dropdown label="Use Cases" links={useCaseLinks} active={isActive("/use-cases")} open={dropdown} setOpen={setDropdown} />
-          <Link to="/integrations/" className={`text-sm font-medium transition-colors hover:text-primary ${isActive("/integrations") ? "text-primary" : "text-muted-foreground"}`}>Integrations</Link>
-          <Link to="/testimonials/" className={`text-sm font-medium transition-colors hover:text-primary ${isActive("/testimonials") ? "text-primary" : "text-muted-foreground"}`}>Testimonials</Link>
-          <Link to="/pricing/" className={`text-sm font-medium transition-colors hover:text-primary ${location.pathname === "/pricing" || location.pathname === "/pricing/" ? "text-primary" : "text-muted-foreground"}`}>Pricing</Link>
-          <Dropdown label="Resources" links={resourceLinks} active={isActive("/resources")} open={dropdown} setOpen={setDropdown} />
-          <Dropdown label="Company" links={companyLinks} active={isActive("/company")} open={dropdown} setOpen={setDropdown} />
+          <NavItem label="Product" active={isActive("/product")} open={dropdown} setOpen={setDropdown}>
+            <ProductDropdown onClose={closeDropdown} />
+          </NavItem>
+          <NavItem label="Solutions" active={isActive("/use-cases")} open={dropdown} setOpen={setDropdown}>
+            <SimpleDropdown links={solutionLinks} onClose={closeDropdown} />
+          </NavItem>
+          <Link to="/pricing/" className={`text-sm font-medium transition-colors hover:text-primary ${location.pathname.startsWith("/pricing") ? "text-primary" : "text-muted-foreground"}`}>
+            Pricing
+          </Link>
+          <NavItem label="Resources" active={isActive("/resources")} open={dropdown} setOpen={setDropdown}>
+            <SimpleDropdown links={resourceLinks} onClose={closeDropdown} />
+          </NavItem>
         </div>
 
         <div className="hidden lg:flex items-center gap-3">
@@ -144,30 +218,38 @@ export default function Navbar() {
       {/* Mobile menu */}
       {mobileOpen && (
         <div className="lg:hidden border-t border-border bg-background px-4 pb-4 pt-2 space-y-1 max-h-[80vh] overflow-y-auto">
-          <MobileSection title="Product" links={productLinks} close={() => setMobileOpen(false)} />
-          <MobileSection title="Use Cases" links={useCaseLinks} close={() => setMobileOpen(false)} />
-          <Link to="/integrations/" onClick={() => setMobileOpen(false)} className="block py-2 text-sm font-medium text-muted-foreground hover:text-primary">Integrations</Link>
-          <Link to="/testimonials/" onClick={() => setMobileOpen(false)} className="block py-2 text-sm font-medium text-muted-foreground hover:text-primary">Testimonials</Link>
-          <Link to="/pricing/" onClick={() => setMobileOpen(false)} className="block py-2 text-sm font-medium text-muted-foreground hover:text-primary">Pricing</Link>
-          <MobileSection title="Resources" links={resourceLinks} close={() => setMobileOpen(false)} />
-          <MobileSection title="Company" links={companyLinks} close={() => setMobileOpen(false)} />
+          <MobileSection title="Product" close={closeMobile}>
+            <MobileLink href="/product/" label="Product Overview" close={closeMobile} />
+            {productGroups.flatMap((g) => g.items).map((item) => (
+              <MobileLink key={item.href} href={item.href} label={item.label} close={closeMobile} />
+            ))}
+          </MobileSection>
+          <MobileSection title="Solutions" close={closeMobile}>
+            <MobileLink href="/use-cases/" label="All Use Cases" close={closeMobile} />
+            {solutionLinks.map((l) => <MobileLink key={l.href} href={l.href} label={l.label} close={closeMobile} />)}
+          </MobileSection>
+          <Link to="/pricing/" onClick={closeMobile} className="block py-2 text-sm font-medium text-muted-foreground hover:text-primary">Pricing</Link>
+          <MobileSection title="Resources" close={closeMobile}>
+            <MobileLink href="/resources/" label="All Resources" close={closeMobile} />
+            {resourceLinks.map((l) => <MobileLink key={l.href} href={l.href} label={l.label} close={closeMobile} />)}
+          </MobileSection>
           <div className="flex gap-2 pt-2">
             {user ? (
               <>
                 <Button variant="ghost" size="sm" className="flex-1" asChild>
                   <a href="https://app.notiproof.com">Dashboard</a>
                 </Button>
-                <Button variant="outline" size="sm" className="flex-1" onClick={() => { signOut(); setMobileOpen(false); }}>
+                <Button variant="outline" size="sm" className="flex-1" onClick={() => { signOut(); closeMobile(); }}>
                   Sign Out
                 </Button>
               </>
             ) : (
               <>
                 <Button variant="ghost" size="sm" className="flex-1" asChild>
-                  <Link to="/login" onClick={() => setMobileOpen(false)}>Log In</Link>
+                  <Link to="/login" onClick={closeMobile}>Log In</Link>
                 </Button>
                 <Button size="sm" className="flex-1" asChild>
-                  <Link to="/signup" onClick={() => setMobileOpen(false)}>Start Free</Link>
+                  <Link to="/signup" onClick={closeMobile}>Start Free</Link>
                 </Button>
               </>
             )}
@@ -175,26 +257,5 @@ export default function Navbar() {
         </div>
       )}
     </nav>
-  );
-}
-
-function MobileSection({ title, links, close }: { title: string; links: { label: string; href: string }[]; close: () => void }) {
-  const [open, setOpen] = useState(false);
-  return (
-    <div>
-      <button onClick={() => setOpen(!open)} className="flex items-center justify-between w-full py-2 text-sm font-medium text-muted-foreground hover:text-primary">
-        {title}
-        <ChevronDown className={`w-4 h-4 transition-transform ${open ? "rotate-180" : ""}`} />
-      </button>
-      {open && (
-        <div className="pl-4 space-y-1">
-          {links.map((l) => (
-            <Link key={l.href} to={l.href} onClick={close} className="block py-1.5 text-sm text-muted-foreground hover:text-primary">
-              {l.label}
-            </Link>
-          ))}
-        </div>
-      )}
-    </div>
   );
 }

@@ -11,23 +11,19 @@ const footerLinks = {
     { label: "Campaign Builder", href: "/product/campaign-builder/" },
     { label: "Analytics & Insights", href: "/product/analytics-conversion-insights/" },
     { label: "Visitor Counter", href: "/product/visitor-counter-live-visitors/" },
-    { label: "Recent Activity", href: "/product/recent-activity-notifications/" },
     { label: "Testimonials Widget", href: "/product/testimonials-widget-reviews-widget/" },
+    { label: "Pricing", href: "/pricing/" },
   ],
-  "Use Cases": [
+  Solutions: [
     { label: "All Use Cases", href: "/use-cases/" },
     { label: "E-commerce", href: "/use-cases/ecommerce/" },
     { label: "SaaS", href: "/use-cases/saas-social-proof-tools-drive-sign-ups/" },
     { label: "Agencies", href: "/use-cases/social-proof-for-marketing-agencies-impress-clients/" },
     { label: "Local Business", href: "/use-cases/local-business-social-proof-convert-website-visitors/" },
-  ],
-  Integrations: [
-    { label: "All Integrations", href: "/integrations/" },
+    { label: "Integrations", href: "/integrations/" },
     { label: "Shopify", href: "/integrations/shopify/" },
     { label: "WordPress", href: "/integrations/wordpress/" },
     { label: "Zapier", href: "/integrations/zapier/" },
-    { label: "Pricing", href: "/pricing/" },
-    { label: "Testimonials", href: "/testimonials/" },
   ],
   Resources: [
     { label: "Resource Hub", href: "/resources/" },
@@ -41,6 +37,7 @@ const footerLinks = {
     { label: "About", href: "/company/about/" },
     { label: "Contact", href: "/company/contact/" },
     { label: "Careers", href: "/company/careers/" },
+    { label: "Testimonials", href: "/testimonials/" },
     { label: "Privacy Policy", href: "/privacy-policy/" },
     { label: "Terms of Service", href: "/terms-of-service/" },
   ],
@@ -50,8 +47,8 @@ export default function Footer() {
   return (
     <footer className="bg-dark text-dark-foreground" role="contentinfo">
       <div className="container-tight section-padding">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 mb-12">
-          <div className="col-span-2 md:col-span-3 lg:col-span-1">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 mb-12">
+          <div className="col-span-2 md:col-span-4 lg:col-span-1">
             <Link to="/">
               <img src={logo} alt="NotiProof" className="h-8 mb-4 brightness-0 invert" />
             </Link>
