@@ -6,6 +6,12 @@ import { LucideIcon } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
 import CTASection from "@/components/CTASection";
 
+interface ResourceLink {
+  label: string;
+  href: string;
+  context: string;
+}
+
 interface IntegrationPageProps {
   metaTitle: string;
   metaDescription: string;
@@ -18,6 +24,8 @@ interface IntegrationPageProps {
   setupSteps: { step: string; desc: string }[];
   features: string[];
   faqs: { q: string; a: string }[];
+  resourceLinks?: ResourceLink[];
+  relatedUseCases?: { label: string; href: string }[];
 }
 
 const fadeUp = {
@@ -30,6 +38,7 @@ const fadeUp = {
 export default function IntegrationPage({
   metaTitle, metaDescription, canonical, name, icon: Icon,
   headline, description, benefits, setupSteps, features, faqs,
+  resourceLinks, relatedUseCases,
 }: IntegrationPageProps) {
   const faqSchema = {
     "@context": "https://schema.org",
@@ -103,6 +112,25 @@ export default function IntegrationPage({
         </div>
       </section>
 
+      {/* Related Use Cases */}
+      {relatedUseCases && relatedUseCases.length > 0 && (
+        <section className="py-12 border-y border-border">
+          <div className="container-tight text-center">
+            <h2 className="text-xl font-bold mb-4">See {name} in Action</h2>
+            <p className="text-sm text-muted-foreground mb-6">
+              Learn how businesses use NotiProof with {name} to increase conversions.
+            </p>
+            <div className="flex flex-wrap justify-center gap-3">
+              {relatedUseCases.map((uc) => (
+                <Button key={uc.href} variant="outline" size="sm" asChild>
+                  <Link to={uc.href}>{uc.label}</Link>
+                </Button>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       <section className="section-padding">
         <div className="container-tight">
           <h2 className="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
@@ -119,6 +147,23 @@ export default function IntegrationPage({
           </div>
         </div>
       </section>
+
+      {/* Related Resources */}
+      {resourceLinks && resourceLinks.length > 0 && (
+        <section className="section-padding bg-surface">
+          <div className="container-tight">
+            <h2 className="text-2xl font-bold mb-6 text-center">Related Reading</h2>
+            <div className="max-w-3xl mx-auto prose prose-sm">
+              {resourceLinks.map((rl) => (
+                <p key={rl.href}>
+                  {rl.context}{" "}
+                  <Link to={rl.href} className="text-primary font-semibold hover:underline">{rl.label}</Link>.
+                </p>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       <div className="py-12 bg-surface text-center">
         <div className="container-tight">

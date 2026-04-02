@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { ArrowRight, CheckCircle2, XCircle } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { LucideIcon } from "lucide-react";
@@ -17,6 +17,19 @@ interface ResourceLink {
   context: string;
 }
 
+interface Testimonial {
+  quote: string;
+  name: string;
+  role: string;
+  metric?: string;
+}
+
+interface FeatureDetail {
+  icon: LucideIcon;
+  title: string;
+  desc: string;
+}
+
 interface ProductFeaturePageProps {
   title: string;
   metaTitle: string;
@@ -26,7 +39,11 @@ interface ProductFeaturePageProps {
   description: string;
   icon: LucideIcon;
   benefits: string[];
+  withoutNotiproof?: string[];
+  withNotiproof?: string[];
   howItWorks: { step: string; desc: string }[];
+  featureDetails?: FeatureDetail[];
+  testimonial?: Testimonial;
   useCases: { title: string; desc: string; href: string }[];
   faqs: FAQ[];
   relatedProducts: { label: string; href: string }[];
@@ -41,18 +58,9 @@ const fadeUp = {
 };
 
 export default function ProductFeaturePage({
-  metaTitle,
-  metaDescription,
-  canonical,
-  headline,
-  description,
-  icon: Icon,
-  benefits,
-  howItWorks,
-  useCases,
-  faqs,
-  relatedProducts,
-  resourceLinks,
+  metaTitle, metaDescription, canonical, headline, description, icon: Icon,
+  benefits, withoutNotiproof, withNotiproof, howItWorks, featureDetails,
+  testimonial, faqs, relatedProducts, resourceLinks,
 }: ProductFeaturePageProps) {
   const faqSchema = {
     "@context": "https://schema.org",
@@ -71,12 +79,10 @@ export default function ProductFeaturePage({
     applicationCategory: "BusinessApplication",
     operatingSystem: "Web",
     url: "https://notiproof.com",
-    offers: {
-      "@type": "Offer",
-      price: "0",
-      priceCurrency: "USD",
-    },
+    offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
   };
+
+  const hasComparison = withoutNotiproof && withNotiproof;
 
   return (
     <>
@@ -85,36 +91,90 @@ export default function ProductFeaturePage({
       {/* Hero */}
       <section className="section-padding">
         <div className="container-tight">
-          <motion.div {...fadeUp} className="max-w-3xl mx-auto text-center">
-            <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-6">
-              <Icon className="w-7 h-7 text-primary" />
-            </div>
-            <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-6">{headline}</h1>
-            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">{description}</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="hero" size="xl" asChild>
-                <a href="https://app.notiproof.com/signup">Start Free Trial <ArrowRight className="w-5 h-5" /></a>
-              </Button>
-              <Button variant="hero-outline" size="xl" asChild>
-                <Link to="/pricing/">View Pricing</Link>
-              </Button>
-            </div>
-          </motion.div>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <motion.div {...fadeUp}>
+              <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-6">
+                <Icon className="w-7 h-7 text-primary" />
+              </div>
+              <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-6">{headline}</h1>
+              <p className="text-lg text-muted-foreground mb-8">{description}</p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button variant="hero" size="xl" asChild>
+                  <a href="https://app.notiproof.com/signup">Start Free Trial <ArrowRight className="w-5 h-5" /></a>
+                </Button>
+                <Button variant="hero-outline" size="xl" asChild>
+                  <Link to="/pricing/">View Pricing</Link>
+                </Button>
+              </div>
+            </motion.div>
+            {/* Visual mockup placeholder */}
+            <motion.div {...fadeUp} transition={{ duration: 0.5, delay: 0.2 }}>
+              <div className="bg-gradient-to-br from-primary/5 to-primary/10 border border-border rounded-2xl p-8 aspect-[4/3] flex items-center justify-center">
+                <div className="bg-card border border-border rounded-xl p-6 shadow-lg max-w-xs w-full">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                      <Icon className="w-5 h-5 text-primary" />
+                    </div>
+                    <div>
+                      <p className="text-sm font-semibold">Live Preview</p>
+                      <p className="text-xs text-muted-foreground">See it in action on your site</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
-      {/* Benefits */}
+      {/* Without / With Comparison OR Benefits */}
       <section className="section-padding bg-surface">
         <div className="container-tight">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Key Benefits</h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            {benefits.map((b) => (
-              <motion.div key={b} {...fadeUp} className="flex items-start gap-3">
-                <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 shrink-0" />
-                <span className="text-sm">{b}</span>
-              </motion.div>
-            ))}
-          </div>
+          {hasComparison ? (
+            <>
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">The Difference NotiProof Makes</h2>
+              <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                <div className="bg-card border border-border rounded-xl p-6">
+                  <h3 className="font-bold text-destructive mb-4 flex items-center gap-2">
+                    <XCircle className="w-5 h-5" /> Without NotiProof
+                  </h3>
+                  <ul className="space-y-3">
+                    {withoutNotiproof.map((item) => (
+                      <li key={item} className="flex items-start gap-3 text-sm text-muted-foreground">
+                        <XCircle className="w-4 h-4 text-destructive shrink-0 mt-0.5" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="bg-card border border-primary/20 rounded-xl p-6 ring-1 ring-primary/10">
+                  <h3 className="font-bold text-primary mb-4 flex items-center gap-2">
+                    <CheckCircle2 className="w-5 h-5" /> With NotiProof
+                  </h3>
+                  <ul className="space-y-3">
+                    {withNotiproof.map((item) => (
+                      <li key={item} className="flex items-start gap-3 text-sm">
+                        <CheckCircle2 className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </>
+          ) : (
+            <>
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Key Benefits</h2>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                {benefits.map((b) => (
+                  <motion.div key={b} {...fadeUp} className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 shrink-0" />
+                    <span className="text-sm">{b}</span>
+                  </motion.div>
+                ))}
+              </div>
+            </>
+          )}
         </div>
       </section>
 
@@ -136,23 +196,44 @@ export default function ProductFeaturePage({
         </div>
       </section>
 
-      {/* Use Cases */}
-      <section className="section-padding bg-surface">
-        <div className="container-tight">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Who Uses This Feature</h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            {useCases.map((uc) => (
-              <Link key={uc.title} to={uc.href} className="bg-card border border-border rounded-xl p-6 hover:shadow-md hover:border-primary/30 transition-all">
-                <h3 className="font-bold mb-2">{uc.title}</h3>
-                <p className="text-sm text-muted-foreground">{uc.desc}</p>
-              </Link>
-            ))}
+      {/* Feature Details */}
+      {featureDetails && featureDetails.length > 0 && (
+        <section className="section-padding bg-surface">
+          <div className="container-tight">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Feature Highlights</h2>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
+              {featureDetails.map((f) => (
+                <motion.div key={f.title} {...fadeUp} className="bg-card border border-border rounded-xl p-6 hover:shadow-md hover:border-primary/30 transition-all">
+                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+                    <f.icon className="w-5 h-5 text-primary" />
+                  </div>
+                  <h3 className="font-bold mb-2">{f.title}</h3>
+                  <p className="text-sm text-muted-foreground">{f.desc}</p>
+                </motion.div>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
+
+      {/* Testimonial */}
+      {testimonial && (
+        <section className="py-16">
+          <div className="container-tight">
+            <div className="max-w-2xl mx-auto text-center">
+              {testimonial.metric && (
+                <p className="text-4xl font-extrabold text-primary mb-4">{testimonial.metric}</p>
+              )}
+              <blockquote className="text-lg italic text-foreground mb-4">"{testimonial.quote}"</blockquote>
+              <p className="text-sm font-semibold">{testimonial.name}</p>
+              <p className="text-xs text-muted-foreground">{testimonial.role}</p>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* FAQ */}
-      <section className="section-padding">
+      <section className="section-padding bg-surface">
         <div className="container-tight">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Frequently Asked Questions</h2>
           <div className="max-w-3xl mx-auto grid gap-4">
@@ -169,9 +250,9 @@ export default function ProductFeaturePage({
         </div>
       </section>
 
-      {/* Related Resources - contextual internal links */}
+      {/* Related Resources */}
       {resourceLinks && resourceLinks.length > 0 && (
-        <section className="section-padding bg-surface">
+        <section className="section-padding">
           <div className="container-tight">
             <h2 className="text-2xl font-bold mb-6 text-center">Related Reading</h2>
             <div className="max-w-3xl mx-auto prose prose-sm">
@@ -186,7 +267,7 @@ export default function ProductFeaturePage({
         </section>
       )}
 
-      {/* Related */}
+      {/* Related Products */}
       <section className="py-12 bg-surface">
         <div className="container-tight">
           <h2 className="text-xl font-bold mb-6 text-center">Explore More Features</h2>
