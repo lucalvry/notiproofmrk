@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { ArrowRight, CheckCircle2, XCircle } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { LucideIcon } from "lucide-react";
@@ -14,6 +14,19 @@ interface ResourceLink {
   context: string;
 }
 
+interface Testimonial {
+  quote: string;
+  name: string;
+  role: string;
+  metric?: string;
+}
+
+interface FeatureHighlight {
+  icon: LucideIcon;
+  title: string;
+  desc: string;
+}
+
 interface UseCasePageProps {
   metaTitle: string;
   metaDescription: string;
@@ -24,8 +37,11 @@ interface UseCasePageProps {
   icon: LucideIcon;
   painPoints: { title: string; desc: string }[];
   benefits: string[];
+  solutions?: string[];
   stats: { value: string; label: string }[];
   notification: { name: string; action: string; item: string; time: string };
+  featureHighlights?: FeatureHighlight[];
+  testimonial?: Testimonial;
   integrations: string[];
   faqs: FAQ[];
   relatedUseCases: { label: string; href: string }[];
@@ -41,7 +57,8 @@ const fadeUp = {
 
 export default function UseCaseTemplate({
   metaTitle, metaDescription, canonical, badge, headline, description, icon: Icon,
-  painPoints, benefits, stats, notification, integrations, faqs, relatedUseCases, resourceLinks,
+  painPoints, benefits, solutions, stats, notification, featureHighlights,
+  testimonial, faqs, relatedUseCases, resourceLinks,
 }: UseCasePageProps) {
   const faqSchema = {
     "@context": "https://schema.org",
@@ -52,6 +69,8 @@ export default function UseCaseTemplate({
       acceptedAnswer: { "@type": "Answer", text: f.a },
     })),
   };
+
+  const hasSolutions = solutions && solutions.length > 0;
 
   return (
     <>
@@ -110,47 +129,100 @@ export default function UseCaseTemplate({
         </div>
       </section>
 
-      {/* Pain Points */}
+      {/* Problem → Solution Comparison */}
       <section className="section-padding">
         <div className="container-tight">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">The Challenge</h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            {painPoints.map((p) => (
-              <motion.div key={p.title} {...fadeUp} className="bg-card border border-border rounded-xl p-6">
-                <h3 className="font-bold mb-2">{p.title}</h3>
-                <p className="text-sm text-muted-foreground">{p.desc}</p>
-              </motion.div>
-            ))}
-          </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+            {hasSolutions ? "The Challenge & The Solution" : "The Challenge"}
+          </h2>
+          {hasSolutions ? (
+            <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+              <div className="bg-card border border-border rounded-xl p-6">
+                <h3 className="font-bold text-destructive mb-4 flex items-center gap-2">
+                  <XCircle className="w-5 h-5" /> Without NotiProof
+                </h3>
+                <ul className="space-y-3">
+                  {painPoints.map((p) => (
+                    <li key={p.title} className="flex items-start gap-3 text-sm text-muted-foreground">
+                      <XCircle className="w-4 h-4 text-destructive shrink-0 mt-0.5" />
+                      <div>
+                        <span className="font-medium text-foreground">{p.title}:</span> {p.desc}
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="bg-card border border-primary/20 rounded-xl p-6 ring-1 ring-primary/10">
+                <h3 className="font-bold text-primary mb-4 flex items-center gap-2">
+                  <CheckCircle2 className="w-5 h-5" /> With NotiProof
+                </h3>
+                <ul className="space-y-3">
+                  {solutions.map((s) => (
+                    <li key={s} className="flex items-start gap-3 text-sm">
+                      <CheckCircle2 className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                      {s}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          ) : (
+            <div className="grid md:grid-cols-3 gap-6">
+              {painPoints.map((p) => (
+                <motion.div key={p.title} {...fadeUp} className="bg-card border border-border rounded-xl p-6">
+                  <h3 className="font-bold mb-2">{p.title}</h3>
+                  <p className="text-sm text-muted-foreground">{p.desc}</p>
+                </motion.div>
+              ))}
+            </div>
+          )}
         </div>
       </section>
 
-      {/* Benefits */}
+      {/* Feature Highlights OR Benefits */}
       <section className="section-padding bg-surface">
         <div className="container-tight">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">How NotiProof Helps</h2>
-          <div className="grid sm:grid-cols-2 gap-4 max-w-3xl mx-auto">
-            {benefits.map((b) => (
-              <div key={b} className="flex items-start gap-3">
-                <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                <span className="text-sm">{b}</span>
-              </div>
-            ))}
-          </div>
+          {featureHighlights && featureHighlights.length > 0 ? (
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
+              {featureHighlights.map((f) => (
+                <motion.div key={f.title} {...fadeUp} className="bg-card border border-border rounded-xl p-6 hover:shadow-md hover:border-primary/30 transition-all">
+                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+                    <f.icon className="w-5 h-5 text-primary" />
+                  </div>
+                  <h3 className="font-bold mb-2">{f.title}</h3>
+                  <p className="text-sm text-muted-foreground">{f.desc}</p>
+                </motion.div>
+              ))}
+            </div>
+          ) : (
+            <div className="grid sm:grid-cols-2 gap-4 max-w-3xl mx-auto">
+              {benefits.map((b) => (
+                <div key={b} className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                  <span className="text-sm">{b}</span>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </section>
 
-      {/* Integrations */}
-      <section className="py-12 border-y border-border">
-        <div className="container-tight text-center">
-          <h2 className="text-xl font-bold mb-6">Works With Your Stack</h2>
-          <div className="flex flex-wrap justify-center gap-3">
-            {integrations.map((name) => (
-              <span key={name} className="text-sm font-medium bg-secondary text-secondary-foreground px-4 py-2 rounded-full">{name}</span>
-            ))}
+      {/* Testimonial */}
+      {testimonial && (
+        <section className="py-16">
+          <div className="container-tight">
+            <div className="max-w-2xl mx-auto text-center">
+              {testimonial.metric && (
+                <p className="text-4xl font-extrabold text-primary mb-4">{testimonial.metric}</p>
+              )}
+              <blockquote className="text-lg italic text-foreground mb-4">"{testimonial.quote}"</blockquote>
+              <p className="text-sm font-semibold">{testimonial.name}</p>
+              <p className="text-xs text-muted-foreground">{testimonial.role}</p>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* FAQ */}
       <section className="section-padding">
@@ -170,9 +242,9 @@ export default function UseCaseTemplate({
         </div>
       </section>
 
-      {/* Related Resources - contextual internal links */}
+      {/* Related Resources */}
       {resourceLinks && resourceLinks.length > 0 && (
-        <section className="section-padding">
+        <section className="section-padding bg-surface">
           <div className="container-tight">
             <h2 className="text-2xl font-bold mb-6 text-center">Related Reading</h2>
             <div className="max-w-3xl mx-auto prose prose-sm">
@@ -187,7 +259,7 @@ export default function UseCaseTemplate({
         </section>
       )}
 
-      {/* Related */}
+      {/* Related Use Cases */}
       <section className="py-12 bg-surface">
         <div className="container-tight text-center">
           <h2 className="text-xl font-bold mb-6">Explore Other Use Cases</h2>
