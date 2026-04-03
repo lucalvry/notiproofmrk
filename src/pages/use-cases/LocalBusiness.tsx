@@ -1,4 +1,4 @@
-import { MapPin } from "lucide-react";
+import { MapPin, Star, Bell, Eye, MessageSquare, Globe } from "lucide-react";
 import UseCaseTemplate from "@/components/UseCaseTemplate";
 
 export default function LocalBusinessUseCase() {
@@ -15,6 +15,13 @@ export default function LocalBusinessUseCase() {
         { title: "Low Website Conversion", desc: "Local business websites often convert under 3% of visitors. Most leave without taking action." },
         { title: "Trust Gap", desc: "Visitors don't know if your business is reputable. Without visible social proof, they go to competitors." },
         { title: "Scattered Reviews", desc: "Great reviews on Google and Yelp don't help if visitors never see them on your website." },
+      ]}
+      solutions={[
+        "Aggregate Google and Yelp reviews into a beautiful widget on your website",
+        "Show recent booking activity to prove your business is busy and in-demand",
+        "Display customer testimonials with photos for authentic local credibility",
+        "Geo-targeted notifications show activity from nearby customers",
+        "Simple setup — no developer or technical skills needed",
       ]}
       benefits={[
         "35% average booking increase",
@@ -33,6 +40,19 @@ export default function LocalBusinessUseCase() {
         { value: "2min", label: "Setup Time" },
       ]}
       notification={{ name: "Maria from Chicago", action: "booked a", item: "consultation", time: "10 minutes ago" }}
+      featureHighlights={[
+        { icon: Star, title: "Google Review Widget", desc: "Pull your Google and Yelp reviews directly onto your website. Visitors see your 4.8-star rating without leaving your page." },
+        { icon: Bell, title: "Booking Notifications", desc: "Show 'Maria from Chicago just booked a consultation' to prove your business is active and in-demand." },
+        { icon: Eye, title: "Visitor Counters", desc: "Display '12 people viewing this service' to create urgency for popular appointment slots." },
+        { icon: MessageSquare, title: "Testimonial Wall", desc: "Showcase customer stories with photos on a beautiful, embeddable wall that builds local trust." },
+        { icon: Globe, title: "Geo-Targeting", desc: "Show notifications from customers in the same city or region as the visitor for maximum local relevance." },
+      ]}
+      testimonial={{
+        quote: "Showing our Google reviews on our website increased consultation bookings by 35%. Patients trust us before they even walk in the door.",
+        name: "Dr. Sarah Mitchell",
+        role: "Owner, BrightSmile Dental",
+        metric: "+35% More Bookings",
+      }}
       integrations={["Google Reviews", "Yelp", "WordPress", "Squarespace", "Wix", "Calendly", "Zapier"]}
       faqs={[
         { q: "Can I show Google reviews on my website?", a: "Yes. NotiProof aggregates your Google reviews and displays them on your site with a beautiful widget." },
@@ -44,6 +64,10 @@ export default function LocalBusinessUseCase() {
         { label: "E-commerce", href: "/use-cases/ecommerce/" },
         { label: "SaaS", href: "/use-cases/saas-social-proof-tools-drive-sign-ups/" },
         { label: "Agencies", href: "/use-cases/social-proof-for-marketing-agencies-impress-clients/" },
+      ]}
+      resourceLinks={[
+        { label: "Social Proof for Websites", href: "/resources/social-proof/social-proof-for-websites/", context: "Learn how to implement social proof specifically for local business websites:" },
+        { label: "Reviews Hub", href: "/resources/reviews/", context: "Explore our complete guide to leveraging customer reviews for your local business:" },
       ]}
     />
   );

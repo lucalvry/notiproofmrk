@@ -1,4 +1,4 @@
-import { Link as LinkIcon } from "lucide-react";
+import { Link as LinkIcon, Plug, Workflow, Settings } from "lucide-react";
 import ProductFeaturePage from "@/components/ProductFeaturePage";
 
 export default function IntegrationsEcosystem() {
@@ -19,11 +19,34 @@ export default function IntegrationsEcosystem() {
         "Analytics: GA4, Mixpanel, Segment",
         "Automation: Zapier, Make, webhooks, API",
       ]}
+      withoutNotiproof={[
+        "Building custom integrations between tools takes weeks of developer time",
+        "Manual data entry means notifications are delayed or inaccurate",
+        "Each platform has different APIs — maintaining connections is a headache",
+        "No webhooks or API means you can't connect custom internal tools",
+      ]}
+      withNotiproof={[
+        "One-click setup for 38+ platforms — most integrations take under 5 minutes",
+        "Real-time data flow means notifications trigger from actual events instantly",
+        "Unified dashboard manages all connections in one place",
+        "REST API and webhooks for custom integrations with any internal system",
+      ]}
       howItWorks={[
         { step: "Choose", desc: "Select the platforms you use from our integration library." },
         { step: "Connect", desc: "Follow the one-click setup guide to connect your accounts." },
         { step: "Automate", desc: "Data flows automatically — notifications trigger from real events." },
       ]}
+      featureDetails={[
+        { icon: Plug, title: "One-Click Setup", desc: "Most integrations connect with a single click — no API keys, no code, no developer required." },
+        { icon: Workflow, title: "Real-Time Data Flow", desc: "Events flow from your tools to NotiProof in real-time. Purchase happens → notification appears instantly." },
+        { icon: Settings, title: "Custom Webhooks & API", desc: "For custom setups, use our REST API or configure webhooks to send any event data to NotiProof." },
+      ]}
+      testimonial={{
+        quote: "We connected Shopify, Klaviyo, and Google Reviews in under 10 minutes. Everything just worked — no developer needed.",
+        name: "Tom Bradley",
+        role: "E-commerce Manager, FitGear Pro",
+        metric: "10-Minute Setup",
+      }}
       useCases={[
         { title: "E-commerce", desc: "Connect Shopify, WooCommerce, Stripe for purchase alerts.", href: "/use-cases/ecommerce/" },
         { title: "SaaS", desc: "Integrate with HubSpot, Segment, Stripe for signup notifications.", href: "/use-cases/saas-social-proof-tools-drive-sign-ups/" },
@@ -40,6 +63,10 @@ export default function IntegrationsEcosystem() {
         { label: "Shopify", href: "/integrations/shopify/" },
         { label: "WordPress", href: "/integrations/wordpress/" },
         { label: "Zapier", href: "/integrations/zapier/" },
+      ]}
+      resourceLinks={[
+        { label: "Social Proof for Websites", href: "/resources/social-proof/social-proof-for-websites/", context: "Learn how integrations power a complete social proof implementation:" },
+        { label: "What Is Social Proof?", href: "/resources/social-proof/what-is-social-proof/", context: "Understand why real-time data from integrations makes social proof more effective:" },
       ]}
     />
   );
