@@ -1,4 +1,4 @@
-import { Star } from "lucide-react";
+import { Star, RefreshCw, Search, Layers } from "lucide-react";
 import ProductFeaturePage from "@/components/ProductFeaturePage";
 
 export default function ReviewAggregation() {
@@ -19,11 +19,34 @@ export default function ReviewAggregation() {
         "Rich snippet schema markup included",
         "Embeddable on any page",
       ]}
+      withoutNotiproof={[
+        "Great reviews are scattered across Google, Trustpilot, G2, and Yelp — visitors never see them all",
+        "Manually copying reviews to your website is tedious and they go stale quickly",
+        "No schema markup means no review stars appearing in Google search results",
+        "Different platforms have different formats — there's no unified, professional display",
+      ]}
+      withNotiproof={[
+        "Pull reviews from 15+ platforms into one beautiful, unified widget on your site",
+        "Auto-sync means new reviews appear automatically — always fresh, always current",
+        "Built-in JSON-LD schema gives you rich snippet stars in search results",
+        "Curate and filter to showcase your best reviews in a consistent, branded format",
+      ]}
       howItWorks={[
         { step: "Connect", desc: "Link your Google, Trustpilot, G2, and other review accounts to NotiProof." },
         { step: "Aggregate", desc: "Reviews are automatically pulled and organized into a unified dashboard." },
         { step: "Showcase", desc: "Display curated reviews in a beautiful widget on your website." },
       ]}
+      featureDetails={[
+        { icon: RefreshCw, title: "Auto-Sync", desc: "New reviews from connected platforms are pulled automatically on your schedule — daily, hourly, or in real-time." },
+        { icon: Search, title: "Rich Snippets", desc: "JSON-LD structured data markup enables review stars to appear alongside your pages in Google search results." },
+        { icon: Layers, title: "Multi-Platform Unified", desc: "Reviews from Google, Trustpilot, G2, Capterra, Yelp, Facebook, and more — all in one place." },
+      ]}
+      testimonial={{
+        quote: "Aggregating our Google and G2 reviews on our homepage increased trust immediately. Our demo request rate jumped 27% in the first month.",
+        name: "James Okonkwo",
+        role: "Head of Growth, ProStack",
+        metric: "+27% Demo Requests",
+      }}
       useCases={[
         { title: "E-commerce", desc: "Showcase product reviews from multiple marketplaces.", href: "/use-cases/ecommerce/" },
         { title: "SaaS", desc: "Display G2 and Capterra reviews on your website.", href: "/use-cases/saas-social-proof-tools-drive-sign-ups/" },
@@ -39,6 +62,10 @@ export default function ReviewAggregation() {
         { label: "Testimonials Collection", href: "/product/testimonials-collection-text-image-video/" },
         { label: "Testimonials Widget", href: "/product/testimonials-widget-reviews-widget/" },
         { label: "Social Proof Notifications", href: "/product/social-proof-notifications/" },
+      ]}
+      resourceLinks={[
+        { label: "Reviews Hub", href: "/resources/reviews/", context: "Learn everything about collecting, managing, and leveraging customer reviews:" },
+        { label: "Social Proof for Websites", href: "/resources/social-proof/social-proof-for-websites/", context: "See how review aggregation fits into a complete website trust strategy:" },
       ]}
     />
   );

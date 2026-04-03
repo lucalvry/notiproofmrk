@@ -43,6 +43,15 @@ export default function ZapierIntegration() {
         { q: "Is Zapier included on all plans?", a: "Yes. Zapier integration is included on every NotiProof plan, including Free." },
         { q: "Can I use multi-step Zaps?", a: "Yes. Build complex automation workflows with multiple steps, filters, and conditions." },
       ]}
+      resourceLinks={[
+        { label: "Integrations Ecosystem", href: "/product/integrations-ecosystem/", context: "Explore all 38+ NotiProof integrations beyond Zapier:" },
+        { label: "Social Proof in Marketing", href: "/resources/social-proof/social-proof-in-marketing/", context: "Learn how to use Zapier-triggered notifications as part of your marketing automation:" },
+      ]}
+      relatedUseCases={[
+        { label: "SaaS", href: "/use-cases/saas-social-proof-tools-drive-sign-ups/" },
+        { label: "E-commerce", href: "/use-cases/ecommerce/" },
+        { label: "Agencies", href: "/use-cases/social-proof-for-marketing-agencies-impress-clients/" },
+      ]}
     />
   );
 }
