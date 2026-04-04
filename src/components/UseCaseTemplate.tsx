@@ -34,6 +34,7 @@ interface UseCasePageProps {
   badge: string;
   headline: string;
   description: string;
+  descriptionContent?: React.ReactNode;
   icon: LucideIcon;
   painPoints: { title: string; desc: string }[];
   benefits: string[];
@@ -56,7 +57,7 @@ const fadeUp = {
 };
 
 export default function UseCaseTemplate({
-  metaTitle, metaDescription, canonical, badge, headline, description, icon: Icon,
+  metaTitle, metaDescription, canonical, badge, headline, description, descriptionContent, icon: Icon,
   painPoints, benefits, solutions, stats, notification, featureHighlights,
   testimonial, faqs, relatedUseCases, resourceLinks,
 }: UseCasePageProps) {
@@ -70,11 +71,20 @@ export default function UseCaseTemplate({
     })),
   };
 
+  const webPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: metaTitle,
+    description: metaDescription,
+    url: canonical,
+    publisher: { "@type": "Organization", name: "NotiProof", url: "https://notiproof.com" },
+  };
+
   const hasSolutions = solutions && solutions.length > 0;
 
   return (
     <>
-      <SEOHead title={metaTitle} description={metaDescription} canonical={canonical} schema={faqSchema} />
+      <SEOHead title={metaTitle} description={metaDescription} canonical={canonical} schema={[webPageSchema, faqSchema]} />
 
       {/* Hero */}
       <section className="section-padding">
@@ -85,7 +95,11 @@ export default function UseCaseTemplate({
                 <Icon className="w-3.5 h-3.5" /> {badge}
               </span>
               <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-6">{headline}</h1>
-              <p className="text-lg text-muted-foreground mb-8">{description}</p>
+              {descriptionContent ? (
+                <div className="text-lg text-muted-foreground mb-8">{descriptionContent}</div>
+              ) : (
+                <p className="text-lg text-muted-foreground mb-8">{description}</p>
+              )}
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button variant="hero" size="xl" asChild>
                   <a href="https://app.notiproof.com/signup">Start Free Trial <ArrowRight className="w-5 h-5" /></a>

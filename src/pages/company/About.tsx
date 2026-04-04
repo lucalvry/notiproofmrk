@@ -21,6 +21,50 @@ const milestones = [
   { year: "2025", event: "Expanded with AI testimonial analysis, campaign builder, and agency tools" },
 ];
 
+const aboutSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    name: "About NotiProof",
+    description: "Learn about NotiProof's mission, story, and values.",
+    url: "https://notiproof.com/company/about/",
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "NotiProof",
+    url: "https://notiproof.com",
+    logo: "https://notiproof.com/og-image.png",
+    foundingDate: "2022",
+    description: "NotiProof is a social proof and testimonial platform that helps businesses increase conversions with real-time notifications, review aggregation, and testimonial collection.",
+    areaServed: "Worldwide",
+    sameAs: [
+      "https://twitter.com/notiproof",
+      "https://www.linkedin.com/company/notiproof",
+      "https://github.com/notiproof",
+    ],
+    knowsAbout: [
+      "Social Proof",
+      "Conversion Rate Optimization",
+      "Testimonial Collection",
+      "Review Aggregation",
+      "A/B Testing",
+      "Customer Trust Signals",
+      "E-commerce Optimization",
+      "SaaS Growth",
+    ],
+    founders: [
+      {
+        "@type": "Person",
+        name: "Olayinka Olayokun",
+        jobTitle: "Founder & CEO",
+        description: "CIM-certified digital marketing professional with 10+ years of experience in conversion optimization.",
+      },
+    ],
+    numberOfEmployees: { "@type": "QuantitativeValue", minValue: 10, maxValue: 50 },
+  },
+];
+
 export default function AboutPage() {
   return (
     <>
@@ -28,13 +72,7 @@ export default function AboutPage() {
         title="About NotiProof – Our Mission, Story & Team"
         description="NotiProof was founded to help businesses of all sizes increase conversions with real-time social proof. Learn about our mission, values, and the team behind the platform."
         canonical="https://notiproof.com/company/about/"
-        schema={{
-          "@context": "https://schema.org",
-          "@type": "AboutPage",
-          name: "About NotiProof",
-          description: "Learn about NotiProof's mission, story, and values.",
-          url: "https://notiproof.com/company/about/",
-        }}
+        schema={aboutSchema}
       />
 
       <section className="section-padding">
