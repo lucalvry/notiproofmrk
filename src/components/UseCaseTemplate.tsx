@@ -34,6 +34,7 @@ interface UseCasePageProps {
   badge: string;
   headline: string;
   description: string;
+  descriptionContent?: React.ReactNode;
   icon: LucideIcon;
   painPoints: { title: string; desc: string }[];
   benefits: string[];
