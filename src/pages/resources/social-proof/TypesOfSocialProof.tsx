@@ -1,5 +1,6 @@
 import ResourceArticle from "@/components/ResourceArticle";
 import { Link } from "react-router-dom";
+import featuredImg from "@/assets/featured-types-social-proof.jpg";
 
 const r = [
   { title: "What Is Social Proof?", href: "/resources/social-proof/what-is-social-proof/", desc: "Complete definition." },
@@ -30,6 +31,7 @@ export default function TypesOfSocialProof() {
       readingTime="14 min read"
       tocSections={tocSections}
       pillarLink={{ label: "Social Proof Guide", href: "/resources/social-proof/" }}
+      featuredImage={featuredImg}
       relatedArticles={r}
       content={
         <div className="space-y-6 text-muted-foreground">

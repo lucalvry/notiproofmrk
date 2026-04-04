@@ -1,9 +1,8 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, ChevronDown, LogOut, User } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import logo from "@/assets/notiproof-logo.png";
-import { useAuth } from "@/contexts/AuthContext";
 
 /* ─── Grouped Product dropdown ─── */
 const productGroups = [
@@ -42,17 +41,19 @@ const solutionLinks = [
 ];
 
 const resourceLinks = [
-  { label: "Social Proof Guide", href: "/resources/social-proof/", desc: "Complete pillar guide" },
-  { label: "Reviews", href: "/resources/reviews/", desc: "Collecting & using reviews" },
-  { label: "Website Trust", href: "/resources/website-trust/", desc: "Building online trust signals" },
-  { label: "Testimonials", href: "/resources/testimonials/", desc: "Customer testimonial strategies" },
-  { label: "Conversion Analytics", href: "/resources/conversion-analytics/", desc: "Measuring conversion lifts" },
+  { label: "Blog", href: "/resources/blog/", desc: "Articles on social proof, reviews & more" },
+  { label: "Guides", href: "/resources/guides/", desc: "Comprehensive pillar guides" },
+  { label: "Glossary", href: "/resources/glossary/", desc: "Key terms and definitions" },
+  { label: "Comparisons", href: "/best-social-proof-software/", desc: "Side-by-side software comparisons" },
+  { label: "Help Center", href: "/resources/help-center/", desc: "Tutorials, FAQs & troubleshooting" },
+  { label: "Free Tools", href: "/conversion-optimization-tools/", desc: "CRO tools and calculators" },
 ];
 
 /* ─── Product mega dropdown (2 col) ─── */
 function ProductDropdown({ onClose }: { onClose: () => void }) {
   return (
-    <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[640px] bg-card border border-border rounded-xl shadow-xl p-5 z-50">
+    <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 w-[640px] z-50">
+      <div className="bg-card border border-border rounded-xl shadow-xl p-5">
       <div className="flex items-center justify-between mb-3 pb-3 border-b border-border">
         <Link to="/product/" onClick={onClose} className="text-sm font-bold text-primary hover:underline">
           Product Overview →
@@ -78,6 +79,7 @@ function ProductDropdown({ onClose }: { onClose: () => void }) {
           </div>
         ))}
       </div>
+      </div>
     </div>
   );
 }
@@ -85,7 +87,8 @@ function ProductDropdown({ onClose }: { onClose: () => void }) {
 /* ─── Simple dropdown ─── */
 function SimpleDropdown({ links, onClose }: { links: { label: string; href: string; desc: string }[]; onClose: () => void }) {
   return (
-    <div className="absolute top-full left-0 mt-2 w-72 bg-card border border-border rounded-xl shadow-lg p-2 z-50">
+    <div className="absolute top-full left-0 pt-2 w-72 z-50">
+      <div className="bg-card border border-border rounded-xl shadow-lg p-2">
       {links.map((l) => (
         <Link
           key={l.href}
@@ -97,6 +100,7 @@ function SimpleDropdown({ links, onClose }: { links: { label: string; href: stri
           <span className="block text-xs text-muted-foreground mt-0.5">{l.desc}</span>
         </Link>
       ))}
+      </div>
     </div>
   );
 }
@@ -154,7 +158,6 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [dropdown, setDropdown] = useState<string | null>(null);
   const location = useLocation();
-  const { user, profile, signOut } = useAuth();
 
   const isActive = (prefix: string) => location.pathname.startsWith(prefix);
   const closeMobile = () => setMobileOpen(false);
@@ -184,29 +187,12 @@ export default function Navbar() {
         </div>
 
         <div className="hidden lg:flex items-center gap-3">
-          {user ? (
-            <>
-              <span className="text-sm text-muted-foreground flex items-center gap-1.5">
-                <User className="w-3.5 h-3.5" />
-                {profile?.name || user.email}
-              </span>
-              <Button variant="ghost" size="sm" asChild>
-                <a href="https://app.notiproof.com">Dashboard</a>
-              </Button>
-              <Button variant="outline" size="sm" onClick={signOut} className="gap-1.5">
-                <LogOut className="w-3.5 h-3.5" /> Sign Out
-              </Button>
-            </>
-          ) : (
-            <>
-              <Button variant="ghost" size="sm" asChild>
-                <Link to="/login">Log In</Link>
-              </Button>
-              <Button size="sm" asChild>
-                <Link to="/signup">Start Free</Link>
-              </Button>
-            </>
-          )}
+          <Button variant="ghost" size="sm" asChild>
+            <a href="https://app.notiproof.com/login">Log In</a>
+          </Button>
+          <Button size="sm" asChild>
+            <a href="https://app.notiproof.com/signup">Start Free</a>
+          </Button>
         </div>
 
         {/* Mobile toggle */}
@@ -234,25 +220,12 @@ export default function Navbar() {
             {resourceLinks.map((l) => <MobileLink key={l.href} href={l.href} label={l.label} close={closeMobile} />)}
           </MobileSection>
           <div className="flex gap-2 pt-2">
-            {user ? (
-              <>
-                <Button variant="ghost" size="sm" className="flex-1" asChild>
-                  <a href="https://app.notiproof.com">Dashboard</a>
-                </Button>
-                <Button variant="outline" size="sm" className="flex-1" onClick={() => { signOut(); closeMobile(); }}>
-                  Sign Out
-                </Button>
-              </>
-            ) : (
-              <>
-                <Button variant="ghost" size="sm" className="flex-1" asChild>
-                  <Link to="/login" onClick={closeMobile}>Log In</Link>
-                </Button>
-                <Button size="sm" className="flex-1" asChild>
-                  <Link to="/signup" onClick={closeMobile}>Start Free</Link>
-                </Button>
-              </>
-            )}
+            <Button variant="ghost" size="sm" className="flex-1" asChild>
+              <a href="https://app.notiproof.com/login">Log In</a>
+            </Button>
+            <Button size="sm" className="flex-1" asChild>
+              <a href="https://app.notiproof.com/signup">Start Free</a>
+            </Button>
           </div>
         </div>
       )}

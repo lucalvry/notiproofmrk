@@ -27,11 +27,12 @@ const footerLinks = {
   ],
   Resources: [
     { label: "Resource Hub", href: "/resources/" },
-    { label: "Social Proof Guide", href: "/resources/social-proof/" },
-    { label: "Reviews", href: "/resources/reviews/" },
-    { label: "Conversion Analytics", href: "/resources/conversion-analytics/" },
-    { label: "Website Trust", href: "/resources/website-trust/" },
-    { label: "Testimonials Resources", href: "/resources/testimonials/" },
+    { label: "Blog", href: "/resources/blog/" },
+    { label: "Guides", href: "/resources/social-proof/" },
+    { label: "Glossary", href: "/resources/glossary/" },
+    { label: "Comparisons", href: "/best-social-proof-software/" },
+    { label: "Help Center", href: "/resources/help-center/" },
+    { label: "Free Tools", href: "/conversion-optimization-tools/" },
   ],
   Company: [
     { label: "About", href: "/company/about/" },

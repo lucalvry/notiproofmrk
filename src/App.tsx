@@ -5,7 +5,6 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import Layout from "./components/Layout";
-import { AuthProvider } from "./contexts/AuthContext";
 
 // Existing pages
 import Index from "./pages/Index";
@@ -47,6 +46,8 @@ const Careers = lazy(() => import("./pages/company/Careers"));
 
 // Resources
 const ResourcesHub = lazy(() => import("./pages/resources/ResourcesHub"));
+const Blog = lazy(() => import("./pages/resources/Blog"));
+const GuidesHub = lazy(() => import("./pages/resources/GuidesHub"));
 const SocialProofPillar = lazy(() => import("./pages/resources/social-proof/SocialProofPillar"));
 const WhatIsSocialProof = lazy(() => import("./pages/resources/social-proof/WhatIsSocialProof"));
 const SocialProofExamples = lazy(() => import("./pages/resources/social-proof/SocialProofExamples"));
@@ -54,7 +55,13 @@ const SocialProofInMarketing = lazy(() => import("./pages/resources/social-proof
 const SocialProofForWebsites = lazy(() => import("./pages/resources/social-proof/SocialProofForWebsites"));
 const TypesOfSocialProof = lazy(() => import("./pages/resources/social-proof/TypesOfSocialProof"));
 const SocialProofPsychology = lazy(() => import("./pages/resources/social-proof/SocialProofPsychology"));
-import { ReviewsHub, ConversionAnalyticsHub, WebsiteTrustHub, TestimonialsResourceHub } from "./pages/resources/CategoryHubs";
+const ReviewsPillar = lazy(() => import("./pages/resources/reviews/ReviewsPillar"));
+const ConversionAnalyticsPillar = lazy(() => import("./pages/resources/conversion-analytics/ConversionAnalyticsPillar"));
+const WebsiteTrustPillar = lazy(() => import("./pages/resources/website-trust/WebsiteTrustPillar"));
+const TestimonialsPillar = lazy(() => import("./pages/resources/testimonials/TestimonialsPillar"));
+const AuthorProfile = lazy(() => import("./pages/resources/AuthorProfile"));
+const HelpCenter = lazy(() => import("./pages/resources/HelpCenter"));
+const Glossary = lazy(() => import("./pages/resources/Glossary"));
 
 // SEO Landing pages
 const BestSocialProofSoftware = lazy(() => import("./pages/BestSocialProofSoftware"));
@@ -64,12 +71,6 @@ const ConversionOptimizationTools = lazy(() => import("./pages/ConversionOptimiz
 // Legal
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 const TermsOfService = lazy(() => import("./pages/TermsOfService"));
-
-// Auth
-const Login = lazy(() => import("./pages/auth/Login"));
-const Signup = lazy(() => import("./pages/auth/Signup"));
-const ForgotPassword = lazy(() => import("./pages/auth/ForgotPassword"));
-const ResetPassword = lazy(() => import("./pages/auth/ResetPassword"));
 
 const queryClient = new QueryClient();
 
@@ -87,7 +88,6 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <AuthProvider>
         <Routes>
           <Route element={<Layout />}>
             <Route path="/" element={<Index />} />
@@ -132,6 +132,8 @@ const App = () => (
 
             {/* Resources */}
             <Route path="/resources/" element={<SuspenseWrap><ResourcesHub /></SuspenseWrap>} />
+            <Route path="/resources/blog/" element={<SuspenseWrap><Blog /></SuspenseWrap>} />
+            <Route path="/resources/guides/" element={<SuspenseWrap><GuidesHub /></SuspenseWrap>} />
             <Route path="/resources/social-proof/" element={<SuspenseWrap><SocialProofPillar /></SuspenseWrap>} />
             <Route path="/resources/social-proof/what-is-social-proof/" element={<SuspenseWrap><WhatIsSocialProof /></SuspenseWrap>} />
             <Route path="/resources/social-proof/social-proof-example/" element={<SuspenseWrap><SocialProofExamples /></SuspenseWrap>} />
@@ -139,10 +141,13 @@ const App = () => (
             <Route path="/resources/social-proof/social-proof-for-websites/" element={<SuspenseWrap><SocialProofForWebsites /></SuspenseWrap>} />
             <Route path="/resources/social-proof/types-of-social-proof/" element={<SuspenseWrap><TypesOfSocialProof /></SuspenseWrap>} />
             <Route path="/resources/social-proof/social-proof-psychology/" element={<SuspenseWrap><SocialProofPsychology /></SuspenseWrap>} />
-            <Route path="/resources/reviews/" element={<ReviewsHub />} />
-            <Route path="/resources/conversion-analytics/" element={<ConversionAnalyticsHub />} />
-            <Route path="/resources/website-trust/" element={<WebsiteTrustHub />} />
-            <Route path="/resources/testimonials/" element={<TestimonialsResourceHub />} />
+            <Route path="/resources/reviews/" element={<SuspenseWrap><ReviewsPillar /></SuspenseWrap>} />
+            <Route path="/resources/conversion-analytics/" element={<SuspenseWrap><ConversionAnalyticsPillar /></SuspenseWrap>} />
+            <Route path="/resources/website-trust/" element={<SuspenseWrap><WebsiteTrustPillar /></SuspenseWrap>} />
+            <Route path="/resources/testimonials/" element={<SuspenseWrap><TestimonialsPillar /></SuspenseWrap>} />
+            <Route path="/resources/author/:slug/" element={<SuspenseWrap><AuthorProfile /></SuspenseWrap>} />
+            <Route path="/resources/help-center/" element={<SuspenseWrap><HelpCenter /></SuspenseWrap>} />
+            <Route path="/resources/glossary/" element={<SuspenseWrap><Glossary /></SuspenseWrap>} />
 
             {/* SEO Landing pages */}
             <Route path="/best-social-proof-software/" element={<SuspenseWrap><BestSocialProofSoftware /></SuspenseWrap>} />
@@ -153,19 +158,12 @@ const App = () => (
             <Route path="/privacy-policy/" element={<SuspenseWrap><PrivacyPolicy /></SuspenseWrap>} />
             <Route path="/terms-of-service/" element={<SuspenseWrap><TermsOfService /></SuspenseWrap>} />
 
-            {/* Auth */}
-            <Route path="/login" element={<SuspenseWrap><Login /></SuspenseWrap>} />
-            <Route path="/signup" element={<SuspenseWrap><Signup /></SuspenseWrap>} />
-            <Route path="/forgot-password" element={<SuspenseWrap><ForgotPassword /></SuspenseWrap>} />
-            <Route path="/reset-password" element={<SuspenseWrap><ResetPassword /></SuspenseWrap>} />
-
             {/* Redirect */}
             <Route path="/home/" element={<Navigate to="/" replace />} />
             <Route path="/home" element={<Navigate to="/" replace />} />
           </Route>
           <Route path="*" element={<NotFound />} />
         </Routes>
-        </AuthProvider>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>

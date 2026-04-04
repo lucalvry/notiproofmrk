@@ -1,5 +1,6 @@
 import ResourceArticle from "@/components/ResourceArticle";
 import { Link } from "react-router-dom";
+import featuredImg from "@/assets/featured-social-proof-guide.jpg";
 
 const clusterLinks = [
   { title: "What Is Social Proof?", href: "/resources/social-proof/what-is-social-proof/", desc: "Definition, history, and core concepts." },
@@ -34,6 +35,7 @@ export default function SocialProofPillar() {
       publishDate="2025-01-15"
       updatedDate="2025-03-20"
       tocSections={tocSections}
+      featuredImage={featuredImg}
       relatedArticles={clusterLinks}
       content={
         <div className="space-y-8 text-foreground">

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import authorImage from "@/assets/author-olayinka.png";
 
 export interface AuthorData {
@@ -8,6 +9,7 @@ export interface AuthorData {
   credentials: string;
   knowsAbout: string[];
   sameAs: string[];
+  profileUrl?: string;
 }
 
 export const defaultAuthor: AuthorData = {
@@ -18,6 +20,7 @@ export const defaultAuthor: AuthorData = {
   credentials: "CIM Certified · MBA in Digital Marketing & Business Transformation",
   knowsAbout: ["Digital Marketing", "SEO", "Social Proof", "Conversion Rate Optimization", "Content Strategy", "Growth Marketing"],
   sameAs: [],
+  profileUrl: "/resources/author/olayinka-olayokun/",
 };
 
 interface AuthorCardProps {
@@ -26,9 +29,11 @@ interface AuthorCardProps {
 }
 
 export default function AuthorCard({ author = defaultAuthor, compact = false }: AuthorCardProps) {
+  const profileHref = author.profileUrl || "/resources/author/olayinka-olayokun/";
+
   if (compact) {
     return (
-      <div className="flex items-center gap-3" itemScope itemType="https://schema.org/Person">
+      <Link to={profileHref} className="flex items-center gap-3 hover:opacity-80 transition-opacity" itemScope itemType="https://schema.org/Person">
         <img
           src={author.image}
           alt={author.name}
@@ -36,10 +41,10 @@ export default function AuthorCard({ author = defaultAuthor, compact = false }: 
           itemProp="image"
         />
         <div>
-          <span className="text-sm font-semibold" itemProp="name">{author.name}</span>
+          <span className="text-sm font-semibold hover:text-primary transition-colors" itemProp="name">{author.name}</span>
           <span className="block text-xs text-muted-foreground" itemProp="jobTitle">{author.jobTitle}</span>
         </div>
-      </div>
+      </Link>
     );
   }
 
@@ -51,14 +56,18 @@ export default function AuthorCard({ author = defaultAuthor, compact = false }: 
       aria-label="About the author"
     >
       <div className="flex items-start gap-5">
-        <img
-          src={author.image}
-          alt={author.name}
-          className="w-16 h-16 rounded-full object-cover shrink-0"
-          itemProp="image"
-        />
+        <Link to={profileHref}>
+          <img
+            src={author.image}
+            alt={author.name}
+            className="w-16 h-16 rounded-full object-cover shrink-0 hover:opacity-80 transition-opacity"
+            itemProp="image"
+          />
+        </Link>
         <div className="min-w-0">
-          <h3 className="text-base font-bold" itemProp="name">{author.name}</h3>
+          <Link to={profileHref} className="hover:text-primary transition-colors">
+            <h3 className="text-base font-bold" itemProp="name">{author.name}</h3>
+          </Link>
           <p className="text-sm text-primary font-medium" itemProp="jobTitle">{author.jobTitle}</p>
           <p className="text-xs text-muted-foreground mt-0.5">{author.credentials}</p>
           <p className="text-sm text-muted-foreground mt-3 leading-relaxed" itemProp="description">
