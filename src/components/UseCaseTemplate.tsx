@@ -57,7 +57,7 @@ const fadeUp = {
 };
 
 export default function UseCaseTemplate({
-  metaTitle, metaDescription, canonical, badge, headline, description, icon: Icon,
+  metaTitle, metaDescription, canonical, badge, headline, description, descriptionContent, icon: Icon,
   painPoints, benefits, solutions, stats, notification, featureHighlights,
   testimonial, faqs, relatedUseCases, resourceLinks,
 }: UseCasePageProps) {
@@ -69,6 +69,15 @@ export default function UseCaseTemplate({
       name: f.q,
       acceptedAnswer: { "@type": "Answer", text: f.a },
     })),
+  };
+
+  const webPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: metaTitle,
+    description: metaDescription,
+    url: canonical,
+    publisher: { "@type": "Organization", name: "NotiProof", url: "https://notiproof.com" },
   };
 
   const hasSolutions = solutions && solutions.length > 0;
