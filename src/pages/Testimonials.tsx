@@ -17,6 +17,32 @@ const testimonials = [
   { name: "Rachel G.", role: "VP Marketing, HomeStyle", quote: "We tested NotiProof against our previous tool and saw a 45% improvement in click-through rates. Never looking back.", rating: 5 },
 ];
 
+const reviewSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: "NotiProof",
+    description: "Social proof and testimonial platform for increasing website conversions.",
+    brand: { "@type": "Brand", name: "NotiProof" },
+    url: "https://notiproof.com",
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "5",
+      bestRating: "5",
+      worstRating: "1",
+      ratingCount: String(testimonials.length),
+      reviewCount: String(testimonials.length),
+    },
+    review: testimonials.map((t) => ({
+      "@type": "Review",
+      author: { "@type": "Person", name: t.name },
+      reviewRating: { "@type": "Rating", ratingValue: String(t.rating), bestRating: "5" },
+      reviewBody: t.quote,
+      datePublished: "2025-01-15",
+    })),
+  },
+];
+
 export default function TestimonialsPage() {
   return (
     <>
@@ -24,6 +50,7 @@ export default function TestimonialsPage() {
         title="NotiProof Testimonials – What Customers Say About Our Social Proof Platform"
         description="Read real testimonials from businesses using NotiProof to boost conversions. See how e-commerce stores, SaaS companies, and agencies achieve results."
         canonical="https://notiproof.com/testimonials/"
+        schema={reviewSchema}
       />
       <section className="section-padding">
         <div className="container-tight">
