@@ -84,7 +84,7 @@ export default function UseCaseTemplate({
 
   return (
     <>
-      <SEOHead title={metaTitle} description={metaDescription} canonical={canonical} schema={faqSchema} />
+      <SEOHead title={metaTitle} description={metaDescription} canonical={canonical} schema={[webPageSchema, faqSchema]} />
 
       {/* Hero */}
       <section className="section-padding">
