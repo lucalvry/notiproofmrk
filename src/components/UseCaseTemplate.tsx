@@ -95,7 +95,11 @@ export default function UseCaseTemplate({
                 <Icon className="w-3.5 h-3.5" /> {badge}
               </span>
               <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-6">{headline}</h1>
-              <p className="text-lg text-muted-foreground mb-8">{description}</p>
+              {descriptionContent ? (
+                <div className="text-lg text-muted-foreground mb-8">{descriptionContent}</div>
+              ) : (
+                <p className="text-lg text-muted-foreground mb-8">{description}</p>
+              )}
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button variant="hero" size="xl" asChild>
                   <a href="https://app.notiproof.com/signup">Start Free Trial <ArrowRight className="w-5 h-5" /></a>
