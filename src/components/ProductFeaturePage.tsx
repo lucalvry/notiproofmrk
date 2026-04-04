@@ -59,7 +59,7 @@ const fadeUp = {
 };
 
 export default function ProductFeaturePage({
-  metaTitle, metaDescription, canonical, headline, description, icon: Icon,
+  metaTitle, metaDescription, canonical, headline, description, descriptionContent, icon: Icon,
   benefits, withoutNotiproof, withNotiproof, howItWorks, featureDetails,
   testimonial, faqs, relatedProducts, resourceLinks,
 }: ProductFeaturePageProps) {
@@ -81,6 +81,16 @@ export default function ProductFeaturePage({
     operatingSystem: "Web",
     url: "https://notiproof.com",
     offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+  };
+
+  const webPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: metaTitle,
+    description: metaDescription,
+    url: canonical,
+    mainEntity: { "@id": "#software" },
+    publisher: { "@type": "Organization", name: "NotiProof", url: "https://notiproof.com" },
   };
 
   const hasComparison = withoutNotiproof && withNotiproof;
