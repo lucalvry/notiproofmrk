@@ -37,6 +37,7 @@ interface ProductFeaturePageProps {
   canonical: string;
   headline: string;
   description: string;
+  descriptionContent?: React.ReactNode;
   icon: LucideIcon;
   benefits: string[];
   withoutNotiproof?: string[];
