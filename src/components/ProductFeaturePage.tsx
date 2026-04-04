@@ -97,7 +97,7 @@ export default function ProductFeaturePage({
 
   return (
     <>
-      <SEOHead title={metaTitle} description={metaDescription} canonical={canonical} schema={[faqSchema, softwareSchema]} />
+      <SEOHead title={metaTitle} description={metaDescription} canonical={canonical} schema={[webPageSchema, faqSchema, softwareSchema]} />
 
       {/* Hero */}
       <section className="section-padding">
