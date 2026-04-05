@@ -2,10 +2,10 @@ import ResourceArticle from "@/components/ResourceArticle";
 import { Link } from "react-router-dom";
 
 const clusterLinks = [
-  { title: "Analytics & Conversion Insights", href: "/product/analytics-conversion-insights/", desc: "Track impressions, clicks, and conversion lift in real-time." },
-  { title: "Campaign Builder", href: "/product/campaign-builder/", desc: "A/B test campaigns and optimize based on data." },
-  { title: "Social Proof in Marketing", href: "/resources/social-proof/social-proof-in-marketing/", desc: "Measure the marketing impact of social proof." },
-  { title: "Social Proof Psychology", href: "/resources/social-proof/social-proof-psychology/", desc: "Understand why certain metrics matter more than others." },
+  { title: "A/B Testing Social Proof", href: "/resources/conversion-analytics/ab-testing-social-proof/", desc: "What to test and how to interpret results." },
+  { title: "Conversion Rate Benchmarks", href: "/resources/conversion-analytics/conversion-rate-benchmarks/", desc: "2025 benchmarks by industry." },
+  { title: "Measuring Social Proof ROI", href: "/resources/conversion-analytics/measuring-social-proof-roi/", desc: "Formulas and attribution models." },
+  { title: "Heatmap Analytics Guide", href: "/resources/conversion-analytics/heatmap-analytics-guide/", desc: "Optimize placement with heatmaps." },
 ];
 
 const tocSections = [

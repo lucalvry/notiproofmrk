@@ -1,5 +1,68 @@
 import { Video, Mic, Globe, Sparkles } from "lucide-react";
+import { Link } from "react-router-dom";
 import ProductFeaturePage from "@/components/ProductFeaturePage";
+import StatCallout from "@/components/StatCallout";
+import KeyTakeaway from "@/components/KeyTakeaway";
+
+const deepDive = (
+  <>
+    <h2 id="video-vs-text">Why Are Video Testimonials More Effective Than Text?</h2>
+    <p>
+      Video testimonials outperform text reviews because they carry three trust signals that text cannot replicate: <strong>facial expressions</strong>, <strong>vocal tone</strong>, and <strong>body language</strong>. According to Albert Mehrabian's communication research, 93% of emotional communication is non-verbal.
+    </p>
+    <StatCallout stat="4x conversion lift" context="Video testimonials vs. text-only testimonial pages (NotiProof customer average)." />
+    <p>
+      Wyzowl's 2024 Video Marketing Statistics report found that 79% of consumers say a brand's video testimonials convince them to purchase a product or service. The key is reducing friction in the recording process — the easier it is for customers to record, the more videos you'll collect.
+    </p>
+
+    <h2 id="browser-recording">How Does Browser-Based Recording Work?</h2>
+    <p>
+      NotiProof's video recorder uses the browser's native <strong>MediaRecorder API</strong>, which is supported by Chrome, Firefox, Safari, and Edge on both desktop and mobile devices. Customers simply click a recording link, grant camera and microphone access, and start recording. No app downloads, no plugins, no account creation.
+    </p>
+    <p>
+      The recording interface displays <strong>guided prompts</strong> — questions you've configured in the NotiProof dashboard — one at a time on screen. This is critical because unguided recordings typically ramble for 3–5 minutes with no clear narrative. Guided prompts keep responses focused to 60–90 seconds.
+    </p>
+    <p>
+      After recording, the video is uploaded directly to NotiProof's global CDN. Automatic processing generates multiple quality levels (360p, 720p, 1080p) for adaptive streaming, a thumbnail image, and AI-powered <strong>transcription with captions</strong>. The entire process takes under 3 minutes for the customer.
+    </p>
+    <KeyTakeaway>
+      Browser-based recording with guided prompts produces focused 60–90 second testimonials. No apps, no friction — customers click a link and talk.
+    </KeyTakeaway>
+
+    <h2 id="get-customers-to-record">How Do You Get Customers to Actually Record?</h2>
+    <p>
+      Response rates for video testimonial requests are naturally lower than text, but NotiProof's guided approach significantly improves participation. Three strategies consistently produce the best results:
+    </p>
+    <p>
+      <strong>1. Timing:</strong> Send the request within 24–48 hours of a positive experience. NotiProof integrates with your CRM and e-commerce platform to trigger requests automatically at these moments.
+    </p>
+    <p>
+      <strong>2. Simplicity:</strong> The recording link must lead directly to the recorder — no login, no signup. NotiProof's one-click recording flow eliminates every barrier.
+    </p>
+    <StatCallout stat="3–5x higher submission rates" context="When offering small incentives (discount code, gift card) alongside the recording request." />
+    <p>
+      <strong>3. Incentives (optional):</strong> Offering a small incentive — a discount code, gift card, or charitable donation — can increase video submission rates dramatically. NotiProof supports post-submission redirect URLs where you can deliver incentive codes automatically.
+    </p>
+
+    <h2 id="after-recording">What Happens After a Customer Records?</h2>
+    <p>
+      Recorded videos enter your NotiProof dashboard in a "pending review" state. You can preview each video, trim the start and end points, and enable or disable auto-generated captions. Once approved, videos become available for embedding via the <Link to="/product/testimonials-widget-reviews-widget/">testimonials widget</Link>.
+    </p>
+    <p>
+      Auto-generated transcriptions serve two purposes: <strong>accessibility</strong> (captions for deaf and hard-of-hearing viewers) and <strong>SEO</strong> (Google can index the transcript text). NotiProof also extracts a key quote from each transcript that you can use as a pull-quote alongside the video embed.
+    </p>
+    <KeyTakeaway>
+      Videos are auto-transcribed for accessibility and SEO. You can trim, caption, and approve before publishing — full quality control in the dashboard.
+    </KeyTakeaway>
+  </>
+);
+
+const tocSections = [
+  { id: "video-vs-text", label: "Why Are Video Testimonials More Effective?" },
+  { id: "browser-recording", label: "How Does Browser-Based Recording Work?" },
+  { id: "get-customers-to-record", label: "How Do You Get Customers to Record?" },
+  { id: "after-recording", label: "What Happens After Recording?" },
+];
 
 export default function VideoTestimonialRecorder() {
   return (
@@ -31,6 +94,8 @@ export default function VideoTestimonialRecorder() {
         "Automatic CDN hosting with embeddable widgets — no technical work",
         "Auto-generated captions and transcriptions for accessibility and SEO",
       ]}
+      deepDiveContent={deepDive}
+      deepDiveToc={tocSections}
       howItWorks={[
         { step: "Invite", desc: "Send customers a recording link via email or embed it on a thank-you page." },
         { step: "Record", desc: "Customers record directly in their browser with guided prompts to help them share their story." },
@@ -64,6 +129,7 @@ export default function VideoTestimonialRecorder() {
         { label: "Review Aggregation", href: "/product/review-aggregation-showcase-system/" },
       ]}
       resourceLinks={[
+        { label: "Video Testimonial Guide", href: "/resources/testimonials/video-testimonial-guide/", context: "Read our complete guide to recording and displaying video testimonials:" },
         { label: "Social Proof Examples", href: "/resources/social-proof/social-proof-example/", context: "See how video testimonials outperform text in real-world conversion examples:" },
         { label: "Testimonials Resources", href: "/resources/testimonials/", context: "Explore our complete guide to collecting and leveraging customer testimonials:" },
       ]}

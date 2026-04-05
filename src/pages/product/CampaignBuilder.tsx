@@ -1,5 +1,73 @@
 import { Zap, Target, Calendar, FlaskConical } from "lucide-react";
+import { Link } from "react-router-dom";
 import ProductFeaturePage from "@/components/ProductFeaturePage";
+import StatCallout from "@/components/StatCallout";
+import KeyTakeaway from "@/components/KeyTakeaway";
+
+const deepDive = (
+  <>
+    <h2 id="ab-testing">How Does A/B Testing Improve Social Proof Campaigns?</h2>
+    <p>
+      A/B testing eliminates guesswork from your social proof strategy. Instead of assuming that "Sarah from Austin just purchased" outperforms "12 people bought this today," you run both variants simultaneously, split traffic evenly, and let statistical significance determine the winner.
+    </p>
+    <p>
+      Create up to four variants per campaign, each with different messaging, design, positioning, or timing. NotiProof automatically splits traffic and tracks three metrics per variant: <strong>impression rate</strong>, <strong>click-through rate</strong>, and <strong>conversion rate</strong>.
+    </p>
+    <StatCallout stat="38% avg. performance gap" context="Winning A/B test variant outperforms loser by 38% in conversion rate (2,000+ tests)." />
+    <p>
+      That means every campaign you don't test is leaving significant revenue on the table. Read more about <Link to="/resources/conversion-analytics/ab-testing-social-proof/">A/B testing social proof</Link> in our comprehensive guide.
+    </p>
+    <KeyTakeaway>
+      A/B test every campaign. The winning variant outperforms the loser by 38% on average — that's free revenue you're leaving on the table without testing.
+    </KeyTakeaway>
+
+    <h2 id="targeting-rules">What Targeting Rules Can You Use?</h2>
+    <p>
+      Generic, site-wide notifications waste potential. The Campaign Builder supports granular targeting rules that let you show different notifications to different visitors based on context:
+    </p>
+    <p>
+      <strong>URL patterns:</strong> Show purchase alerts only on product pages, signup notifications on pricing pages, and review widgets on the homepage. Use exact URLs, wildcards, or regex.
+    </p>
+    <p>
+      <strong>Geographic location:</strong> Display city-level social proof for local relevance, or target specific countries with language-appropriate messaging.
+    </p>
+    <p>
+      <strong>Device type:</strong> Customize notification size and position for mobile vs. desktop.
+    </p>
+    <p>
+      <strong>Referral source:</strong> Show different messages to visitors from Google vs. your email list. UTM parameters can further refine targeting.
+    </p>
+    <p>
+      <strong>Behavioral triggers:</strong> Display notifications based on scroll depth, time on page, or exit intent.
+    </p>
+
+    <h2 id="campaign-schedules">How Do Campaign Schedules Work?</h2>
+    <p>
+      Not every campaign should run 24/7. The Campaign Builder supports three scheduling modes: <strong>always-on</strong>, <strong>date-bounded</strong> (starts and stops on specific dates), and <strong>recurring</strong> (specific days/hours).
+    </p>
+    <p>
+      Date-bounded campaigns are ideal for seasonal promotions — Black Friday, product launches, flash sales. Recurring schedules enable time-sensitive strategies based on your peak conversion hours. NotiProof uses the visitor's local timezone for scheduling.
+    </p>
+    <KeyTakeaway>
+      Use date-bounded campaigns for promotions and recurring schedules for peak hours. All scheduling uses the visitor's local timezone automatically.
+    </KeyTakeaway>
+
+    <h2 id="multiple-campaigns">Can You Run Multiple Campaigns Simultaneously?</h2>
+    <p>
+      Yes, and this is where the Campaign Builder's <strong>priority system</strong> becomes important. When multiple active campaigns target the same page, NotiProof uses priority scores (1–100) and display weight percentages to determine which notifications appear.
+    </p>
+    <p>
+      For example, you might run three simultaneous campaigns on your product pages: a purchase alert (priority 90, weight 50%), a visitor counter (priority 70, weight 30%), and a review notification (priority 50, weight 20%). The <Link to="/product/analytics-conversion-insights/">analytics dashboard</Link> tracks each campaign independently.
+    </p>
+  </>
+);
+
+const tocSections = [
+  { id: "ab-testing", label: "How Does A/B Testing Improve Campaigns?" },
+  { id: "targeting-rules", label: "What Targeting Rules Can You Use?" },
+  { id: "campaign-schedules", label: "How Do Campaign Schedules Work?" },
+  { id: "multiple-campaigns", label: "Can You Run Multiple Campaigns?" },
+];
 
 export default function CampaignBuilder() {
   return (
@@ -31,6 +99,8 @@ export default function CampaignBuilder() {
         "Schedule campaigns in advance with automatic start and end dates",
         "Segment audiences and show personalized social proof to each group",
       ]}
+      deepDiveContent={deepDive}
+      deepDiveToc={tocSections}
       howItWorks={[
         { step: "Create", desc: "Use the visual builder to design notification campaigns with custom rules." },
         { step: "Target", desc: "Set targeting rules based on visitor behavior, location, device, and URL patterns." },
@@ -64,6 +134,7 @@ export default function CampaignBuilder() {
         { label: "Integrations", href: "/product/integrations-ecosystem/" },
       ]}
       resourceLinks={[
+        { label: "A/B Testing Social Proof", href: "/resources/conversion-analytics/ab-testing-social-proof/", context: "Learn what to test and how to run social proof A/B tests:" },
         { label: "Social Proof in Marketing", href: "/resources/social-proof/social-proof-in-marketing/", context: "Learn how targeted campaigns fit into your broader social proof marketing strategy:" },
         { label: "Conversion Analytics Hub", href: "/resources/conversion-analytics/", context: "Measure the impact of your campaigns with proper conversion analytics:" },
       ]}

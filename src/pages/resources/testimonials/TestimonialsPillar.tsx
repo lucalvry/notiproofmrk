@@ -2,10 +2,10 @@ import ResourceArticle from "@/components/ResourceArticle";
 import { Link } from "react-router-dom";
 
 const clusterLinks = [
-  { title: "Testimonials Collection", href: "/product/testimonials-collection-text-image-video/", desc: "Collect text, image & video testimonials automatically." },
-  { title: "Video Testimonial Recorder", href: "/product/video-testimonial-recorder/", desc: "Browser-based video recording for customers." },
-  { title: "Testimonials Widget", href: "/product/testimonials-widget-reviews-widget/", desc: "Embeddable, customizable testimonial widgets." },
-  { title: "Social Proof Examples", href: "/resources/social-proof/social-proof-example/", desc: "See how testimonials drive real-world results." },
+  { title: "How to Collect Testimonials That Convert", href: "/resources/testimonials/how-to-collect-testimonials/", desc: "Automated workflows and timing strategies." },
+  { title: "Video Testimonials: Complete Guide", href: "/resources/testimonials/video-testimonial-guide/", desc: "Record and display video testimonials." },
+  { title: "Testimonial Page Design Guide", href: "/resources/testimonials/testimonial-page-design/", desc: "Layouts and design for maximum trust." },
+  { title: "Testimonial Request Email Templates", href: "/resources/testimonials/testimonial-request-email-templates/", desc: "Email templates that get 3–5× more replies." },
 ];
 
 const tocSections = [

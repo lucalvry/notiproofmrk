@@ -1,5 +1,61 @@
 import { BarChart3, TrendingUp, PieChart, FileText } from "lucide-react";
+import { Link } from "react-router-dom";
 import ProductFeaturePage from "@/components/ProductFeaturePage";
+import StatCallout from "@/components/StatCallout";
+import KeyTakeaway from "@/components/KeyTakeaway";
+
+const deepDive = (
+  <>
+    <h2 id="what-metrics">What Conversion Metrics Should You Track?</h2>
+    <p>
+      Effective social proof measurement requires tracking metrics at three levels: <strong>engagement</strong> (impressions and clicks), <strong>conversion</strong> (goal completions and conversion rate), and <strong>revenue</strong> (attributed revenue and ROI). Most social proof tools only track impressions and clicks. NotiProof tracks all three.
+    </p>
+    <p>
+      <strong>Impressions</strong> measure how many times a notification was displayed. <strong>Click-through rate (CTR)</strong> measures the percentage of viewers who interacted. <strong>Conversion lift</strong> compares the conversion rate of visitors who saw notifications against a holdback control group — the most important metric because it isolates NotiProof's impact.
+    </p>
+    <KeyTakeaway>
+      Track three levels: engagement (impressions/clicks), conversion (lift vs. control group), and revenue (attributed dollars and ROI). Don't stop at vanity metrics.
+    </KeyTakeaway>
+
+    <h2 id="conversion-lift">How Does Conversion Lift Measurement Work?</h2>
+    <p>
+      NotiProof uses a <strong>control group methodology</strong> to measure conversion lift accurately. A configurable percentage of visitors (typically 5–10%) are placed in a holdback group that sees no notifications. The conversion rate difference is your conversion lift.
+    </p>
+    <p>
+      This approach is significantly more rigorous than simple before/after comparisons. NotiProof's methodology matches what companies like Google and Facebook use in their advertising effectiveness studies.
+    </p>
+    <StatCallout stat="95% confidence threshold" context="NotiProof displays statistical confidence levels so you know when results are significant." />
+    <p>
+      We recommend running measurement periods of at least 7 days and 1,000+ visitors in each group before drawing conclusions.
+    </p>
+
+    <h2 id="per-campaign">How Do Per-Campaign Analytics Help Optimization?</h2>
+    <p>
+      Aggregate metrics tell you whether NotiProof is working. Per-campaign analytics tell you <strong>which specific campaigns</strong> are working. NotiProof's dashboard breaks down every metric by campaign, notification type, page, device, and geographic region.
+    </p>
+    <p>
+      Common insights: discovering that purchase alerts outperform signup notifications on product pages, finding that mobile conversion lift is lower (adjust mobile notification design), or identifying that notifications perform poorly on blog pages (restrict targeting to commercial pages).
+    </p>
+    <p>
+      The <Link to="/product/campaign-builder/">Campaign Builder's A/B testing</Link> generates its own analytics — per-variant metrics with statistical significance indicators. Together, they form a continuous optimization loop.
+    </p>
+    <KeyTakeaway>
+      Use per-campaign analytics to identify which notification types and pages drive the most conversions. Combine with A/B testing for continuous optimization.
+    </KeyTakeaway>
+
+    <h2 id="export-data">Can You Export Analytics Data?</h2>
+    <p>
+      Yes. NotiProof supports CSV export for all analytics data. For automated reporting, NotiProof's GA4 integration sends notification events directly to Google Analytics, where they appear alongside your other marketing channel data in a single unified view.
+    </p>
+  </>
+);
+
+const tocSections = [
+  { id: "what-metrics", label: "What Conversion Metrics Should You Track?" },
+  { id: "conversion-lift", label: "How Does Conversion Lift Measurement Work?" },
+  { id: "per-campaign", label: "How Do Per-Campaign Analytics Help?" },
+  { id: "export-data", label: "Can You Export Analytics Data?" },
+];
 
 export default function AnalyticsConversionInsights() {
   return (
@@ -31,6 +87,8 @@ export default function AnalyticsConversionInsights() {
         "Built-in A/B testing with statistical significance reporting",
         "Data-driven optimization: double down on what works, cut what doesn't",
       ]}
+      deepDiveContent={deepDive}
+      deepDiveToc={tocSections}
       howItWorks={[
         { step: "Track", desc: "NotiProof automatically tracks every impression, click, and conversion." },
         { step: "Analyze", desc: "View dashboards with real-time data on notification performance and conversion lift." },
@@ -64,7 +122,8 @@ export default function AnalyticsConversionInsights() {
         { label: "Integrations", href: "/product/integrations-ecosystem/" },
       ]}
       resourceLinks={[
-        { label: "Social Proof in Marketing", href: "/resources/social-proof/social-proof-in-marketing/", context: "Analytics are essential to measuring your marketing ROI — read our guide on" },
+        { label: "Measuring Social Proof ROI", href: "/resources/conversion-analytics/measuring-social-proof-roi/", context: "Learn exactly how to calculate the return on investment of your social proof strategy:" },
+        { label: "Conversion Rate Benchmarks", href: "/resources/conversion-analytics/conversion-rate-benchmarks/", context: "Compare your performance against industry conversion rate benchmarks:" },
         { label: "Conversion Analytics Hub", href: "/resources/conversion-analytics/", context: "Explore all our resources on measuring and optimizing conversion rates:" },
       ]}
     />

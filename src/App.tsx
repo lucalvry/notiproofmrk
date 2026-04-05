@@ -55,13 +55,39 @@ const SocialProofInMarketing = lazy(() => import("./pages/resources/social-proof
 const SocialProofForWebsites = lazy(() => import("./pages/resources/social-proof/SocialProofForWebsites"));
 const TypesOfSocialProof = lazy(() => import("./pages/resources/social-proof/TypesOfSocialProof"));
 const SocialProofPsychology = lazy(() => import("./pages/resources/social-proof/SocialProofPsychology"));
+
+// Reviews cluster
 const ReviewsPillar = lazy(() => import("./pages/resources/reviews/ReviewsPillar"));
-const ConversionAnalyticsPillar = lazy(() => import("./pages/resources/conversion-analytics/ConversionAnalyticsPillar"));
-const WebsiteTrustPillar = lazy(() => import("./pages/resources/website-trust/WebsiteTrustPillar"));
+const HowToCollectGoogleReviews = lazy(() => import("./pages/resources/reviews/HowToCollectGoogleReviews"));
+const ReviewAggregationGuide = lazy(() => import("./pages/resources/reviews/ReviewAggregationGuide"));
+const RespondingToNegativeReviews = lazy(() => import("./pages/resources/reviews/RespondingToNegativeReviews"));
+const ReviewWidgetsForWebsites = lazy(() => import("./pages/resources/reviews/ReviewWidgetsForWebsites"));
+
+// Testimonials cluster
 const TestimonialsPillar = lazy(() => import("./pages/resources/testimonials/TestimonialsPillar"));
+const HowToCollectTestimonials = lazy(() => import("./pages/resources/testimonials/HowToCollectTestimonials"));
+const VideoTestimonialGuide = lazy(() => import("./pages/resources/testimonials/VideoTestimonialGuide"));
+const TestimonialPageDesign = lazy(() => import("./pages/resources/testimonials/TestimonialPageDesign"));
+const TestimonialRequestEmailTemplates = lazy(() => import("./pages/resources/testimonials/TestimonialRequestEmailTemplates"));
+
+// Conversion Analytics cluster
+const ConversionAnalyticsPillar = lazy(() => import("./pages/resources/conversion-analytics/ConversionAnalyticsPillar"));
+const ABTestingSocialProof = lazy(() => import("./pages/resources/conversion-analytics/ABTestingSocialProof"));
+const ConversionRateBenchmarks = lazy(() => import("./pages/resources/conversion-analytics/ConversionRateBenchmarks"));
+const MeasuringSocialProofROI = lazy(() => import("./pages/resources/conversion-analytics/MeasuringSocialProofROI"));
+const HeatmapAnalyticsGuide = lazy(() => import("./pages/resources/conversion-analytics/HeatmapAnalyticsGuide"));
+
+// Website Trust cluster
+const WebsiteTrustPillar = lazy(() => import("./pages/resources/website-trust/WebsiteTrustPillar"));
+const TrustSignalsForEcommerce = lazy(() => import("./pages/resources/website-trust/TrustSignalsForEcommerce"));
+const TrustBadgesGuide = lazy(() => import("./pages/resources/website-trust/TrustBadgesGuide"));
+const BuildingWebsiteCredibility = lazy(() => import("./pages/resources/website-trust/BuildingWebsiteCredibility"));
+const FOMOMarketingGuide = lazy(() => import("./pages/resources/website-trust/FOMOMarketingGuide"));
+
 const AuthorProfile = lazy(() => import("./pages/resources/AuthorProfile"));
 const HelpCenter = lazy(() => import("./pages/resources/HelpCenter"));
 const Glossary = lazy(() => import("./pages/resources/Glossary"));
+const TopicDetail = lazy(() => import("./pages/resources/TopicDetail"));
 
 // SEO Landing pages
 const BestSocialProofSoftware = lazy(() => import("./pages/BestSocialProofSoftware"));
@@ -91,13 +117,9 @@ const App = () => (
         <Routes>
           <Route element={<Layout />}>
             <Route path="/" element={<Index />} />
-            <Route path="/pricing" element={<Pricing />} />
             <Route path="/pricing/" element={<Pricing />} />
-            <Route path="/integrations" element={<Integrations />} />
             <Route path="/integrations/" element={<Integrations />} />
-            <Route path="/use-cases" element={<UseCases />} />
             <Route path="/use-cases/" element={<UseCases />} />
-            <Route path="/testimonials" element={<Testimonials />} />
             <Route path="/testimonials/" element={<Testimonials />} />
 
             {/* Product */}
@@ -130,7 +152,7 @@ const App = () => (
             <Route path="/company/contact/" element={<SuspenseWrap><Contact /></SuspenseWrap>} />
             <Route path="/company/careers/" element={<SuspenseWrap><Careers /></SuspenseWrap>} />
 
-            {/* Resources */}
+            {/* Resources — Social Proof cluster */}
             <Route path="/resources/" element={<SuspenseWrap><ResourcesHub /></SuspenseWrap>} />
             <Route path="/resources/blog/" element={<SuspenseWrap><Blog /></SuspenseWrap>} />
             <Route path="/resources/guides/" element={<SuspenseWrap><GuidesHub /></SuspenseWrap>} />
@@ -141,13 +163,40 @@ const App = () => (
             <Route path="/resources/social-proof/social-proof-for-websites/" element={<SuspenseWrap><SocialProofForWebsites /></SuspenseWrap>} />
             <Route path="/resources/social-proof/types-of-social-proof/" element={<SuspenseWrap><TypesOfSocialProof /></SuspenseWrap>} />
             <Route path="/resources/social-proof/social-proof-psychology/" element={<SuspenseWrap><SocialProofPsychology /></SuspenseWrap>} />
+
+            {/* Resources — Reviews cluster */}
             <Route path="/resources/reviews/" element={<SuspenseWrap><ReviewsPillar /></SuspenseWrap>} />
-            <Route path="/resources/conversion-analytics/" element={<SuspenseWrap><ConversionAnalyticsPillar /></SuspenseWrap>} />
-            <Route path="/resources/website-trust/" element={<SuspenseWrap><WebsiteTrustPillar /></SuspenseWrap>} />
+            <Route path="/resources/reviews/how-to-collect-google-reviews/" element={<SuspenseWrap><HowToCollectGoogleReviews /></SuspenseWrap>} />
+            <Route path="/resources/reviews/review-aggregation-guide/" element={<SuspenseWrap><ReviewAggregationGuide /></SuspenseWrap>} />
+            <Route path="/resources/reviews/responding-to-negative-reviews/" element={<SuspenseWrap><RespondingToNegativeReviews /></SuspenseWrap>} />
+            <Route path="/resources/reviews/review-widgets-for-websites/" element={<SuspenseWrap><ReviewWidgetsForWebsites /></SuspenseWrap>} />
+
+            {/* Resources — Testimonials cluster */}
             <Route path="/resources/testimonials/" element={<SuspenseWrap><TestimonialsPillar /></SuspenseWrap>} />
+            <Route path="/resources/testimonials/how-to-collect-testimonials/" element={<SuspenseWrap><HowToCollectTestimonials /></SuspenseWrap>} />
+            <Route path="/resources/testimonials/video-testimonial-guide/" element={<SuspenseWrap><VideoTestimonialGuide /></SuspenseWrap>} />
+            <Route path="/resources/testimonials/testimonial-page-design/" element={<SuspenseWrap><TestimonialPageDesign /></SuspenseWrap>} />
+            <Route path="/resources/testimonials/testimonial-request-email-templates/" element={<SuspenseWrap><TestimonialRequestEmailTemplates /></SuspenseWrap>} />
+
+            {/* Resources — Conversion Analytics cluster */}
+            <Route path="/resources/conversion-analytics/" element={<SuspenseWrap><ConversionAnalyticsPillar /></SuspenseWrap>} />
+            <Route path="/resources/conversion-analytics/ab-testing-social-proof/" element={<SuspenseWrap><ABTestingSocialProof /></SuspenseWrap>} />
+            <Route path="/resources/conversion-analytics/conversion-rate-benchmarks/" element={<SuspenseWrap><ConversionRateBenchmarks /></SuspenseWrap>} />
+            <Route path="/resources/conversion-analytics/measuring-social-proof-roi/" element={<SuspenseWrap><MeasuringSocialProofROI /></SuspenseWrap>} />
+            <Route path="/resources/conversion-analytics/heatmap-analytics-guide/" element={<SuspenseWrap><HeatmapAnalyticsGuide /></SuspenseWrap>} />
+
+            {/* Resources — Website Trust cluster */}
+            <Route path="/resources/website-trust/" element={<SuspenseWrap><WebsiteTrustPillar /></SuspenseWrap>} />
+            <Route path="/resources/website-trust/trust-signals-for-ecommerce/" element={<SuspenseWrap><TrustSignalsForEcommerce /></SuspenseWrap>} />
+            <Route path="/resources/website-trust/trust-badges-guide/" element={<SuspenseWrap><TrustBadgesGuide /></SuspenseWrap>} />
+            <Route path="/resources/website-trust/building-website-credibility/" element={<SuspenseWrap><BuildingWebsiteCredibility /></SuspenseWrap>} />
+            <Route path="/resources/website-trust/fomo-marketing-guide/" element={<SuspenseWrap><FOMOMarketingGuide /></SuspenseWrap>} />
+
+            {/* Resources — Other */}
             <Route path="/resources/author/:slug/" element={<SuspenseWrap><AuthorProfile /></SuspenseWrap>} />
             <Route path="/resources/help-center/" element={<SuspenseWrap><HelpCenter /></SuspenseWrap>} />
             <Route path="/resources/glossary/" element={<SuspenseWrap><Glossary /></SuspenseWrap>} />
+            <Route path="/resources/blog/:topicId/" element={<SuspenseWrap><TopicDetail /></SuspenseWrap>} />
 
             {/* SEO Landing pages */}
             <Route path="/best-social-proof-software/" element={<SuspenseWrap><BestSocialProofSoftware /></SuspenseWrap>} />
@@ -161,8 +210,8 @@ const App = () => (
             {/* Redirect */}
             <Route path="/home/" element={<Navigate to="/" replace />} />
             <Route path="/home" element={<Navigate to="/" replace />} />
+            <Route path="*" element={<NotFound />} />
           </Route>
-          <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>

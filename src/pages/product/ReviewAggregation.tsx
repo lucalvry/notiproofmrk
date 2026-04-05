@@ -1,5 +1,66 @@
 import { Star, RefreshCw, Search, Layers } from "lucide-react";
+import { Link } from "react-router-dom";
 import ProductFeaturePage from "@/components/ProductFeaturePage";
+import StatCallout from "@/components/StatCallout";
+import KeyTakeaway from "@/components/KeyTakeaway";
+
+const deepDive = (
+  <>
+    <h2 id="which-platforms">Which Review Platforms Should You Aggregate?</h2>
+    <p>
+      The platforms you aggregate depend on your business type, but most businesses should prioritize three to five sources. For <strong>e-commerce</strong>, the critical platforms are Google Business Reviews, Amazon, Trustpilot, and your own on-site reviews. For <strong>SaaS</strong>, focus on G2, Capterra, Product Hunt, and Trustpilot. For <strong>local businesses</strong>, Google Business Profile and Yelp carry the most weight.
+    </p>
+    <p>
+      NotiProof connects to 15+ review platforms including Google, Trustpilot, G2, Capterra, Yelp, Facebook, Product Hunt, Tripadvisor, Clutch, and more. Each connection syncs reviews automatically on your configured schedule.
+    </p>
+    <StatCallout stat="87% of consumers" context="Read online reviews for local businesses (BrightLocal 2024 Consumer Review Survey)." />
+    <p>
+      73% say they only pay attention to reviews written in the last month. This recency bias makes auto-sync critical — stale reviews on your website undermine trust rather than build it.
+    </p>
+
+    <h2 id="seo-impact">How Does Review Aggregation Improve SEO?</h2>
+    <p>
+      Review aggregation directly impacts search visibility through <strong>structured data markup</strong>. NotiProof's review widgets automatically include JSON-LD schema — the format Google recommends — which enables <strong>rich snippet stars</strong> to appear alongside your pages in search results.
+    </p>
+    <StatCallout stat="35% higher CTR" context="Pages with review rich snippet stars vs. plain listings (Search Engine Journal 2023)." />
+    <p>
+      Beyond rich snippets, aggregated reviews add unique, keyword-rich user-generated content to your pages. Each review contains natural language that customers use to describe your product — terms that align with how potential buyers search.
+    </p>
+    <p>
+      NotiProof's schema implementation follows Google's <Link to="/resources/reviews/review-aggregation-guide/">review aggregation guidelines</Link> precisely: it includes aggregate rating, review count, individual review author names, dates, and text.
+    </p>
+    <KeyTakeaway>
+      Review aggregation with proper JSON-LD schema earns rich snippet stars in Google (35% higher CTR) and adds keyword-rich UGC to your pages — a double SEO win.
+    </KeyTakeaway>
+
+    <h2 id="curate-display">How Do You Curate and Display Aggregated Reviews?</h2>
+    <p>
+      Not every review belongs on your homepage. NotiProof's curation tools let you filter reviews by star rating, platform, recency, keyword, and language. You can create curated collections — "Homepage Hero Reviews," "Product Page Reviews," or "Enterprise Social Proof."
+    </p>
+    <p>
+      Display options include grid, carousel, masonry wall, list, and featured single-review formats. Each format is fully customizable. The widget renders responsively and can be embedded on any page with a single HTML snippet.
+    </p>
+
+    <h2 id="negative-reviews">What About Negative Reviews in the Aggregate?</h2>
+    <p>
+      Negative reviews are a natural part of any honest review profile, and research shows that a perfect 5.0 rating actually hurts credibility.
+    </p>
+    <StatCallout stat="4.0 – 4.7 rating sweet spot" context="Purchase probability peaks in this range — 5.0 triggers skepticism (Spiegel Research Center)." />
+    <p>
+      NotiProof lets you set a minimum star threshold for displayed reviews (e.g., show only 4-star and above), but we recommend including occasional 4-star reviews to maintain authenticity. Reviews below your threshold are still captured in the dashboard for monitoring sentiment.
+    </p>
+    <KeyTakeaway>
+      Don't hide all negative reviews — a 4.0–4.7 range converts better than a perfect 5.0. Use NotiProof's threshold filter to show 4+ stars while monitoring everything in the dashboard.
+    </KeyTakeaway>
+  </>
+);
+
+const tocSections = [
+  { id: "which-platforms", label: "Which Platforms Should You Aggregate?" },
+  { id: "seo-impact", label: "How Does Aggregation Improve SEO?" },
+  { id: "curate-display", label: "How Do You Curate and Display Reviews?" },
+  { id: "negative-reviews", label: "What About Negative Reviews?" },
+];
 
 export default function ReviewAggregation() {
   return (
@@ -31,6 +92,8 @@ export default function ReviewAggregation() {
         "Built-in JSON-LD schema gives you rich snippet stars in search results",
         "Curate and filter to showcase your best reviews in a consistent, branded format",
       ]}
+      deepDiveContent={deepDive}
+      deepDiveToc={tocSections}
       howItWorks={[
         { step: "Connect", desc: "Link your Google, Trustpilot, G2, and other review accounts to NotiProof." },
         { step: "Aggregate", desc: "Reviews are automatically pulled and organized into a unified dashboard." },
@@ -64,7 +127,8 @@ export default function ReviewAggregation() {
         { label: "Social Proof Notifications", href: "/product/social-proof-notifications/" },
       ]}
       resourceLinks={[
-        { label: "Reviews Hub", href: "/resources/reviews/", context: "Learn everything about collecting, managing, and leveraging customer reviews:" },
+        { label: "Review Aggregation Guide", href: "/resources/reviews/review-aggregation-guide/", context: "Learn everything about combining reviews from multiple platforms:" },
+        { label: "Reviews Hub", href: "/resources/reviews/", context: "Explore our complete guide to collecting, managing, and leveraging customer reviews:" },
         { label: "Social Proof for Websites", href: "/resources/social-proof/social-proof-for-websites/", context: "See how review aggregation fits into a complete website trust strategy:" },
       ]}
     />

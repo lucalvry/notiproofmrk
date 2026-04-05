@@ -2,10 +2,10 @@ import ResourceArticle from "@/components/ResourceArticle";
 import { Link } from "react-router-dom";
 
 const clusterLinks = [
-  { title: "Review Aggregation System", href: "/product/review-aggregation-showcase-system/", desc: "Aggregate reviews from 15+ platforms into one widget." },
-  { title: "Testimonials Collection", href: "/product/testimonials-collection-text-image-video/", desc: "Collect text, image & video testimonials." },
-  { title: "Social Proof Examples", href: "/resources/social-proof/social-proof-example/", desc: "Real-world examples of reviews driving conversions." },
-  { title: "Types of Social Proof", href: "/resources/social-proof/types-of-social-proof/", desc: "How reviews fit into the social proof landscape." },
+  { title: "How to Get More Google Reviews", href: "/resources/reviews/how-to-collect-google-reviews/", desc: "Proven strategies to collect more Google reviews." },
+  { title: "Review Aggregation Guide", href: "/resources/reviews/review-aggregation-guide/", desc: "Combine reviews from multiple platforms." },
+  { title: "Responding to Negative Reviews", href: "/resources/reviews/responding-to-negative-reviews/", desc: "Templates and strategies for negative feedback." },
+  { title: "Best Review Widgets for Websites", href: "/resources/reviews/review-widgets-for-websites/", desc: "Widget types, placement, and design guide." },
 ];
 
 const tocSections = [

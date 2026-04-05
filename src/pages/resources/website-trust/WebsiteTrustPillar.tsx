@@ -2,10 +2,10 @@ import ResourceArticle from "@/components/ResourceArticle";
 import { Link } from "react-router-dom";
 
 const clusterLinks = [
-  { title: "Social Proof for Websites", href: "/resources/social-proof/social-proof-for-websites/", desc: "Complete implementation guide for website trust signals." },
-  { title: "Types of Social Proof", href: "/resources/social-proof/types-of-social-proof/", desc: "All the trust signal types you can deploy." },
-  { title: "Social Proof Psychology", href: "/resources/social-proof/social-proof-psychology/", desc: "The science behind why trust signals work." },
-  { title: "Testimonials Widget", href: "/product/testimonials-widget-reviews-widget/", desc: "Display trust-building testimonial widgets." },
+  { title: "Trust Signals for E-commerce", href: "/resources/website-trust/trust-signals-for-ecommerce/", desc: "Essential trust signals for online stores." },
+  { title: "Trust Badges Guide", href: "/resources/website-trust/trust-badges-guide/", desc: "Which badges matter and where to place them." },
+  { title: "Building Website Credibility", href: "/resources/website-trust/building-website-credibility/", desc: "Build trust from scratch with zero reviews." },
+  { title: "FOMO Marketing Guide", href: "/resources/website-trust/fomo-marketing-guide/", desc: "Ethical urgency with counters and alerts." },
 ];
 
 const tocSections = [

@@ -24,7 +24,7 @@ export default function SEOHead({
     <Helmet>
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
-      {noindex && <meta name="robots" content="noindex,nofollow" />}
+      <meta name="robots" content={noindex ? "noindex,nofollow" : "index,follow"} />
       <link rel="canonical" href={canonicalUrl} />
 
       <meta property="og:title" content={fullTitle} />

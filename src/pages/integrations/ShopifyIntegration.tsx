@@ -43,6 +43,15 @@ export default function ShopifyIntegration() {
         { q: "Can I show real order data?", a: "Yes. NotiProof syncs with your Shopify orders and displays real purchase data." },
         { q: "Is it compatible with Shopify Plus?", a: "Yes. We fully support Shopify Plus with additional enterprise features." },
       ]}
+      resourceLinks={[
+        { label: "Social Proof for E-commerce: Complete Guide", href: "/resources/social-proof/social-proof-for-websites/", context: "Learn how social proof notifications drive purchases on e-commerce stores." },
+        { label: "Types of Social Proof That Convert", href: "/resources/social-proof/types-of-social-proof/", context: "Discover which notification types work best for Shopify stores." },
+        { label: "Social Proof Examples", href: "/resources/social-proof/social-proof-example/", context: "See real examples of social proof increasing Shopify conversion rates." },
+      ]}
+      relatedUseCases={[
+        { label: "E-commerce", href: "/use-cases/ecommerce/" },
+        { label: "Local Business", href: "/use-cases/local-business-social-proof-convert-website-visitors/" },
+      ]}
     />
   );
 }

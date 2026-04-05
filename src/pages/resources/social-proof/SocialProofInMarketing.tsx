@@ -30,7 +30,7 @@ export default function SocialProofInMarketing() {
       updatedDate="2025-03-08"
       readingTime="14 min read"
       tocSections={tocSections}
-      pillarLink={{ label: "Social Proof Guide", href: "/resources/social-proof/" }}
+      pillarLink={{ label: "Social Proof", href: "/resources/blog/social-proof/" }}
       featuredImage={featuredImg}
       relatedArticles={r}
       content={

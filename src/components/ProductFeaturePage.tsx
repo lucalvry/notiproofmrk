@@ -5,6 +5,9 @@ import { Link } from "react-router-dom";
 import { LucideIcon } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
 import CTASection from "@/components/CTASection";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import ExpertAttribution from "@/components/ExpertAttribution";
+import TableOfContents, { TocSection } from "@/components/TableOfContents";
 
 interface FAQ {
   q: string;
@@ -44,6 +47,8 @@ interface ProductFeaturePageProps {
   withNotiproof?: string[];
   howItWorks: { step: string; desc: string }[];
   featureDetails?: FeatureDetail[];
+  deepDiveContent?: React.ReactNode;
+  deepDiveToc?: TocSection[];
   testimonial?: Testimonial;
   useCases: { title: string; desc: string; href: string }[];
   faqs: FAQ[];
@@ -60,7 +65,7 @@ const fadeUp = {
 
 export default function ProductFeaturePage({
   metaTitle, metaDescription, canonical, headline, description, descriptionContent, icon: Icon,
-  benefits, withoutNotiproof, withNotiproof, howItWorks, featureDetails,
+  benefits, withoutNotiproof, withNotiproof, howItWorks, featureDetails, deepDiveContent, deepDiveToc,
   testimonial, faqs, relatedProducts, resourceLinks,
 }: ProductFeaturePageProps) {
   const faqSchema = {
@@ -99,8 +104,11 @@ export default function ProductFeaturePage({
     <>
       <SEOHead title={metaTitle} description={metaDescription} canonical={canonical} schema={[webPageSchema, faqSchema, softwareSchema]} />
 
+      {/* Breadcrumbs */}
+      <Breadcrumbs />
+
       {/* Hero */}
-      <section className="section-padding">
+      <section className="section-padding pt-4">
         <div className="container-tight">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div {...fadeUp}>
@@ -122,7 +130,7 @@ export default function ProductFeaturePage({
                 </Button>
               </div>
             </motion.div>
-            {/* Visual mockup placeholder */}
+            {/* Visual mockup */}
             <motion.div {...fadeUp} transition={{ duration: 0.5, delay: 0.2 }}>
               <div className="bg-gradient-to-br from-primary/5 to-primary/10 border border-border rounded-2xl p-8 aspect-[4/3] flex items-center justify-center">
                 <div className="bg-card border border-border rounded-xl p-6 shadow-lg max-w-xs w-full">
@@ -141,6 +149,37 @@ export default function ProductFeaturePage({
           </div>
         </div>
       </section>
+
+      {/* Deep Dive Content with TOC sidebar + Expert Attribution */}
+      {deepDiveContent && (
+        <section className="section-padding">
+          <div className="container-tight">
+            <ExpertAttribution />
+            <div className="flex gap-10">
+              {/* Sticky TOC sidebar — desktop only */}
+              {deepDiveToc && deepDiveToc.length > 0 && (
+                <aside className="hidden lg:block w-64 shrink-0">
+                  <div className="sticky top-24">
+                    <TableOfContents sections={deepDiveToc} />
+                  </div>
+                </aside>
+              )}
+              {/* Main content */}
+              <div className="min-w-0 flex-1">
+                {/* Mobile TOC */}
+                {deepDiveToc && deepDiveToc.length > 0 && (
+                  <div className="lg:hidden">
+                    <TableOfContents sections={deepDiveToc} />
+                  </div>
+                )}
+                <div className="prose prose-lg prose-headings:font-bold prose-headings:text-foreground prose-p:text-muted-foreground prose-a:text-primary prose-a:font-semibold prose-li:text-muted-foreground prose-strong:text-foreground max-w-none [&>h2]:scroll-mt-28 [&>h2+p]:text-lg [&>h2+p]:font-medium [&>h2+p]:text-foreground/80">
+                  {deepDiveContent}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Without / With Comparison OR Benefits */}
       <section className="section-padding bg-surface">

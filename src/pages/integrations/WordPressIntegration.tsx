@@ -43,6 +43,16 @@ export default function WordPressIntegration() {
         { q: "Will it conflict with caching plugins?", a: "No. NotiProof loads dynamically and works perfectly with WP Rocket, W3 Total Cache, etc." },
         { q: "Can I use shortcodes to embed widgets?", a: "Yes. Use shortcodes to place testimonial walls, review widgets, and counters anywhere on your site." },
       ]}
+      resourceLinks={[
+        { label: "What Is Social Proof?", href: "/resources/social-proof/what-is-social-proof/", context: "Understand the psychology behind social proof and why it works on WordPress sites." },
+        { label: "Social Proof in Marketing", href: "/resources/social-proof/social-proof-in-marketing/", context: "Learn how to use social proof as part of your WordPress marketing strategy." },
+        { label: "Building Website Trust", href: "/resources/website-trust/", context: "Discover all the trust signals you can add to your WordPress site." },
+      ]}
+      relatedUseCases={[
+        { label: "Local Business", href: "/use-cases/local-business-social-proof-convert-website-visitors/" },
+        { label: "SaaS", href: "/use-cases/saas-social-proof-tools-drive-sign-ups/" },
+        { label: "Agencies", href: "/use-cases/social-proof-for-marketing-agencies-impress-clients/" },
+      ]}
     />
   );
 }

@@ -1,5 +1,53 @@
 import { Link as LinkIcon, Plug, Workflow, Settings } from "lucide-react";
+import { Link } from "react-router-dom";
 import ProductFeaturePage from "@/components/ProductFeaturePage";
+import StatCallout from "@/components/StatCallout";
+import KeyTakeaway from "@/components/KeyTakeaway";
+
+const deepDive = (
+  <>
+    <h2 id="platforms">What Platforms Does NotiProof Integrate With?</h2>
+    <p>
+      NotiProof connects with 38+ platforms across six categories: <strong>e-commerce</strong> (Shopify, WooCommerce, BigCommerce, Magento, Gumroad), <strong>payments</strong> (Stripe, PayPal, Paddle, Lemon Squeezy), <strong>CRM & marketing</strong> (HubSpot, Salesforce, Mailchimp, Klaviyo, ActiveCampaign), <strong>analytics</strong> (Google Analytics 4, Mixpanel, Segment, Amplitude), <strong>reviews</strong> (Google Business, Trustpilot, G2, Capterra, Yelp), and <strong>automation</strong> (Zapier, Make/Integromat, webhooks, REST API).
+    </p>
+    <StatCallout stat="38+ integrations" context="All included on every plan — including the free tier. No per-integration fees." />
+    <p>
+      This philosophy ensures that businesses of any size can connect NotiProof to their existing stack without worrying about costs scaling with complexity.
+    </p>
+
+    <h2 id="ecommerce-integrations">How Do E-Commerce Integrations Power Notifications?</h2>
+    <p>
+      When you connect <Link to="/integrations/shopify/">Shopify</Link> or WooCommerce to NotiProof, the integration creates a real-time data pipeline. Every order event — new purchase, order fulfilled, review submitted — flows into NotiProof within seconds and is automatically transformed into display-ready notifications.
+    </p>
+    <p>
+      For Shopify specifically, NotiProof's integration uses Shopify's webhook system. The setup takes under 2 minutes: install the NotiProof Shopify app, authorize the connection, and it begins receiving order data immediately. No API keys to configure, no code to write.
+    </p>
+    <KeyTakeaway>
+      E-commerce integrations create real-time data pipelines. Shopify setup takes under 2 minutes with zero code — install, authorize, done.
+    </KeyTakeaway>
+
+    <h2 id="webhooks-api">How Do Custom Webhooks and API Work?</h2>
+    <p>
+      For platforms not covered by native integrations, NotiProof provides a REST API and webhook receiver. The webhook endpoint accepts JSON payloads with event data and creates notification-ready events in your NotiProof account.
+    </p>
+    <p>
+      The REST API supports full CRUD operations with rate limits of 100 requests/second on Pro plans and 500 requests/second on Business plans. Our <Link to="/resources/help-center/">Help Center</Link> includes step-by-step webhook setup guides.
+    </p>
+
+    <h2 id="setup-time">How Long Does Integration Setup Take?</h2>
+    <p>
+      Most native integrations take <strong>under 5 minutes</strong>. The setup flow follows three steps: select the platform, authenticate (usually via OAuth), and configure which events to capture. Custom webhook integrations take 15–30 minutes for a developer.
+    </p>
+    <StatCallout stat="Under 5 minutes" context="Average setup time for native integrations with the guided wizard." />
+  </>
+);
+
+const tocSections = [
+  { id: "platforms", label: "What Platforms Does NotiProof Integrate With?" },
+  { id: "ecommerce-integrations", label: "How Do E-Commerce Integrations Work?" },
+  { id: "webhooks-api", label: "How Do Custom Webhooks and API Work?" },
+  { id: "setup-time", label: "How Long Does Setup Take?" },
+];
 
 export default function IntegrationsEcosystem() {
   return (
@@ -31,6 +79,8 @@ export default function IntegrationsEcosystem() {
         "Unified dashboard manages all connections in one place",
         "REST API and webhooks for custom integrations with any internal system",
       ]}
+      deepDiveContent={deepDive}
+      deepDiveToc={tocSections}
       howItWorks={[
         { step: "Choose", desc: "Select the platforms you use from our integration library." },
         { step: "Connect", desc: "Follow the one-click setup guide to connect your accounts." },

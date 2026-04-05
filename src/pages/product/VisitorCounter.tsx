@@ -1,5 +1,65 @@
 import { Eye, TrendingUp, Globe, Gauge } from "lucide-react";
+import { Link } from "react-router-dom";
 import ProductFeaturePage from "@/components/ProductFeaturePage";
+import StatCallout from "@/components/StatCallout";
+import KeyTakeaway from "@/components/KeyTakeaway";
+
+const deepDive = (
+  <>
+    <h2 id="does-it-work">Does Showing Visitor Counts Actually Increase Conversions?</h2>
+    <p>
+      Yes, and the effect is well-documented in behavioral psychology research. Visitor counters leverage the <strong>bandwagon effect</strong> — a cognitive bias where people are more likely to adopt a behavior when they see others doing it.
+    </p>
+    <StatCallout stat="18% avg. conversion increase" context="NotiProof customers who enable visitor counters on product pages." />
+    <p>
+      In e-commerce specifically, visitor counts trigger <strong>loss aversion</strong> and <strong>scarcity perception</strong>. When a shopper sees "47 people are viewing this right now," they instinctively worry that the product might sell out. A study in the <em>Journal of Retailing</em> found that real-time demand signals increase purchase urgency by 23%.
+    </p>
+    <p>
+      The key is authenticity — displaying real visitor data, not inflated numbers. NotiProof only shows actual concurrent visitor counts, ensuring genuine and sustainable social proof.
+    </p>
+    <KeyTakeaway>
+      Visitor counters create urgency through the bandwagon effect and loss aversion. Average 18% conversion lift on product pages — but only when showing real, authentic counts.
+    </KeyTakeaway>
+
+    <h2 id="privacy-compliant">How Does Privacy-Compliant Visitor Counting Work?</h2>
+    <p>
+      NotiProof's visitor counter uses <strong>server-side session tracking</strong> rather than client-side cookies. When a visitor loads a page, the NotiProof script sends a heartbeat ping to our servers, which maintain a count of active sessions per page.
+    </p>
+    <p>
+      Because the counting mechanism doesn't set cookies or store PII, it falls outside GDPR's cookie consent requirements in most jurisdictions. The counter data is processed in-memory on NotiProof's edge servers and discarded once a session expires — no visitor-level data is stored or accessible.
+    </p>
+
+    <h2 id="where-to-display">Where Should You Display Visitor Counts?</h2>
+    <p>
+      Visitor counters work best on pages where <strong>demand validation</strong> influences purchase decisions:
+    </p>
+    <StatCallout stat="22% conversion lift" context="Product pages showing visitor counts near the add-to-cart button." />
+    <p>
+      <strong>Pricing pages:</strong> For SaaS products, displaying active viewer counts ("14 teams are comparing plans right now") reinforces demand. Average lift: 15%.
+    </p>
+    <p>
+      <strong>Event/webinar pages:</strong> Showing live registration interest drives FOMO for time-limited offerings. Average lift: 28%.
+    </p>
+    <p>
+      Avoid showing visitor counters on low-traffic pages. NotiProof's <strong>minimum threshold</strong> feature lets you set a floor (e.g., only show when 5+ visitors are on the page).
+    </p>
+    <KeyTakeaway>
+      Best placements: product pages (22% lift), pricing pages (15% lift), event pages (28% lift). Always set a minimum threshold to avoid showing "1 person viewing."
+    </KeyTakeaway>
+
+    <h2 id="customize-widget">Can You Customize the Visitor Counter Widget?</h2>
+    <p>
+      The visitor counter widget is fully customizable: display text template, widget position (inline or floating), visual style, and animation. For developers, the counter value is also accessible via NotiProof's JavaScript API with real-time WebSocket updates.
+    </p>
+  </>
+);
+
+const tocSections = [
+  { id: "does-it-work", label: "Does Showing Visitor Counts Increase Conversions?" },
+  { id: "privacy-compliant", label: "How Does Privacy-Compliant Counting Work?" },
+  { id: "where-to-display", label: "Where Should You Display Visitor Counts?" },
+  { id: "customize-widget", label: "Can You Customize the Widget?" },
+];
 
 export default function VisitorCounter() {
   return (
@@ -31,6 +91,8 @@ export default function VisitorCounter() {
         "Popular pages are visibly popular, reinforcing the bandwagon effect",
         "Privacy-first counting means no cookie consent banners required for the counter",
       ]}
+      deepDiveContent={deepDive}
+      deepDiveToc={tocSections}
       howItWorks={[
         { step: "Enable", desc: "Turn on the visitor counter from your NotiProof dashboard." },
         { step: "Customize", desc: "Choose where to show counts (specific pages, site-wide), and customize the design." },
@@ -65,6 +127,7 @@ export default function VisitorCounter() {
       ]}
       resourceLinks={[
         { label: "Social Proof Psychology", href: "/resources/social-proof/social-proof-psychology/", context: "Visitor counters leverage the 'wisdom of the crowd' principle — learn more about the psychology:" },
+        { label: "FOMO Marketing Guide", href: "/resources/website-trust/fomo-marketing-guide/", context: "Learn how to use urgency ethically to drive conversions:" },
         { label: "Social Proof for Websites", href: "/resources/social-proof/social-proof-for-websites/", context: "See how visitor counters fit into a complete website social proof strategy:" },
       ]}
     />

@@ -36,6 +36,7 @@ export default function SocialProofPillar() {
       updatedDate="2025-03-20"
       tocSections={tocSections}
       featuredImage={featuredImg}
+      pillarLink={{ label: "Social Proof", href: "/resources/blog/social-proof/" }}
       relatedArticles={clusterLinks}
       content={
         <div className="space-y-8 text-foreground">
