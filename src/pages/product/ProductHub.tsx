@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle2, TrendingUp, Users, Zap, Shield } from "lucide-react";
+import { ArrowRight, CheckCircle2, TrendingUp, Users, Zap, Shield, Bell, Video, Star as StarIcon, BarChart3, Eye, Activity, Layout, Plug } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import SEOHead from "@/components/SEOHead";
@@ -9,6 +9,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import ExpertAttribution from "@/components/ExpertAttribution";
 import TableOfContents from "@/components/TableOfContents";
 import StatCallout from "@/components/StatCallout";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const fadeUp = {
   initial: { opacity: 0, y: 30 },
@@ -18,16 +19,16 @@ const fadeUp = {
 };
 
 const features = [
-  { title: "Social Proof Notifications", desc: "Show real-time purchase alerts, signups, and reviews to create urgency and trust.", href: "/product/social-proof-notifications/" },
-  { title: "Testimonials Collection", desc: "Collect text, image, and video testimonials from customers with automated workflows.", href: "/product/testimonials-collection-text-image-video/" },
-  { title: "Video Testimonial Recorder", desc: "Let customers record video reviews directly from their browser — no app needed.", href: "/product/video-testimonial-recorder/" },
-  { title: "Review Aggregation System", desc: "Pull reviews from Google, Trustpilot, G2, and more into a unified showcase.", href: "/product/review-aggregation-showcase-system/" },
-  { title: "Campaign Builder", desc: "Create targeted notification campaigns with smart rules, scheduling, and A/B testing.", href: "/product/campaign-builder/" },
-  { title: "Integrations Ecosystem", desc: "Connect with 38+ platforms including Shopify, WordPress, Stripe, and Zapier.", href: "/product/integrations-ecosystem/" },
-  { title: "Analytics & Conversion Insights", desc: "Track impressions, clicks, and conversion lift with a real-time analytics dashboard.", href: "/product/analytics-conversion-insights/" },
-  { title: "Visitor Counter", desc: "Show live visitor counts to demonstrate popularity and increase engagement.", href: "/product/visitor-counter-live-visitors/" },
-  { title: "Recent Activity Notifications", desc: "Display a live feed of recent purchases, signups, and actions on your site.", href: "/product/recent-activity-notifications/" },
-  { title: "Testimonials & Reviews Widget", desc: "Embed beautiful, customizable testimonial and review widgets anywhere on your site.", href: "/product/testimonials-widget-reviews-widget/" },
+  { title: "Social Proof Notifications", desc: "Show real-time purchase alerts, signups, and reviews to create urgency and trust.", href: "/product/social-proof-notifications/", icon: Bell },
+  { title: "Testimonials Collection", desc: "Collect text, image, and video testimonials from customers with automated workflows.", href: "/product/testimonials-collection-text-image-video/", icon: StarIcon },
+  { title: "Video Testimonial Recorder", desc: "Let customers record video reviews directly from their browser — no app needed.", href: "/product/video-testimonial-recorder/", icon: Video },
+  { title: "Review Aggregation System", desc: "Pull reviews from Google, Trustpilot, G2, and more into a unified showcase.", href: "/product/review-aggregation-showcase-system/", icon: Layout },
+  { title: "Campaign Builder", desc: "Create targeted notification campaigns with smart rules, scheduling, and A/B testing.", href: "/product/campaign-builder/", icon: Zap },
+  { title: "Integrations Ecosystem", desc: "Connect with 38+ platforms including Shopify, WordPress, Stripe, and Zapier.", href: "/product/integrations-ecosystem/", icon: Plug },
+  { title: "Analytics & Conversion Insights", desc: "Track impressions, clicks, and conversion lift with a real-time analytics dashboard.", href: "/product/analytics-conversion-insights/", icon: BarChart3 },
+  { title: "Visitor Counter", desc: "Show live visitor counts to demonstrate popularity and increase engagement.", href: "/product/visitor-counter-live-visitors/", icon: Eye },
+  { title: "Recent Activity Notifications", desc: "Display a live feed of recent purchases, signups, and actions on your site.", href: "/product/recent-activity-notifications/", icon: Activity },
+  { title: "Testimonials & Reviews Widget", desc: "Embed beautiful, customizable testimonial and review widgets anywhere on your site.", href: "/product/testimonials-widget-reviews-widget/", icon: Layout },
 ];
 
 const pillarFaqs = [
@@ -96,8 +97,27 @@ export default function ProductHub() {
         </div>
       </section>
 
+      {/* Trust Strip */}
+      <section className="py-8 border-y border-border bg-surface">
+        <div className="container-tight">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {stats.map((s) => (
+              <motion.div key={s.label} {...fadeUp} className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+                  <s.icon className="w-5 h-5 text-primary" />
+                </div>
+                <div>
+                  <p className="text-xl font-extrabold text-primary leading-tight">{s.stat}</p>
+                  <p className="text-xs text-muted-foreground">{s.label}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Expert Attribution + TOC + Content */}
-      <section className="section-padding bg-surface">
+      <section className="section-padding">
         <div className="container-tight">
           <ExpertAttribution />
           <div className="flex gap-10">
@@ -112,7 +132,7 @@ export default function ProductHub() {
               </div>
 
               {/* What Is NotiProof? */}
-              <div className="mb-16">
+              <div className="mb-16 border-l-4 border-primary/20 pl-6">
                 <h2 id="what-is-notiproof" className="text-3xl md:text-4xl font-bold mb-4 scroll-mt-28">What Is NotiProof?</h2>
                 <p className="text-lg font-medium text-foreground/80 mb-4">
                   NotiProof is a unified social proof platform that combines real-time notifications, testimonial collection, review aggregation, visitor counting, and conversion analytics into a single tool.
@@ -126,7 +146,7 @@ export default function ProductHub() {
               </div>
 
               {/* How Does NotiProof Increase Conversions? */}
-              <div className="mb-16">
+              <div className="mb-16 border-l-4 border-primary/20 pl-6">
                 <h2 id="how-increase-conversions" className="text-3xl md:text-4xl font-bold mb-4 scroll-mt-28">How Does NotiProof Increase Conversions?</h2>
                 <p className="text-lg font-medium text-foreground/80 mb-4">
                   NotiProof increases conversions by leveraging three psychological principles: social validation, urgency through scarcity, and trust through third-party endorsement.
@@ -147,6 +167,21 @@ export default function ProductHub() {
         </div>
       </section>
 
+      {/* Mid-page CTA */}
+      <section className="py-10">
+        <div className="container-tight">
+          <div className="bg-gradient-to-r from-primary to-primary/80 rounded-2xl p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div>
+              <h3 className="text-xl md:text-2xl font-bold text-primary-foreground mb-2">Ready to increase conversions?</h3>
+              <p className="text-primary-foreground/80 text-sm">Start your free trial today — no credit card required.</p>
+            </div>
+            <Button size="xl" variant="secondary" className="shrink-0 font-bold" asChild>
+              <a href="https://app.notiproof.com/signup">Start Free Trial <ArrowRight className="w-5 h-5 ml-1" /></a>
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* Product Grid */}
       <section id="features" className="section-padding scroll-mt-28">
         <div className="container-tight">
@@ -156,11 +191,19 @@ export default function ProductHub() {
               <motion.div key={f.title} {...fadeUp} transition={{ duration: 0.5, delay: i * 0.05 }}>
                 <Link
                   to={f.href}
-                  className="block bg-card border border-border rounded-xl p-6 hover:shadow-lg hover:border-primary/30 hover:-translate-y-1 transition-all duration-300 h-full"
+                  className="block bg-card border border-border rounded-xl overflow-hidden hover:shadow-lg hover:border-primary/30 hover:-translate-y-1 transition-all duration-300 h-full"
                 >
-                  <h3 className="font-bold mb-2">{f.title}</h3>
-                  <p className="text-sm text-muted-foreground mb-4">{f.desc}</p>
-                  <span className="text-sm font-semibold text-primary">Learn more →</span>
+                  <div className="h-1 bg-gradient-to-r from-primary to-primary/60" />
+                  <div className="p-6">
+                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+                      <f.icon className="w-5 h-5 text-primary" />
+                    </div>
+                    <h3 className="font-bold mb-2">{f.title}</h3>
+                    <p className="text-sm text-muted-foreground mb-4">{f.desc}</p>
+                    <span className="text-sm font-semibold text-primary inline-flex items-center gap-1">
+                      Learn more <ArrowRight className="w-3.5 h-3.5" />
+                    </span>
+                  </div>
                 </Link>
               </motion.div>
             ))}
@@ -183,9 +226,15 @@ export default function ProductHub() {
                 { title: "Marketing Agencies", desc: "Manage social proof campaigns across multiple client websites from a single dashboard with white-label options.", href: "/use-cases/social-proof-for-marketing-agencies-impress-clients/" },
                 { title: "Local Businesses", desc: "Aggregate Google and Yelp reviews, display booking activity, and show local customer testimonials.", href: "/use-cases/local-business-social-proof-convert-website-visitors/" },
               ].map((uc) => (
-                <Link key={uc.title} to={uc.href} className="block bg-card border border-border rounded-xl p-6 hover:shadow-md hover:border-primary/30 transition-all">
-                  <h3 className="font-bold mb-2">{uc.title}</h3>
-                  <p className="text-sm text-muted-foreground">{uc.desc}</p>
+                <Link key={uc.title} to={uc.href} className="group block bg-card border border-border rounded-xl overflow-hidden hover:shadow-md hover:border-primary/30 transition-all">
+                  <div className="h-1 bg-gradient-to-r from-primary/40 to-primary/20" />
+                  <div className="p-6">
+                    <h3 className="font-bold mb-2">{uc.title}</h3>
+                    <p className="text-sm text-muted-foreground mb-3">{uc.desc}</p>
+                    <span className="text-sm font-semibold text-primary inline-flex items-center gap-1 group-hover:underline">
+                      Learn more <ArrowRight className="w-3.5 h-3.5" />
+                    </span>
+                  </div>
                 </Link>
               ))}
             </div>
@@ -193,21 +242,10 @@ export default function ProductHub() {
         </div>
       </section>
 
-      {/* Why Teams Choose NotiProof — Stat Cards */}
+      {/* Why Teams Choose NotiProof */}
       <section id="why-choose" className="section-padding scroll-mt-28">
         <div className="container-tight">
           <SectionHeading title="Why Teams Choose NotiProof" description="Trusted by thousands of businesses to increase conversions and build trust." />
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto mb-10">
-            {stats.map((s) => (
-              <motion.div key={s.label} {...fadeUp} className="bg-card border border-border rounded-xl p-6 text-center hover:shadow-md hover:border-primary/30 transition-all">
-                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-3">
-                  <s.icon className="w-5 h-5 text-primary" />
-                </div>
-                <p className="text-2xl font-extrabold text-primary">{s.stat}</p>
-                <p className="text-sm text-muted-foreground mt-1">{s.label}</p>
-              </motion.div>
-            ))}
-          </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto">
             {[
               "1-line install, no developers needed",
@@ -215,9 +253,9 @@ export default function ProductHub() {
               "A/B testing built in",
               "White label available",
             ].map((b) => (
-              <div key={b} className="flex items-start gap-2">
+              <div key={b} className="flex items-start gap-2 bg-card border border-border rounded-lg p-4">
                 <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                <span className="text-sm">{b}</span>
+                <span className="text-sm font-medium">{b}</span>
               </div>
             ))}
           </div>
@@ -228,16 +266,19 @@ export default function ProductHub() {
       <section className="section-padding bg-surface">
         <div className="container-tight">
           <SectionHeading title="Frequently Asked Questions" description="Common questions about the NotiProof platform." />
-          <div className="max-w-3xl mx-auto grid gap-4">
-            {pillarFaqs.map((faq) => (
-              <details key={faq.q} className="group bg-card border border-border rounded-xl">
-                <summary className="flex items-center justify-between p-5 cursor-pointer font-semibold text-sm list-none">
-                  {faq.q}
-                  <ArrowRight className="w-4 h-4 text-muted-foreground group-open:rotate-90 transition-transform" />
-                </summary>
-                <div className="px-5 pb-5 text-sm text-muted-foreground">{faq.a}</div>
-              </details>
-            ))}
+          <div className="max-w-3xl mx-auto">
+            <Accordion type="single" collapsible className="space-y-3">
+              {pillarFaqs.map((faq, i) => (
+                <AccordionItem key={faq.q} value={`faq-${i}`} className="bg-card border border-border rounded-xl px-5 data-[state=open]:border-primary/20 transition-colors">
+                  <AccordionTrigger className="text-sm font-semibold hover:no-underline py-5">
+                    {faq.q}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-sm text-muted-foreground pb-5">
+                    {faq.a}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
           </div>
         </div>
       </section>
