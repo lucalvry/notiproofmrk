@@ -1,5 +1,6 @@
 import ResourceArticle from "@/components/ResourceArticle";
 import { Link } from "react-router-dom";
+import featuredFomoMarketing from "@/assets/featured-fomo-marketing-guide.jpg";
 
 const tocSections = [
   { id: "what-is-fomo", label: "What Is FOMO Marketing?" },
@@ -31,7 +32,7 @@ export default function FOMOMarketingGuide() {
       tocSections={tocSections}
       pillarLink={{ label: "Website Trust Guide", href: "/resources/website-trust/" }}
       relatedArticles={relatedArticles}
-      featuredImageGradient="from-violet-500/20 to-purple-500/20"
+      featuredImage={featuredFomoMarketing}
       content={
         <div className="space-y-8 text-foreground">
           <p className="text-lg text-muted-foreground">FOMO — Fear of Missing Out — is one of the most powerful psychological drivers in marketing. When deployed ethically, FOMO techniques accelerate purchase decisions by highlighting genuine scarcity, real-time activity, and time-sensitive opportunities. When deployed manipulatively, they destroy trust and brand reputation. This guide shows you how to create authentic urgency that converts without crossing ethical lines.</p>

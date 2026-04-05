@@ -1,5 +1,6 @@
 import ResourceArticle from "@/components/ResourceArticle";
 import { Link } from "react-router-dom";
+import featuredTestimonialEmail from "@/assets/featured-testimonial-request-email-templates.jpg";
 
 const tocSections = [
   { id: "why-templates-matter", label: "Why Do Email Templates Matter for Collection?" },
@@ -31,7 +32,7 @@ export default function TestimonialRequestEmailTemplates() {
       tocSections={tocSections}
       pillarLink={{ label: "Testimonials Guide", href: "/resources/testimonials/" }}
       relatedArticles={relatedArticles}
-      featuredImageGradient="from-pink-500/20 to-rose-500/20"
+      featuredImage={featuredTestimonialEmail}
       content={
         <div className="space-y-8 text-foreground">
           <p className="text-lg text-muted-foreground">The right email template is the difference between a 3% and a 15% testimonial response rate. Most businesses send generic "We'd love your feedback!" emails that customers ignore. The templates in this guide use specific timing triggers, personalization, and proven copywriting structures to achieve 10-20% response rates consistently — turning your happiest customers into powerful advocates.</p>

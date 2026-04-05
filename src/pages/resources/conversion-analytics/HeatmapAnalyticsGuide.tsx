@@ -1,5 +1,6 @@
 import ResourceArticle from "@/components/ResourceArticle";
 import { Link } from "react-router-dom";
+import featuredHeatmapAnalytics from "@/assets/featured-heatmap-analytics-guide.jpg";
 
 const tocSections = [
   { id: "what-are-heatmaps", label: "What Are Heatmaps and Why Do They Matter?" },
@@ -30,7 +31,7 @@ export default function HeatmapAnalyticsGuide() {
       tocSections={tocSections}
       pillarLink={{ label: "Conversion Analytics Guide", href: "/resources/conversion-analytics/" }}
       relatedArticles={relatedArticles}
-      featuredImageGradient="from-emerald-500/20 to-teal-500/20"
+      featuredImage={featuredHeatmapAnalytics}
       content={
         <div className="space-y-8 text-foreground">
           <p className="text-lg text-muted-foreground">Where you place social proof on your page matters as much as what social proof you show. Heatmap analytics reveal exactly where visitors look, click, and scroll — giving you data-driven guidance for placing notifications, testimonials, and trust widgets in the highest-impact positions. The difference between optimal and suboptimal placement can mean a 20-40% difference in conversion lift.</p>

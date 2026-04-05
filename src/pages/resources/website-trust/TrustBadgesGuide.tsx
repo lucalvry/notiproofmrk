@@ -1,5 +1,6 @@
 import ResourceArticle from "@/components/ResourceArticle";
 import { Link } from "react-router-dom";
+import featuredTrustBadges from "@/assets/featured-trust-badges-guide.jpg";
 
 const tocSections = [
   { id: "what-are-trust-badges", label: "What Are Trust Badges?" },
@@ -30,7 +31,7 @@ export default function TrustBadgesGuide() {
       tocSections={tocSections}
       pillarLink={{ label: "Website Trust Guide", href: "/resources/website-trust/" }}
       relatedArticles={relatedArticles}
-      featuredImageGradient="from-violet-500/20 to-purple-500/20"
+      featuredImage={featuredTrustBadges}
       content={
         <div className="space-y-8 text-foreground">
           <p className="text-lg text-muted-foreground">Trust badges are small visual indicators displayed on websites to signal security, legitimacy, and quality. While they seem like minor design elements, they have outsized conversion impact — a CXL study found that 48% of consumers consider trust badges essential before making an online purchase, and removing them from checkout pages can increase cart abandonment by 10-15%.</p>

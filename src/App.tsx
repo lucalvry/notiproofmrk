@@ -94,6 +94,21 @@ const BestSocialProofSoftware = lazy(() => import("./pages/BestSocialProofSoftwa
 const SocialProofNotificationsLanding = lazy(() => import("./pages/SocialProofNotificationsLanding"));
 const ConversionOptimizationTools = lazy(() => import("./pages/ConversionOptimizationTools"));
 
+// Comparisons
+const ComparisonsHub = lazy(() => import("./pages/comparisons/ComparisonsHub"));
+const NotiProofVsFomo = lazy(() => import("./pages/comparisons/NotiProofVsFomo"));
+const NotiProofVsTrustPulse = lazy(() => import("./pages/comparisons/NotiProofVsTrustPulse"));
+const NotiProofVsProof = lazy(() => import("./pages/comparisons/NotiProofVsProof"));
+const NotiProofVsProveSource = lazy(() => import("./pages/comparisons/NotiProofVsProveSource"));
+
+// Free Tools
+const FreeToolsHub = lazy(() => import("./pages/tools/FreeToolsHub"));
+const ABTestCalculator = lazy(() => import("./pages/tools/ABTestCalculator"));
+const SocialProofROICalculator = lazy(() => import("./pages/tools/SocialProofROICalculator"));
+const GoogleReviewLinkGenerator = lazy(() => import("./pages/tools/GoogleReviewLinkGenerator"));
+const TestimonialEmailGenerator = lazy(() => import("./pages/tools/TestimonialEmailGenerator"));
+const WebsiteTrustScoreChecker = lazy(() => import("./pages/tools/WebsiteTrustScoreChecker"));
+
 // Legal
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 const TermsOfService = lazy(() => import("./pages/TermsOfService"));
@@ -199,17 +214,32 @@ const App = () => (
             <Route path="/resources/blog/:topicId/" element={<SuspenseWrap><TopicDetail /></SuspenseWrap>} />
 
             {/* SEO Landing pages */}
-            <Route path="/best-social-proof-software/" element={<SuspenseWrap><BestSocialProofSoftware /></SuspenseWrap>} />
             <Route path="/social-proof-notifications/" element={<SuspenseWrap><SocialProofNotificationsLanding /></SuspenseWrap>} />
-            <Route path="/conversion-optimization-tools/" element={<SuspenseWrap><ConversionOptimizationTools /></SuspenseWrap>} />
+
+            {/* Comparisons */}
+            <Route path="/comparisons/" element={<SuspenseWrap><ComparisonsHub /></SuspenseWrap>} />
+            <Route path="/comparisons/notiproof-vs-fomo/" element={<SuspenseWrap><NotiProofVsFomo /></SuspenseWrap>} />
+            <Route path="/comparisons/notiproof-vs-trustpulse/" element={<SuspenseWrap><NotiProofVsTrustPulse /></SuspenseWrap>} />
+            <Route path="/comparisons/notiproof-vs-proof/" element={<SuspenseWrap><NotiProofVsProof /></SuspenseWrap>} />
+            <Route path="/comparisons/notiproof-vs-provesource/" element={<SuspenseWrap><NotiProofVsProveSource /></SuspenseWrap>} />
+
+            {/* Free Tools */}
+            <Route path="/free-tools/" element={<SuspenseWrap><FreeToolsHub /></SuspenseWrap>} />
+            <Route path="/free-tools/ab-test-calculator/" element={<SuspenseWrap><ABTestCalculator /></SuspenseWrap>} />
+            <Route path="/free-tools/social-proof-roi-calculator/" element={<SuspenseWrap><SocialProofROICalculator /></SuspenseWrap>} />
+            <Route path="/free-tools/google-review-link-generator/" element={<SuspenseWrap><GoogleReviewLinkGenerator /></SuspenseWrap>} />
+            <Route path="/free-tools/testimonial-email-generator/" element={<SuspenseWrap><TestimonialEmailGenerator /></SuspenseWrap>} />
+            <Route path="/free-tools/website-trust-score-checker/" element={<SuspenseWrap><WebsiteTrustScoreChecker /></SuspenseWrap>} />
 
             {/* Legal */}
             <Route path="/privacy-policy/" element={<SuspenseWrap><PrivacyPolicy /></SuspenseWrap>} />
             <Route path="/terms-of-service/" element={<SuspenseWrap><TermsOfService /></SuspenseWrap>} />
 
-            {/* Redirect */}
+            {/* Redirects */}
             <Route path="/home/" element={<Navigate to="/" replace />} />
             <Route path="/home" element={<Navigate to="/" replace />} />
+            <Route path="/best-social-proof-software/" element={<Navigate to="/comparisons/" replace />} />
+            <Route path="/conversion-optimization-tools/" element={<Navigate to="/free-tools/" replace />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>

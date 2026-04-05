@@ -5,9 +5,7 @@ import { Link } from "react-router-dom";
 import { LucideIcon } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
 import CTASection from "@/components/CTASection";
-import Breadcrumbs from "@/components/Breadcrumbs";
-import ExpertAttribution from "@/components/ExpertAttribution";
-import TableOfContents, { TocSection } from "@/components/TableOfContents";
+
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 interface FAQ { q: string; a: string; }
@@ -30,7 +28,7 @@ interface ProductFeaturePageProps {
   howItWorks: { step: string; desc: string }[];
   featureDetails?: FeatureDetail[];
   deepDiveContent?: React.ReactNode;
-  deepDiveToc?: TocSection[];
+  deepDiveToc?: { id: string; label: string }[];
   testimonial?: Testimonial;
   useCases: { title: string; desc: string; href: string }[];
   faqs: FAQ[];
@@ -85,8 +83,6 @@ export default function ProductFeaturePage({
   return (
     <>
       <SEOHead title={metaTitle} description={metaDescription} canonical={canonical} schema={[webPageSchema, faqSchema, softwareSchema]} />
-
-      <Breadcrumbs />
 
       {/* Hero */}
       <section className="section-padding pt-4">
@@ -144,29 +140,113 @@ export default function ProductFeaturePage({
         </div>
       </section>
 
-      {/* Deep Dive Content with TOC sidebar + Expert Attribution */}
-      {deepDiveContent && (
+      {/* Key Benefits */}
+      <section className="section-padding bg-surface">
+        <div className="container-tight">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Key Benefits</h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-4xl mx-auto">
+            {benefits.map((b, i) => (
+              <motion.div key={b} {...fadeUp} transition={{ duration: 0.5, delay: i * 0.05 }} className="flex items-start gap-3 bg-card border border-border rounded-xl p-5 hover:border-primary/20 transition-colors">
+                <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 shrink-0" />
+                <span className="text-sm font-medium">{b}</span>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Feature Details */}
+      {featureDetails && featureDetails.length > 0 && (
         <section className="section-padding">
           <div className="container-tight">
-            <ExpertAttribution />
-            <div className="flex gap-10">
-              {deepDiveToc && deepDiveToc.length > 0 && (
-                <aside className="hidden lg:block w-64 shrink-0">
-                  <div className="sticky top-24">
-                    <TableOfContents sections={deepDiveToc} />
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Feature Highlights</h2>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
+              {featureDetails.map((f, i) => (
+                <motion.div key={f.title} {...fadeUp} transition={{ duration: 0.5, delay: i * 0.1 }} className="bg-card border border-border rounded-xl overflow-hidden hover:shadow-lg hover:border-primary/30 hover:-translate-y-1 transition-all duration-300">
+                  <div className="h-1 bg-gradient-to-r from-primary to-primary/60" />
+                  <div className="p-7">
+                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                      <f.icon className="w-6 h-6 text-primary" />
+                    </div>
+                    <h3 className="font-bold mb-2 text-base">{f.title}</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{f.desc}</p>
                   </div>
-                </aside>
-              )}
-              <div className="min-w-0 flex-1">
-                {deepDiveToc && deepDiveToc.length > 0 && (
-                  <div className="lg:hidden">
-                    <TableOfContents sections={deepDiveToc} />
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* How It Works */}
+      <section className="section-padding bg-surface">
+        <div className="container-tight">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">How It Works</h2>
+          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto relative">
+            <div className="hidden md:block absolute top-7 left-[calc(16.67%+20px)] right-[calc(16.67%+20px)] h-px border-t-2 border-dashed border-primary/20" />
+            {howItWorks.map((step, i) => (
+              <motion.div key={step.step} {...fadeUp} transition={{ duration: 0.5, delay: i * 0.1 }} className="text-center relative">
+                <div className="bg-gradient-to-br from-primary/5 to-primary/10 rounded-xl p-6">
+                  <div className="w-14 h-14 rounded-full bg-primary text-primary-foreground font-extrabold text-lg flex items-center justify-center mx-auto mb-4 relative z-10 shadow-md">
+                    {i + 1}
                   </div>
-                )}
-                <div className="prose prose-lg prose-headings:font-bold prose-headings:text-foreground prose-p:text-muted-foreground prose-a:text-primary prose-a:font-semibold prose-li:text-muted-foreground prose-strong:text-foreground max-w-none [&>h2]:scroll-mt-28 [&>h2+p]:text-lg [&>h2+p]:font-medium [&>h2+p]:text-foreground/80">
-                  {deepDiveContent}
+                  <h3 className="font-bold mb-2">{step.step}</h3>
+                  <p className="text-sm text-muted-foreground">{step.desc}</p>
                 </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Without / With Comparison */}
+      {hasComparison && (
+        <section className="section-padding">
+          <div className="container-tight">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">The Difference NotiProof Makes</h2>
+            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto relative">
+              <div className="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-background border-2 border-border items-center justify-center">
+                <span className="text-xs font-bold text-muted-foreground">VS</span>
               </div>
+              <div className="bg-destructive/5 border border-destructive/20 rounded-xl p-7">
+                <h3 className="font-bold text-destructive mb-5 flex items-center gap-2 text-base">
+                  <XCircle className="w-5 h-5" /> Without NotiProof
+                </h3>
+                <ul className="space-y-4">
+                  {withoutNotiproof!.map((item) => (
+                    <li key={item} className="flex items-start gap-3 text-sm text-muted-foreground">
+                      <XCircle className="w-4 h-4 text-destructive shrink-0 mt-0.5" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="bg-primary/5 border border-primary/20 rounded-xl p-7 ring-1 ring-primary/10">
+                <h3 className="font-bold text-primary mb-5 flex items-center gap-2 text-base">
+                  <CheckCircle2 className="w-5 h-5" /> With NotiProof
+                </h3>
+                <ul className="space-y-4">
+                  {withNotiproof!.map((item) => (
+                    <li key={item} className="flex items-start gap-3 text-sm">
+                      <CheckCircle2 className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Deep Dive Sections — styled as visual cards, not article prose */}
+      {deepDiveContent && (
+        <section className="section-padding bg-surface">
+          <div className="container-tight">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Deep Dive</h2>
+            <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">Everything you need to know about this feature — how it works, where to use it, and why it drives results.</p>
+            <div className="max-w-4xl mx-auto space-y-8 [&>h2]:text-2xl [&>h2]:md:text-3xl [&>h2]:font-bold [&>h2]:text-foreground [&>h2]:pt-8 [&>h2]:pb-4 [&>h2]:border-b [&>h2]:border-border [&>h2]:scroll-mt-28 [&>p]:text-muted-foreground [&>p]:leading-relaxed [&>p]:mb-4 [&>p>strong]:text-foreground [&>p>a]:text-primary [&>p>a]:font-semibold [&>p>a:hover]:underline">
+              {deepDiveContent}
             </div>
           </div>
         </section>
@@ -184,106 +264,6 @@ export default function ProductFeaturePage({
               <Button size="xl" variant="secondary" className="shrink-0 font-bold" asChild>
                 <a href="https://app.notiproof.com/signup">Start Free Trial <ArrowRight className="w-5 h-5 ml-1" /></a>
               </Button>
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* Without / With Comparison OR Benefits */}
-      <section className="section-padding bg-surface">
-        <div className="container-tight">
-          {hasComparison ? (
-            <>
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">The Difference NotiProof Makes</h2>
-              <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto relative">
-                {/* VS badge - desktop */}
-                <div className="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-background border-2 border-border items-center justify-center">
-                  <span className="text-xs font-bold text-muted-foreground">VS</span>
-                </div>
-                <div className="bg-destructive/5 border border-destructive/20 rounded-xl p-7">
-                  <h3 className="font-bold text-destructive mb-5 flex items-center gap-2 text-base">
-                    <XCircle className="w-5 h-5" /> Without NotiProof
-                  </h3>
-                  <ul className="space-y-4">
-                    {withoutNotiproof.map((item) => (
-                      <li key={item} className="flex items-start gap-3 text-sm text-muted-foreground">
-                        <XCircle className="w-4 h-4 text-destructive shrink-0 mt-0.5" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div className="bg-primary/5 border border-primary/20 rounded-xl p-7 ring-1 ring-primary/10">
-                  <h3 className="font-bold text-primary mb-5 flex items-center gap-2 text-base">
-                    <CheckCircle2 className="w-5 h-5" /> With NotiProof
-                  </h3>
-                  <ul className="space-y-4">
-                    {withNotiproof.map((item) => (
-                      <li key={item} className="flex items-start gap-3 text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-primary shrink-0 mt-0.5" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </>
-          ) : (
-            <>
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Key Benefits</h2>
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
-                {benefits.map((b) => (
-                  <motion.div key={b} {...fadeUp} className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 shrink-0" />
-                    <span className="text-sm">{b}</span>
-                  </motion.div>
-                ))}
-              </div>
-            </>
-          )}
-        </div>
-      </section>
-
-      {/* How It Works */}
-      <section className="section-padding">
-        <div className="container-tight">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">How It Works</h2>
-          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto relative">
-            {/* Connecting line - desktop */}
-            <div className="hidden md:block absolute top-7 left-[calc(16.67%+20px)] right-[calc(16.67%+20px)] h-px border-t-2 border-dashed border-primary/20" />
-            {howItWorks.map((step, i) => (
-              <motion.div key={step.step} {...fadeUp} transition={{ duration: 0.5, delay: i * 0.1 }} className="text-center relative">
-                <div className="bg-gradient-to-br from-primary/5 to-primary/10 rounded-xl p-6">
-                  <div className="w-14 h-14 rounded-full bg-primary text-primary-foreground font-extrabold text-lg flex items-center justify-center mx-auto mb-4 relative z-10 shadow-md">
-                    {i + 1}
-                  </div>
-                  <h3 className="font-bold mb-2">{step.step}</h3>
-                  <p className="text-sm text-muted-foreground">{step.desc}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Feature Details */}
-      {featureDetails && featureDetails.length > 0 && (
-        <section className="section-padding bg-surface">
-          <div className="container-tight">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Feature Highlights</h2>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
-              {featureDetails.map((f) => (
-                <motion.div key={f.title} {...fadeUp} className="bg-card border border-border rounded-xl overflow-hidden hover:shadow-lg hover:border-primary/30 hover:-translate-y-1 transition-all duration-300">
-                  <div className="h-1 bg-gradient-to-r from-primary to-primary/60" />
-                  <div className="p-7">
-                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
-                      <f.icon className="w-6 h-6 text-primary" />
-                    </div>
-                    <h3 className="font-bold mb-2 text-base">{f.title}</h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed">{f.desc}</p>
-                  </div>
-                </motion.div>
-              ))}
             </div>
           </div>
         </section>

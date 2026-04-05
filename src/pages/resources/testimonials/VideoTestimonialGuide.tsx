@@ -1,5 +1,6 @@
 import ResourceArticle from "@/components/ResourceArticle";
 import { Link } from "react-router-dom";
+import featuredVideoTestimonial from "@/assets/featured-video-testimonial-guide.jpg";
 
 const tocSections = [
   { id: "why-video", label: "Why Are Video Testimonials More Effective?" },
@@ -31,7 +32,7 @@ export default function VideoTestimonialGuide() {
       tocSections={tocSections}
       pillarLink={{ label: "Testimonials Guide", href: "/resources/testimonials/" }}
       relatedArticles={relatedArticles}
-      featuredImageGradient="from-pink-500/20 to-rose-500/20"
+      featuredImage={featuredVideoTestimonial}
       content={
         <div className="space-y-8 text-foreground">
           <p className="text-lg text-muted-foreground">Video testimonials are the most persuasive form of social proof available to businesses. They convert 4x better than text testimonials because they convey emotion, authenticity, and body language that written words cannot replicate. Yet most businesses don't collect video testimonials — not because customers are unwilling, but because the recording process has traditionally been too friction-heavy. Modern browser-based recording tools have changed this entirely.</p>

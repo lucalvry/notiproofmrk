@@ -1,5 +1,6 @@
 import ResourceArticle from "@/components/ResourceArticle";
 import { Link } from "react-router-dom";
+import featuredBuildingCredibility from "@/assets/featured-building-website-credibility.jpg";
 
 const tocSections = [
   { id: "what-is-credibility", label: "What Is Website Credibility?" },
@@ -31,7 +32,7 @@ export default function BuildingWebsiteCredibility() {
       tocSections={tocSections}
       pillarLink={{ label: "Website Trust Guide", href: "/resources/website-trust/" }}
       relatedArticles={relatedArticles}
-      featuredImageGradient="from-violet-500/20 to-purple-500/20"
+      featuredImage={featuredBuildingCredibility}
       content={
         <div className="space-y-8 text-foreground">
           <p className="text-lg text-muted-foreground">Every successful website started with zero credibility. Stanford's Web Credibility Research found that 75% of users judge a company's credibility based on their website design, and it takes just 50 milliseconds for a visitor to form a first impression. Building credibility is a systematic process — not luck — and this guide provides a framework for establishing trust from the ground up.</p>

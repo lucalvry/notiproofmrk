@@ -1,5 +1,6 @@
 import ResourceArticle from "@/components/ResourceArticle";
 import { Link } from "react-router-dom";
+import featuredReviewAggregation from "@/assets/featured-review-aggregation-guide.jpg";
 
 const tocSections = [
   { id: "what-is-review-aggregation", label: "What Is Review Aggregation?" },
@@ -31,7 +32,7 @@ export default function ReviewAggregationGuide() {
       tocSections={tocSections}
       pillarLink={{ label: "Reviews Guide", href: "/resources/reviews/" }}
       relatedArticles={relatedArticles}
-      featuredImageGradient="from-amber-500/20 to-orange-500/20"
+      featuredImage={featuredReviewAggregation}
       content={
         <div className="space-y-8 text-foreground">
           <p className="text-lg text-muted-foreground">Your customers are leaving reviews across dozens of platforms — Google, Trustpilot, G2, Capterra, Yelp, Facebook, and industry-specific directories. But visitors to your website only see what's on your website. Review aggregation solves this by pulling reviews from every platform into a single, unified display — ensuring that every positive review works for you where it matters most: on your own site, at the point of conversion.</p>

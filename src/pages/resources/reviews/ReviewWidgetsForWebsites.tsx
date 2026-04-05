@@ -1,5 +1,6 @@
 import ResourceArticle from "@/components/ResourceArticle";
 import { Link } from "react-router-dom";
+import featuredReviewWidgets from "@/assets/featured-review-widgets-for-websites.jpg";
 
 const tocSections = [
   { id: "what-are-review-widgets", label: "What Are Review Widgets?" },
@@ -31,7 +32,7 @@ export default function ReviewWidgetsForWebsites() {
       tocSections={tocSections}
       pillarLink={{ label: "Reviews Guide", href: "/resources/reviews/" }}
       relatedArticles={relatedArticles}
-      featuredImageGradient="from-amber-500/20 to-orange-500/20"
+      featuredImage={featuredReviewWidgets}
       content={
         <div className="space-y-8 text-foreground">
           <p className="text-lg text-muted-foreground">Review widgets are embeddable components that display customer reviews and ratings directly on your website. They transform scattered third-party reviews into on-site social proof — putting trust signals exactly where purchase decisions happen. The right review widget can increase conversion rates by 15-35%, according to research from the Spiegel Research Center, while the wrong one can slow your page, break your design, or fail to include the schema markup needed for rich snippets.</p>

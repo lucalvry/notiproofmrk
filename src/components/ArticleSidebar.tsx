@@ -30,15 +30,6 @@ const defaultPopular: SidebarArticle[] = [
 export default function ArticleSidebar({ popularArticles = defaultPopular, relatedArticles }: ArticleSidebarProps) {
   return (
     <aside className="space-y-8 lg:sticky lg:top-24">
-      {/* Newsletter CTA */}
-      <div className="bg-primary/5 border border-primary/20 rounded-xl p-5">
-        <h3 className="text-sm font-bold mb-2">Get CRO Tips Weekly</h3>
-        <p className="text-xs text-muted-foreground mb-3">Join 5,000+ marketers getting conversion optimization insights.</p>
-        <Button size="sm" className="w-full" asChild>
-          <a href="https://app.notiproof.com/signup">Subscribe Free</a>
-        </Button>
-      </div>
-
       {/* Categories */}
       <div>
         <h3 className="text-sm font-bold mb-3">Browse Categories</h3>

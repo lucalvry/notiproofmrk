@@ -1,5 +1,6 @@
 import ResourceArticle from "@/components/ResourceArticle";
 import { Link } from "react-router-dom";
+import featuredMeasuringRoi from "@/assets/featured-measuring-social-proof-roi.jpg";
 
 const tocSections = [
   { id: "why-measure-roi", label: "Why Is Measuring Social Proof ROI Important?" },
@@ -30,7 +31,7 @@ export default function MeasuringSocialProofROI() {
       tocSections={tocSections}
       pillarLink={{ label: "Conversion Analytics Guide", href: "/resources/conversion-analytics/" }}
       relatedArticles={relatedArticles}
-      featuredImageGradient="from-emerald-500/20 to-teal-500/20"
+      featuredImage={featuredMeasuringRoi}
       content={
         <div className="space-y-8 text-foreground">
           <p className="text-lg text-muted-foreground">Social proof works — but can you prove it to your stakeholders with numbers? Measuring the ROI of social proof requires tracking the right metrics, choosing an appropriate attribution model, and isolating the lift that social proof specifically creates. This guide shows you how to measure, attribute, and report the business impact of every <Link to="/resources/social-proof/" className="text-primary font-semibold hover:underline">social proof</Link> element on your site.</p>

@@ -1,5 +1,6 @@
 import ResourceArticle from "@/components/ResourceArticle";
 import { Link } from "react-router-dom";
+import featuredConversionBenchmarks from "@/assets/featured-conversion-rate-benchmarks.jpg";
 
 const tocSections = [
   { id: "why-benchmarks", label: "Why Do Conversion Rate Benchmarks Matter?" },
@@ -31,7 +32,7 @@ export default function ConversionRateBenchmarks() {
       tocSections={tocSections}
       pillarLink={{ label: "Conversion Analytics Guide", href: "/resources/conversion-analytics/" }}
       relatedArticles={relatedArticles}
-      featuredImageGradient="from-emerald-500/20 to-teal-500/20"
+      featuredImage={featuredConversionBenchmarks}
       content={
         <div className="space-y-8 text-foreground">
           <p className="text-lg text-muted-foreground">Knowing your industry's average conversion rate tells you whether you're underperforming, competitive, or leading. Without benchmarks, a 2% conversion rate could be excellent (luxury goods) or terrible (free tool signups). This guide compiles the most current 2025 conversion rate data across industries, traffic sources, and devices — plus the measurable impact that <Link to="/resources/social-proof/" className="text-primary font-semibold hover:underline">social proof</Link> has on each.</p>

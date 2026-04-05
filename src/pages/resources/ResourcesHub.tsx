@@ -28,7 +28,7 @@ const resourceCards = [
     icon: BarChart3,
     title: "Comparisons",
     desc: "Side-by-side comparisons of social proof software and CRO tools.",
-    href: "/best-social-proof-software/",
+    href: "/comparisons/",
   },
   {
     icon: HelpCircle,
@@ -52,7 +52,7 @@ const resourceCards = [
     icon: Wrench,
     title: "Free Tools",
     desc: "Conversion optimization tools, A/B testing resources, and calculators.",
-    href: "/conversion-optimization-tools/",
+    href: "/free-tools/",
   },
 ];
 

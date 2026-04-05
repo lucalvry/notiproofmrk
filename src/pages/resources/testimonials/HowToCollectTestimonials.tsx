@@ -1,5 +1,6 @@
 import ResourceArticle from "@/components/ResourceArticle";
 import { Link } from "react-router-dom";
+import featuredHowToCollectTestimonials from "@/assets/featured-how-to-collect-testimonials.jpg";
 
 const tocSections = [
   { id: "why-testimonials-matter", label: "Why Do Customer Testimonials Matter?" },
@@ -31,7 +32,7 @@ export default function HowToCollectTestimonials() {
       tocSections={tocSections}
       pillarLink={{ label: "Testimonials Guide", href: "/resources/testimonials/" }}
       relatedArticles={relatedArticles}
-      featuredImageGradient="from-pink-500/20 to-rose-500/20"
+      featuredImage={featuredHowToCollectTestimonials}
       content={
         <div className="space-y-8 text-foreground">
           <p className="text-lg text-muted-foreground">Customer testimonials are the most trusted form of marketing content. According to Nielsen, 92% of consumers trust peer recommendations over brand advertising, and B2B buyers rank testimonials as the most reliable content type when making purchase decisions. Yet most businesses collect testimonials haphazardly — if at all. The result is a handful of generic quotes that fail to address specific buyer objections or demonstrate real outcomes.</p>

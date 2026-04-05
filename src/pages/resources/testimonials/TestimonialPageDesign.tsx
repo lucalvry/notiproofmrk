@@ -1,5 +1,6 @@
 import ResourceArticle from "@/components/ResourceArticle";
 import { Link } from "react-router-dom";
+import featuredTestimonialPage from "@/assets/featured-testimonial-page-design.jpg";
 
 const tocSections = [
   { id: "why-dedicated-page", label: "Why Do You Need a Dedicated Testimonial Page?" },
@@ -31,7 +32,7 @@ export default function TestimonialPageDesign() {
       tocSections={tocSections}
       pillarLink={{ label: "Testimonials Guide", href: "/resources/testimonials/" }}
       relatedArticles={relatedArticles}
-      featuredImageGradient="from-pink-500/20 to-rose-500/20"
+      featuredImage={featuredTestimonialPage}
       content={
         <div className="space-y-8 text-foreground">
           <p className="text-lg text-muted-foreground">Your testimonial page is often the last stop before a prospect decides to buy. It's where skeptical visitors go to validate their decision, where comparison shoppers look for proof that you're the right choice, and where enterprise buyers find the social validation they need to justify the purchase internally. A poorly designed testimonial page wastes this critical opportunity. A well-designed one converts browsers into buyers.</p>

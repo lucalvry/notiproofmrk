@@ -1,5 +1,6 @@
 import ResourceArticle from "@/components/ResourceArticle";
 import { Link } from "react-router-dom";
+import featuredAbTesting from "@/assets/featured-ab-testing-social-proof.jpg";
 
 const tocSections = [
   { id: "what-is-ab-testing", label: "What Is A/B Testing for Social Proof?" },
@@ -31,7 +32,7 @@ export default function ABTestingSocialProof() {
       tocSections={tocSections}
       pillarLink={{ label: "Conversion Analytics Guide", href: "/resources/conversion-analytics/" }}
       relatedArticles={relatedArticles}
-      featuredImageGradient="from-emerald-500/20 to-teal-500/20"
+      featuredImage={featuredAbTesting}
       content={
         <div className="space-y-8 text-foreground">
           <p className="text-lg text-muted-foreground">Social proof increases conversions — but by how much depends entirely on what you show, where you show it, and how you show it. A/B testing removes the guesswork by measuring the actual impact of different social proof implementations against a control. Companies that systematically A/B test their social proof typically find 2-3x more conversion lift than those who just "set it and forget it."</p>

@@ -21,7 +21,7 @@ export default function CTASection({
               Start Free 14-Day Trial <ArrowRight className="w-5 h-5" />
             </a>
           </Button>
-          <Button variant="hero-outline" size="xl" className="border-dark-foreground/20 text-dark-foreground hover:bg-dark-foreground/10" asChild>
+          <Button variant="hero-outline" size="xl" className="bg-transparent border-dark-foreground/20 text-dark-foreground hover:bg-dark-foreground/10" asChild>
             <a href="/pricing">View Pricing</a>
           </Button>
         </div>

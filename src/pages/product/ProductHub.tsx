@@ -5,10 +5,7 @@ import { Link } from "react-router-dom";
 import SEOHead from "@/components/SEOHead";
 import CTASection from "@/components/CTASection";
 import SectionHeading from "@/components/SectionHeading";
-import Breadcrumbs from "@/components/Breadcrumbs";
-import ExpertAttribution from "@/components/ExpertAttribution";
-import TableOfContents from "@/components/TableOfContents";
-import StatCallout from "@/components/StatCallout";
+
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const fadeUp = {
@@ -40,19 +37,38 @@ const pillarFaqs = [
   { q: "Can I use NotiProof with Shopify, WordPress, or other platforms?", a: "Yes. NotiProof integrates with 38+ platforms including Shopify, WordPress, WooCommerce, BigCommerce, Stripe, HubSpot, Zapier, and more. Custom webhooks and REST API are available for any platform." },
 ];
 
-const tocSections = [
-  { id: "what-is-notiproof", label: "What Is NotiProof?" },
-  { id: "how-increase-conversions", label: "How Does NotiProof Increase Conversions?" },
-  { id: "features", label: "What Features Does NotiProof Include?" },
-  { id: "who-is-it-for", label: "Who Is NotiProof For?" },
-  { id: "why-choose", label: "Why Teams Choose NotiProof" },
-];
-
 const stats = [
   { icon: TrendingUp, stat: "10–35%", label: "Conversion increase" },
   { icon: Zap, stat: "38+", label: "Platform integrations" },
   { icon: Users, stat: "4,000+", label: "Websites powered" },
   { icon: Shield, stat: "GDPR", label: "Fully compliant" },
+];
+
+const conversionPillars = [
+  {
+    title: "Social Validation",
+    description: "Real-time notifications and activity feeds show visitors that others trust your product — \"Sarah from Austin just purchased this item.\"",
+    links: [
+      { label: "Social Proof Notifications", href: "/product/social-proof-notifications/" },
+      { label: "Recent Activity", href: "/product/recent-activity-notifications/" },
+    ],
+  },
+  {
+    title: "Urgency & Scarcity",
+    description: "Visitor counters and purchase velocity alerts trigger loss aversion — \"47 people viewing this right now.\"",
+    links: [
+      { label: "Visitor Counter", href: "/product/visitor-counter-live-visitors/" },
+      { label: "Campaign Builder", href: "/product/campaign-builder/" },
+    ],
+  },
+  {
+    title: "Trust & Credibility",
+    description: "Customer testimonials, video reviews, and aggregated ratings displayed via embeddable widgets — up to 270% conversion lift for higher-priced products.",
+    links: [
+      { label: "Testimonials", href: "/product/testimonials-collection-text-image-video/" },
+      { label: "Review Aggregation", href: "/product/review-aggregation-showcase-system/" },
+    ],
+  },
 ];
 
 export default function ProductHub() {
@@ -84,16 +100,26 @@ export default function ProductHub() {
         schema={[webPageSchema, faqSchema]}
       />
 
-      <Breadcrumbs />
-
       {/* Hero */}
       <section className="section-padding pt-4">
-        <div className="container-tight">
-          <SectionHeading
-            badge="Product"
-            title="The Complete Social Proof Platform"
-            description="Everything you need to increase conversions with social proof, testimonials, and trust signals — in one platform."
-          />
+        <div className="container-tight text-center">
+          <motion.div {...fadeUp}>
+            <span className="inline-block text-xs font-semibold tracking-wider uppercase text-primary bg-primary/10 px-3 py-1 rounded-full mb-6">Product</span>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 max-w-3xl mx-auto">The Complete Social Proof Platform</h1>
+            <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">Everything you need to increase conversions with social proof, testimonials, and trust signals — in one platform.</p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-4">
+              <Button variant="hero" size="xl" asChild>
+                <a href="https://app.notiproof.com/signup">Start Free Trial <ArrowRight className="w-5 h-5" /></a>
+              </Button>
+              <Button variant="hero-outline" size="xl" asChild>
+                <Link to="/pricing/">View Pricing</Link>
+              </Button>
+            </div>
+            <p className="text-xs text-muted-foreground flex items-center justify-center gap-1.5">
+              <CheckCircle2 className="w-3.5 h-3.5 text-primary" />
+              Trusted by 4,000+ websites · No credit card required
+            </p>
+          </motion.div>
         </div>
       </section>
 
@@ -116,53 +142,30 @@ export default function ProductHub() {
         </div>
       </section>
 
-      {/* Expert Attribution + TOC + Content */}
+      {/* How NotiProof Increases Conversions — 3 pillars */}
       <section className="section-padding">
         <div className="container-tight">
-          <ExpertAttribution />
-          <div className="flex gap-10">
-            <aside className="hidden lg:block w-64 shrink-0">
-              <div className="sticky top-24">
-                <TableOfContents sections={tocSections} />
-              </div>
-            </aside>
-            <div className="min-w-0 flex-1">
-              <div className="lg:hidden mb-8">
-                <TableOfContents sections={tocSections} />
-              </div>
-
-              {/* What Is NotiProof? */}
-              <div className="mb-16 border-l-4 border-primary/20 pl-6">
-                <h2 id="what-is-notiproof" className="text-3xl md:text-4xl font-bold mb-4 scroll-mt-28">What Is NotiProof?</h2>
-                <p className="text-lg font-medium text-foreground/80 mb-4">
-                  NotiProof is a unified social proof platform that combines real-time notifications, testimonial collection, review aggregation, visitor counting, and conversion analytics into a single tool.
-                </p>
-                <p className="text-muted-foreground mb-4">
-                  The platform addresses a fundamental challenge in online business: visitors don't trust websites they've never heard of. Studies from the <em>Journal of Consumer Research</em> show that 92% of consumers hesitate to purchase when there's no social proof present. NotiProof solves this by surfacing real customer actions — purchases, signups, reviews, and testimonials — as visible trust signals throughout your website.
-                </p>
-                <p className="text-muted-foreground">
-                  Unlike point solutions that handle only notifications or only reviews, NotiProof provides the entire social proof stack: <Link to="/product/social-proof-notifications/" className="text-primary font-semibold hover:underline">real-time notifications</Link>, <Link to="/product/testimonials-collection-text-image-video/" className="text-primary font-semibold hover:underline">testimonial collection</Link>, <Link to="/product/review-aggregation-showcase-system/" className="text-primary font-semibold hover:underline">review aggregation</Link>, and <Link to="/product/analytics-conversion-insights/" className="text-primary font-semibold hover:underline">analytics</Link> — all connected through <Link to="/product/integrations-ecosystem/" className="text-primary font-semibold hover:underline">38+ integrations</Link>.
-                </p>
-              </div>
-
-              {/* How Does NotiProof Increase Conversions? */}
-              <div className="mb-16 border-l-4 border-primary/20 pl-6">
-                <h2 id="how-increase-conversions" className="text-3xl md:text-4xl font-bold mb-4 scroll-mt-28">How Does NotiProof Increase Conversions?</h2>
-                <p className="text-lg font-medium text-foreground/80 mb-4">
-                  NotiProof increases conversions by leveraging three psychological principles: social validation, urgency through scarcity, and trust through third-party endorsement.
-                </p>
-                <StatCallout stat="10–35% conversion lift" context="Average across NotiProof customers, depending on traffic volume and product category." />
-                <p className="text-muted-foreground mb-4">
-                  <strong className="text-foreground">Social validation</strong> is powered by <Link to="/product/social-proof-notifications/" className="text-primary font-semibold hover:underline">real-time notifications</Link> and <Link to="/product/recent-activity-notifications/" className="text-primary font-semibold hover:underline">activity feeds</Link>. When visitors see "Sarah from Austin just purchased this item," they receive confirmation that others trust your product.
-                </p>
-                <p className="text-muted-foreground mb-4">
-                  <strong className="text-foreground">Urgency</strong> is created by the <Link to="/product/visitor-counter-live-visitors/" className="text-primary font-semibold hover:underline">visitor counter</Link> ("47 people viewing this right now") and purchase velocity alerts, triggering loss aversion.
-                </p>
-                <p className="text-muted-foreground">
-                  <strong className="text-foreground">Trust</strong> is built through <Link to="/product/testimonials-collection-text-image-video/" className="text-primary font-semibold hover:underline">customer testimonials</Link>, <Link to="/product/video-testimonial-recorder/" className="text-primary font-semibold hover:underline">video reviews</Link>, and <Link to="/product/review-aggregation-showcase-system/" className="text-primary font-semibold hover:underline">aggregated reviews</Link> displayed via <Link to="/product/testimonials-widget-reviews-widget/" className="text-primary font-semibold hover:underline">embeddable widgets</Link>. The Spiegel Research Center found that displaying reviews increases conversion rates by up to 270% for higher-priced products.
-                </p>
-              </div>
-            </div>
+          <SectionHeading title="How NotiProof Increases Conversions" description="Three psychological principles, powered by one platform." />
+          <div className="grid md:grid-cols-3 gap-8">
+            {conversionPillars.map((pillar, i) => (
+              <motion.div key={pillar.title} {...fadeUp} transition={{ duration: 0.5, delay: i * 0.1 }} className="bg-card border border-border rounded-xl overflow-hidden hover:shadow-lg hover:border-primary/30 transition-all duration-300">
+                <div className="h-1 bg-gradient-to-r from-primary to-primary/60" />
+                <div className="p-7">
+                  <div className="w-12 h-12 rounded-full bg-primary text-primary-foreground font-extrabold text-lg flex items-center justify-center mb-5 shadow-md">
+                    {i + 1}
+                  </div>
+                  <h3 className="text-lg font-bold mb-3">{pillar.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed mb-5">{pillar.description}</p>
+                  <div className="flex flex-wrap gap-2">
+                    {pillar.links.map((link) => (
+                      <Link key={link.href} to={link.href} className="text-xs font-semibold text-primary hover:underline inline-flex items-center gap-1">
+                        {link.label} <ArrowRight className="w-3 h-3" />
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
@@ -183,9 +186,9 @@ export default function ProductHub() {
       </section>
 
       {/* Product Grid */}
-      <section id="features" className="section-padding scroll-mt-28">
+      <section className="section-padding">
         <div className="container-tight">
-          <SectionHeading title="What Features Does NotiProof Include?" description="Ten integrated tools that work together to maximize your website's conversion rate." />
+          <SectionHeading title="All Features" description="Ten integrated tools that work together to maximize your website's conversion rate." />
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {features.map((f, i) => (
               <motion.div key={f.title} {...fadeUp} transition={{ duration: 0.5, delay: i * 0.05 }}>
@@ -212,38 +215,33 @@ export default function ProductHub() {
       </section>
 
       {/* Who Is NotiProof For? */}
-      <section id="who-is-it-for" className="section-padding bg-surface scroll-mt-28">
+      <section className="section-padding bg-surface">
         <div className="container-tight">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Who Is NotiProof For?</h2>
-            <p className="text-lg font-medium text-foreground/80 mb-6">
-              NotiProof serves any business that converts visitors on a website — from solo founders to enterprise teams across four primary segments.
-            </p>
-            <div className="grid sm:grid-cols-2 gap-6">
-              {[
-                { title: "E-commerce Stores", desc: "Display purchase alerts, product reviews, and visitor counts to reduce cart abandonment and increase average order value.", href: "/use-cases/ecommerce/" },
-                { title: "SaaS Companies", desc: "Show trial signups, user milestones, and customer testimonials to build credibility and drive free trial conversions.", href: "/use-cases/saas-social-proof-tools-drive-sign-ups/" },
-                { title: "Marketing Agencies", desc: "Manage social proof campaigns across multiple client websites from a single dashboard with white-label options.", href: "/use-cases/social-proof-for-marketing-agencies-impress-clients/" },
-                { title: "Local Businesses", desc: "Aggregate Google and Yelp reviews, display booking activity, and show local customer testimonials.", href: "/use-cases/local-business-social-proof-convert-website-visitors/" },
-              ].map((uc) => (
-                <Link key={uc.title} to={uc.href} className="group block bg-card border border-border rounded-xl overflow-hidden hover:shadow-md hover:border-primary/30 transition-all">
-                  <div className="h-1 bg-gradient-to-r from-primary/40 to-primary/20" />
-                  <div className="p-6">
-                    <h3 className="font-bold mb-2">{uc.title}</h3>
-                    <p className="text-sm text-muted-foreground mb-3">{uc.desc}</p>
-                    <span className="text-sm font-semibold text-primary inline-flex items-center gap-1 group-hover:underline">
-                      Learn more <ArrowRight className="w-3.5 h-3.5" />
-                    </span>
-                  </div>
-                </Link>
-              ))}
-            </div>
+          <SectionHeading title="Who Is NotiProof For?" description="NotiProof serves any business that converts visitors on a website." />
+          <div className="grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {[
+              { title: "E-commerce Stores", desc: "Display purchase alerts, product reviews, and visitor counts to reduce cart abandonment and increase average order value.", href: "/use-cases/ecommerce/" },
+              { title: "SaaS Companies", desc: "Show trial signups, user milestones, and customer testimonials to build credibility and drive free trial conversions.", href: "/use-cases/saas-social-proof-tools-drive-sign-ups/" },
+              { title: "Marketing Agencies", desc: "Manage social proof campaigns across multiple client websites from a single dashboard with white-label options.", href: "/use-cases/social-proof-for-marketing-agencies-impress-clients/" },
+              { title: "Local Businesses", desc: "Aggregate Google and Yelp reviews, display booking activity, and show local customer testimonials.", href: "/use-cases/local-business-social-proof-convert-website-visitors/" },
+            ].map((uc) => (
+              <Link key={uc.title} to={uc.href} className="group block bg-card border border-border rounded-xl overflow-hidden hover:shadow-md hover:border-primary/30 transition-all">
+                <div className="h-1 bg-gradient-to-r from-primary/40 to-primary/20" />
+                <div className="p-6">
+                  <h3 className="font-bold mb-2">{uc.title}</h3>
+                  <p className="text-sm text-muted-foreground mb-3">{uc.desc}</p>
+                  <span className="text-sm font-semibold text-primary inline-flex items-center gap-1 group-hover:underline">
+                    Learn more <ArrowRight className="w-3.5 h-3.5" />
+                  </span>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Why Teams Choose NotiProof */}
-      <section id="why-choose" className="section-padding scroll-mt-28">
+      <section className="section-padding">
         <div className="container-tight">
           <SectionHeading title="Why Teams Choose NotiProof" description="Trusted by thousands of businesses to increase conversions and build trust." />
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto">

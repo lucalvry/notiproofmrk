@@ -50,6 +50,20 @@ const plans = [
   },
 ];
 
+const ltdFeatures = [
+  "Lifetime access",
+  "3 websites",
+  "25,000 events/month",
+  "5GB media storage",
+  "3-minute video recordings",
+  "Custom domains for forms",
+  "Remove NotiProof branding",
+  "Advanced analytics",
+  "Unlimited testimonials & forms",
+  "All launch integrations included",
+  "Future features & integrations included",
+];
+
 const comparisonFeatures = [
   { name: "Notifications/mo", values: ["1K", "10K", "50K", "200K", "Unlimited"] },
   { name: "Sites", values: ["1", "3", "10", "25", "Unlimited"] },
@@ -65,16 +79,18 @@ const comparisonFeatures = [
 ];
 
 const faqs = [
+  { q: "What is the Lifetime Deal?", a: "The Lifetime Deal is a one-time payment of $79 that gives you permanent access to NotiProof with no recurring fees. It includes 3 websites, 25,000 events/month, advanced analytics, and all future features and integrations." },
   { q: "Can I try NotiProof for free?", a: "Yes! Our Free plan lets you get started with 1,000 notifications per month. All paid plans include a 14-day free trial." },
   { q: "What counts as a notification?", a: "A notification is counted each time a social proof widget is displayed to a unique visitor on your website." },
   { q: "Can I change plans anytime?", a: "Absolutely. You can upgrade, downgrade, or cancel your plan at any time from your dashboard." },
   { q: "Are all integrations included?", a: "Yes! All 38+ integrations are included on every plan, including Free. No feature paywalls." },
   { q: "What is an add-on seat?", a: "Additional team members can be added for $3/month each. The first seat is included with every plan." },
-  { q: "Do you offer refunds?", a: "Yes, we offer a 30-day money-back guarantee on all paid plans." },
+  { q: "Do you offer refunds?", a: "Yes, we offer a 30-day money-back guarantee on all paid plans, including the Lifetime Deal." },
 ];
 
 export default function PricingPage() {
   const [yearly, setYearly] = useState(false);
+  const [activeTab, setActiveTab] = useState<"lifetime" | "subscription">("lifetime");
 
   const pricingSchema = [
     {
@@ -83,15 +99,26 @@ export default function PricingPage() {
       name: "NotiProof",
       description: "Social proof and testimonial platform for increasing website conversions.",
       brand: { "@type": "Brand", name: "NotiProof" },
-      offers: plans.map((p) => ({
-        "@type": "Offer",
-        name: p.name,
-        price: yearly ? p.yearly : p.monthly,
-        priceCurrency: "USD",
-        priceValidUntil: "2027-12-31",
-        availability: "https://schema.org/InStock",
-        url: "https://notiproof.com/pricing/",
-      })),
+      offers: [
+        {
+          "@type": "Offer",
+          name: "Lifetime Deal",
+          price: 79,
+          priceCurrency: "USD",
+          priceValidUntil: "2027-12-31",
+          availability: "https://schema.org/InStock",
+          url: "https://notiproof.com/pricing/",
+        },
+        ...plans.map((p) => ({
+          "@type": "Offer",
+          name: p.name,
+          price: yearly ? p.yearly : p.monthly,
+          priceCurrency: "USD",
+          priceValidUntil: "2027-12-31",
+          availability: "https://schema.org/InStock",
+          url: "https://notiproof.com/pricing/",
+        })),
+      ],
     },
     {
       "@context": "https://schema.org",
@@ -108,7 +135,7 @@ export default function PricingPage() {
     <>
       <SEOHead
         title="NotiProof Pricing – Plans Starting Free | Social Proof Platform"
-        description="Compare NotiProof pricing plans. Free, Starter ($19), Standard ($49), Pro ($119), and Business ($380). All integrations included. No feature paywalls."
+        description="Compare NotiProof pricing plans. Lifetime Deal ($79), Free, Starter ($19), Standard ($49), Pro ($119), and Business ($380). All integrations included."
         canonical="https://notiproof.com/pricing/"
         schema={pricingSchema}
       />
@@ -120,59 +147,125 @@ export default function PricingPage() {
             description="All integrations included. No feature paywalls. Scale based on usage."
           />
 
-          {/* Toggle */}
-          <div className="flex items-center justify-center gap-3 mb-12">
-            <span className={`text-sm font-medium ${!yearly ? "text-foreground" : "text-muted-foreground"}`}>Monthly</span>
+          {/* Tab Switcher */}
+          <div className="flex items-center justify-center gap-1 mb-12 bg-muted p-1 rounded-lg max-w-sm mx-auto">
             <button
-              onClick={() => setYearly(!yearly)}
-              className={`relative w-12 h-6 rounded-full transition-colors ${yearly ? "bg-primary" : "bg-border"}`}
+              onClick={() => setActiveTab("lifetime")}
+              className={`flex-1 px-4 py-2 text-sm font-semibold rounded-md transition-all ${
+                activeTab === "lifetime"
+                  ? "bg-background text-foreground shadow-sm"
+                  : "text-muted-foreground hover:text-foreground"
+              }`}
             >
-              <span className={`absolute top-0.5 w-5 h-5 bg-card rounded-full transition-transform shadow ${yearly ? "translate-x-6" : "translate-x-0.5"}`} />
+              Lifetime Deal
             </button>
-            <span className={`text-sm font-medium ${yearly ? "text-foreground" : "text-muted-foreground"}`}>
-              Yearly <span className="text-primary text-xs font-semibold">Save 20%</span>
-            </span>
+            <button
+              onClick={() => setActiveTab("subscription")}
+              className={`flex-1 px-4 py-2 text-sm font-semibold rounded-md transition-all ${
+                activeTab === "subscription"
+                  ? "bg-background text-foreground shadow-sm"
+                  : "text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              Subscription Plans
+            </button>
           </div>
 
-          {/* Plans */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-5 mb-20">
-            {plans.map((plan) => (
-              <motion.div
-                key={plan.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className={`bg-card border rounded-xl p-6 relative flex flex-col ${
-                  plan.popular ? "border-primary shadow-lg shadow-primary/10 ring-2 ring-primary" : "border-border"
-                }`}
-              >
-                {plan.popular && (
-                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground text-xs font-semibold px-3 py-1 rounded-full">
-                    Most Popular
-                  </span>
-                )}
-                <h3 className="font-bold text-lg">{plan.name}</h3>
-                <div className="mt-2 mb-1">
-                  <span className="text-4xl font-extrabold">
-                    ${yearly ? plan.yearly : plan.monthly}
-                  </span>
-                  <span className="text-sm text-muted-foreground">/mo</span>
+          {/* Lifetime Deal Tab */}
+          {activeTab === "lifetime" && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="flex justify-center mb-20"
+            >
+              <div className="relative bg-card border-primary ring-2 ring-primary shadow-lg shadow-primary/10 rounded-xl p-8 max-w-lg w-full text-center">
+                <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground text-xs font-semibold px-3 py-1 rounded-full">
+                  Limited Time Offer
+                </span>
+
+                <div className="mt-4 mb-2">
+                  <span className="text-lg text-muted-foreground line-through mr-2">$299</span>
+                  <span className="text-5xl font-extrabold">$79</span>
                 </div>
-                <p className="text-xs text-muted-foreground mb-4">{plan.desc}</p>
-                <ul className="space-y-2 mb-6 flex-1">
-                  {plan.features.map((f) => (
+                <p className="text-muted-foreground text-sm mb-6">Pay once. Use forever.</p>
+
+                <ul className="space-y-2.5 mb-8 text-left max-w-xs mx-auto">
+                  {ltdFeatures.map((f) => (
                     <li key={f} className="flex items-start gap-2 text-sm">
                       <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 shrink-0" />
                       {f}
                     </li>
                   ))}
                 </ul>
-                <Button variant={plan.popular ? "default" : "outline"} className="w-full" asChild>
-                  <a href="https://app.notiproof.com/signup">{plan.cta}</a>
+
+                <Button variant="default" size="lg" className="w-full max-w-xs" asChild>
+                  <a href="https://app.notiproof.com/signup">Get Lifetime Access</a>
                 </Button>
-              </motion.div>
-            ))}
-          </div>
+                <p className="text-xs text-muted-foreground mt-4">
+                  One-time payment · No recurring fees · 30-day money-back guarantee
+                </p>
+              </div>
+            </motion.div>
+          )}
+
+          {/* Subscription Plans Tab */}
+          {activeTab === "subscription" && (
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
+              {/* Toggle */}
+              <div className="flex items-center justify-center gap-3 mb-12">
+                <span className={`text-sm font-medium ${!yearly ? "text-foreground" : "text-muted-foreground"}`}>Monthly</span>
+                <button
+                  onClick={() => setYearly(!yearly)}
+                  className={`relative w-12 h-6 rounded-full transition-colors ${yearly ? "bg-primary" : "bg-border"}`}
+                >
+                  <span className={`absolute top-0.5 w-5 h-5 bg-card rounded-full transition-transform shadow ${yearly ? "translate-x-6" : "translate-x-0.5"}`} />
+                </button>
+                <span className={`text-sm font-medium ${yearly ? "text-foreground" : "text-muted-foreground"}`}>
+                  Yearly <span className="text-primary text-xs font-semibold">Save 20%</span>
+                </span>
+              </div>
+
+              {/* Plans */}
+              <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-5 mb-20">
+                {plans.map((plan) => (
+                  <motion.div
+                    key={plan.name}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className={`bg-card border rounded-xl p-6 relative flex flex-col ${
+                      plan.popular ? "border-primary shadow-lg shadow-primary/10 ring-2 ring-primary" : "border-border"
+                    }`}
+                  >
+                    {plan.popular && (
+                      <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground text-xs font-semibold px-3 py-1 rounded-full">
+                        Most Popular
+                      </span>
+                    )}
+                    <h3 className="font-bold text-lg">{plan.name}</h3>
+                    <div className="mt-2 mb-1">
+                      <span className="text-4xl font-extrabold">
+                        ${yearly ? plan.yearly : plan.monthly}
+                      </span>
+                      <span className="text-sm text-muted-foreground">/mo</span>
+                    </div>
+                    <p className="text-xs text-muted-foreground mb-4">{plan.desc}</p>
+                    <ul className="space-y-2 mb-6 flex-1">
+                      {plan.features.map((f) => (
+                        <li key={f} className="flex items-start gap-2 text-sm">
+                          <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 shrink-0" />
+                          {f}
+                        </li>
+                      ))}
+                    </ul>
+                    <Button variant={plan.popular ? "default" : "outline"} className="w-full" asChild>
+                      <a href="https://app.notiproof.com/signup">{plan.cta}</a>
+                    </Button>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+          )}
 
           {/* Add-on */}
           <div className="bg-surface border border-border rounded-xl p-6 text-center mb-20">

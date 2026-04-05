@@ -2,6 +2,10 @@ import { Bell, MessageSquare, BarChart3, Zap } from "lucide-react";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { motion } from "framer-motion";
 import SectionHeading from "@/components/SectionHeading";
+import tabNotifications from "@/assets/tab-notifications.jpg";
+import tabTestimonials from "@/assets/tab-testimonials.jpg";
+import tabAnalytics from "@/assets/tab-analytics.jpg";
+import tabIntegrations from "@/assets/tab-integrations.jpg";
 
 const fadeUp = {
   initial: { opacity: 0, y: 30 },
@@ -18,7 +22,7 @@ const features = [
     title: "Real-time social proof notifications",
     description:
       "Show live purchase alerts, signup activity, and review notifications to build instant trust. Customize timing, position, and design to match your brand perfectly.",
-    gradient: "from-primary/20 to-blue-400/20",
+    image: tabNotifications,
   },
   {
     value: "testimonials",
@@ -27,7 +31,7 @@ const features = [
     title: "Collect & display testimonials effortlessly",
     description:
       "Gather written and video testimonials from happy customers with one-click collection forms. Display them in beautiful widgets that convert — right where they matter most.",
-    gradient: "from-accent/20 to-yellow-300/20",
+    image: tabTestimonials,
   },
   {
     value: "analytics",
@@ -36,7 +40,7 @@ const features = [
     title: "Conversion analytics & A/B testing",
     description:
       "Track every impression, click, and conversion. Run A/B tests on notification styles, timing, and placement to find what drives the most revenue for your business.",
-    gradient: "from-green-400/20 to-emerald-400/20",
+    image: tabAnalytics,
   },
   {
     value: "integrations",
@@ -45,7 +49,7 @@ const features = [
     title: "Connect your entire stack in minutes",
     description:
       "One-click integrations with Shopify, WooCommerce, WordPress, Zapier, Stripe, and more. Pull in real purchase data, reviews, and signups automatically.",
-    gradient: "from-purple-400/20 to-pink-400/20",
+    image: tabIntegrations,
   },
 ];
 
@@ -87,11 +91,14 @@ export default function TabbedFeatures() {
                     {f.description}
                   </p>
                 </div>
-                <div
-                  className={`aspect-[4/3] rounded-2xl bg-gradient-to-br ${f.gradient} border border-border flex items-center justify-center`}
-                >
-                  <f.icon className="w-16 h-16 text-muted-foreground/30" />
-                </div>
+                <img
+                  src={f.image}
+                  alt={f.title}
+                  loading="lazy"
+                  width={1280}
+                  height={960}
+                  className="aspect-[4/3] rounded-2xl shadow-lg object-cover border border-border"
+                />
               </motion.div>
             </TabsContent>
           ))}

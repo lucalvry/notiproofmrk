@@ -1,5 +1,6 @@
 import ResourceArticle from "@/components/ResourceArticle";
 import { Link } from "react-router-dom";
+import featuredHowToCollectGoogleReviews from "@/assets/featured-how-to-collect-google-reviews.jpg";
 
 const tocSections = [
   { id: "why-google-reviews-matter", label: "Why Do Google Reviews Matter?" },
@@ -32,7 +33,7 @@ export default function HowToCollectGoogleReviews() {
       tocSections={tocSections}
       pillarLink={{ label: "Reviews Guide", href: "/resources/reviews/" }}
       relatedArticles={relatedArticles}
-      featuredImageGradient="from-amber-500/20 to-orange-500/20"
+      featuredImage={featuredHowToCollectGoogleReviews}
       content={
         <div className="space-y-8 text-foreground">
           <p className="text-lg text-muted-foreground">Google reviews are the single most influential factor in local search rankings and consumer purchase decisions. According to BrightLocal's 2024 Consumer Review Survey, 87% of consumers read online reviews for local businesses, and 73% only pay attention to reviews written in the last month. Yet most businesses struggle to collect reviews consistently — not because customers are unhappy, but because they're never asked at the right time, in the right way.</p>

@@ -44,9 +44,9 @@ const resourceLinks = [
   { label: "Blog", href: "/resources/blog/", desc: "Articles on social proof, reviews & more" },
   { label: "Guides", href: "/resources/guides/", desc: "Comprehensive pillar guides" },
   { label: "Glossary", href: "/resources/glossary/", desc: "Key terms and definitions" },
-  { label: "Comparisons", href: "/best-social-proof-software/", desc: "Side-by-side software comparisons" },
+  { label: "Comparisons", href: "/comparisons/", desc: "Side-by-side software comparisons" },
   { label: "Help Center", href: "/resources/help-center/", desc: "Tutorials, FAQs & troubleshooting" },
-  { label: "Free Tools", href: "/conversion-optimization-tools/", desc: "CRO tools and calculators" },
+  { label: "Free Tools", href: "/free-tools/", desc: "CRO tools and calculators" },
 ];
 
 /* ─── Product mega dropdown (2 col) ─── */

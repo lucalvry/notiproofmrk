@@ -1,5 +1,6 @@
 import ResourceArticle from "@/components/ResourceArticle";
 import { Link } from "react-router-dom";
+import featuredRespondingToNegativeReviews from "@/assets/featured-responding-to-negative-reviews.jpg";
 
 const tocSections = [
   { id: "why-respond", label: "Why Should You Respond to Every Negative Review?" },
@@ -31,7 +32,7 @@ export default function RespondingToNegativeReviews() {
       tocSections={tocSections}
       pillarLink={{ label: "Reviews Guide", href: "/resources/reviews/" }}
       relatedArticles={relatedArticles}
-      featuredImageGradient="from-amber-500/20 to-orange-500/20"
+      featuredImage={featuredRespondingToNegativeReviews}
       content={
         <div className="space-y-8 text-foreground">
           <p className="text-lg text-muted-foreground">Negative reviews feel personal, but they're inevitable — and how you respond matters far more than the review itself. According to Harvard Business Review, businesses that respond to negative reviews see their overall ratings increase by an average of 0.12 stars and receive 12% more reviews. A thoughtful, professional response transforms a potential reputation crisis into a public demonstration of your commitment to customer satisfaction.</p>
