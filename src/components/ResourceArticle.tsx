@@ -150,9 +150,9 @@ export default function ResourceArticle({
               {/* In-article CTA */}
               <div className="my-12 bg-primary/5 border border-primary/20 rounded-xl p-8 text-center">
                 <h3 className="text-xl font-bold mb-3">Ready to Add Social Proof to Your Website?</h3>
-                <p className="text-muted-foreground text-sm mb-4">Start your free trial and increase conversions in minutes.</p>
+                <p className="text-muted-foreground text-sm mb-4">Get started free and increase conversions in minutes.</p>
                 <Button asChild>
-                  <a href="https://app.notiproof.com/signup">Start Free Trial <ArrowRight className="w-4 h-4" /></a>
+                  <a href="https://app.notiproof.com/signup">Get Started Free <ArrowRight className="w-4 h-4" /></a>
                 </Button>
               </div>
 

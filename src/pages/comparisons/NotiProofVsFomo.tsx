@@ -14,8 +14,8 @@ const editorialContent = (
     <p className="text-muted-foreground mb-4">Fomo may still be the right choice if you've already built workflows around its 100+ integration marketplace and only need basic notification popups. However, for new implementations or businesses outgrowing basic notifications, NotiProof delivers substantially more value per dollar.</p>
 
     <h2 className="text-2xl font-bold mt-10 mb-3">How Does Pricing Compare Between NotiProof and Fomo?</h2>
-    <p className="text-lg font-medium text-foreground mb-4">NotiProof starts with a free plan (1,000 events/month) and paid plans from $19/mo, while Fomo has no free tier and starts at $25/mo — making NotiProof 24-100% cheaper at every tier while including more features.</p>
-    <p className="text-muted-foreground mb-4">The pricing gap becomes more significant at scale. Fomo's Growth plan costs $75/mo for notifications only, while NotiProof's equivalent $49/mo plan includes notifications plus testimonials, reviews, A/B testing, and revenue attribution. At the Business tier, Fomo charges $149/mo versus NotiProof's $99/mo — a 33% savings with far more capabilities included.</p>
+    <p className="text-lg font-medium text-foreground mb-4">NotiProof starts with a free plan (5,000 views/month) and paid plans from $5/mo, while Fomo has no free tier and starts at $25/mo — making NotiProof significantly cheaper at every tier while including more features.</p>
+    <p className="text-muted-foreground mb-4">The pricing gap becomes more significant at scale. Fomo's Growth plan costs $75/mo for notifications only, while NotiProof's equivalent $15/mo Standard plan includes notifications plus testimonials, reviews, and analytics. At the top tier, Fomo charges $149/mo versus NotiProof's $40/mo Professional plan — a 73% savings with far more capabilities included.</p>
     <p className="text-muted-foreground mb-6">For businesses evaluating total cost of ownership, consider that replacing Fomo's missing features (testimonials, reviews, video) with separate tools can add $50-200/mo in additional subscriptions. NotiProof consolidates everything into a single platform and billing relationship.</p>
 
     <h2 className="text-2xl font-bold mt-10 mb-3">Which Tool Is Better for E-commerce Stores?</h2>
@@ -85,15 +85,15 @@ const data: ComparisonData = {
   whoShouldChooseCompetitor: "You only need basic purchase notifications and already have a Fomo subscription you're happy with. You rely heavily on Fomo's specific third-party app marketplace.",
   sections: [
     { title: "Features", content: "NotiProof includes everything Fomo offers — real-time purchase notifications, visitor counters, and geo-targeting — plus a full testimonials suite, review aggregation, campaign builder, and revenue attribution. Fomo focuses primarily on notification popups." },
-    { title: "Pricing", content: "NotiProof starts with a free plan (1,000 events/mo) and paid plans from $19/mo. Fomo has no free tier and starts at $25/mo. At every level, NotiProof provides more features for less money." },
+    { title: "Pricing", content: "NotiProof starts with a free plan (5,000 views/mo) and paid plans from $5/mo. Fomo has no free tier and starts at $25/mo. At every level, NotiProof provides more features for less money." },
     { title: "Integrations", content: "Both platforms offer 30+ integrations including Shopify, WooCommerce, Stripe, and Zapier. Fomo has a larger third-party app marketplace, while NotiProof focuses on deeper native integrations." },
     { title: "Ease of Use", content: "Both platforms install in under 60 seconds with a JavaScript snippet. NotiProof's campaign builder offers more customization, while Fomo's simpler UI may appeal to users who only need basic notifications." },
-    { title: "Customer Support", content: "NotiProof provides email support, a help center with video tutorials, and priority support on Growth+ plans. Fomo offers email support and documentation." },
+    { title: "Customer Support", content: "NotiProof provides email support, a help center with video tutorials, and priority support on Starter+ plans. Fomo offers email support and documentation." },
   ],
   faqs: [
     { q: "Is NotiProof a good alternative to Fomo?", a: "Yes. NotiProof offers all of Fomo's core features plus testimonials, reviews, video recording, and a campaign builder — often at a lower price." },
     { q: "Can I migrate from Fomo to NotiProof?", a: "Absolutely. NotiProof supports the same integrations, so setup takes minutes. Your notification designs can be recreated using NotiProof's template system." },
-    { q: "Does NotiProof have a free plan?", a: "Yes. NotiProof offers a free plan with up to 1,000 events per month, unlimited websites, and core features included." },
+    { q: "Does NotiProof have a free plan?", a: "Yes. NotiProof offers a free plan with up to 5,000 monthly views, 1 website, and basic templates included." },
     { q: "Which tool is better for e-commerce?", a: "NotiProof, because it combines purchase notifications with review aggregation and testimonials — giving you a complete social proof strategy from one dashboard." },
   ],
 };

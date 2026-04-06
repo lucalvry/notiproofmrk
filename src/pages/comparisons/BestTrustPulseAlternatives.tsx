@@ -16,7 +16,7 @@ const alternatives = [
   {
     name: "NotiProof",
     highlight: true,
-    pricing: "Free – $79/mo",
+    pricing: "Free – $40/mo",
     pros: ["Social proof + testimonials + reviews in one platform", "Built-in A/B testing & revenue attribution", "Video testimonial recorder", "50+ notification templates", "38+ integrations"],
     cons: ["Newer brand (launched 2024)"],
     verdict: "Best TrustPulse alternative — significantly more features at competitive pricing.",
@@ -117,7 +117,7 @@ export default function BestTrustPulseAlternatives() {
 
           <motion.div {...fadeUp} className="text-center mt-12">
             <Button variant="hero" size="xl" asChild>
-              <a href="https://app.notiproof.com/signup">Start Free 14-Day Trial <ArrowRight className="w-5 h-5" /></a>
+              <a href="https://app.notiproof.com/signup">Get Started Free <ArrowRight className="w-5 h-5" /></a>
             </Button>
           </motion.div>
 

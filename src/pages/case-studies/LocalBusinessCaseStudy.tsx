@@ -97,7 +97,7 @@ export default function LocalBusinessCaseStudy() {
           <motion.div {...fadeUp} className="text-center mt-12">
             <p className="text-muted-foreground mb-4">Ready to grow your local business with social proof?</p>
             <Button variant="hero" size="xl" asChild>
-              <a href="https://app.notiproof.com/signup">Start Free 14-Day Trial <ArrowRight className="w-5 h-5" /></a>
+              <a href="https://app.notiproof.com/signup">Get Started Free <ArrowRight className="w-5 h-5" /></a>
             </Button>
             <p className="text-sm text-muted-foreground mt-3">No credit card required · Setup in 60 seconds</p>
           </motion.div>

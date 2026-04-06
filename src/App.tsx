@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import Layout from "./components/Layout";
+import CookieConsentBanner from "./components/CookieConsent";
 
 // Existing pages
 import Index from "./pages/Index";
@@ -126,6 +127,7 @@ const WebsiteTrustScoreChecker = lazy(() => import("./pages/tools/WebsiteTrustSc
 // Legal
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 const TermsOfService = lazy(() => import("./pages/TermsOfService"));
+const CookiePolicy = lazy(() => import("./pages/CookiePolicy"));
 
 const queryClient = new QueryClient();
 
@@ -143,6 +145,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <CookieConsentBanner />
         <Routes>
           <Route element={<Layout />}>
             <Route path="/" element={<Index />} />
@@ -262,6 +265,7 @@ const App = () => (
             {/* Legal */}
             <Route path="/privacy-policy/" element={<SuspenseWrap><PrivacyPolicy /></SuspenseWrap>} />
             <Route path="/terms-of-service/" element={<SuspenseWrap><TermsOfService /></SuspenseWrap>} />
+            <Route path="/cookie-policy/" element={<SuspenseWrap><CookiePolicy /></SuspenseWrap>} />
 
             {/* Redirects */}
             <Route path="/home/" element={<Navigate to="/" replace />} />

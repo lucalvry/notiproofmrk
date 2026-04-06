@@ -30,7 +30,7 @@ const features = [
 
 const pillarFaqs = [
   { q: "What is NotiProof?", a: "NotiProof is a complete social proof and testimonials platform that helps websites increase conversions through real-time notifications, customer testimonials, review aggregation, visitor counters, and conversion analytics. It serves e-commerce stores, SaaS companies, agencies, and local businesses." },
-  { q: "How much does NotiProof cost?", a: "NotiProof offers a free plan with core features, plus Standard ($19/mo), Pro ($49/mo), and Business ($99/mo) plans with increasing notification volume, advanced targeting, and priority support. All 38+ integrations are included on every plan." },
+  { q: "How much does NotiProof cost?", a: "NotiProof offers a free plan with core features, plus Starter ($5/mo), Standard ($15/mo), and Professional ($40/mo) plans with increasing views, storage, advanced targeting, and priority support. All 38+ integrations are included on every plan." },
   { q: "How long does setup take?", a: "Most businesses are fully set up in under 10 minutes. Add one line of JavaScript to your website, connect your data sources (Shopify, Stripe, etc.), and configure your first campaign in the dashboard." },
   { q: "Does NotiProof slow down my website?", a: "No. NotiProof's embed script is under 15KB gzipped, loads asynchronously, and has zero impact on Core Web Vitals (LCP, FID, CLS). Notification data is served from a global CDN with edge caching." },
   { q: "Is NotiProof GDPR compliant?", a: "Yes. NotiProof offers privacy-compliant tracking options, customer data anonymization controls, and data processing that complies with GDPR Article 6(1)(f). You control exactly what customer information is displayed." },
@@ -121,7 +121,7 @@ export default function ProductHub() {
             <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">Everything you need to increase conversions with social proof, testimonials, and trust signals — in one platform.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-4">
               <Button variant="hero" size="xl" asChild>
-                <a href="https://app.notiproof.com/signup">Start Free Trial <ArrowRight className="w-5 h-5" /></a>
+                <a href="https://app.notiproof.com/signup">Get Started Free <ArrowRight className="w-5 h-5" /></a>
               </Button>
               <Button variant="hero-outline" size="xl" asChild>
                 <Link to="/pricing/">View Pricing</Link>
@@ -188,10 +188,10 @@ export default function ProductHub() {
           <div className="bg-gradient-to-r from-primary to-primary/80 rounded-2xl p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6">
             <div>
               <h3 className="text-xl md:text-2xl font-bold text-primary-foreground mb-2">Ready to increase conversions?</h3>
-              <p className="text-primary-foreground/80 text-sm">Start your free trial today — no credit card required.</p>
+              <p className="text-primary-foreground/80 text-sm">Get started free today — no credit card required.</p>
             </div>
             <Button size="xl" variant="secondary" className="shrink-0 font-bold" asChild>
-              <a href="https://app.notiproof.com/signup">Start Free Trial <ArrowRight className="w-5 h-5 ml-1" /></a>
+              <a href="https://app.notiproof.com/signup">Get Started Free <ArrowRight className="w-5 h-5 ml-1" /></a>
             </Button>
           </div>
         </div>

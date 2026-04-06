@@ -5,33 +5,26 @@ import { componentTagger } from "lovable-tagger";
 import { vitePrerenderPlugin } from "vite-prerender-plugin";
 
 // https://vitejs.dev/config/
-export default defineConfig(async ({ mode }) => {
-  const additionalRoutes = mode === "production"
-    ? (await import("./src/routes-manifest.ts")).staticRoutes
-    : [];
-
-  return {
-    server: {
-      host: "::",
-      port: 8080,
-      hmr: {
-        overlay: false,
-      },
+export default defineConfig(({ mode }) => ({
+  server: {
+    host: "::",
+    port: 8080,
+    hmr: {
+      overlay: false,
     },
-    plugins: [
-      react(),
-      mode === "development" && componentTagger(),
-      mode === "production" &&
-        vitePrerenderPlugin({
-          renderTarget: "#root",
-          prerenderScript: "./src/entry-prerender.tsx",
-          additionalPrerenderRoutes: additionalRoutes,
-        }),
-    ].filter(Boolean),
-    resolve: {
-      alias: {
-        "@": path.resolve(__dirname, "./src"),
-      },
+  },
+  plugins: [
+    react(),
+    mode === "development" && componentTagger(),
+    mode === "production" &&
+      vitePrerenderPlugin({
+        renderTarget: "#root",
+        prerenderScript: "./src/entry-prerender.tsx",
+      }),
+  ].filter(Boolean),
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
     },
-  };
-});
+  },
+}));

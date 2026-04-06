@@ -94,14 +94,14 @@ export default function HomePage() {
             <div className="flex flex-col sm:flex-row gap-4">
               <Button variant="hero" size="xl" asChild>
                 <a href="https://app.notiproof.com/signup" target="_blank" rel="noopener noreferrer">
-                  Start Free Trial <ArrowRight className="w-5 h-5" />
+                  Get Started Free <ArrowRight className="w-5 h-5" />
                 </a>
               </Button>
               <Button variant="hero-outline" size="xl" asChild>
                 <Link to="/pricing/">View Pricing</Link>
               </Button>
             </div>
-            <p className="text-sm text-muted-foreground mt-3">No credit card required · 14-day free trial</p>
+            <p className="text-sm text-muted-foreground mt-3">Free forever plan · No credit card required</p>
           </motion.div>
 
           <motion.div {...fadeUp} transition={{ duration: 0.5, delay: 0.2 }} className="mt-10 w-full max-w-5xl mx-auto">

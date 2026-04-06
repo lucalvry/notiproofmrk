@@ -62,7 +62,7 @@ Built-in split testing for notification variants. Test different messages, posit
 
 **Lifetime Deal**: $299 one-time payment — 25,000 events/month, 3 websites, 5GB media storage, all features forever, future features included.
 
-All paid plans include a 14-day free trial. No credit card required to start.
+The Free plan is free forever. Paid plans have no trial period.
 
 ---
 
@@ -235,7 +235,7 @@ NotiProof integrates with Shopify via a one-click app install. It automatically 
 NotiProof integrates with WordPress via a plugin that installs in one click. It supports WooCommerce order syncing, form submission notifications, and works with any WordPress theme. Details: https://notiproof.com/integrations/wordpress/
 
 ### How much does NotiProof cost?
-NotiProof offers a free plan (1,000 notifications/month, 1 site), paid plans from $19/month (billed annually: $15/month), and a $299 lifetime deal. All paid plans include a 14-day free trial with no credit card required. Full pricing: https://notiproof.com/pricing/
+NotiProof offers a free plan (1,000 notifications/month, 1 site), paid plans from $19/month (billed annually: $15/month), and a $299 lifetime deal. The Free plan is free forever. Paid plans have no trial period. Full pricing: https://notiproof.com/pricing/
 
 ### What are the best social proof examples?
 Top social proof examples include Amazon's layered review system, Booking.com's real-time activity alerts, Basecamp's "75,000+ companies" crowd proof, and Shopify's revenue-focused case studies. The most effective strategies layer multiple types of proof. Examples: https://notiproof.com/resources/social-proof/social-proof-example/

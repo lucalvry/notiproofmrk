@@ -87,7 +87,7 @@ export default function UseCaseTemplate({
               )}
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button variant="hero" size="xl" asChild>
-                  <a href="https://app.notiproof.com/signup">Start Free Trial <ArrowRight className="w-5 h-5" /></a>
+                  <a href="https://app.notiproof.com/signup">Get Started Free <ArrowRight className="w-5 h-5" /></a>
                 </Button>
                 <Button variant="hero-outline" size="xl" asChild>
                   <Link to="/pricing/">View Pricing</Link>
@@ -188,10 +188,10 @@ export default function UseCaseTemplate({
           <div className="bg-gradient-to-r from-primary to-primary/80 rounded-2xl p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6">
             <div>
               <h3 className="text-xl md:text-2xl font-bold text-primary-foreground mb-2">Ready to boost your conversions?</h3>
-              <p className="text-primary-foreground/80 text-sm">Start your free trial today — no credit card required.</p>
+              <p className="text-primary-foreground/80 text-sm">Get started free today — no credit card required.</p>
             </div>
             <Button size="xl" variant="secondary" className="shrink-0 font-bold" asChild>
-              <a href="https://app.notiproof.com/signup">Start Free Trial <ArrowRight className="w-5 h-5 ml-1" /></a>
+              <a href="https://app.notiproof.com/signup">Get Started Free <ArrowRight className="w-5 h-5 ml-1" /></a>
             </Button>
           </div>
         </div>

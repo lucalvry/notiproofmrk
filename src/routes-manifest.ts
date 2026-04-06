@@ -118,4 +118,5 @@ export const staticRoutes = [
   // Legal
   "/privacy-policy/",
   "/terms-of-service/",
+  "/cookie-policy/",
 ];

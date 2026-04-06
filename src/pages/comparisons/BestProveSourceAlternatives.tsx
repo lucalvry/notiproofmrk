@@ -16,7 +16,7 @@ const alternatives = [
   {
     name: "NotiProof",
     highlight: true,
-    pricing: "Free – $79/mo",
+    pricing: "Free – $40/mo",
     pros: ["Complete platform: notifications + testimonials + reviews", "A/B testing & revenue attribution built-in", "Video testimonial recorder", "50+ customizable templates", "38+ integrations"],
     cons: ["Newer brand (launched 2024)"],
     verdict: "Best ProveSource alternative — all-in-one social proof with superior analytics.",
@@ -90,7 +90,7 @@ export default function BestProveSourceAlternatives() {
           </div>
           <motion.div {...fadeUp} className="text-center mt-12">
             <Button variant="hero" size="xl" asChild>
-              <a href="https://app.notiproof.com/signup">Start Free 14-Day Trial <ArrowRight className="w-5 h-5" /></a>
+              <a href="https://app.notiproof.com/signup">Get Started Free <ArrowRight className="w-5 h-5" /></a>
             </Button>
           </motion.div>
 

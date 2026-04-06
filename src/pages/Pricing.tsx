@@ -12,44 +12,35 @@ const plans = [
     monthly: 0,
     yearly: 0,
     desc: "For testing and small sites",
-    features: ["1,000 notifications/mo", "1 site", "Basic templates", "Community support", "All integrations"],
+    features: ["1 website", "5K monthly views", "Basic templates", "Community support"],
     cta: "Start Free",
   },
   {
     name: "Starter",
-    monthly: 19,
-    yearly: 15,
+    monthly: 5,
+    yearly: 50,
     desc: "For growing websites",
-    features: ["10,000 notifications/mo", "3 sites", "All templates", "Testimonial collection", "Email support", "All integrations"],
-    cta: "Start Free Trial",
+    features: ["Up to 3 websites", "30K monthly views", "300MB media storage", "3-min video recording", "Unlimited testimonials", "Unlimited forms & wall", "Analytics dashboard", "All templates & integrations", "Remove NotiProof branding", "Priority support"],
+    cta: "Get Started",
   },
   {
     name: "Standard",
-    monthly: 49,
-    yearly: 39,
+    monthly: 15,
+    yearly: 150,
     desc: "For serious businesses",
     popular: true,
-    features: ["50,000 notifications/mo", "10 sites", "All templates", "Testimonial wall", "Analytics dashboard", "Priority support", "All integrations"],
-    cta: "Start Free Trial",
+    features: ["Unlimited websites", "100K monthly views", "500MB media storage", "3-min video recording", "Unlimited testimonials", "Unlimited forms & wall", "Analytics dashboard", "All templates & integrations", "Remove NotiProof branding", "Priority support"],
+    cta: "Get Started",
   },
   {
-    name: "Pro",
-    monthly: 119,
-    yearly: 95,
+    name: "Professional",
+    monthly: 40,
+    yearly: 400,
     desc: "For conversion-focused teams",
-    features: ["200,000 notifications/mo", "25 sites", "A/B testing", "Targeting rules", "White label", "AI testimonial analysis", "Dedicated support", "All integrations"],
-    cta: "Start Free Trial",
-  },
-  {
-    name: "Business",
-    monthly: 380,
-    yearly: 304,
-    desc: "For large-scale operations",
-    features: ["Unlimited notifications", "Unlimited sites", "Everything in Pro", "Custom integrations", "SLA guarantee", "Account manager", "All integrations"],
-    cta: "Contact Sales",
+    features: ["Unlimited websites", "400K monthly views", "1GB media storage", "3-min video recording", "Unlimited testimonials", "Unlimited forms & wall", "Analytics dashboard", "A/B testing", "Targeting rules", "All templates & integrations", "Remove NotiProof branding", "Priority support"],
+    cta: "Get Started",
   },
 ];
-
 const ltdFeatures = [
   "Lifetime access",
   "3 websites",
@@ -65,25 +56,26 @@ const ltdFeatures = [
 ];
 
 const comparisonFeatures = [
-  { name: "Notifications/mo", values: ["1K", "10K", "50K", "200K", "Unlimited"] },
-  { name: "Sites", values: ["1", "3", "10", "25", "Unlimited"] },
-  { name: "Templates", values: ["Basic", "All", "All", "All", "All"] },
-  { name: "Testimonial Collection", values: [false, true, true, true, true] },
-  { name: "Testimonial Wall", values: [false, false, true, true, true] },
-  { name: "Analytics Dashboard", values: [false, false, true, true, true] },
-  { name: "A/B Testing", values: [false, false, false, true, true] },
-  { name: "Targeting Rules", values: [false, false, false, true, true] },
-  { name: "White Label", values: [false, false, false, true, true] },
-  { name: "AI Analysis", values: [false, false, false, true, true] },
-  { name: "Integrations", values: ["All", "All", "All", "All", "All"] },
+  { name: "Websites", values: ["1", "3", "Unlimited", "Unlimited"] },
+  { name: "Monthly Views", values: ["5K", "30K", "100K", "400K"] },
+  { name: "Media Storage", values: [false, "300MB", "500MB", "1GB"] },
+  { name: "Video Recording", values: [false, "3 min", "3 min", "3 min"] },
+  { name: "Testimonials Collection", values: [false, true, true, true] },
+  { name: "Testimonial Forms & Wall", values: [false, true, true, true] },
+  { name: "Analytics Dashboard", values: [false, true, true, true] },
+  { name: "A/B Testing", values: [false, false, false, true] },
+  { name: "Targeting Rules", values: [false, false, false, true] },
+  { name: "Templates", values: ["Basic", "All", "All", "All"] },
+  { name: "Integrations", values: ["All", "All", "All", "All"] },
+  { name: "Remove Branding", values: [false, true, true, true] },
+  { name: "Priority Support", values: [false, true, true, true] },
 ];
-
 const faqs = [
   { q: "What is the Lifetime Deal?", a: "The Lifetime Deal is a one-time payment of $79 that gives you permanent access to NotiProof with no recurring fees. It includes 3 websites, 25,000 events/month, advanced analytics, and all future features and integrations." },
-  { q: "Can I try NotiProof for free?", a: "Yes! Our Free plan lets you get started with 1,000 notifications per month. All paid plans include a 14-day free trial." },
-  { q: "What counts as a notification?", a: "A notification is counted each time a social proof widget is displayed to a unique visitor on your website." },
+  { q: "Can I try NotiProof for free?", a: "Yes! Our Free plan lets you get started with 5,000 monthly views on 1 website. There's no trial — the Free plan is free forever. Upgrade anytime when you need more." },
+  { q: "What counts as a monthly view?", a: "A monthly view is counted each time a visitor loads a page on your website where NotiProof is installed." },
   { q: "Can I change plans anytime?", a: "Absolutely. You can upgrade, downgrade, or cancel your plan at any time from your dashboard." },
-  { q: "Are all integrations included?", a: "Yes! All 38+ integrations are included on every plan, including Free. No feature paywalls." },
+  { q: "Are all integrations included?", a: "Yes! All integrations are included on every paid plan. The Free plan also includes all integrations." },
   { q: "What is an add-on seat?", a: "Additional team members can be added for $3/month each. The first seat is included with every plan." },
   { q: "Do you offer refunds?", a: "Yes, we offer a 30-day money-back guarantee on all paid plans, including the Lifetime Deal." },
 ];
@@ -135,7 +127,7 @@ export default function PricingPage() {
     <>
       <SEOHead
         title="NotiProof Pricing – Plans Starting Free | Social Proof Platform"
-        description="Compare NotiProof pricing plans. Lifetime Deal ($79), Free, Starter ($19), Standard ($49), Pro ($119), and Business ($380). All integrations included."
+        description="Compare NotiProof pricing plans. Lifetime Deal ($79), Free, Starter ($5), Standard ($15), Professional ($40). All integrations included."
         canonical="https://notiproof.com/pricing/"
         schema={pricingSchema}
       />
@@ -221,12 +213,12 @@ export default function PricingPage() {
                   <span className={`absolute top-0.5 w-5 h-5 bg-card rounded-full transition-transform shadow ${yearly ? "translate-x-6" : "translate-x-0.5"}`} />
                 </button>
                 <span className={`text-sm font-medium ${yearly ? "text-foreground" : "text-muted-foreground"}`}>
-                  Yearly <span className="text-primary text-xs font-semibold">Save 20%</span>
+                  Yearly <span className="text-primary text-xs font-semibold">Save 17%</span>
                 </span>
               </div>
 
               {/* Plans */}
-              <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-5 mb-20">
+              <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-20">
                 {plans.map((plan) => (
                   <motion.div
                     key={plan.name}
@@ -247,7 +239,7 @@ export default function PricingPage() {
                       <span className="text-4xl font-extrabold">
                         ${yearly ? plan.yearly : plan.monthly}
                       </span>
-                      <span className="text-sm text-muted-foreground">/mo</span>
+                      <span className="text-sm text-muted-foreground">{yearly ? "/yr" : "/mo"}</span>
                     </div>
                     <p className="text-xs text-muted-foreground mb-4">{plan.desc}</p>
                     <ul className="space-y-2 mb-6 flex-1">

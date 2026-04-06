@@ -94,7 +94,7 @@ export default function SaaSCaseStudy() {
 
           <motion.div {...fadeUp} className="text-center mt-12">
             <Button variant="hero" size="xl" asChild>
-              <a href="https://app.notiproof.com/signup">Start Free 14-Day Trial <ArrowRight className="w-5 h-5" /></a>
+              <a href="https://app.notiproof.com/signup">Get Started Free <ArrowRight className="w-5 h-5" /></a>
             </Button>
           </motion.div>
 

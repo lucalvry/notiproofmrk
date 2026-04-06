@@ -10,8 +10,8 @@ const editorialContent = (
 
     <h2 className="text-2xl font-bold mt-10 mb-3">Is TrustPulse's Lower Price Worth the Trade-offs?</h2>
     <p className="text-lg font-medium text-foreground mb-4">TrustPulse's $5/mo entry price is attractive, but its limited feature set means you'll likely need additional tools for testimonials, reviews, and analytics — often costing more in total than NotiProof's all-in-one approach.</p>
-    <p className="text-muted-foreground mb-4">The math is straightforward: TrustPulse at $5-19/mo covers notifications only. Adding a testimonial tool ($20-50/mo), review management ($30-80/mo), and A/B testing ($50-100/mo) brings your total to $105-249/mo. NotiProof's Growth plan at $49/mo includes all of these capabilities in one platform with one login and one billing relationship.</p>
-    <p className="text-muted-foreground mb-4">NotiProof also offers a free plan with 1,000 events/month — eliminating TrustPulse's main advantage (low cost) for small sites. The free plan includes core notification features plus access to testimonial and review tools, giving you room to grow before upgrading.</p>
+    <p className="text-muted-foreground mb-4">The math is straightforward: TrustPulse at $5-19/mo covers notifications only. Adding a testimonial tool ($20-50/mo), review management ($30-80/mo), and A/B testing ($50-100/mo) brings your total to $105-249/mo. NotiProof's Standard plan at $15/mo includes all of these capabilities in one platform with one login and one billing relationship.</p>
+    <p className="text-muted-foreground mb-4">NotiProof also offers a free plan with 5,000 views/month — eliminating TrustPulse's main advantage (low cost) for small sites. The free plan includes core notification features plus basic templates, giving you room to grow before upgrading.</p>
 
     <h2 className="text-2xl font-bold mt-10 mb-3">Which Platform Works Better Beyond WordPress?</h2>
     <p className="text-lg font-medium text-foreground mb-4">NotiProof is platform-agnostic with 38+ integrations across Shopify, WordPress, Squarespace, and custom sites, while TrustPulse works best within the WordPress ecosystem and has limited integration options for other platforms.</p>
@@ -53,10 +53,10 @@ const data: ComparisonData = {
     { feature: "WordPress Plugin", notiproof: true, competitor: true },
   ],
   pricing: [
-    { name: "Free", notiproof: "$0/mo (1k events)", competitor: "No free plan" },
-    { name: "Basic", notiproof: "$19/mo", competitor: "$5/mo (2.5k sessions)" },
-    { name: "Growth", notiproof: "$49/mo", competitor: "$10/mo" },
-    { name: "Business", notiproof: "$99/mo", competitor: "$19/mo" },
+    { name: "Free", notiproof: "$0/mo (5K views)", competitor: "No free plan" },
+    { name: "Starter", notiproof: "$5/mo", competitor: "$5/mo (2.5k sessions)" },
+    { name: "Standard", notiproof: "$15/mo", competitor: "$10/mo" },
+    { name: "Professional", notiproof: "$40/mo", competitor: "$19/mo" },
   ],
   notiproofPros: [
     "Complete social proof platform beyond just notifications",
@@ -87,7 +87,7 @@ const data: ComparisonData = {
   whoShouldChooseCompetitor: "You have a tight budget and only need simple purchase notification popups on a WordPress site. You don't need testimonials, reviews, or advanced analytics.",
   sections: [
     { title: "Features", content: "TrustPulse focuses narrowly on notification popups and on-fire visitor counts. NotiProof matches these core features and adds testimonial collection, video recording, review aggregation, a campaign builder, and A/B testing." },
-    { title: "Pricing", content: "TrustPulse is one of the cheapest options at $5/mo, but it's limited to notifications only. NotiProof's free plan covers 1,000 events, and paid plans start at $19/mo with far more features included." },
+    { title: "Pricing", content: "TrustPulse is one of the cheapest options at $5/mo, but it's limited to notifications only. NotiProof's free plan covers 5,000 views, and paid plans start at $5/mo with far more features included." },
     { title: "Integrations", content: "TrustPulse works best with WordPress and WooCommerce. NotiProof offers 38+ integrations including Shopify, Stripe, HubSpot, Zapier, and more — making it platform-agnostic." },
     { title: "Ease of Use", content: "Both tools are easy to install. TrustPulse's simplicity is a strength for basic use cases. NotiProof's dashboard is more feature-rich but well-organized with guided onboarding." },
     { title: "Customer Support", content: "TrustPulse offers email support and documentation. NotiProof provides email support, a video-rich help center, and priority support on higher plans." },

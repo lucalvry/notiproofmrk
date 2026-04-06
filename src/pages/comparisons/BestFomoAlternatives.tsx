@@ -16,7 +16,7 @@ const alternatives = [
   {
     name: "NotiProof",
     highlight: true,
-    pricing: "Free – $79/mo",
+    pricing: "Free – $40/mo",
     pros: ["All-in-one: notifications + testimonials + reviews", "Built-in A/B testing & revenue attribution", "50+ templates with pixel-perfect customization", "Video testimonial recorder included", "38+ native integrations"],
     cons: ["Newer brand (launched 2024)"],
     verdict: "Best overall Fomo alternative — more features at a lower price with built-in testimonial and review tools.",
@@ -142,7 +142,7 @@ export default function BestFomoAlternatives() {
             <p className="text-muted-foreground mb-4">Ready to try the #1 Fomo alternative?</p>
             <Button variant="hero" size="xl" asChild>
               <a href="https://app.notiproof.com/signup">
-                Start Free 14-Day Trial <ArrowRight className="w-5 h-5" />
+                Get Started Free <ArrowRight className="w-5 h-5" />
               </a>
             </Button>
           </motion.div>

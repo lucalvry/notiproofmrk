@@ -23,11 +23,11 @@ export default function FinalCTA() {
           </p>
           <Button variant="hero" size="xl" asChild>
             <a href="https://app.notiproof.com/signup">
-              Start Free Trial <ArrowRight className="w-5 h-5" />
+              Get Started Free <ArrowRight className="w-5 h-5" />
             </a>
           </Button>
           <p className="text-sm text-dark-foreground/40 mt-4">
-            14-day free trial · No credit card required
+            Free forever plan · No credit card required
           </p>
         </motion.div>
       </div>

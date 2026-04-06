@@ -34,7 +34,7 @@ const helpCenterData: HelpCategory[] = [
       { question: "What plans are available?", answer: "We offer Free, Starter, Growth, and Enterprise plans. Each includes different notification limits, features, and support levels. Visit our Pricing page for details." },
       { question: "Can I change my plan at any time?", answer: "Yes. Upgrade or downgrade from your account dashboard at any time. Upgrades take effect immediately; downgrades apply at the next billing cycle." },
       { question: "How does billing work?", answer: "We bill monthly or annually (with a 20% discount for annual plans). All payments are processed securely via Stripe." },
-      { question: "Can I get a refund?", answer: "We offer a 14-day money-back guarantee on all paid plans. Contact support within 14 days of your purchase for a full refund." },
+      { question: "Can I get a refund?", answer: "We offer a 30-day money-back guarantee on all paid plans. Contact support within 30 days of your purchase for a full refund." },
       { question: "How do I cancel my subscription?", answer: "Go to Settings → Billing in your dashboard and click 'Cancel Plan.' Your account will remain active until the end of your current billing period." },
     ],
   },

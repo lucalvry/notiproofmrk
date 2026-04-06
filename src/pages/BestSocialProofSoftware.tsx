@@ -15,7 +15,7 @@ export default function BestSocialProofSoftware() {
       </motion.div>
       <div className="max-w-4xl mx-auto space-y-6">
         {[
-          { name: "NotiProof", desc: "All-in-one social proof & testimonial platform with 38+ integrations, video testimonials, and AI analysis.", price: "Free – $380/mo", highlight: true },
+          { name: "NotiProof", desc: "All-in-one social proof & testimonial platform with 38+ integrations, video testimonials, and AI analysis.", price: "Free – $40/mo", highlight: true },
           { name: "Fomo", desc: "Real-time social proof notifications for e-commerce stores.", price: "$25 – $149/mo", highlight: false },
           { name: "Proof (UseProof)", desc: "Social proof notifications with A/B testing. Recently acquired.", price: "$79 – $299/mo", highlight: false },
           { name: "TrustPulse", desc: "Simple social proof notification tool by OptinMonster.", price: "$5 – $39/mo", highlight: false },

@@ -48,9 +48,9 @@ const faqs = [
   {
     q: "Is there a free plan?",
     a: (
-      <>Yes! Our free plan includes up to 1,000 notification impressions per month — perfect for testing. Paid plans start at $19/mo and scale with your traffic. <Link to="/pricing/" className="text-primary hover:underline">See pricing details</Link>. You can also use our <Link to="/free-tools/" className="text-primary hover:underline">free tools</Link> without any account.</>
+      <>Yes! Our free plan includes up to 5,000 monthly views — perfect for testing. Paid plans start at $5/mo and scale with your traffic. <Link to="/pricing/" className="text-primary hover:underline">See pricing details</Link>. You can also use our <Link to="/free-tools/" className="text-primary hover:underline">free tools</Link> without any account.</>
     ),
-    aText: "Yes! Our free plan includes up to 1,000 notification impressions per month — perfect for testing. Paid plans start at $19/mo and scale with your traffic.",
+    aText: "Yes! Our free plan includes up to 5,000 monthly views — perfect for testing. Paid plans start at $5/mo and scale with your traffic.",
   },
   {
     q: "How does NotiProof track conversions?",

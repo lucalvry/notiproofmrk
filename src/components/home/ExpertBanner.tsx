@@ -45,7 +45,7 @@ export default function ExpertBanner() {
             </ul>
             <Button variant="hero" size="lg" asChild>
               <a href="https://app.notiproof.com/signup">
-                Start Free Trial <ArrowRight className="w-4 h-4" />
+                Get Started Free <ArrowRight className="w-4 h-4" />
               </a>
             </Button>
           </div>

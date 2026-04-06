@@ -191,7 +191,7 @@ export default function Navbar() {
             <a href="https://app.notiproof.com/login">Log In</a>
           </Button>
           <Button size="sm" asChild>
-            <a href="https://app.notiproof.com/signup">Start Free Trial</a>
+            <a href="https://app.notiproof.com/signup">Get Started Free</a>
           </Button>
         </div>
 
@@ -224,7 +224,7 @@ export default function Navbar() {
               <a href="https://app.notiproof.com/login">Log In</a>
             </Button>
             <Button size="sm" className="flex-1" asChild>
-              <a href="https://app.notiproof.com/signup">Start Free Trial</a>
+              <a href="https://app.notiproof.com/signup">Get Started Free</a>
             </Button>
           </div>
         </div>

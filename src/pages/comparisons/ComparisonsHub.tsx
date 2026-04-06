@@ -153,7 +153,7 @@ export default function ComparisonsHub() {
         </div>
       </section>
 
-      <CTASection title="Ready to See NotiProof in Action?" description="Start your free 14-day trial and see why teams switch from competitors." />
+      <CTASection title="Ready to See NotiProof in Action?" description="Get started free and see why teams switch from competitors." />
     </>
   );
 }

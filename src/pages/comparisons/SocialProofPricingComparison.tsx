@@ -13,7 +13,7 @@ const fadeUp = {
 };
 
 const tools = [
-  { name: "NotiProof", free: "$0", starter: "$9/mo", pro: "$29/mo", growth: "$79/mo", notifications: true, testimonials: true, video: true, reviews: true, abTest: true, analytics: true, integrations: "38+" },
+  { name: "NotiProof", free: "$0", starter: "$5/mo", pro: "$15/mo", growth: "$40/mo", notifications: true, testimonials: true, video: true, reviews: true, abTest: true, analytics: true, integrations: "38+" },
   { name: "Fomo", free: "—", starter: "$25/mo", pro: "$75/mo", growth: "$199/mo", notifications: true, testimonials: false, video: false, reviews: false, abTest: "Limited", analytics: true, integrations: "100+" },
   { name: "TrustPulse", free: "—", starter: "$5/mo", pro: "$10/mo", growth: "$39/mo", notifications: true, testimonials: false, video: false, reviews: false, abTest: false, analytics: "Basic", integrations: "Limited" },
   { name: "ProveSource", free: "$0", starter: "$21/mo", pro: "$49/mo", growth: "$89/mo", notifications: true, testimonials: false, video: false, reviews: false, abTest: false, analytics: "Basic", integrations: "20+" },

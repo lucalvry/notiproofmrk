@@ -10,7 +10,7 @@ const editorialContent = (
 
     <h2 className="text-2xl font-bold mt-10 mb-3">Which Offers Better Value for Money?</h2>
     <p className="text-lg font-medium text-foreground mb-4">While ProveSource is slightly cheaper on mid-tier plans, NotiProof delivers significantly more features per dollar — including testimonials, reviews, A/B testing, and revenue attribution that would cost $100+/mo as separate tools.</p>
-    <p className="text-muted-foreground mb-4">Both platforms offer free plans, making it easy to test before committing. ProveSource's free tier covers 1,000 visitors with notification-only features, while NotiProof's free plan includes 1,000 events with access to core testimonial and review features as well. On paid plans, the price difference is modest ($19 vs $21 at the starter level), but the feature gap is substantial.</p>
+    <p className="text-muted-foreground mb-4">Both platforms offer free plans, making it easy to test before committing. ProveSource's free tier covers 1,000 visitors with notification-only features, while NotiProof's free plan includes 5,000 views with basic templates included. On paid plans, NotiProof starts at just $5/mo versus ProveSource's $21/mo — and the feature gap is substantial.</p>
     <p className="text-muted-foreground mb-4">Consider the total cost of ownership: with ProveSource, you'd need separate tools for <Link to="/resources/testimonials/how-to-collect-testimonials/" className="text-primary hover:underline">testimonial collection</Link> ($20-50/mo), review management ($30-80/mo), and A/B testing. NotiProof bundles all of these into a single subscription, often saving businesses $100-200/mo compared to a multi-tool stack.</p>
 
     <h2 className="text-2xl font-bold mt-10 mb-3">What Features Does NotiProof Have That ProveSource Lacks?</h2>
@@ -53,10 +53,10 @@ const data: ComparisonData = {
     { feature: "Webhook Support", notiproof: true, competitor: true },
   ],
   pricing: [
-    { name: "Free", notiproof: "$0/mo (1k events)", competitor: "$0/mo (1k visitors)" },
-    { name: "Starter", notiproof: "$19/mo", competitor: "$21/mo" },
-    { name: "Growth", notiproof: "$49/mo", competitor: "$42/mo" },
-    { name: "Business", notiproof: "$99/mo", competitor: "$84/mo" },
+    { name: "Free", notiproof: "$0/mo (5K views)", competitor: "$0/mo (1k visitors)" },
+    { name: "Starter", notiproof: "$5/mo", competitor: "$21/mo" },
+    { name: "Standard", notiproof: "$15/mo", competitor: "$42/mo" },
+    { name: "Professional", notiproof: "$40/mo", competitor: "$84/mo" },
   ],
   notiproofPros: [
     "Complete platform: notifications + testimonials + reviews",
