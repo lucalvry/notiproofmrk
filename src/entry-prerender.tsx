@@ -283,6 +283,7 @@ export async function prerender() {
                   <Route path="/resources/conversion-analytics/conversion-rate-benchmarks/" element={<ConversionRateBenchmarks />} />
                   <Route path="/resources/conversion-analytics/measuring-social-proof-roi/" element={<MeasuringSocialProofROI />} />
                   <Route path="/resources/conversion-analytics/heatmap-analytics-guide/" element={<HeatmapAnalyticsGuide />} />
+                  <Route path="/resources/conversion-analytics/testimonial-review-roi/" element={<TestimonialReviewROI />} />
                   <Route path="/resources/website-trust/" element={<WebsiteTrustPillar />} />
                   <Route path="/resources/website-trust/trust-signals-for-ecommerce/" element={<TrustSignalsForEcommerce />} />
                   <Route path="/resources/website-trust/trust-badges-guide/" element={<TrustBadgesGuide />} />
