@@ -81,6 +81,11 @@ import SocialProofPricingComparison from "./pages/comparisons/SocialProofPricing
 import CaseStudiesHub from "./pages/case-studies/CaseStudiesHub";
 import EcommerceCaseStudy from "./pages/case-studies/EcommerceCaseStudy";
 import SaaSCaseStudy from "./pages/case-studies/SaaSCaseStudy";
+import AgencyCaseStudy from "./pages/case-studies/AgencyCaseStudy";
+import LocalBusinessCaseStudy from "./pages/case-studies/LocalBusinessCaseStudy";
+import ReviewsAndSocialProof from "./pages/resources/social-proof/ReviewsAndSocialProof";
+import TestimonialReviewROI from "./pages/resources/conversion-analytics/TestimonialReviewROI";
+import TestimonialsAsTrustSignals from "./pages/resources/website-trust/TestimonialsAsTrustSignals";
 import FreeToolsHub from "./pages/tools/FreeToolsHub";
 import ABTestCalculator from "./pages/tools/ABTestCalculator";
 import SocialProofROICalculator from "./pages/tools/SocialProofROICalculator";
