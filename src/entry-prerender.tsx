@@ -267,6 +267,7 @@ export async function prerender() {
                   <Route path="/resources/social-proof/social-proof-for-websites/" element={<SocialProofForWebsites />} />
                   <Route path="/resources/social-proof/types-of-social-proof/" element={<TypesOfSocialProof />} />
                   <Route path="/resources/social-proof/social-proof-psychology/" element={<SocialProofPsychology />} />
+                  <Route path="/resources/social-proof/reviews-and-social-proof/" element={<ReviewsAndSocialProof />} />
                   <Route path="/resources/reviews/" element={<ReviewsPillar />} />
                   <Route path="/resources/reviews/how-to-collect-google-reviews/" element={<HowToCollectGoogleReviews />} />
                   <Route path="/resources/reviews/review-aggregation-guide/" element={<ReviewAggregationGuide />} />
