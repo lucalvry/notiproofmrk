@@ -20,6 +20,7 @@ export default defineConfig(({ mode }) => ({
       vitePrerenderPlugin({
         renderTarget: "#root",
         prerenderScript: "./src/entry-prerender.tsx",
+        additionalPrerenderRoutes: (await import("./src/routes-manifest.ts")).staticRoutes,
       }),
   ].filter(Boolean),
   resolve: {
