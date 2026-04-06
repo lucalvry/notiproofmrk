@@ -1,0 +1,52 @@
+# NotiProof
+
+> Social proof and testimonial platform that increases website conversions by 10–35%.
+
+NotiProof is a SaaS platform that helps businesses boost website conversions through real-time social proof notifications, testimonial collection, review aggregation, and visitor engagement tools. Trusted by 2,000+ conversion-focused teams worldwide.
+
+## Core Product
+
+- **Social Proof Notifications**: Real-time purchase, signup, and activity alerts displayed on your website
+- **Testimonials Collection**: Collect text, image, and video testimonials from customers
+- **Video Testimonial Recorder**: In-browser video recording for customer reviews
+- **Review Aggregation**: Pull and display reviews from Google, G2, Trustpilot, and more
+- **Campaign Builder**: Create targeted notification campaigns with display rules and scheduling
+- **Analytics & Insights**: Conversion tracking dashboard with revenue attribution
+- **Visitor Counter**: Live visitor count widget
+- **Recent Activity Feed**: Real-time activity notifications
+- **Testimonials & Reviews Widget**: Embeddable review display widgets
+- **A/B Testing**: Built-in split testing for notification variants
+- **38+ Integrations**: Shopify, WooCommerce, WordPress, Stripe, Zapier, HubSpot, Webflow, and more
+
+## Pricing
+
+- Free: $0/mo — 1,000 notifications, 1 site
+- Starter: $19/mo — 10,000 notifications, 3 sites
+- Standard: $49/mo — 50,000 notifications, 10 sites (most popular)
+- Pro: $119/mo — 200,000 notifications, 25 sites, A/B testing, white label
+- Business: $380/mo — Unlimited notifications, unlimited sites, SLA
+- Lifetime Deal: $299 one-time — 25,000 events/mo, 3 sites, all features forever
+
+## Use Cases
+
+- E-commerce: Boost sales with purchase notifications and review widgets
+- SaaS: Drive trial signups with real-time social proof
+- Agencies: Offer CRO as a service to clients
+- Local Business: Convert website visitors with trust signals
+
+## Key Pages
+
+- Homepage: https://notiproof.com/
+- Pricing: https://notiproof.com/pricing/
+- Product Overview: https://notiproof.com/product/
+- Integrations: https://notiproof.com/integrations/
+- Comparisons: https://notiproof.com/comparisons/
+- Free Tools: https://notiproof.com/free-tools/
+- Resources & Blog: https://notiproof.com/resources/
+- Help Center: https://notiproof.com/resources/help-center/
+
+## Contact
+
+- Website: https://notiproof.com
+- App: https://app.notiproof.com
+- Contact: https://notiproof.com/company/contact/

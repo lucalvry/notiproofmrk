@@ -3,6 +3,8 @@ import ComparisonPageTemplate, { ComparisonData } from "@/components/ComparisonP
 const data: ComparisonData = {
   competitorName: "ProveSource",
   competitorSlug: "provesource",
+  publishDate: "2025-02-10",
+  updatedDate: "2025-04-01",
   metaTitle: "NotiProof vs ProveSource: Full Comparison (2025)",
   metaDescription: "NotiProof vs ProveSource compared — features, pricing, video testimonials, analytics, and integrations. Find out which social proof tool wins.",
   canonical: "https://notiproof.com/comparisons/notiproof-vs-provesource/",

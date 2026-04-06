@@ -1,4 +1,5 @@
 import { Bell, BarChart3, Palette } from "lucide-react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import SectionHeading from "@/components/SectionHeading";
 import featureNotifications from "@/assets/feature-smart-notifications.jpg";
@@ -19,6 +20,7 @@ const features = [
     description:
       "Set rules for when and where notifications appear. Target by page, device, geography, or visitor behavior — so every notification feels relevant, not spammy.",
     image: featureNotifications,
+    link: { href: "/resources/social-proof/social-proof-for-websites/", label: "Learn more about social proof for websites →" },
   },
   {
     icon: BarChart3,
@@ -26,6 +28,7 @@ const features = [
     description:
       "See exactly how much revenue your social proof generates. Track assisted conversions, direct conversions, and average time-to-purchase with clear attribution models.",
     image: featureRevenue,
+    link: { href: "/resources/conversion-analytics/", label: "Explore our conversion analytics guide →" },
   },
   {
     icon: Palette,
@@ -33,6 +36,7 @@ const features = [
     description:
       "Match your brand with custom colors, fonts, animations, and layouts. Choose from 50+ templates or build your own — no designer required.",
     image: featureDesign,
+    link: { href: "/resources/website-trust/building-website-credibility/", label: "Learn about building website credibility →" },
   },
 ];
 
@@ -58,9 +62,14 @@ export default function FeatureBento() {
                 <h3 className="text-xl md:text-2xl font-bold mb-3">
                   {f.title}
                 </h3>
-                <p className="text-muted-foreground text-lg leading-relaxed">
+                <p className="text-muted-foreground text-lg leading-relaxed mb-3">
                   {f.description}
                 </p>
+                {f.link && (
+                  <Link to={f.link.href} className="text-sm font-semibold text-primary hover:underline">
+                    {f.link.label}
+                  </Link>
+                )}
               </div>
               <div
                 className={`aspect-[3/2] rounded-2xl border border-border overflow-hidden ${

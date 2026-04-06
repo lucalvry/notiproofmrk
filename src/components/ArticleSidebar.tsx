@@ -29,7 +29,7 @@ const defaultPopular: SidebarArticle[] = [
 
 export default function ArticleSidebar({ popularArticles = defaultPopular, relatedArticles }: ArticleSidebarProps) {
   return (
-    <aside className="space-y-8 lg:sticky lg:top-24">
+    <aside aria-label="Article sidebar" className="space-y-8 lg:sticky lg:top-24">
       {/* Categories */}
       <div>
         <h3 className="text-sm font-bold mb-3">Browse Categories</h3>

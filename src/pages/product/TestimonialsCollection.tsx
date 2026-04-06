@@ -133,6 +133,11 @@ export default function TestimonialsCollection() {
         { label: "Types of Social Proof", href: "/resources/social-proof/types-of-social-proof/", context: "Testimonials are one of the most powerful types of social proof — learn about all the types:" },
         { label: "Social Proof Examples", href: "/resources/social-proof/social-proof-example/", context: "See real examples of how businesses use collected testimonials to drive conversions:" },
       ]}
+      comparisonLinks={[
+        { label: "NotiProof vs Fomo", href: "/comparisons/notiproof-vs-fomo/" },
+        { label: "NotiProof vs TrustPulse", href: "/comparisons/notiproof-vs-trustpulse/" },
+        { label: "NotiProof vs Proof", href: "/comparisons/notiproof-vs-proof/" },
+      ]}
     />
   );
 }

@@ -1,4 +1,5 @@
 import { Bell, MessageSquare, BarChart3, Zap } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { motion } from "framer-motion";
 import SectionHeading from "@/components/SectionHeading";
@@ -23,6 +24,7 @@ const features = [
     description:
       "Show live purchase alerts, signup activity, and review notifications to build instant trust. Customize timing, position, and design to match your brand perfectly.",
     image: tabNotifications,
+    link: { href: "/resources/social-proof/", label: "Read the complete social proof guide →" },
   },
   {
     value: "testimonials",
@@ -32,6 +34,7 @@ const features = [
     description:
       "Gather written and video testimonials from happy customers with one-click collection forms. Display them in beautiful widgets that convert — right where they matter most.",
     image: tabTestimonials,
+    link: { href: "/resources/testimonials/", label: "Read the complete testimonials guide →" },
   },
   {
     value: "analytics",
@@ -41,6 +44,7 @@ const features = [
     description:
       "Track every impression, click, and conversion. Run A/B tests on notification styles, timing, and placement to find what drives the most revenue for your business.",
     image: tabAnalytics,
+    link: { href: "/resources/conversion-analytics/", label: "Read the conversion analytics guide →" },
   },
   {
     value: "integrations",
@@ -50,6 +54,7 @@ const features = [
     description:
       "One-click integrations with Shopify, WooCommerce, WordPress, Zapier, Stripe, and more. Pull in real purchase data, reviews, and signups automatically.",
     image: tabIntegrations,
+    link: { href: "/product/integrations-ecosystem/", label: "Explore all integrations →" },
   },
 ];
 
@@ -87,9 +92,14 @@ export default function TabbedFeatures() {
                   <h3 className="text-2xl md:text-3xl font-bold mb-4">
                     {f.title}
                   </h3>
-                  <p className="text-muted-foreground text-lg leading-relaxed">
+                  <p className="text-muted-foreground text-lg leading-relaxed mb-3">
                     {f.description}
                   </p>
+                  {f.link && (
+                    <Link to={f.link.href} className="text-sm font-semibold text-primary hover:underline">
+                      {f.link.label}
+                    </Link>
+                  )}
                 </div>
                 <img
                   src={f.image}

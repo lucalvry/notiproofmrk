@@ -33,6 +33,7 @@ export default function ReviewsPillar() {
       updatedDate="2025-03-25"
       tocSections={tocSections}
       relatedArticles={clusterLinks}
+      speakable={["h1", "h2", "[data-speakable]"]}
       content={
         <div className="space-y-8 text-foreground">
           <p className="text-lg text-muted-foreground">Customer reviews are the single most influential form of <Link to="/resources/social-proof/" className="text-primary font-semibold hover:underline">social proof</Link> for online businesses. Research consistently shows that 93% of consumers say online reviews influence their purchasing decisions, and 72% won't take action until they've read reviews. This guide covers everything from collection strategies to display optimization.</p>

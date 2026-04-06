@@ -3,6 +3,7 @@ import logo from "@/assets/notiproof-logo.png";
 
 const footerLinks = {
   Platform: [
+    { label: "Social Proof Notifications", href: "/social-proof-notifications/" },
     { label: "Notifications", href: "/product/social-proof-notifications/" },
     { label: "Testimonials", href: "/product/testimonials-collection-text-image-video/" },
     { label: "Video Recorder", href: "/product/video-testimonial-recorder/" },
@@ -30,6 +31,8 @@ const footerLinks = {
     { label: "Testimonials Guide", href: "/resources/testimonials/" },
     { label: "Conversion Analytics", href: "/resources/conversion-analytics/" },
     { label: "Website Trust Guide", href: "/resources/website-trust/" },
+    { label: "Comparisons", href: "/comparisons/" },
+    { label: "Free Tools", href: "/free-tools/" },
     { label: "Glossary", href: "/resources/glossary/" },
     { label: "Help Center", href: "/resources/help-center/" },
   ],

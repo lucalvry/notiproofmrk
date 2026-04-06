@@ -146,6 +146,12 @@ export default function SocialProofNotifications() {
         { label: "Social Proof for Websites", href: "/resources/social-proof/social-proof-for-websites/", context: "Learn how to implement social proof across your entire website in our comprehensive guide:" },
         { label: "Social Proof Examples", href: "/resources/social-proof/social-proof-example/", context: "See real-world examples of notification-driven social proof in action:" },
       ]}
+      comparisonLinks={[
+        { label: "NotiProof vs Fomo", href: "/comparisons/notiproof-vs-fomo/" },
+        { label: "NotiProof vs TrustPulse", href: "/comparisons/notiproof-vs-trustpulse/" },
+        { label: "NotiProof vs Proof", href: "/comparisons/notiproof-vs-proof/" },
+        { label: "NotiProof vs ProveSource", href: "/comparisons/notiproof-vs-provesource/" },
+      ]}
     />
   );
 }

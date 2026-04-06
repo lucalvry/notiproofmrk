@@ -126,6 +126,10 @@ export default function AnalyticsConversionInsights() {
         { label: "Conversion Rate Benchmarks", href: "/resources/conversion-analytics/conversion-rate-benchmarks/", context: "Compare your performance against industry conversion rate benchmarks:" },
         { label: "Conversion Analytics Hub", href: "/resources/conversion-analytics/", context: "Explore all our resources on measuring and optimizing conversion rates:" },
       ]}
+      comparisonLinks={[
+        { label: "NotiProof vs Fomo", href: "/comparisons/notiproof-vs-fomo/" },
+        { label: "NotiProof vs TrustPulse", href: "/comparisons/notiproof-vs-trustpulse/" },
+      ]}
     />
   );
 }

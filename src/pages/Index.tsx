@@ -40,11 +40,6 @@ const homepageSchema = [
     "@type": "WebSite",
     name: "NotiProof",
     url: "https://notiproof.com",
-    potentialAction: {
-      "@type": "SearchAction",
-      target: "https://notiproof.com/search?q={search_term_string}",
-      "query-input": "required name=search_term_string",
-    },
   },
   {
     "@context": "https://schema.org",
@@ -83,6 +78,7 @@ export default function HomePage() {
         description="NotiProof is the social proof and testimonial platform trusted by thousands of businesses. Show real-time notifications, collect testimonials, and boost conversions instantly."
         canonical="https://notiproof.com/"
         schema={homepageSchema}
+        speakable={["h1", "[data-speakable]"]}
       />
 
       {/* Hero */}
@@ -104,7 +100,7 @@ export default function HomePage() {
                 </a>
               </Button>
               <Button variant="hero-outline" size="xl" asChild>
-                <Link to="/pricing">View Pricing</Link>
+                <Link to="/pricing/">View Pricing</Link>
               </Button>
             </div>
             <p className="text-sm text-muted-foreground mt-3">No credit card required · Setup in 60 seconds</p>

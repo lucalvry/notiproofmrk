@@ -7,6 +7,7 @@ interface SEOHeadProps {
   schema?: object | object[];
   ogImage?: string;
   noindex?: boolean;
+  speakable?: string[];
 }
 
 export default function SEOHead({
@@ -16,9 +17,29 @@ export default function SEOHead({
   schema,
   ogImage = "https://notiproof.com/og-image.png",
   noindex = false,
+  speakable,
 }: SEOHeadProps) {
   const fullTitle = title.includes("NotiProof") ? title : `${title} – NotiProof`;
   const canonicalUrl = canonical || (typeof window !== "undefined" ? window.location.href : "");
+
+  const allSchemas: object[] = [];
+  if (schema) {
+    if (Array.isArray(schema)) allSchemas.push(...schema);
+    else allSchemas.push(schema);
+  }
+
+  if (speakable && speakable.length > 0) {
+    allSchemas.push({
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      name: fullTitle,
+      url: canonicalUrl,
+      speakable: {
+        "@type": "SpeakableSpecification",
+        cssSelector: speakable,
+      },
+    });
+  }
 
   return (
     <Helmet>
@@ -38,9 +59,9 @@ export default function SEOHead({
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
 
-      {schema && (
+      {allSchemas.length > 0 && (
         <script type="application/ld+json">
-          {JSON.stringify(Array.isArray(schema) ? schema : schema)}
+          {JSON.stringify(allSchemas.length === 1 ? allSchemas[0] : allSchemas)}
         </script>
       )}
     </Helmet>

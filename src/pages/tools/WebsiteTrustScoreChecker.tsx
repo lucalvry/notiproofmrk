@@ -72,6 +72,16 @@ export default function WebsiteTrustScoreChecker() {
         title="Website Trust Score Checker – Free Audit Tool"
         description="Audit your website's trust signals with this interactive checklist. Get a trust score and personalized recommendations to boost credibility and conversions."
         canonical="https://notiproof.com/free-tools/website-trust-score-checker/"
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          name: "Website Trust Score Checker",
+          description: "Audit your website's trust signals with an interactive checklist and get a score plus recommendations.",
+          url: "https://notiproof.com/free-tools/website-trust-score-checker/",
+          applicationCategory: "BusinessApplication",
+          offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+          provider: { "@type": "Organization", name: "NotiProof", url: "https://notiproof.com" },
+        }}
       />
 
       <section className="relative overflow-hidden bg-foreground text-background py-16 md:py-24">
@@ -131,6 +141,15 @@ export default function WebsiteTrustScoreChecker() {
               </div>
             </motion.div>
           )}
+
+          <div className="mt-8 bg-card border border-border rounded-2xl p-6">
+            <h2 className="text-lg font-bold mb-3">Related Reading</h2>
+            <ul className="space-y-2 text-sm">
+              <li><Link to="/resources/website-trust/trust-signals-for-ecommerce/" className="text-primary hover:underline">Trust Signals for E-commerce →</Link></li>
+              <li><Link to="/resources/website-trust/trust-badges-guide/" className="text-primary hover:underline">Trust Badges Guide →</Link></li>
+              <li><Link to="/resources/website-trust/building-website-credibility/" className="text-primary hover:underline">Building Website Credibility →</Link></li>
+            </ul>
+          </div>
         </div>
       </section>
 

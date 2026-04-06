@@ -91,13 +91,25 @@ export default function ProductHub() {
     publisher: { "@type": "Organization", name: "NotiProof", url: "https://notiproof.com" },
   };
 
+  const itemListSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "NotiProof Product Features",
+    itemListElement: features.map((f, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: f.title,
+      url: `https://notiproof.com${f.href}`,
+    })),
+  };
+
   return (
     <>
       <SEOHead
         title="Product – Complete Social Proof & Testimonial Platform"
         description="Explore NotiProof's full suite of social proof tools: real-time notifications, testimonial collection, video reviews, analytics, campaign builder, and 38+ integrations."
         canonical="https://notiproof.com/product/"
-        schema={[webPageSchema, faqSchema]}
+        schema={[webPageSchema, faqSchema, itemListSchema]}
       />
 
       {/* Hero */}

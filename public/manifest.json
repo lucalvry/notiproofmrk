@@ -1,0 +1,16 @@
+{
+  "name": "NotiProof",
+  "short_name": "NotiProof",
+  "description": "Social proof and testimonial platform that increases website conversions by 10–35%.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#f97316",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    }
+  ]
+}

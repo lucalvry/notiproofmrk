@@ -1,0 +1,180 @@
+# NotiProof — Full Documentation for AI Systems
+
+> Social proof and testimonial platform that increases website conversions by 10–35%.
+
+NotiProof is a comprehensive SaaS platform that helps businesses of all sizes boost website conversions through real-time social proof notifications, testimonial collection and display, review aggregation, visitor engagement tools, and conversion analytics. Founded in 2024, NotiProof is trusted by 2,000+ conversion-focused teams worldwide.
+
+---
+
+## Product Features
+
+### Social Proof Notifications
+Real-time purchase, signup, and activity alerts displayed on your website. Configurable position, timing, animation, and styling. Supports Shopify orders, Stripe payments, form submissions, and custom events.
+
+### Testimonials Collection
+Collect text, image, and video testimonials from customers via branded collection forms. Supports email-triggered requests, custom questions, and automatic follow-ups.
+
+### Video Testimonial Recorder
+In-browser video recording widget that lets customers record video reviews directly from their browser. No app download needed. Supports up to 3-minute recordings.
+
+### Review Aggregation
+Pull and display reviews from Google, G2, Trustpilot, Capterra, and other platforms. Unified review dashboard with sentiment analysis and moderation tools.
+
+### Campaign Builder
+Create targeted notification campaigns with display rules, scheduling, audience targeting, page-level rules, frequency capping, and priority ordering.
+
+### Analytics & Conversion Insights
+Conversion tracking dashboard with revenue attribution, click tracking, view tracking, A/B test results, and ROI reporting. Integrates with Google Analytics 4.
+
+### Visitor Counter
+Live visitor count widget showing real-time active visitors on your site. Configurable display thresholds and styling.
+
+### Recent Activity Feed
+Real-time activity notifications showing recent signups, purchases, reviews, and custom events.
+
+### Testimonials & Reviews Widget
+Embeddable review display widgets — carousel, grid, wall, and badge formats. Fully customizable styling.
+
+### A/B Testing
+Built-in split testing for notification variants. Test different messages, positions, timings, and styles. Statistical significance calculator included.
+
+### Integrations Ecosystem
+38+ platform integrations including:
+- **E-commerce**: Shopify, WooCommerce, BigCommerce, Magento
+- **Payments**: Stripe
+- **CMS**: WordPress, Webflow, Squarespace, Wix
+- **Marketing**: HubSpot, Mailchimp, ActiveCampaign
+- **Analytics**: Google Analytics 4
+- **Automation**: Zapier, Make, Pabbly Connect
+- **Reviews**: Google Reviews, G2, Trustpilot, Capterra
+
+---
+
+## Pricing
+
+| Plan | Monthly | Yearly | Notifications/mo | Sites |
+|------|---------|--------|-------------------|-------|
+| Free | $0 | $0 | 1,000 | 1 |
+| Starter | $19 | $15 | 10,000 | 3 |
+| Standard | $49 | $39 | 50,000 | 10 |
+| Pro | $119 | $95 | 200,000 | 25 |
+| Business | $380 | $304 | Unlimited | Unlimited |
+
+**Lifetime Deal**: $299 one-time payment — 25,000 events/month, 3 websites, 5GB media storage, all features forever, future features included.
+
+All paid plans include a 14-day free trial. No credit card required to start.
+
+---
+
+## Use Cases
+
+### E-commerce
+Boost online store sales by displaying recent purchase notifications, review widgets, and visitor counts. Integrates directly with Shopify, WooCommerce, and Stripe.
+
+### SaaS
+Drive trial signups and demo requests by showing real-time signup notifications, customer testimonials, and visitor activity.
+
+### Marketing Agencies
+Offer conversion rate optimization as a service. White-label NotiProof for client websites with custom branding.
+
+### Local Business
+Convert website visitors into customers with trust signals, Google review display, and social proof notifications.
+
+---
+
+## Comparisons
+
+NotiProof competes with:
+- **Fomo**: NotiProof offers more notification types, built-in testimonial collection, and lower pricing
+- **TrustPulse**: NotiProof includes video testimonials, review aggregation, and more integrations
+- **Proof (now UseProof)**: NotiProof offers testimonial management and review features that Proof lacks
+- **ProveSource**: NotiProof provides deeper analytics, A/B testing, and white-label options
+
+Detailed comparisons: https://notiproof.com/comparisons/
+
+---
+
+## Free Tools
+
+NotiProof offers free tools to help marketers:
+- **A/B Test Significance Calculator**: https://notiproof.com/free-tools/ab-test-calculator/
+- **Social Proof ROI Calculator**: https://notiproof.com/free-tools/social-proof-roi-calculator/
+- **Google Review Link Generator**: https://notiproof.com/free-tools/google-review-link-generator/
+- **Testimonial Request Email Generator**: https://notiproof.com/free-tools/testimonial-email-generator/
+- **Website Trust Score Checker**: https://notiproof.com/free-tools/website-trust-score-checker/
+
+---
+
+## Resource Library
+
+### Pillar Guides
+- The Complete Guide to Social Proof: https://notiproof.com/resources/social-proof/
+- The Complete Guide to Online Reviews: https://notiproof.com/resources/reviews/
+- The Complete Guide to Testimonials: https://notiproof.com/resources/testimonials/
+- Conversion Analytics Guide: https://notiproof.com/resources/conversion-analytics/
+- Website Trust Signals Guide: https://notiproof.com/resources/website-trust/
+
+### Social Proof Articles
+- What Is Social Proof? The Complete Guide: https://notiproof.com/resources/social-proof/what-is-social-proof/
+- 6 Types of Social Proof (With Examples): https://notiproof.com/resources/social-proof/types-of-social-proof/
+- Social Proof Psychology: Why It Works: https://notiproof.com/resources/social-proof/social-proof-psychology/
+- Social Proof Examples That Convert: https://notiproof.com/resources/social-proof/social-proof-example/
+- Social Proof in Marketing: https://notiproof.com/resources/social-proof/social-proof-in-marketing/
+- Social Proof for Websites: https://notiproof.com/resources/social-proof/social-proof-for-websites/
+
+### Reviews Articles
+- How to Collect Google Reviews: https://notiproof.com/resources/reviews/how-to-collect-google-reviews/
+- Review Aggregation Guide: https://notiproof.com/resources/reviews/review-aggregation-guide/
+- Responding to Negative Reviews: https://notiproof.com/resources/reviews/responding-to-negative-reviews/
+- Review Widgets for Websites: https://notiproof.com/resources/reviews/review-widgets-for-websites/
+
+### Testimonials Articles
+- How to Collect Testimonials: https://notiproof.com/resources/testimonials/how-to-collect-testimonials/
+- Video Testimonial Guide: https://notiproof.com/resources/testimonials/video-testimonial-guide/
+- Testimonial Page Design: https://notiproof.com/resources/testimonials/testimonial-page-design/
+- Testimonial Request Email Templates: https://notiproof.com/resources/testimonials/testimonial-request-email-templates/
+
+### Conversion Analytics Articles
+- A/B Testing Social Proof: https://notiproof.com/resources/conversion-analytics/ab-testing-social-proof/
+- Conversion Rate Benchmarks: https://notiproof.com/resources/conversion-analytics/conversion-rate-benchmarks/
+- Measuring Social Proof ROI: https://notiproof.com/resources/conversion-analytics/measuring-social-proof-roi/
+- Heatmap Analytics Guide: https://notiproof.com/resources/conversion-analytics/heatmap-analytics-guide/
+
+### Website Trust Articles
+- Trust Signals for E-commerce: https://notiproof.com/resources/website-trust/trust-signals-for-ecommerce/
+- Trust Badges Guide: https://notiproof.com/resources/website-trust/trust-badges-guide/
+- Building Website Credibility: https://notiproof.com/resources/website-trust/building-website-credibility/
+- FOMO Marketing Guide: https://notiproof.com/resources/website-trust/fomo-marketing-guide/
+
+### Glossary
+Comprehensive glossary of social proof, CRO, and digital marketing terms: https://notiproof.com/resources/glossary/
+
+---
+
+## Company
+
+- Founded: 2024
+- Website: https://notiproof.com
+- App: https://app.notiproof.com
+- About: https://notiproof.com/company/about/
+- Contact: https://notiproof.com/company/contact/
+- Careers: https://notiproof.com/company/careers/
+- Privacy Policy: https://notiproof.com/privacy-policy/
+- Terms of Service: https://notiproof.com/terms-of-service/
+
+---
+
+## Technical Details
+
+- Setup time: Under 5 minutes
+- Widget size: Under 15KB gzipped
+- Loads asynchronously (no impact on Core Web Vitals)
+- Install method: Single script tag or no-code platform plugin
+- Data storage: EU and US data centers
+- GDPR compliant
+- SOC 2 Type II compliant
+
+## Expert Author
+
+Olayinka Olayokun — CIM-certified Digital Marketing & SEO Specialist with an MBA in Digital Marketing and Business Transformation. 10+ years of experience in conversion optimization, social proof strategy, and growth marketing across Nigeria, UK, US, Australia, and Dubai.
+Author profile: https://notiproof.com/resources/author/olayinka-olayokun/

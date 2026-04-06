@@ -118,6 +118,11 @@ export default function IntegrationsEcosystem() {
         { label: "Social Proof for Websites", href: "/resources/social-proof/social-proof-for-websites/", context: "Learn how integrations power a complete social proof implementation:" },
         { label: "What Is Social Proof?", href: "/resources/social-proof/what-is-social-proof/", context: "Understand why real-time data from integrations makes social proof more effective:" },
       ]}
+      comparisonLinks={[
+        { label: "NotiProof vs Fomo", href: "/comparisons/notiproof-vs-fomo/" },
+        { label: "NotiProof vs TrustPulse", href: "/comparisons/notiproof-vs-trustpulse/" },
+        { label: "All Comparisons", href: "/comparisons/" },
+      ]}
     />
   );
 }

@@ -138,6 +138,10 @@ export default function CampaignBuilder() {
         { label: "Social Proof in Marketing", href: "/resources/social-proof/social-proof-in-marketing/", context: "Learn how targeted campaigns fit into your broader social proof marketing strategy:" },
         { label: "Conversion Analytics Hub", href: "/resources/conversion-analytics/", context: "Measure the impact of your campaigns with proper conversion analytics:" },
       ]}
+      comparisonLinks={[
+        { label: "NotiProof vs Fomo", href: "/comparisons/notiproof-vs-fomo/" },
+        { label: "NotiProof vs Proof", href: "/comparisons/notiproof-vs-proof/" },
+      ]}
     />
   );
 }

@@ -14,6 +14,23 @@ const labelMap: Record<string, string> = {
   about: "About",
   contact: "Contact",
   careers: "Careers",
+  comparisons: "Comparisons",
+  "free-tools": "Free Tools",
+
+  // Comparisons
+  "notiproof-vs-fomo": "NotiProof vs Fomo",
+  "notiproof-vs-trustpulse": "NotiProof vs TrustPulse",
+  "notiproof-vs-proof": "NotiProof vs Proof",
+  "notiproof-vs-provesource": "NotiProof vs ProveSource",
+
+  // Free Tools
+  "ab-test-calculator": "A/B Test Calculator",
+  "social-proof-roi-calculator": "Social Proof ROI Calculator",
+  "google-review-link-generator": "Google Review Link Generator",
+  "testimonial-email-generator": "Testimonial Email Generator",
+  "website-trust-score-checker": "Website Trust Score Checker",
+
+  // Product pages
   "social-proof": "Social Proof",
   "social-proof-notifications": "Social Proof Notifications",
   "testimonials-collection-text-image-video": "Testimonials Collection",
@@ -25,24 +42,64 @@ const labelMap: Record<string, string> = {
   "visitor-counter-live-visitors": "Visitor Counter",
   "recent-activity-notifications": "Recent Activity Notifications",
   "testimonials-widget-reviews-widget": "Testimonials & Reviews Widget",
+
+  // Use cases
   ecommerce: "E-commerce",
   "saas-social-proof-tools-drive-sign-ups": "SaaS",
   "social-proof-for-marketing-agencies-impress-clients": "Agencies",
   "local-business-social-proof-convert-website-visitors": "Local Business",
+
+  // Integrations
   shopify: "Shopify",
   wordpress: "WordPress",
   zapier: "Zapier",
+
+  // Resources clusters
+  blog: "Blog",
+  guides: "Guides",
+  "help-center": "Help Center",
+  glossary: "Glossary",
+  reviews: "Reviews",
+  "conversion-analytics": "Conversion Analytics",
+  "website-trust": "Website Trust",
+
+  // Social Proof articles
   "what-is-social-proof": "What Is Social Proof?",
   "social-proof-example": "Social Proof Examples",
   "social-proof-in-marketing": "Social Proof in Marketing",
   "social-proof-for-websites": "Social Proof for Websites",
   "types-of-social-proof": "Types of Social Proof",
   "social-proof-psychology": "Social Proof Psychology",
-  reviews: "Reviews",
-  "conversion-analytics": "Conversion Analytics",
-  "website-trust": "Website Trust",
+
+  // Reviews articles
+  "how-to-collect-google-reviews": "How to Collect Google Reviews",
+  "review-aggregation-guide": "Review Aggregation Guide",
+  "responding-to-negative-reviews": "Responding to Negative Reviews",
+  "review-widgets-for-websites": "Review Widgets for Websites",
+
+  // Testimonials articles
+  "how-to-collect-testimonials": "How to Collect Testimonials",
+  "video-testimonial-guide": "Video Testimonial Guide",
+  "testimonial-page-design": "Testimonial Page Design",
+  "testimonial-request-email-templates": "Testimonial Request Email Templates",
+
+  // Conversion Analytics articles
+  "ab-testing-social-proof": "A/B Testing Social Proof",
+  "conversion-rate-benchmarks": "Conversion Rate Benchmarks",
+  "measuring-social-proof-roi": "Measuring Social Proof ROI",
+  "heatmap-analytics-guide": "Heatmap Analytics Guide",
+
+  // Website Trust articles
+  "trust-signals-for-ecommerce": "Trust Signals for E-commerce",
+  "trust-badges-guide": "Trust Badges Guide",
+  "building-website-credibility": "Building Website Credibility",
+  "fomo-marketing-guide": "FOMO Marketing Guide",
+
+  // Legal
   "privacy-policy": "Privacy Policy",
   "terms-of-service": "Terms of Service",
+
+  // SEO landing pages
   "conversion-optimization-tools": "Conversion Optimization Tools",
   "best-social-proof-software": "Best Social Proof Software",
 };

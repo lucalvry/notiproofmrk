@@ -34,6 +34,7 @@ interface ProductFeaturePageProps {
   faqs: FAQ[];
   relatedProducts: { label: string; href: string }[];
   resourceLinks?: ResourceLink[];
+  comparisonLinks?: { label: string; href: string }[];
 }
 
 const fadeUp = {
@@ -46,7 +47,7 @@ const fadeUp = {
 export default function ProductFeaturePage({
   metaTitle, metaDescription, canonical, headline, description, descriptionContent, icon: Icon,
   benefits, withoutNotiproof, withNotiproof, howItWorks, featureDetails, deepDiveContent, deepDiveToc,
-  testimonial, faqs, relatedProducts, resourceLinks,
+  testimonial, faqs, relatedProducts, resourceLinks, comparisonLinks,
 }: ProductFeaturePageProps) {
   const faqSchema = {
     "@context": "https://schema.org",
@@ -331,6 +332,28 @@ export default function ProductFeaturePage({
                     <p className="text-xs text-muted-foreground">{rl.context}</p>
                   </div>
                   <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-primary shrink-0 transition-colors" />
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Compare */}
+      {comparisonLinks && comparisonLinks.length > 0 && (
+        <section className="py-12 bg-surface">
+          <div className="container-tight">
+            <h2 className="text-xl font-bold mb-2 text-center">See How NotiProof Compares</h2>
+            <p className="text-sm text-muted-foreground text-center mb-8">Detailed head-to-head comparisons with leading alternatives</p>
+            <div className="flex flex-wrap justify-center gap-3">
+              {comparisonLinks.map((cl) => (
+                <Link
+                  key={cl.href}
+                  to={cl.href}
+                  className="inline-flex items-center gap-2 bg-card border border-border rounded-lg px-4 py-2.5 text-sm font-medium hover:border-primary/30 hover:shadow-sm hover:-translate-y-0.5 transition-all duration-200"
+                >
+                  {cl.label}
+                  <ArrowRight className="w-3.5 h-3.5 text-muted-foreground" />
                 </Link>
               ))}
             </div>

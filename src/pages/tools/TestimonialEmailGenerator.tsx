@@ -92,6 +92,16 @@ export default function TestimonialEmailGenerator() {
         title="Testimonial Request Email Generator – Free Tool"
         description="Generate copy-paste email templates to request testimonials from customers. Choose tone and industry for personalized templates."
         canonical="https://notiproof.com/free-tools/testimonial-email-generator/"
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          name: "Testimonial Request Email Generator",
+          description: "Generate copy-paste email templates to request testimonials from happy customers.",
+          url: "https://notiproof.com/free-tools/testimonial-email-generator/",
+          applicationCategory: "BusinessApplication",
+          offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+          provider: { "@type": "Organization", name: "NotiProof", url: "https://notiproof.com" },
+        }}
       />
 
       <section className="relative overflow-hidden bg-foreground text-background py-16 md:py-24">
@@ -160,6 +170,15 @@ export default function TestimonialEmailGenerator() {
 
             <p className="text-xs text-muted-foreground mt-4">Replace [bracketed text] with your actual details before sending.</p>
           </Card>
+
+          <div className="mt-8 bg-card border border-border rounded-2xl p-6">
+            <h2 className="text-lg font-bold mb-3">Related Reading</h2>
+            <ul className="space-y-2 text-sm">
+              <li><Link to="/resources/testimonials/testimonial-request-email-templates/" className="text-primary hover:underline">Testimonial Request Email Templates →</Link></li>
+              <li><Link to="/resources/testimonials/how-to-collect-testimonials/" className="text-primary hover:underline">How to Collect Testimonials: Complete Guide →</Link></li>
+              <li><Link to="/resources/testimonials/video-testimonial-guide/" className="text-primary hover:underline">Video Testimonial Guide →</Link></li>
+            </ul>
+          </div>
         </div>
       </section>
 

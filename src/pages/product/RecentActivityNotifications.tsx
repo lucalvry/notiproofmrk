@@ -139,6 +139,10 @@ export default function RecentActivityNotifications() {
         { label: "Social Proof Psychology", href: "/resources/social-proof/social-proof-psychology/", context: "Understand why seeing others' actions influences buying decisions:" },
         { label: "FOMO Marketing Guide", href: "/resources/website-trust/fomo-marketing-guide/", context: "Learn how activity feeds create ethical urgency:" },
       ]}
+      comparisonLinks={[
+        { label: "NotiProof vs Fomo", href: "/comparisons/notiproof-vs-fomo/" },
+        { label: "NotiProof vs ProveSource", href: "/comparisons/notiproof-vs-provesource/" },
+      ]}
     />
   );
 }

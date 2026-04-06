@@ -14,13 +14,26 @@ const tools = [
   { icon: ShieldCheck, title: "Website Trust Score Checker", desc: "Audit your website's trust signals with an interactive checklist and get a score plus recommendations.", href: "/free-tools/website-trust-score-checker/" },
 ];
 
-const schema = {
-  "@context": "https://schema.org",
-  "@type": "CollectionPage",
-  name: "Free Conversion Optimization Tools – NotiProof",
-  description: "Free CRO tools: A/B test calculator, ROI estimator, review link generator, email templates, and trust audit.",
-  url: "https://notiproof.com/free-tools/",
-};
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: "Free Conversion Optimization Tools – NotiProof",
+    description: "Free CRO tools: A/B test calculator, ROI estimator, review link generator, email templates, and trust audit.",
+    url: "https://notiproof.com/free-tools/",
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Free Conversion Optimization Tools",
+    itemListElement: tools.map((t, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: t.title,
+      url: `https://notiproof.com${t.href}`,
+    })),
+  },
+];
 
 export default function FreeToolsHub() {
   return (
@@ -65,6 +78,27 @@ export default function FreeToolsHub() {
                 </Link>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Related Resources */}
+      <section className="py-12 bg-muted/30">
+        <div className="container-tight">
+          <h2 className="text-2xl font-bold text-center mb-6">Related Resources</h2>
+          <div className="grid sm:grid-cols-3 gap-4 max-w-3xl mx-auto">
+            <Link to="/comparisons/" className="p-4 bg-card border border-border rounded-xl hover:border-primary/30 transition-all text-center">
+              <p className="text-sm font-semibold">Software Comparisons</p>
+              <p className="text-xs text-muted-foreground mt-1">NotiProof vs competitors</p>
+            </Link>
+            <Link to="/resources/conversion-analytics/ab-testing-social-proof/" className="p-4 bg-card border border-border rounded-xl hover:border-primary/30 transition-all text-center">
+              <p className="text-sm font-semibold">A/B Testing Guide</p>
+              <p className="text-xs text-muted-foreground mt-1">Test social proof effectively</p>
+            </Link>
+            <Link to="/resources/website-trust/" className="p-4 bg-card border border-border rounded-xl hover:border-primary/30 transition-all text-center">
+              <p className="text-sm font-semibold">Website Trust Guide</p>
+              <p className="text-xs text-muted-foreground mt-1">Build credibility</p>
+            </Link>
           </div>
         </div>
       </section>

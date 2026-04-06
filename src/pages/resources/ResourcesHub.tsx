@@ -56,14 +56,27 @@ const resourceCards = [
   },
 ];
 
-const collectionPageSchema = {
-  "@context": "https://schema.org",
-  "@type": "CollectionPage",
-  name: "NotiProof Resources – Social Proof Guides, Blog & Tools",
-  description: "Explore guides, articles, glossary, comparisons, case studies, and free tools for social proof and conversion optimization.",
-  url: "https://notiproof.com/resources/",
-  publisher: { "@type": "Organization", name: "NotiProof", url: "https://notiproof.com" },
-};
+const collectionPageSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: "NotiProof Resources – Social Proof Guides, Blog & Tools",
+    description: "Explore guides, articles, glossary, comparisons, case studies, and free tools for social proof and conversion optimization.",
+    url: "https://notiproof.com/resources/",
+    publisher: { "@type": "Organization", name: "NotiProof", url: "https://notiproof.com" },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "NotiProof Resources",
+    itemListElement: resourceCards.map((c, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: c.title,
+      url: `https://notiproof.com${c.href}`,
+    })),
+  },
+];
 
 export default function ResourcesHub() {
   return (

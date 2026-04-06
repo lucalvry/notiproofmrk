@@ -131,6 +131,11 @@ export default function ReviewAggregation() {
         { label: "Reviews Hub", href: "/resources/reviews/", context: "Explore our complete guide to collecting, managing, and leveraging customer reviews:" },
         { label: "Social Proof for Websites", href: "/resources/social-proof/social-proof-for-websites/", context: "See how review aggregation fits into a complete website trust strategy:" },
       ]}
+      comparisonLinks={[
+        { label: "NotiProof vs Fomo", href: "/comparisons/notiproof-vs-fomo/" },
+        { label: "NotiProof vs TrustPulse", href: "/comparisons/notiproof-vs-trustpulse/" },
+        { label: "NotiProof vs ProveSource", href: "/comparisons/notiproof-vs-provesource/" },
+      ]}
     />
   );
 }

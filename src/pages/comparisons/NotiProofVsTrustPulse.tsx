@@ -3,6 +3,8 @@ import ComparisonPageTemplate, { ComparisonData } from "@/components/ComparisonP
 const data: ComparisonData = {
   competitorName: "TrustPulse",
   competitorSlug: "trustpulse",
+  publishDate: "2025-02-10",
+  updatedDate: "2025-04-01",
   metaTitle: "NotiProof vs TrustPulse: Full Comparison (2025)",
   metaDescription: "NotiProof vs TrustPulse compared — features, pricing, analytics, targeting, and testimonials. Find the best social proof solution for your site.",
   canonical: "https://notiproof.com/comparisons/notiproof-vs-trustpulse/",

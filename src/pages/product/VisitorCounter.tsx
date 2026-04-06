@@ -130,6 +130,10 @@ export default function VisitorCounter() {
         { label: "FOMO Marketing Guide", href: "/resources/website-trust/fomo-marketing-guide/", context: "Learn how to use urgency ethically to drive conversions:" },
         { label: "Social Proof for Websites", href: "/resources/social-proof/social-proof-for-websites/", context: "See how visitor counters fit into a complete website social proof strategy:" },
       ]}
+      comparisonLinks={[
+        { label: "NotiProof vs Fomo", href: "/comparisons/notiproof-vs-fomo/" },
+        { label: "NotiProof vs ProveSource", href: "/comparisons/notiproof-vs-provesource/" },
+      ]}
     />
   );
 }

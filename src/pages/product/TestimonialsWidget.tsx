@@ -136,6 +136,10 @@ export default function TestimonialsWidget() {
         { label: "Review Widgets for Websites", href: "/resources/reviews/review-widgets-for-websites/", context: "Compare the best review widget options for your website:" },
         { label: "Social Proof Examples", href: "/resources/social-proof/social-proof-example/", context: "See real-world examples of how testimonial widgets drive conversions:" },
       ]}
+      comparisonLinks={[
+        { label: "NotiProof vs Fomo", href: "/comparisons/notiproof-vs-fomo/" },
+        { label: "NotiProof vs TrustPulse", href: "/comparisons/notiproof-vs-trustpulse/" },
+      ]}
     />
   );
 }

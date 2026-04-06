@@ -40,6 +40,16 @@ export default function SocialProofROICalculator() {
         title="Social Proof ROI Calculator – Free Tool"
         description="Estimate the revenue impact of social proof on your website. Enter your traffic, conversion rate, and AOV to see projected lift at various improvement levels."
         canonical="https://notiproof.com/free-tools/social-proof-roi-calculator/"
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          name: "Social Proof ROI Calculator",
+          description: "Estimate revenue lift from social proof based on your traffic, conversion rate, and average order value.",
+          url: "https://notiproof.com/free-tools/social-proof-roi-calculator/",
+          applicationCategory: "BusinessApplication",
+          offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+          provider: { "@type": "Organization", name: "NotiProof", url: "https://notiproof.com" },
+        }}
       />
 
       <section className="relative overflow-hidden bg-foreground text-background py-16 md:py-24">
@@ -94,6 +104,15 @@ export default function SocialProofROICalculator() {
               </motion.div>
             )}
           </Card>
+
+          <div className="mt-8 bg-card border border-border rounded-2xl p-6">
+            <h2 className="text-lg font-bold mb-3">Related Reading</h2>
+            <ul className="space-y-2 text-sm">
+              <li><Link to="/resources/conversion-analytics/measuring-social-proof-roi/" className="text-primary hover:underline">Measuring Social Proof ROI: Complete Guide →</Link></li>
+              <li><Link to="/resources/social-proof/social-proof-in-marketing/" className="text-primary hover:underline">Social Proof in Marketing →</Link></li>
+              <li><Link to="/resources/social-proof/social-proof-example/" className="text-primary hover:underline">Social Proof Examples That Convert →</Link></li>
+            </ul>
+          </div>
         </div>
       </section>
 

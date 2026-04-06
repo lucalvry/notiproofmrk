@@ -133,6 +133,10 @@ export default function VideoTestimonialRecorder() {
         { label: "Social Proof Examples", href: "/resources/social-proof/social-proof-example/", context: "See how video testimonials outperform text in real-world conversion examples:" },
         { label: "Testimonials Resources", href: "/resources/testimonials/", context: "Explore our complete guide to collecting and leveraging customer testimonials:" },
       ]}
+      comparisonLinks={[
+        { label: "NotiProof vs Fomo", href: "/comparisons/notiproof-vs-fomo/" },
+        { label: "NotiProof vs Proof", href: "/comparisons/notiproof-vs-proof/" },
+      ]}
     />
   );
 }

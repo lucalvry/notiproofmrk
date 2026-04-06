@@ -3,6 +3,8 @@ import ComparisonPageTemplate, { ComparisonData } from "@/components/ComparisonP
 const data: ComparisonData = {
   competitorName: "Proof",
   competitorSlug: "proof",
+  publishDate: "2025-02-10",
+  updatedDate: "2025-04-01",
   metaTitle: "NotiProof vs Proof: Full Comparison (2025)",
   metaDescription: "NotiProof vs Proof (formerly UseProof) compared — features, pricing, integrations, and more. Which social proof platform is right for you?",
   canonical: "https://notiproof.com/comparisons/notiproof-vs-proof/",

@@ -21,6 +21,23 @@ const relatedArticles = [
   { title: "Social Proof for Websites", href: "/resources/social-proof/social-proof-for-websites/", desc: "Complete implementation guide for trust signals." },
 ];
 
+const howToSchema = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  name: "How to Get More Google Reviews",
+  description: "Learn proven strategies to collect more Google reviews: email templates, direct links, timing tips, and automation.",
+  step: [
+    { "@type": "HowToStep", name: "Understand why Google reviews matter", text: "Google reviews impact local search rankings (17% of local pack algorithm), click-through rates, and conversion rates — making them one of the highest-ROI marketing activities." },
+    { "@type": "HowToStep", name: "Determine how many reviews you need", text: "Most businesses need 10-20 reviews for basic credibility. Competitive industries require 50-100+ reviews with consistent monthly velocity." },
+    { "@type": "HowToStep", name: "Ask at the right time", text: "Request reviews within 24 hours of a positive customer experience. Requests sent within 24 hours achieve 3-5x higher response rates." },
+    { "@type": "HowToStep", name: "Use the best collection methods", text: "Combine email requests, SMS follow-ups, in-person requests, and QR codes to target different customer touchpoints." },
+    { "@type": "HowToStep", name: "Create a direct Google review link", text: "Use your Place ID to create a direct link: https://search.google.com/local/writereview?placeid=YOUR_PLACE_ID" },
+    { "@type": "HowToStep", name: "Send effective review request emails", text: "Keep emails under 80 words, personalize with customer name and purchase details, and include a single prominent CTA button." },
+    { "@type": "HowToStep", name: "Avoid common mistakes", text: "Don't offer incentives, don't gate reviews, don't bulk-blast old customers, and always respond to reviews you receive." },
+    { "@type": "HowToStep", name: "Display reviews on your website", text: "Aggregate Google reviews onto your website with widgets that include schema markup for rich snippets." },
+  ],
+};
+
 export default function HowToCollectGoogleReviews() {
   return (
     <ResourceArticle
@@ -34,6 +51,7 @@ export default function HowToCollectGoogleReviews() {
       pillarLink={{ label: "Reviews Guide", href: "/resources/reviews/" }}
       relatedArticles={relatedArticles}
       featuredImage={featuredHowToCollectGoogleReviews}
+      schema={howToSchema}
       content={
         <div className="space-y-8 text-foreground">
           <p className="text-lg text-muted-foreground">Google reviews are the single most influential factor in local search rankings and consumer purchase decisions. According to BrightLocal's 2024 Consumer Review Survey, 87% of consumers read online reviews for local businesses, and 73% only pay attention to reviews written in the last month. Yet most businesses struggle to collect reviews consistently — not because customers are unhappy, but because they're never asked at the right time, in the right way.</p>

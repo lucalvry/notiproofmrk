@@ -20,6 +20,23 @@ const relatedArticles = [
   { title: "Types of Social Proof", href: "/resources/social-proof/types-of-social-proof/", desc: "Where testimonials fit in the social proof landscape." },
 ];
 
+const howToSchema = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  name: "How to Collect Customer Testimonials That Convert",
+  description: "Learn proven strategies to collect powerful customer testimonials: timing, questions, automation, text vs. video, and legal permissions.",
+  step: [
+    { "@type": "HowToStep", name: "Understand why testimonials matter", text: "Testimonials reduce perceived risk with third-party validation, showing a 34% average conversion increase when placed on landing pages." },
+    { "@type": "HowToStep", name: "Ask at the right time", text: "Request testimonials at 'peak happiness' moments — after a milestone achievement, positive support interaction, or renewal." },
+    { "@type": "HowToStep", name: "Ask the right questions", text: "Guide testimonials with specific questions about the problem faced, results achieved, and what they'd tell others considering your product." },
+    { "@type": "HowToStep", name: "Choose collection methods", text: "Use email requests with embedded forms, dedicated landing pages, in-app prompts at milestones, and interview sessions for premium testimonials." },
+    { "@type": "HowToStep", name: "Choose text vs video format", text: "Video testimonials convert 4x better but have higher friction. Use text for volume and video for your best customers." },
+    { "@type": "HowToStep", name: "Automate collection", text: "Set triggers based on customer events — purchases, milestones, positive support interactions — to send personalized requests automatically." },
+    { "@type": "HowToStep", name: "Handle legal permissions", text: "Include explicit consent checkboxes covering usage rights for website, marketing materials, and social media." },
+    { "@type": "HowToStep", name: "Ensure quality", text: "Include example testimonials on your collection form and follow up for specific metrics to transform good testimonials into great ones." },
+  ],
+};
+
 export default function HowToCollectTestimonials() {
   return (
     <ResourceArticle
@@ -33,6 +50,7 @@ export default function HowToCollectTestimonials() {
       pillarLink={{ label: "Testimonials Guide", href: "/resources/testimonials/" }}
       relatedArticles={relatedArticles}
       featuredImage={featuredHowToCollectTestimonials}
+      schema={howToSchema}
       content={
         <div className="space-y-8 text-foreground">
           <p className="text-lg text-muted-foreground">Customer testimonials are the most trusted form of marketing content. According to Nielsen, 92% of consumers trust peer recommendations over brand advertising, and B2B buyers rank testimonials as the most reliable content type when making purchase decisions. Yet most businesses collect testimonials haphazardly — if at all. The result is a handful of generic quotes that fail to address specific buyer objections or demonstrate real outcomes.</p>

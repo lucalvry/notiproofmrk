@@ -30,7 +30,7 @@ export default function WhatIsSocialProof() {
       updatedDate="2025-03-18"
       readingTime="12 min read"
       tocSections={tocSections}
-      pillarLink={{ label: "Social Proof", href: "/resources/blog/social-proof/" }}
+      pillarLink={{ label: "Social Proof", href: "/resources/social-proof/" }}
       featuredImage={featuredImg}
       relatedArticles={related}
       content={

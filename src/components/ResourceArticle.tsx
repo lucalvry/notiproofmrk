@@ -28,6 +28,8 @@ interface ResourceArticleProps {
   author?: AuthorData;
   featuredImage?: string;
   featuredImageGradient?: string;
+  speakable?: string[];
+  schema?: object | object[];
 }
 
 function formatDate(iso: string) {
@@ -38,6 +40,7 @@ export default function ResourceArticle({
   metaTitle, metaDescription, canonical, title, readingTime = "8 min read",
   publishDate, updatedDate, content, relatedArticles, pillarLink, tocSections, author = defaultAuthor,
   featuredImage, featuredImageGradient = "from-primary/20 to-primary/10",
+  speakable, schema: extraSchema,
 }: ResourceArticleProps) {
   const articleSchema = {
     "@context": "https://schema.org",
@@ -45,7 +48,7 @@ export default function ResourceArticle({
     headline: title,
     datePublished: publishDate,
     ...(updatedDate && { dateModified: updatedDate }),
-    ...(featuredImage && { image: featuredImage }),
+    ...(featuredImage && { image: featuredImage.startsWith("http") ? featuredImage : `https://notiproof.com${featuredImage}` }),
     author: {
       "@type": "Person",
       name: author.name,
@@ -62,7 +65,7 @@ export default function ResourceArticle({
 
   return (
     <>
-      <SEOHead title={metaTitle} description={metaDescription} canonical={canonical} schema={articleSchema} />
+      <SEOHead title={metaTitle} description={metaDescription} canonical={canonical} schema={extraSchema ? [articleSchema, ...(Array.isArray(extraSchema) ? extraSchema : [extraSchema])] : articleSchema} speakable={speakable} />
 
       <article className="section-padding" itemScope itemType="https://schema.org/Article">
         <div className="container-tight">

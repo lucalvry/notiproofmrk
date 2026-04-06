@@ -36,6 +36,16 @@ export default function GoogleReviewLinkGenerator() {
         title="Google Review Link Generator – Free Tool"
         description="Generate a direct Google review link for your business. Paste your Google Place ID and get a shareable link customers can use to leave a review."
         canonical="https://notiproof.com/free-tools/google-review-link-generator/"
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          name: "Google Review Link Generator",
+          description: "Generate a direct Google review link for your business to share with customers via email or SMS.",
+          url: "https://notiproof.com/free-tools/google-review-link-generator/",
+          applicationCategory: "BusinessApplication",
+          offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+          provider: { "@type": "Organization", name: "NotiProof", url: "https://notiproof.com" },
+        }}
       />
 
       <section className="relative overflow-hidden bg-foreground text-background py-16 md:py-24">
@@ -90,6 +100,15 @@ export default function GoogleReviewLinkGenerator() {
               <li>Copy the Place ID shown on the map</li>
               <li>Paste it above to generate your review link</li>
             </ol>
+          </div>
+
+          <div className="mt-6 bg-card border border-border rounded-2xl p-6">
+            <h2 className="text-lg font-bold mb-3">Related Reading</h2>
+            <ul className="space-y-2 text-sm">
+              <li><Link to="/resources/reviews/how-to-collect-google-reviews/" className="text-primary hover:underline">How to Collect Google Reviews: Complete Guide →</Link></li>
+              <li><Link to="/resources/reviews/review-aggregation-guide/" className="text-primary hover:underline">Review Aggregation Guide →</Link></li>
+              <li><Link to="/resources/reviews/review-widgets-for-websites/" className="text-primary hover:underline">Review Widgets for Websites →</Link></li>
+            </ul>
           </div>
         </div>
       </section>

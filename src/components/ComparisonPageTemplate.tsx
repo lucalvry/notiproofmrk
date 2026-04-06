@@ -36,6 +36,8 @@ export interface ComparisonData {
   whoShouldChooseCompetitor: string;
   sections: { title: string; content: string }[];
   faqs: { q: string; a: string }[];
+  publishDate?: string;
+  updatedDate?: string;
 }
 
 const fadeUp = { initial: { opacity: 0, y: 20 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true }, transition: { duration: 0.4 } };
@@ -48,18 +50,53 @@ function CellValue({ value }: { value: string | boolean }) {
 }
 
 export default function ComparisonPageTemplate({ data }: { data: ComparisonData }) {
-  const schema = {
+  const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: data.metaTitle,
     description: data.metaDescription,
     url: data.canonical,
+    ...(data.publishDate && { datePublished: data.publishDate }),
+    ...(data.updatedDate && { dateModified: data.updatedDate }),
+    author: {
+      "@type": "Person",
+      name: "Olayinka Olayokun",
+      jobTitle: "Digital Marketing & SEO Specialist",
+      url: "https://notiproof.com/resources/author/olayinka-olayokun/",
+    },
     publisher: { "@type": "Organization", name: "NotiProof", url: "https://notiproof.com" },
+  };
+
+  const reviewSchema = {
+    "@context": "https://schema.org",
+    "@type": "Review",
+    name: `NotiProof vs ${data.competitorName} Review`,
+    reviewBody: data.verdict,
+    author: {
+      "@type": "Person",
+      name: "Olayinka Olayokun",
+    },
+    itemReviewed: {
+      "@type": "SoftwareApplication",
+      name: "NotiProof",
+      applicationCategory: "BusinessApplication",
+    },
+    ...(data.publishDate && { datePublished: data.publishDate }),
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: data.faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.q,
+      acceptedAnswer: { "@type": "Answer", text: faq.a },
+    })),
   };
 
   return (
     <>
-      <SEOHead title={data.metaTitle} description={data.metaDescription} canonical={data.canonical} schema={schema} />
+      <SEOHead title={data.metaTitle} description={data.metaDescription} canonical={data.canonical} schema={[articleSchema, faqSchema, reviewSchema]} />
 
       {/* Hero */}
       <section className="relative overflow-hidden bg-foreground text-background py-16 md:py-24">

@@ -47,6 +47,21 @@ const routes = [
   { path: '/company/contact/', priority: '0.6', changefreq: 'monthly' },
   { path: '/company/careers/', priority: '0.5', changefreq: 'monthly' },
 
+  // Comparisons
+  { path: '/comparisons/', priority: '0.8', changefreq: 'monthly' },
+  { path: '/comparisons/notiproof-vs-fomo/', priority: '0.8', changefreq: 'monthly' },
+  { path: '/comparisons/notiproof-vs-trustpulse/', priority: '0.8', changefreq: 'monthly' },
+  { path: '/comparisons/notiproof-vs-proof/', priority: '0.8', changefreq: 'monthly' },
+  { path: '/comparisons/notiproof-vs-provesource/', priority: '0.8', changefreq: 'monthly' },
+
+  // Free Tools
+  { path: '/free-tools/', priority: '0.8', changefreq: 'monthly' },
+  { path: '/free-tools/ab-test-calculator/', priority: '0.7', changefreq: 'monthly' },
+  { path: '/free-tools/social-proof-roi-calculator/', priority: '0.7', changefreq: 'monthly' },
+  { path: '/free-tools/google-review-link-generator/', priority: '0.7', changefreq: 'monthly' },
+  { path: '/free-tools/testimonial-email-generator/', priority: '0.7', changefreq: 'monthly' },
+  { path: '/free-tools/website-trust-score-checker/', priority: '0.7', changefreq: 'monthly' },
+
   // Resources — Social Proof cluster
   { path: '/resources/', priority: '0.8', changefreq: 'weekly' },
   { path: '/resources/blog/', priority: '0.8', changefreq: 'weekly' },
@@ -88,13 +103,23 @@ const routes = [
   { path: '/resources/website-trust/fomo-marketing-guide/', priority: '0.8', changefreq: 'monthly' },
 
   // Resources — Other
+  { path: '/resources/author/olayinka-olayokun/', priority: '0.6', changefreq: 'monthly' },
   { path: '/resources/help-center/', priority: '0.6', changefreq: 'monthly' },
   { path: '/resources/glossary/', priority: '0.6', changefreq: 'monthly' },
 
   // SEO landing pages
-  { path: '/best-social-proof-software/', priority: '0.8', changefreq: 'monthly' },
   { path: '/social-proof-notifications/', priority: '0.8', changefreq: 'monthly' },
-  { path: '/conversion-optimization-tools/', priority: '0.8', changefreq: 'monthly' },
+
+  // Alternatives pages
+  { path: '/comparisons/best-fomo-alternatives/', priority: '0.8', changefreq: 'monthly' },
+  { path: '/comparisons/best-trustpulse-alternatives/', priority: '0.8', changefreq: 'monthly' },
+  { path: '/comparisons/best-provesource-alternatives/', priority: '0.8', changefreq: 'monthly' },
+  { path: '/comparisons/social-proof-pricing-comparison/', priority: '0.8', changefreq: 'monthly' },
+
+  // Case Studies
+  { path: '/case-studies/', priority: '0.8', changefreq: 'monthly' },
+  { path: '/case-studies/ecommerce-stylehaven/', priority: '0.8', changefreq: 'monthly' },
+  { path: '/case-studies/saas-conversion/', priority: '0.8', changefreq: 'monthly' },
 
   // Legal
   { path: '/privacy-policy/', priority: '0.3', changefreq: 'yearly' },

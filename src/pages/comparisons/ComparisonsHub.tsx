@@ -29,13 +29,26 @@ function BoolIcon({ val }: { val: boolean }) {
   return val ? <Check className="w-4 h-4 text-green-600 mx-auto" /> : <X className="w-4 h-4 text-muted-foreground/40 mx-auto" />;
 }
 
-const schema = {
-  "@context": "https://schema.org",
-  "@type": "CollectionPage",
-  name: "Social Proof Software Comparisons – NotiProof",
-  description: "Compare NotiProof with Fomo, TrustPulse, Proof, and ProveSource. Detailed feature tables, pricing, and verdicts.",
-  url: "https://notiproof.com/comparisons/",
-};
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: "Social Proof Software Comparisons – NotiProof",
+    description: "Compare NotiProof with Fomo, TrustPulse, Proof, and ProveSource. Detailed feature tables, pricing, and verdicts.",
+    url: "https://notiproof.com/comparisons/",
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Social Proof Software Comparisons",
+    itemListElement: comparisons.map((c, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: `NotiProof vs ${c.name}`,
+      url: `https://notiproof.com/comparisons/${c.slug}/`,
+    })),
+  },
+];
 
 export default function ComparisonsHub() {
   return (
@@ -116,6 +129,27 @@ export default function ComparisonsHub() {
               </Table>
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Related Resources */}
+      <section className="section-padding">
+        <div className="container-tight">
+          <h2 className="text-2xl font-bold text-center mb-6">Related Resources</h2>
+          <div className="grid sm:grid-cols-3 gap-4 max-w-3xl mx-auto">
+            <Link to="/resources/social-proof/what-is-social-proof/" className="p-4 bg-card border border-border rounded-xl hover:border-primary/30 transition-all text-center">
+              <p className="text-sm font-semibold">What Is Social Proof?</p>
+              <p className="text-xs text-muted-foreground mt-1">The complete guide</p>
+            </Link>
+            <Link to="/free-tools/" className="p-4 bg-card border border-border rounded-xl hover:border-primary/30 transition-all text-center">
+              <p className="text-sm font-semibold">Free CRO Tools</p>
+              <p className="text-xs text-muted-foreground mt-1">Calculators & audits</p>
+            </Link>
+            <Link to="/resources/conversion-analytics/" className="p-4 bg-card border border-border rounded-xl hover:border-primary/30 transition-all text-center">
+              <p className="text-sm font-semibold">Conversion Analytics</p>
+              <p className="text-xs text-muted-foreground mt-1">Measure & optimize</p>
+            </Link>
+          </div>
         </div>
       </section>
 

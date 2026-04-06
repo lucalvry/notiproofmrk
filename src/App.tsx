@@ -100,6 +100,15 @@ const NotiProofVsFomo = lazy(() => import("./pages/comparisons/NotiProofVsFomo")
 const NotiProofVsTrustPulse = lazy(() => import("./pages/comparisons/NotiProofVsTrustPulse"));
 const NotiProofVsProof = lazy(() => import("./pages/comparisons/NotiProofVsProof"));
 const NotiProofVsProveSource = lazy(() => import("./pages/comparisons/NotiProofVsProveSource"));
+const BestFomoAlternatives = lazy(() => import("./pages/comparisons/BestFomoAlternatives"));
+const BestTrustPulseAlternatives = lazy(() => import("./pages/comparisons/BestTrustPulseAlternatives"));
+const BestProveSourceAlternatives = lazy(() => import("./pages/comparisons/BestProveSourceAlternatives"));
+const SocialProofPricingComparison = lazy(() => import("./pages/comparisons/SocialProofPricingComparison"));
+
+// Case Studies
+const CaseStudiesHub = lazy(() => import("./pages/case-studies/CaseStudiesHub"));
+const EcommerceCaseStudy = lazy(() => import("./pages/case-studies/EcommerceCaseStudy"));
+const SaaSCaseStudy = lazy(() => import("./pages/case-studies/SaaSCaseStudy"));
 
 // Free Tools
 const FreeToolsHub = lazy(() => import("./pages/tools/FreeToolsHub"));
@@ -222,6 +231,15 @@ const App = () => (
             <Route path="/comparisons/notiproof-vs-trustpulse/" element={<SuspenseWrap><NotiProofVsTrustPulse /></SuspenseWrap>} />
             <Route path="/comparisons/notiproof-vs-proof/" element={<SuspenseWrap><NotiProofVsProof /></SuspenseWrap>} />
             <Route path="/comparisons/notiproof-vs-provesource/" element={<SuspenseWrap><NotiProofVsProveSource /></SuspenseWrap>} />
+            <Route path="/comparisons/best-fomo-alternatives/" element={<SuspenseWrap><BestFomoAlternatives /></SuspenseWrap>} />
+            <Route path="/comparisons/best-trustpulse-alternatives/" element={<SuspenseWrap><BestTrustPulseAlternatives /></SuspenseWrap>} />
+            <Route path="/comparisons/best-provesource-alternatives/" element={<SuspenseWrap><BestProveSourceAlternatives /></SuspenseWrap>} />
+            <Route path="/comparisons/social-proof-pricing-comparison/" element={<SuspenseWrap><SocialProofPricingComparison /></SuspenseWrap>} />
+
+            {/* Case Studies */}
+            <Route path="/case-studies/" element={<SuspenseWrap><CaseStudiesHub /></SuspenseWrap>} />
+            <Route path="/case-studies/ecommerce-stylehaven/" element={<SuspenseWrap><EcommerceCaseStudy /></SuspenseWrap>} />
+            <Route path="/case-studies/saas-conversion/" element={<SuspenseWrap><SaaSCaseStudy /></SuspenseWrap>} />
 
             {/* Free Tools */}
             <Route path="/free-tools/" element={<SuspenseWrap><FreeToolsHub /></SuspenseWrap>} />

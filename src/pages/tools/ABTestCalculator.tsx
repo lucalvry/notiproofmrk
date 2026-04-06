@@ -48,6 +48,16 @@ export default function ABTestCalculator() {
         title="Free A/B Test Significance Calculator"
         description="Calculate statistical significance for your A/B tests. Enter visitors and conversions for control and variant to get confidence level, lift %, and p-value."
         canonical="https://notiproof.com/free-tools/ab-test-calculator/"
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          name: "A/B Test Significance Calculator",
+          description: "Calculate statistical significance for your A/B tests with confidence level, lift %, and p-value.",
+          url: "https://notiproof.com/free-tools/ab-test-calculator/",
+          applicationCategory: "BusinessApplication",
+          offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+          provider: { "@type": "Organization", name: "NotiProof", url: "https://notiproof.com" },
+        }}
       />
 
       <section className="relative overflow-hidden bg-foreground text-background py-16 md:py-24">
@@ -128,6 +138,15 @@ export default function ABTestCalculator() {
               </motion.div>
             )}
           </Card>
+
+          <div className="mt-8 bg-card border border-border rounded-2xl p-6">
+            <h2 className="text-lg font-bold mb-3">Related Reading</h2>
+            <ul className="space-y-2 text-sm">
+              <li><Link to="/resources/conversion-analytics/ab-testing-social-proof/" className="text-primary hover:underline">A/B Testing Social Proof: Complete Guide →</Link></li>
+              <li><Link to="/resources/conversion-analytics/measuring-social-proof-roi/" className="text-primary hover:underline">Measuring Social Proof ROI →</Link></li>
+              <li><Link to="/resources/conversion-analytics/conversion-rate-benchmarks/" className="text-primary hover:underline">Conversion Rate Benchmarks by Industry →</Link></li>
+            </ul>
+          </div>
         </div>
       </section>
 
