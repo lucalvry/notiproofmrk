@@ -305,6 +305,8 @@ export async function prerender() {
                   <Route path="/case-studies/" element={<CaseStudiesHub />} />
                   <Route path="/case-studies/ecommerce-stylehaven/" element={<EcommerceCaseStudy />} />
                   <Route path="/case-studies/saas-conversion/" element={<SaaSCaseStudy />} />
+                  <Route path="/case-studies/agency-brightpath/" element={<AgencyCaseStudy />} />
+                  <Route path="/case-studies/local-business-greenleaf/" element={<LocalBusinessCaseStudy />} />
                   <Route path="/free-tools/" element={<FreeToolsHub />} />
                   <Route path="/free-tools/ab-test-calculator/" element={<ABTestCalculator />} />
                   <Route path="/free-tools/social-proof-roi-calculator/" element={<SocialProofROICalculator />} />
