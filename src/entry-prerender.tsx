@@ -173,6 +173,7 @@ function AppShell({ url }: { url: string }) {
                 <Route path="/resources/website-trust/trust-badges-guide/" element={<TrustBadgesGuide />} />
                 <Route path="/resources/website-trust/building-website-credibility/" element={<BuildingWebsiteCredibility />} />
                 <Route path="/resources/website-trust/fomo-marketing-guide/" element={<FOMOMarketingGuide />} />
+                <Route path="/resources/website-trust/testimonials-as-trust-signals/" element={<TestimonialsAsTrustSignals />} />
 
                 <Route path="/resources/help-center/" element={<HelpCenter />} />
                 <Route path="/resources/glossary/" element={<Glossary />} />
