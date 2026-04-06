@@ -219,124 +219,122 @@ function AppShell({ url }: { url: string }) {
   );
 }
 
-export async function prerender() {
-  return staticRoutes.map((url) => {
-    const helmetContext: { helmet?: HelmetServerState } = {};
+export async function prerender({ url }: { url: string }) {
+  const helmetContext: { helmet?: HelmetServerState } = {};
 
-    const html = renderToString(
-      <QueryClientProvider client={new QueryClient()}>
-        <TooltipProvider>
-          <HelmetProvider context={helmetContext}>
-            <StaticRouter location={url}>
-              <Routes>
-                <Route element={<Layout />}>
-                  <Route path="/" element={<Index />} />
-                  <Route path="/pricing/" element={<Pricing />} />
-                  <Route path="/integrations/" element={<Integrations />} />
-                  <Route path="/use-cases/" element={<UseCases />} />
-                  <Route path="/testimonials/" element={<Testimonials />} />
-                  <Route path="/product/" element={<ProductHub />} />
-                  <Route path="/product/social-proof-notifications/" element={<SocialProofNotifications />} />
-                  <Route path="/product/testimonials-collection-text-image-video/" element={<TestimonialsCollection />} />
-                  <Route path="/product/video-testimonial-recorder/" element={<VideoTestimonialRecorder />} />
-                  <Route path="/product/review-aggregation-showcase-system/" element={<ReviewAggregation />} />
-                  <Route path="/product/campaign-builder/" element={<CampaignBuilder />} />
-                  <Route path="/product/integrations-ecosystem/" element={<IntegrationsEcosystem />} />
-                  <Route path="/product/analytics-conversion-insights/" element={<AnalyticsConversionInsights />} />
-                  <Route path="/product/visitor-counter-live-visitors/" element={<VisitorCounter />} />
-                  <Route path="/product/recent-activity-notifications/" element={<RecentActivityNotifications />} />
-                  <Route path="/product/testimonials-widget-reviews-widget/" element={<TestimonialsWidget />} />
-                  <Route path="/use-cases/ecommerce/" element={<EcommerceUseCase />} />
-                  <Route path="/use-cases/saas-social-proof-tools-drive-sign-ups/" element={<SaaSUseCase />} />
-                  <Route path="/use-cases/social-proof-for-marketing-agencies-impress-clients/" element={<AgenciesUseCase />} />
-                  <Route path="/use-cases/local-business-social-proof-convert-website-visitors/" element={<LocalBusinessUseCase />} />
-                  <Route path="/integrations/shopify/" element={<ShopifyIntegration />} />
-                  <Route path="/integrations/wordpress/" element={<WordPressIntegration />} />
-                  <Route path="/integrations/zapier/" element={<ZapierIntegration />} />
-                  <Route path="/company/" element={<CompanyHub />} />
-                  <Route path="/company/about/" element={<About />} />
-                  <Route path="/company/contact/" element={<Contact />} />
-                  <Route path="/company/careers/" element={<Careers />} />
-                  <Route path="/resources/" element={<ResourcesHub />} />
-                  <Route path="/resources/blog/" element={<Blog />} />
-                  <Route path="/resources/guides/" element={<GuidesHub />} />
-                  <Route path="/resources/social-proof/" element={<SocialProofPillar />} />
-                  <Route path="/resources/social-proof/what-is-social-proof/" element={<WhatIsSocialProof />} />
-                  <Route path="/resources/social-proof/social-proof-example/" element={<SocialProofExamples />} />
-                  <Route path="/resources/social-proof/social-proof-in-marketing/" element={<SocialProofInMarketing />} />
-                  <Route path="/resources/social-proof/social-proof-for-websites/" element={<SocialProofForWebsites />} />
-                  <Route path="/resources/social-proof/types-of-social-proof/" element={<TypesOfSocialProof />} />
-                  <Route path="/resources/social-proof/social-proof-psychology/" element={<SocialProofPsychology />} />
-                  <Route path="/resources/social-proof/reviews-and-social-proof/" element={<ReviewsAndSocialProof />} />
-                  <Route path="/resources/reviews/" element={<ReviewsPillar />} />
-                  <Route path="/resources/reviews/how-to-collect-google-reviews/" element={<HowToCollectGoogleReviews />} />
-                  <Route path="/resources/reviews/review-aggregation-guide/" element={<ReviewAggregationGuide />} />
-                  <Route path="/resources/reviews/responding-to-negative-reviews/" element={<RespondingToNegativeReviews />} />
-                  <Route path="/resources/reviews/review-widgets-for-websites/" element={<ReviewWidgetsForWebsites />} />
-                  <Route path="/resources/testimonials/" element={<TestimonialsPillar />} />
-                  <Route path="/resources/testimonials/how-to-collect-testimonials/" element={<HowToCollectTestimonials />} />
-                  <Route path="/resources/testimonials/video-testimonial-guide/" element={<VideoTestimonialGuide />} />
-                  <Route path="/resources/testimonials/testimonial-page-design/" element={<TestimonialPageDesign />} />
-                  <Route path="/resources/testimonials/testimonial-request-email-templates/" element={<TestimonialRequestEmailTemplates />} />
-                  <Route path="/resources/conversion-analytics/" element={<ConversionAnalyticsPillar />} />
-                  <Route path="/resources/conversion-analytics/ab-testing-social-proof/" element={<ABTestingSocialProof />} />
-                  <Route path="/resources/conversion-analytics/conversion-rate-benchmarks/" element={<ConversionRateBenchmarks />} />
-                  <Route path="/resources/conversion-analytics/measuring-social-proof-roi/" element={<MeasuringSocialProofROI />} />
-                  <Route path="/resources/conversion-analytics/heatmap-analytics-guide/" element={<HeatmapAnalyticsGuide />} />
-                  <Route path="/resources/conversion-analytics/testimonial-review-roi/" element={<TestimonialReviewROI />} />
-                  <Route path="/resources/website-trust/" element={<WebsiteTrustPillar />} />
-                  <Route path="/resources/website-trust/trust-signals-for-ecommerce/" element={<TrustSignalsForEcommerce />} />
-                  <Route path="/resources/website-trust/trust-badges-guide/" element={<TrustBadgesGuide />} />
-                  <Route path="/resources/website-trust/building-website-credibility/" element={<BuildingWebsiteCredibility />} />
-                  <Route path="/resources/website-trust/fomo-marketing-guide/" element={<FOMOMarketingGuide />} />
-                  <Route path="/resources/website-trust/testimonials-as-trust-signals/" element={<TestimonialsAsTrustSignals />} />
-                  <Route path="/resources/help-center/" element={<HelpCenter />} />
-                  <Route path="/resources/glossary/" element={<Glossary />} />
-                  <Route path="/social-proof-notifications/" element={<SocialProofNotificationsLanding />} />
-                  <Route path="/comparisons/" element={<ComparisonsHub />} />
-                  <Route path="/comparisons/notiproof-vs-fomo/" element={<NotiProofVsFomo />} />
-                  <Route path="/comparisons/notiproof-vs-trustpulse/" element={<NotiProofVsTrustPulse />} />
-                  <Route path="/comparisons/notiproof-vs-proof/" element={<NotiProofVsProof />} />
-                  <Route path="/comparisons/notiproof-vs-provesource/" element={<NotiProofVsProveSource />} />
-                  <Route path="/comparisons/best-fomo-alternatives/" element={<BestFomoAlternatives />} />
-                  <Route path="/comparisons/best-trustpulse-alternatives/" element={<BestTrustPulseAlternatives />} />
-                  <Route path="/comparisons/best-provesource-alternatives/" element={<BestProveSourceAlternatives />} />
-                  <Route path="/comparisons/social-proof-pricing-comparison/" element={<SocialProofPricingComparison />} />
-                  <Route path="/case-studies/" element={<CaseStudiesHub />} />
-                  <Route path="/case-studies/ecommerce-stylehaven/" element={<EcommerceCaseStudy />} />
-                  <Route path="/case-studies/saas-conversion/" element={<SaaSCaseStudy />} />
-                  <Route path="/case-studies/agency-brightpath/" element={<AgencyCaseStudy />} />
-                  <Route path="/case-studies/local-business-greenleaf/" element={<LocalBusinessCaseStudy />} />
-                  <Route path="/free-tools/" element={<FreeToolsHub />} />
-                  <Route path="/free-tools/ab-test-calculator/" element={<ABTestCalculator />} />
-                  <Route path="/free-tools/social-proof-roi-calculator/" element={<SocialProofROICalculator />} />
-                  <Route path="/free-tools/google-review-link-generator/" element={<GoogleReviewLinkGenerator />} />
-                  <Route path="/free-tools/testimonial-email-generator/" element={<TestimonialEmailGenerator />} />
-                  <Route path="/free-tools/website-trust-score-checker/" element={<WebsiteTrustScoreChecker />} />
-                  <Route path="/privacy-policy/" element={<PrivacyPolicy />} />
-                  <Route path="/terms-of-service/" element={<TermsOfService />} />
-                  <Route path="*" element={<NotFound />} />
-                </Route>
-              </Routes>
-            </StaticRouter>
-          </HelmetProvider>
-        </TooltipProvider>
-      </QueryClientProvider>
-    );
+  const html = renderToString(
+    <QueryClientProvider client={new QueryClient()}>
+      <TooltipProvider>
+        <HelmetProvider context={helmetContext}>
+          <StaticRouter location={url}>
+            <Routes>
+              <Route element={<Layout />}>
+                <Route path="/" element={<Index />} />
+                <Route path="/pricing/" element={<Pricing />} />
+                <Route path="/integrations/" element={<Integrations />} />
+                <Route path="/use-cases/" element={<UseCases />} />
+                <Route path="/testimonials/" element={<Testimonials />} />
+                <Route path="/product/" element={<ProductHub />} />
+                <Route path="/product/social-proof-notifications/" element={<SocialProofNotifications />} />
+                <Route path="/product/testimonials-collection-text-image-video/" element={<TestimonialsCollection />} />
+                <Route path="/product/video-testimonial-recorder/" element={<VideoTestimonialRecorder />} />
+                <Route path="/product/review-aggregation-showcase-system/" element={<ReviewAggregation />} />
+                <Route path="/product/campaign-builder/" element={<CampaignBuilder />} />
+                <Route path="/product/integrations-ecosystem/" element={<IntegrationsEcosystem />} />
+                <Route path="/product/analytics-conversion-insights/" element={<AnalyticsConversionInsights />} />
+                <Route path="/product/visitor-counter-live-visitors/" element={<VisitorCounter />} />
+                <Route path="/product/recent-activity-notifications/" element={<RecentActivityNotifications />} />
+                <Route path="/product/testimonials-widget-reviews-widget/" element={<TestimonialsWidget />} />
+                <Route path="/use-cases/ecommerce/" element={<EcommerceUseCase />} />
+                <Route path="/use-cases/saas-social-proof-tools-drive-sign-ups/" element={<SaaSUseCase />} />
+                <Route path="/use-cases/social-proof-for-marketing-agencies-impress-clients/" element={<AgenciesUseCase />} />
+                <Route path="/use-cases/local-business-social-proof-convert-website-visitors/" element={<LocalBusinessUseCase />} />
+                <Route path="/integrations/shopify/" element={<ShopifyIntegration />} />
+                <Route path="/integrations/wordpress/" element={<WordPressIntegration />} />
+                <Route path="/integrations/zapier/" element={<ZapierIntegration />} />
+                <Route path="/company/" element={<CompanyHub />} />
+                <Route path="/company/about/" element={<About />} />
+                <Route path="/company/contact/" element={<Contact />} />
+                <Route path="/company/careers/" element={<Careers />} />
+                <Route path="/resources/" element={<ResourcesHub />} />
+                <Route path="/resources/blog/" element={<Blog />} />
+                <Route path="/resources/guides/" element={<GuidesHub />} />
+                <Route path="/resources/social-proof/" element={<SocialProofPillar />} />
+                <Route path="/resources/social-proof/what-is-social-proof/" element={<WhatIsSocialProof />} />
+                <Route path="/resources/social-proof/social-proof-example/" element={<SocialProofExamples />} />
+                <Route path="/resources/social-proof/social-proof-in-marketing/" element={<SocialProofInMarketing />} />
+                <Route path="/resources/social-proof/social-proof-for-websites/" element={<SocialProofForWebsites />} />
+                <Route path="/resources/social-proof/types-of-social-proof/" element={<TypesOfSocialProof />} />
+                <Route path="/resources/social-proof/social-proof-psychology/" element={<SocialProofPsychology />} />
+                <Route path="/resources/social-proof/reviews-and-social-proof/" element={<ReviewsAndSocialProof />} />
+                <Route path="/resources/reviews/" element={<ReviewsPillar />} />
+                <Route path="/resources/reviews/how-to-collect-google-reviews/" element={<HowToCollectGoogleReviews />} />
+                <Route path="/resources/reviews/review-aggregation-guide/" element={<ReviewAggregationGuide />} />
+                <Route path="/resources/reviews/responding-to-negative-reviews/" element={<RespondingToNegativeReviews />} />
+                <Route path="/resources/reviews/review-widgets-for-websites/" element={<ReviewWidgetsForWebsites />} />
+                <Route path="/resources/testimonials/" element={<TestimonialsPillar />} />
+                <Route path="/resources/testimonials/how-to-collect-testimonials/" element={<HowToCollectTestimonials />} />
+                <Route path="/resources/testimonials/video-testimonial-guide/" element={<VideoTestimonialGuide />} />
+                <Route path="/resources/testimonials/testimonial-page-design/" element={<TestimonialPageDesign />} />
+                <Route path="/resources/testimonials/testimonial-request-email-templates/" element={<TestimonialRequestEmailTemplates />} />
+                <Route path="/resources/conversion-analytics/" element={<ConversionAnalyticsPillar />} />
+                <Route path="/resources/conversion-analytics/ab-testing-social-proof/" element={<ABTestingSocialProof />} />
+                <Route path="/resources/conversion-analytics/conversion-rate-benchmarks/" element={<ConversionRateBenchmarks />} />
+                <Route path="/resources/conversion-analytics/measuring-social-proof-roi/" element={<MeasuringSocialProofROI />} />
+                <Route path="/resources/conversion-analytics/heatmap-analytics-guide/" element={<HeatmapAnalyticsGuide />} />
+                <Route path="/resources/conversion-analytics/testimonial-review-roi/" element={<TestimonialReviewROI />} />
+                <Route path="/resources/website-trust/" element={<WebsiteTrustPillar />} />
+                <Route path="/resources/website-trust/trust-signals-for-ecommerce/" element={<TrustSignalsForEcommerce />} />
+                <Route path="/resources/website-trust/trust-badges-guide/" element={<TrustBadgesGuide />} />
+                <Route path="/resources/website-trust/building-website-credibility/" element={<BuildingWebsiteCredibility />} />
+                <Route path="/resources/website-trust/fomo-marketing-guide/" element={<FOMOMarketingGuide />} />
+                <Route path="/resources/website-trust/testimonials-as-trust-signals/" element={<TestimonialsAsTrustSignals />} />
+                <Route path="/resources/help-center/" element={<HelpCenter />} />
+                <Route path="/resources/glossary/" element={<Glossary />} />
+                <Route path="/social-proof-notifications/" element={<SocialProofNotificationsLanding />} />
+                <Route path="/comparisons/" element={<ComparisonsHub />} />
+                <Route path="/comparisons/notiproof-vs-fomo/" element={<NotiProofVsFomo />} />
+                <Route path="/comparisons/notiproof-vs-trustpulse/" element={<NotiProofVsTrustPulse />} />
+                <Route path="/comparisons/notiproof-vs-proof/" element={<NotiProofVsProof />} />
+                <Route path="/comparisons/notiproof-vs-provesource/" element={<NotiProofVsProveSource />} />
+                <Route path="/comparisons/best-fomo-alternatives/" element={<BestFomoAlternatives />} />
+                <Route path="/comparisons/best-trustpulse-alternatives/" element={<BestTrustPulseAlternatives />} />
+                <Route path="/comparisons/best-provesource-alternatives/" element={<BestProveSourceAlternatives />} />
+                <Route path="/comparisons/social-proof-pricing-comparison/" element={<SocialProofPricingComparison />} />
+                <Route path="/case-studies/" element={<CaseStudiesHub />} />
+                <Route path="/case-studies/ecommerce-stylehaven/" element={<EcommerceCaseStudy />} />
+                <Route path="/case-studies/saas-conversion/" element={<SaaSCaseStudy />} />
+                <Route path="/case-studies/agency-brightpath/" element={<AgencyCaseStudy />} />
+                <Route path="/case-studies/local-business-greenleaf/" element={<LocalBusinessCaseStudy />} />
+                <Route path="/free-tools/" element={<FreeToolsHub />} />
+                <Route path="/free-tools/ab-test-calculator/" element={<ABTestCalculator />} />
+                <Route path="/free-tools/social-proof-roi-calculator/" element={<SocialProofROICalculator />} />
+                <Route path="/free-tools/google-review-link-generator/" element={<GoogleReviewLinkGenerator />} />
+                <Route path="/free-tools/testimonial-email-generator/" element={<TestimonialEmailGenerator />} />
+                <Route path="/free-tools/website-trust-score-checker/" element={<WebsiteTrustScoreChecker />} />
+                <Route path="/privacy-policy/" element={<PrivacyPolicy />} />
+                <Route path="/terms-of-service/" element={<TermsOfService />} />
+                <Route path="*" element={<NotFound />} />
+              </Route>
+            </Routes>
+          </StaticRouter>
+        </HelmetProvider>
+      </TooltipProvider>
+    </QueryClientProvider>
+  );
 
-    // Extract helmet data for head injection
-    const helmet = helmetContext.helmet;
-    const head = helmet
-      ? [
-          helmet.title?.toString() || "",
-          helmet.meta?.toString() || "",
-          helmet.link?.toString() || "",
-          helmet.script?.toString() || "",
-        ]
-          .filter(Boolean)
-          .join("\n")
-      : "";
+  // Extract helmet data for head injection
+  const helmet = helmetContext.helmet;
+  const head = helmet
+    ? [
+        helmet.title?.toString() || "",
+        helmet.meta?.toString() || "",
+        helmet.link?.toString() || "",
+        helmet.script?.toString() || "",
+      ]
+        .filter(Boolean)
+        .join("\n")
+    : "";
 
-    return { url, html, head };
-  });
+  return { url, html, head };
 }
