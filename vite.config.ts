@@ -28,10 +28,10 @@ export default defineConfig(async ({ mode }) => {
           additionalPrerenderRoutes: additionalRoutes,
         }),
     ].filter(Boolean),
-  ].filter(Boolean),
-  resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "./src"),
+    resolve: {
+      alias: {
+        "@": path.resolve(__dirname, "./src"),
+      },
     },
-  },
-}));
+  };
+});
