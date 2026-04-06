@@ -35,7 +35,7 @@ export default function ReviewAggregationGuide() {
       featuredImage={featuredReviewAggregation}
       content={
         <div className="space-y-8 text-foreground">
-          <p className="text-lg text-muted-foreground">Your customers are leaving reviews across dozens of platforms — Google, Trustpilot, G2, Capterra, Yelp, Facebook, and industry-specific directories. But visitors to your website only see what's on your website. Review aggregation solves this by pulling reviews from every platform into a single, unified display — ensuring that every positive review works for you where it matters most: on your own site, at the point of conversion.</p>
+          <p className="text-lg text-muted-foreground">Your customers are leaving reviews across dozens of platforms — Google, Trustpilot, G2, Capterra, Yelp, Facebook, and industry-specific directories. But visitors to your website only see what's on your website. <dfn><Link to="/resources/glossary/#review-aggregation" className="text-primary font-semibold hover:underline">Review aggregation</Link></dfn> solves this by pulling reviews from every platform into a single, unified display — ensuring that every positive review works for you where it matters most: on your own site, at the point of conversion.</p>
 
           <h2 id="what-is-review-aggregation" className="text-2xl font-bold mt-12">What Is Review Aggregation?</h2>
           <p className="font-medium text-foreground">Review aggregation is the process of collecting customer reviews from multiple third-party platforms and consolidating them into a single, unified display on your own website or marketing materials.</p>

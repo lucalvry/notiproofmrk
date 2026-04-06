@@ -55,6 +55,7 @@ const SocialProofInMarketing = lazy(() => import("./pages/resources/social-proof
 const SocialProofForWebsites = lazy(() => import("./pages/resources/social-proof/SocialProofForWebsites"));
 const TypesOfSocialProof = lazy(() => import("./pages/resources/social-proof/TypesOfSocialProof"));
 const SocialProofPsychology = lazy(() => import("./pages/resources/social-proof/SocialProofPsychology"));
+const ReviewsAndSocialProof = lazy(() => import("./pages/resources/social-proof/ReviewsAndSocialProof"));
 
 // Reviews cluster
 const ReviewsPillar = lazy(() => import("./pages/resources/reviews/ReviewsPillar"));
@@ -76,6 +77,7 @@ const ABTestingSocialProof = lazy(() => import("./pages/resources/conversion-ana
 const ConversionRateBenchmarks = lazy(() => import("./pages/resources/conversion-analytics/ConversionRateBenchmarks"));
 const MeasuringSocialProofROI = lazy(() => import("./pages/resources/conversion-analytics/MeasuringSocialProofROI"));
 const HeatmapAnalyticsGuide = lazy(() => import("./pages/resources/conversion-analytics/HeatmapAnalyticsGuide"));
+const TestimonialReviewROI = lazy(() => import("./pages/resources/conversion-analytics/TestimonialReviewROI"));
 
 // Website Trust cluster
 const WebsiteTrustPillar = lazy(() => import("./pages/resources/website-trust/WebsiteTrustPillar"));
@@ -83,6 +85,7 @@ const TrustSignalsForEcommerce = lazy(() => import("./pages/resources/website-tr
 const TrustBadgesGuide = lazy(() => import("./pages/resources/website-trust/TrustBadgesGuide"));
 const BuildingWebsiteCredibility = lazy(() => import("./pages/resources/website-trust/BuildingWebsiteCredibility"));
 const FOMOMarketingGuide = lazy(() => import("./pages/resources/website-trust/FOMOMarketingGuide"));
+const TestimonialsAsTrustSignals = lazy(() => import("./pages/resources/website-trust/TestimonialsAsTrustSignals"));
 
 const AuthorProfile = lazy(() => import("./pages/resources/AuthorProfile"));
 const HelpCenter = lazy(() => import("./pages/resources/HelpCenter"));
@@ -109,6 +112,8 @@ const SocialProofPricingComparison = lazy(() => import("./pages/comparisons/Soci
 const CaseStudiesHub = lazy(() => import("./pages/case-studies/CaseStudiesHub"));
 const EcommerceCaseStudy = lazy(() => import("./pages/case-studies/EcommerceCaseStudy"));
 const SaaSCaseStudy = lazy(() => import("./pages/case-studies/SaaSCaseStudy"));
+const AgencyCaseStudy = lazy(() => import("./pages/case-studies/AgencyCaseStudy"));
+const LocalBusinessCaseStudy = lazy(() => import("./pages/case-studies/LocalBusinessCaseStudy"));
 
 // Free Tools
 const FreeToolsHub = lazy(() => import("./pages/tools/FreeToolsHub"));
@@ -187,6 +192,7 @@ const App = () => (
             <Route path="/resources/social-proof/social-proof-for-websites/" element={<SuspenseWrap><SocialProofForWebsites /></SuspenseWrap>} />
             <Route path="/resources/social-proof/types-of-social-proof/" element={<SuspenseWrap><TypesOfSocialProof /></SuspenseWrap>} />
             <Route path="/resources/social-proof/social-proof-psychology/" element={<SuspenseWrap><SocialProofPsychology /></SuspenseWrap>} />
+            <Route path="/resources/social-proof/reviews-and-social-proof/" element={<SuspenseWrap><ReviewsAndSocialProof /></SuspenseWrap>} />
 
             {/* Resources — Reviews cluster */}
             <Route path="/resources/reviews/" element={<SuspenseWrap><ReviewsPillar /></SuspenseWrap>} />
@@ -208,6 +214,7 @@ const App = () => (
             <Route path="/resources/conversion-analytics/conversion-rate-benchmarks/" element={<SuspenseWrap><ConversionRateBenchmarks /></SuspenseWrap>} />
             <Route path="/resources/conversion-analytics/measuring-social-proof-roi/" element={<SuspenseWrap><MeasuringSocialProofROI /></SuspenseWrap>} />
             <Route path="/resources/conversion-analytics/heatmap-analytics-guide/" element={<SuspenseWrap><HeatmapAnalyticsGuide /></SuspenseWrap>} />
+            <Route path="/resources/conversion-analytics/testimonial-review-roi/" element={<SuspenseWrap><TestimonialReviewROI /></SuspenseWrap>} />
 
             {/* Resources — Website Trust cluster */}
             <Route path="/resources/website-trust/" element={<SuspenseWrap><WebsiteTrustPillar /></SuspenseWrap>} />
@@ -215,6 +222,7 @@ const App = () => (
             <Route path="/resources/website-trust/trust-badges-guide/" element={<SuspenseWrap><TrustBadgesGuide /></SuspenseWrap>} />
             <Route path="/resources/website-trust/building-website-credibility/" element={<SuspenseWrap><BuildingWebsiteCredibility /></SuspenseWrap>} />
             <Route path="/resources/website-trust/fomo-marketing-guide/" element={<SuspenseWrap><FOMOMarketingGuide /></SuspenseWrap>} />
+            <Route path="/resources/website-trust/testimonials-as-trust-signals/" element={<SuspenseWrap><TestimonialsAsTrustSignals /></SuspenseWrap>} />
 
             {/* Resources — Other */}
             <Route path="/resources/author/:slug/" element={<SuspenseWrap><AuthorProfile /></SuspenseWrap>} />
@@ -240,6 +248,8 @@ const App = () => (
             <Route path="/case-studies/" element={<SuspenseWrap><CaseStudiesHub /></SuspenseWrap>} />
             <Route path="/case-studies/ecommerce-stylehaven/" element={<SuspenseWrap><EcommerceCaseStudy /></SuspenseWrap>} />
             <Route path="/case-studies/saas-conversion/" element={<SuspenseWrap><SaaSCaseStudy /></SuspenseWrap>} />
+            <Route path="/case-studies/agency-brightpath/" element={<SuspenseWrap><AgencyCaseStudy /></SuspenseWrap>} />
+            <Route path="/case-studies/local-business-greenleaf/" element={<SuspenseWrap><LocalBusinessCaseStudy /></SuspenseWrap>} />
 
             {/* Free Tools */}
             <Route path="/free-tools/" element={<SuspenseWrap><FreeToolsHub /></SuspenseWrap>} />

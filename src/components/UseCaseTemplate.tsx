@@ -68,11 +68,11 @@ export default function UseCaseTemplate({
   const hasSolutions = solutions && solutions.length > 0;
 
   return (
-    <>
+    <article itemScope itemType="https://schema.org/WebPage">
       <SEOHead title={metaTitle} description={metaDescription} canonical={canonical} schema={[webPageSchema, faqSchema]} />
 
       {/* Hero */}
-      <section className="section-padding">
+      <header className="section-padding">
         <div className="container-tight">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div {...fadeUp}>
@@ -112,7 +112,7 @@ export default function UseCaseTemplate({
             </motion.div>
           </div>
         </div>
-      </section>
+      </header>
 
       {/* Stats */}
       <section className="py-12 bg-surface border-y border-border">
@@ -318,6 +318,6 @@ export default function UseCaseTemplate({
       </section>
 
       <CTASection />
-    </>
+    </article>
   );
 }

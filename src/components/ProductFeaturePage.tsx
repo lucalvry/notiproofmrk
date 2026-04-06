@@ -22,6 +22,7 @@ interface ProductFeaturePageProps {
   description: string;
   descriptionContent?: React.ReactNode;
   icon: LucideIcon;
+  heroMockup?: React.ReactNode;
   benefits: string[];
   withoutNotiproof?: string[];
   withNotiproof?: string[];
@@ -35,6 +36,7 @@ interface ProductFeaturePageProps {
   relatedProducts: { label: string; href: string }[];
   resourceLinks?: ResourceLink[];
   comparisonLinks?: { label: string; href: string }[];
+  lastUpdated?: string;
 }
 
 const fadeUp = {
@@ -45,9 +47,9 @@ const fadeUp = {
 };
 
 export default function ProductFeaturePage({
-  metaTitle, metaDescription, canonical, headline, description, descriptionContent, icon: Icon,
+  metaTitle, metaDescription, canonical, headline, description, descriptionContent, icon: Icon, heroMockup,
   benefits, withoutNotiproof, withNotiproof, howItWorks, featureDetails, deepDiveContent, deepDiveToc,
-  testimonial, faqs, relatedProducts, resourceLinks, comparisonLinks,
+  testimonial, faqs, relatedProducts, resourceLinks, comparisonLinks, lastUpdated,
 }: ProductFeaturePageProps) {
   const faqSchema = {
     "@context": "https://schema.org",
@@ -82,11 +84,11 @@ export default function ProductFeaturePage({
   const hasComparison = withoutNotiproof && withNotiproof;
 
   return (
-    <>
-      <SEOHead title={metaTitle} description={metaDescription} canonical={canonical} schema={[webPageSchema, faqSchema, softwareSchema]} />
+    <article itemScope itemType="https://schema.org/WebPage">
+      <SEOHead title={metaTitle} description={metaDescription} canonical={canonical} schema={[webPageSchema, faqSchema, softwareSchema]} ogType="product" />
 
       {/* Hero */}
-      <section className="section-padding pt-4">
+      <header className="section-padding pt-4">
         <div className="container-tight">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div {...fadeUp}>
@@ -111,35 +113,47 @@ export default function ProductFeaturePage({
                 <CheckCircle2 className="w-3.5 h-3.5 text-primary" />
                 Trusted by 4,000+ websites · No credit card required
               </p>
+              {lastUpdated && (
+                <p className="text-xs text-muted-foreground mt-2">
+                  Last updated: <time dateTime={lastUpdated}>{new Date(lastUpdated).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}</time>
+                </p>
+              )}
             </motion.div>
 
             {/* Notification preview mockup */}
             <motion.div {...fadeUp} transition={{ duration: 0.5, delay: 0.2 }}>
-              <div className="bg-gradient-to-br from-primary/5 via-background to-primary/10 border border-border rounded-2xl p-8 aspect-[4/3] flex items-center justify-center relative overflow-hidden">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,hsl(var(--primary)/0.06),transparent_70%)]" />
-                <div className="bg-card border border-border rounded-xl p-5 shadow-xl max-w-xs w-full relative z-10">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                      <Icon className="w-5 h-5 text-primary" />
+              {heroMockup ? (
+                <div className="bg-gradient-to-br from-primary/5 via-background to-primary/10 border border-border rounded-2xl p-8 aspect-[4/3] flex items-center justify-center relative overflow-hidden">
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,hsl(var(--primary)/0.06),transparent_70%)]" />
+                  <div className="relative z-10 w-full">{heroMockup}</div>
+                </div>
+              ) : (
+                <div className="bg-gradient-to-br from-primary/5 via-background to-primary/10 border border-border rounded-2xl p-8 aspect-[4/3] flex items-center justify-center relative overflow-hidden">
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,hsl(var(--primary)/0.06),transparent_70%)]" />
+                  <div className="bg-card border border-border rounded-xl p-5 shadow-xl max-w-xs w-full relative z-10">
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                        <Icon className="w-5 h-5 text-primary" />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <p className="text-sm font-semibold truncate">
+                          <span className="text-foreground">Sarah from Austin</span>{" "}
+                          <span className="text-muted-foreground font-normal">just purchased</span>
+                        </p>
+                        <p className="text-xs text-muted-foreground">Premium Plan · 2 minutes ago</p>
+                      </div>
                     </div>
-                    <div className="flex-1 min-w-0">
-                      <p className="text-sm font-semibold truncate">
-                        <span className="text-foreground">Sarah from Austin</span>{" "}
-                        <span className="text-muted-foreground font-normal">just purchased</span>
-                      </p>
-                      <p className="text-xs text-muted-foreground">Premium Plan · 2 minutes ago</p>
+                    <div className="flex items-center gap-1 text-xs text-muted-foreground">
+                      <span className="inline-block w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+                      47 people viewing this page
                     </div>
-                  </div>
-                  <div className="flex items-center gap-1 text-xs text-muted-foreground">
-                    <span className="inline-block w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                    47 people viewing this page
                   </div>
                 </div>
-              </div>
+              )}
             </motion.div>
           </div>
         </div>
-      </section>
+      </header>
 
       {/* Key Benefits */}
       <section className="section-padding bg-surface">
@@ -381,6 +395,6 @@ export default function ProductFeaturePage({
       </section>
 
       <CTASection />
-    </>
+    </article>
   );
 }

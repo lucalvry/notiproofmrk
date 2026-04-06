@@ -34,7 +34,7 @@ export default function TrustBadgesGuide() {
       featuredImage={featuredTrustBadges}
       content={
         <div className="space-y-8 text-foreground">
-          <p className="text-lg text-muted-foreground">Trust badges are small visual indicators displayed on websites to signal security, legitimacy, and quality. While they seem like minor design elements, they have outsized conversion impact — a CXL study found that 48% of consumers consider trust badges essential before making an online purchase, and removing them from checkout pages can increase cart abandonment by 10-15%.</p>
+          <p className="text-lg text-muted-foreground">Trust badges are small visual indicators displayed on websites to signal security, legitimacy, and quality. While they seem like minor design elements, they have outsized conversion impact — a CXL study found that 48% of consumers consider <dfn><Link to="/resources/glossary/">trust badge</Link></dfn>s essential before making an online purchase, and removing them from checkout pages can increase cart abandonment by 10-15%.</p>
 
           <h2 id="what-are-trust-badges" className="text-2xl font-bold mt-12">What Are Trust Badges?</h2>
           <p className="font-medium text-foreground">Trust badges are visual icons, seals, or logos displayed on websites to signal security, verify identity, or communicate quality guarantees — designed to reduce perceived risk and increase visitor confidence in completing a purchase or sharing personal information.</p>

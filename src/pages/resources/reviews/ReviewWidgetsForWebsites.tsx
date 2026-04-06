@@ -35,7 +35,7 @@ export default function ReviewWidgetsForWebsites() {
       featuredImage={featuredReviewWidgets}
       content={
         <div className="space-y-8 text-foreground">
-          <p className="text-lg text-muted-foreground">Review widgets are embeddable components that display customer reviews and ratings directly on your website. They transform scattered third-party reviews into on-site social proof — putting trust signals exactly where purchase decisions happen. The right review widget can increase conversion rates by 15-35%, according to research from the Spiegel Research Center, while the wrong one can slow your page, break your design, or fail to include the schema markup needed for rich snippets.</p>
+          <p className="text-lg text-muted-foreground">Review widgets are embeddable components that display customer reviews and ratings directly on your website. They transform scattered third-party reviews into on-site social proof — putting trust signals exactly where purchase decisions happen. The right <dfn><Link to="/resources/glossary/">review widget</Link></dfn> can increase conversion rates by 15-35%, according to research from the Spiegel Research Center, while the wrong one can slow your page, break your design, or fail to include the schema markup needed for rich snippets.</p>
 
           <h2 id="what-are-review-widgets" className="text-2xl font-bold mt-12">What Are Review Widgets?</h2>
           <p className="font-medium text-foreground">Review widgets are embeddable UI components — typically JavaScript-based — that pull customer reviews from external platforms or internal databases and display them in customizable formats like grids, carousels, or lists on any page of your website.</p>

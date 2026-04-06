@@ -9,14 +9,14 @@ const r = [
 ];
 
 const tocSections = [
-  { id: "choose-types", label: "Step 1: Choose Your Social Proof Types" },
-  { id: "placement", label: "Step 2: Strategic Placement" },
-  { id: "install", label: "Step 3: Install and Configure" },
-  { id: "optimize", label: "Step 4: Optimize and Test" },
-  { id: "homepage", label: "Social Proof on Your Homepage" },
-  { id: "product-pages", label: "Social Proof on Product Pages" },
-  { id: "checkout", label: "Social Proof During Checkout" },
-  { id: "platform-guides", label: "Platform-Specific Guides" },
+  { id: "choose-types", label: "How Do You Choose Your Social Proof Types?" },
+  { id: "placement", label: "Where Should You Place Social Proof on Your Website?" },
+  { id: "install", label: "How Do You Install and Configure Social Proof?" },
+  { id: "optimize", label: "How Do You Optimize and Test Social Proof?" },
+  { id: "homepage", label: "What Social Proof Works Best on Your Homepage?" },
+  { id: "product-pages", label: "How Do You Add Social Proof to Product Pages?" },
+  { id: "checkout", label: "What Social Proof Reduces Cart Abandonment at Checkout?" },
+  { id: "platform-guides", label: "What Are the Platform-Specific Implementation Steps?" },
   { id: "key-takeaways", label: "Key Takeaways" },
 ];
 
@@ -36,9 +36,10 @@ export default function SocialProofForWebsites() {
       relatedArticles={r}
       content={
         <div className="space-y-6 text-muted-foreground">
-          <p className="text-lg">Adding social proof to your website is one of the highest-ROI improvements you can make. This guide walks you through exactly how to implement social proof on any website — from choosing the right <Link to="/resources/social-proof/types-of-social-proof/" className="text-primary font-semibold hover:underline">types of social proof</Link> to optimal placement strategies and ongoing optimization.</p>
+          <p className="text-lg">Adding <dfn><Link to="/resources/glossary/">social proof</Link></dfn> to your website is one of the highest-ROI improvements you can make. This guide walks you through exactly how to implement social proof on any website — from choosing the right <Link to="/resources/social-proof/types-of-social-proof/" className="text-primary font-semibold hover:underline">types of social proof</Link> to optimal placement strategies and ongoing optimization.</p>
 
-          <h2 id="choose-types" className="text-2xl font-bold text-foreground">Step 1: Choose Your Social Proof Types</h2>
+          <h2 id="choose-types" className="text-2xl font-bold text-foreground">How Do You Choose Your Social Proof Types?</h2>
+          <p className="font-medium text-foreground">Choose social proof types based on your business model: e-commerce stores need purchase notifications and reviews, SaaS products need signup activity and ROI testimonials, service businesses need booking notifications, and local businesses need Google review aggregation.</p>
           <p>Start with the social proof types that match your business model. The right combination depends on your industry, audience, and conversion goals:</p>
           <ul className="list-disc pl-6 space-y-2">
             <li><strong className="text-foreground"><Link to="/use-cases/ecommerce/" className="text-primary hover:underline">E-commerce stores</Link>:</strong> <Link to="/product/social-proof-notifications/" className="text-primary font-semibold hover:underline">Purchase notifications</Link>, product reviews, stock alerts, and bestseller badges. These address the core buying anxieties: "Is this product good?" and "Should I buy now?"</li>
@@ -47,7 +48,8 @@ export default function SocialProofForWebsites() {
             <li><strong className="text-foreground"><Link to="/use-cases/local-business-social-proof-convert-website-visitors/" className="text-primary hover:underline">Local businesses</Link>:</strong> Local review aggregation, <Link to="/product/visitor-counter-live-visitors/" className="text-primary font-semibold hover:underline">visitor counters</Link>, and location-specific testimonials. Local trust signals outweigh national brand recognition.</li>
           </ul>
 
-          <h2 id="placement" className="text-2xl font-bold text-foreground">Step 2: Strategic Placement</h2>
+          <h2 id="placement" className="text-2xl font-bold text-foreground">Where Should You Place Social Proof on Your Website?</h2>
+          <p className="font-medium text-foreground">Place social proof where decisions happen — next to CTAs, on pricing pages, and during checkout — because Baymard Institute research shows placement is as important as the proof itself, with proximity to conversion points directly impacting effectiveness.</p>
           <p>Place social proof where decisions happen — not where it's convenient. Research from the Baymard Institute shows that social proof placement is as important as the proof itself. Key placement guidelines:</p>
           <ul className="list-disc pl-6 space-y-2">
             <li><strong className="text-foreground">Above the fold on your homepage:</strong> Customer count or logo bar for instant credibility</li>
@@ -58,7 +60,8 @@ export default function SocialProofForWebsites() {
           </ul>
           <p>Each placement serves a specific purpose in reducing friction and building confidence at the exact moment the visitor needs it most.</p>
 
-          <h2 id="install" className="text-2xl font-bold text-foreground">Step 3: Install and Configure</h2>
+          <h2 id="install" className="text-2xl font-bold text-foreground">How Do You Install and Configure Social Proof?</h2>
+          <p className="font-medium text-foreground">With NotiProof, adding social proof takes 60 seconds on any platform: add one JavaScript tag, configure notification types and styling in the dashboard, set display rules, and go live — no development work required.</p>
           <p>With NotiProof, adding social proof takes 60 seconds. The process is the same regardless of your platform:</p>
           <ol className="list-decimal pl-6 space-y-2">
             <li><strong className="text-foreground">Add one line of JavaScript</strong> to your website header — the NotiProof script tag</li>
@@ -69,7 +72,8 @@ export default function SocialProofForWebsites() {
           </ol>
           <p>NotiProof works on any website platform: <Link to="/integrations/shopify/" className="text-primary font-semibold hover:underline">Shopify</Link>, <Link to="/integrations/wordpress/" className="text-primary font-semibold hover:underline">WordPress</Link>, Webflow, Squarespace, Wix, or custom HTML. For Shopify and WordPress, dedicated integrations provide one-click installation and automatic data sync.</p>
 
-          <h2 id="optimize" className="text-2xl font-bold text-foreground">Step 4: Optimize and Test</h2>
+          <h2 id="optimize" className="text-2xl font-bold text-foreground">How Do You Optimize and Test Social Proof?</h2>
+          <p className="font-medium text-foreground">Continuously A/B test notification designs, message copy, display frequency, and placement — small changes in color, position, or wording can yield significant conversion lifts when measured with NotiProof's built-in analytics.</p>
           <p>Installation is just the beginning. The highest-performing social proof strategies are continuously optimized based on data. Key optimization levers:</p>
           <ul className="list-disc pl-6 space-y-2">
             <li><strong className="text-foreground">A/B test notification designs:</strong> Test different colors, sizes, positions, and animation styles. Small changes can yield significant conversion lifts.</li>
@@ -78,13 +82,15 @@ export default function SocialProofForWebsites() {
             <li><strong className="text-foreground">Monitor <Link to="/product/analytics-conversion-insights/" className="text-primary font-semibold hover:underline">analytics</Link>:</strong> Track impressions, clicks, and conversion lift for each social proof element. Double down on what works.</li>
           </ul>
 
-          <h2 id="homepage" className="text-2xl font-bold text-foreground">Social Proof on Your Homepage</h2>
+          <h2 id="homepage" className="text-2xl font-bold text-foreground">What Social Proof Works Best on Your Homepage?</h2>
+          <p className="font-medium text-foreground">Effective homepage social proof includes a "Trusted by X,000+ businesses" bar with customer logos in the hero, 2-3 customer testimonials with specific results below the fold, and real-time activity notifications creating momentum throughout.</p>
           <p>Your homepage is often the first impression visitors have of your business. Effective homepage social proof includes:</p>
           <p><strong className="text-foreground">Hero section:</strong> "Trusted by X,000+ businesses" with customer logos. This immediately establishes credibility and answers the unconscious question: "Is this company legitimate?"</p>
           <p><strong className="text-foreground">Below the fold:</strong> 2–3 customer testimonials with specific results. Include photos, names, and company names for authenticity. <Link to="/product/video-testimonial-recorder/" className="text-primary font-semibold hover:underline">Video testimonials</Link> are even more compelling.</p>
           <p><strong className="text-foreground">Notification popups:</strong> <Link to="/product/recent-activity-notifications/" className="text-primary font-semibold hover:underline">Recent activity notifications</Link> showing signups, purchases, or reviews create a sense of momentum that draws visitors deeper into your site.</p>
 
-          <h2 id="product-pages" className="text-2xl font-bold text-foreground">Social Proof on Product Pages</h2>
+          <h2 id="product-pages" className="text-2xl font-bold text-foreground">How Do You Add Social Proof to Product Pages?</h2>
+          <p className="font-medium text-foreground">Product pages need aggregated star ratings near the title, customer photos and testimonial widgets below the description, live purchase notifications ("X people bought this in 24 hours"), and visitor counters — all placed near the buy button for maximum impact.</p>
           <p>Product pages are where buying decisions happen. Social proof here directly impacts revenue. Essential elements:</p>
           <ul className="list-disc pl-6 space-y-2">
             <li>Star ratings and review counts (aggregated from multiple sources via NotiProof's <Link to="/product/review-aggregation-showcase-system/" className="text-primary font-semibold hover:underline">review aggregation</Link>)</li>
@@ -93,10 +99,12 @@ export default function SocialProofForWebsites() {
             <li>Visitor counters: "Y people are viewing this right now"</li>
           </ul>
 
-          <h2 id="checkout" className="text-2xl font-bold text-foreground">Social Proof During Checkout</h2>
+          <h2 id="checkout" className="text-2xl font-bold text-foreground">What Social Proof Reduces Cart Abandonment at Checkout?</h2>
+          <p className="font-medium text-foreground">Cart abandonment averages 70% across e-commerce — the most effective checkout social proof includes security badges (SSL, payment logos), recent purchase notifications creating urgency, and brief testimonials addressing shipping or quality objections.</p>
           <p>Cart abandonment averages 70% across e-commerce. Social proof at checkout is your last chance to prevent drop-off. The most effective checkout social proof includes security badges (SSL, payment processor logos), recent purchase notifications (creating urgency), and simple testimonial quotes addressing common objections ("Shipping was faster than expected!").</p>
 
-          <h2 id="platform-guides" className="text-2xl font-bold text-foreground">Platform-Specific Implementation Guides</h2>
+          <h2 id="platform-guides" className="text-2xl font-bold text-foreground">What Are the Platform-Specific Implementation Steps?</h2>
+          <p className="font-medium text-foreground">NotiProof offers one-click installation for major platforms: Shopify app with automatic order sync, WordPress plugin with WooCommerce integration, Zapier connection for any data source, and a single script tag for custom HTML sites.</p>
           <div className="bg-primary/5 border border-primary/20 rounded-xl p-6 my-4">
             <ul className="list-disc pl-6 space-y-2">
               <li><strong className="text-foreground"><Link to="/integrations/shopify/" className="text-primary hover:underline">Shopify</Link>:</strong> One-click app install, automatic order sync, product-level notifications</li>

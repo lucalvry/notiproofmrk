@@ -35,7 +35,7 @@ export default function RespondingToNegativeReviews() {
       featuredImage={featuredRespondingToNegativeReviews}
       content={
         <div className="space-y-8 text-foreground">
-          <p className="text-lg text-muted-foreground">Negative reviews feel personal, but they're inevitable — and how you respond matters far more than the review itself. According to Harvard Business Review, businesses that respond to negative reviews see their overall ratings increase by an average of 0.12 stars and receive 12% more reviews. A thoughtful, professional response transforms a potential reputation crisis into a public demonstration of your commitment to customer satisfaction.</p>
+          <p className="text-lg text-muted-foreground">Negative reviews feel personal, but they're inevitable — and how you respond matters far more than the review itself. According to Harvard Business Review, businesses that respond to <dfn><Link to="/resources/glossary/">negative reviews</Link></dfn> see their overall ratings increase by an average of 0.12 stars and receive 12% more reviews. A thoughtful, professional response transforms a potential reputation crisis into a public demonstration of your commitment to customer satisfaction.</p>
 
           <h2 id="why-respond" className="text-2xl font-bold mt-12">Why Should You Respond to Every Negative Review?</h2>
           <p className="font-medium text-foreground">Responding to negative reviews isn't about the unhappy customer — it's about the hundreds of future customers who will read your response and judge your business by how you handle criticism.</p>

@@ -35,7 +35,7 @@ export default function VideoTestimonialGuide() {
       featuredImage={featuredVideoTestimonial}
       content={
         <div className="space-y-8 text-foreground">
-          <p className="text-lg text-muted-foreground">Video testimonials are the most persuasive form of social proof available to businesses. They convert 4x better than text testimonials because they convey emotion, authenticity, and body language that written words cannot replicate. Yet most businesses don't collect video testimonials — not because customers are unwilling, but because the recording process has traditionally been too friction-heavy. Modern browser-based recording tools have changed this entirely.</p>
+          <p className="text-lg text-muted-foreground">Video testimonials are the most persuasive form of social proof available to businesses. They convert 4x better than text testimonials because they convey emotion, authenticity, and body language that written words cannot replicate. Yet most businesses don't collect <dfn><Link to="/resources/glossary/">video testimonial</Link></dfn>s — not because customers are unwilling, but because the recording process has traditionally been too friction-heavy. Modern browser-based recording tools have changed this entirely.</p>
 
           <h2 id="why-video" className="text-2xl font-bold mt-12">Why Are Video Testimonials More Effective?</h2>
           <p className="font-medium text-foreground">Video testimonials convert 4x better than text because they transmit emotional authenticity through facial expressions, vocal tone, and body language — signals that text cannot convey and that humans are hardwired to trust.</p>

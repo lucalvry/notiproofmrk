@@ -35,7 +35,7 @@ export default function TestimonialPageDesign() {
       featuredImage={featuredTestimonialPage}
       content={
         <div className="space-y-8 text-foreground">
-          <p className="text-lg text-muted-foreground">Your testimonial page is often the last stop before a prospect decides to buy. It's where skeptical visitors go to validate their decision, where comparison shoppers look for proof that you're the right choice, and where enterprise buyers find the social validation they need to justify the purchase internally. A poorly designed testimonial page wastes this critical opportunity. A well-designed one converts browsers into buyers.</p>
+          <p className="text-lg text-muted-foreground">Your <dfn><Link to="/resources/glossary/">testimonial page</Link></dfn> is often the last stop before a prospect decides to buy. It's where skeptical visitors go to validate their decision, where comparison shoppers look for proof that you're the right choice, and where enterprise buyers find the social validation they need to justify the purchase internally. A poorly designed testimonial page wastes this critical opportunity. A well-designed one converts browsers into buyers.</p>
 
           <h2 id="why-dedicated-page" className="text-2xl font-bold mt-12">Why Do You Need a Dedicated Testimonial Page?</h2>
           <p className="font-medium text-foreground">A dedicated testimonial page serves as a comprehensive trust library for prospects in the final decision stage — providing deeper social proof than scattered quotes on other pages can achieve.</p>

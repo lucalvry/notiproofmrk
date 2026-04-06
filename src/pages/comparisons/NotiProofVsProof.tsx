@@ -1,4 +1,28 @@
+import { Link } from "react-router-dom";
 import ComparisonPageTemplate, { ComparisonData } from "@/components/ComparisonPageTemplate";
+
+const editorialContent = (
+  <>
+    <h2 className="text-2xl font-bold mt-10 mb-3">What Happened to Proof and Why Does It Matter?</h2>
+    <p className="text-lg font-medium text-foreground mb-4">Proof (formerly UseProof) pivoted from social proof notifications to website personalization, leaving businesses that relied on its notification features without a dedicated solution — NotiProof fills that gap with a purpose-built social proof platform.</p>
+    <p className="text-muted-foreground mb-4">When Proof launched as UseProof, it was a direct competitor to Fomo — offering real-time purchase notifications and visitor counters. However, the company rebranded to Proof.com and shifted its entire product focus toward website personalization and dynamic content experiences. While the original notification features still exist, they're no longer the product's priority, which means slower updates, less innovation, and reduced support for social proof use cases.</p>
+    <p className="text-muted-foreground mb-4">For businesses specifically seeking <Link to="/resources/social-proof/what-is-social-proof/" className="text-primary hover:underline">social proof tools</Link>, this pivot creates risk. NotiProof was built from day one as a dedicated social proof platform — notifications, <Link to="/product/testimonials-collection-text-image-video/" className="text-primary hover:underline">testimonials</Link>, <Link to="/product/review-aggregation-showcase-system/" className="text-primary hover:underline">reviews</Link>, and conversion analytics are all core features, not afterthoughts.</p>
+
+    <h2 className="text-2xl font-bold mt-10 mb-3">How Do NotiProof and Proof Compare on Social Proof Features?</h2>
+    <p className="text-lg font-medium text-foreground mb-4">NotiProof offers 14 social proof-specific features including video testimonials, review aggregation, and a campaign builder, while Proof's social proof capabilities are limited to basic notifications and visitor counts — features that haven't seen significant updates since the pivot.</p>
+    <p className="text-muted-foreground mb-4">The feature gap is substantial. NotiProof's <Link to="/product/campaign-builder/" className="text-primary hover:underline">campaign builder</Link> lets you create multi-step notification sequences with A/B testing, geo-targeting, and revenue attribution. Proof's notification system is simpler — it shows real-time activity but lacks the optimization and analytics tools that help you maximize conversion impact.</p>
+    <p className="text-muted-foreground mb-4">Where Proof does have an advantage is its personalization engine — the ability to dynamically change website content based on visitor attributes. However, if your primary goal is <Link to="/resources/social-proof/social-proof-in-marketing/" className="text-primary hover:underline">social proof marketing</Link>, that personalization capability doesn't compensate for the missing testimonial, review, and video features.</p>
+
+    <h2 className="text-2xl font-bold mt-10 mb-3">Is Proof Worth the Higher Price?</h2>
+    <p className="text-lg font-medium text-foreground mb-4">At $79/mo minimum with no free plan, Proof is one of the most expensive options in the social proof space — NotiProof starts free and offers paid plans from $19/mo with significantly more social proof features included.</p>
+    <p className="text-muted-foreground mb-4">Proof's pricing reflects its enterprise personalization positioning, not its social proof value. You're paying for website personalization technology that you may not need if your goal is displaying notifications, collecting testimonials, or aggregating reviews. NotiProof's pricing is aligned with social proof use cases, offering a free tier for small sites and scaling based on event volume and features.</p>
+    <p className="text-muted-foreground mb-6">The cost comparison becomes even more stark when you factor in what's included: NotiProof's $49/mo Growth plan includes everything Proof offers for social proof plus testimonials, reviews, video recording, A/B testing, and revenue attribution — features that would require separate tools (and budgets) with Proof.</p>
+
+    <h2 className="text-2xl font-bold mt-10 mb-3">Can NotiProof Replace Proof for Social Proof Use Cases?</h2>
+    <p className="text-lg font-medium text-foreground mb-4">Yes — NotiProof covers every social proof feature Proof offers plus adds testimonials, reviews, video recording, and advanced analytics, making it a complete replacement for Proof's social proof capabilities at a fraction of the cost.</p>
+    <p className="text-muted-foreground mb-4">Migration is straightforward: both tools use a JavaScript snippet for installation. You can recreate your notification designs using NotiProof's 50+ templates and set up equivalent display rules in the <Link to="/product/campaign-builder/" className="text-primary hover:underline">campaign builder</Link>. The only feature you'd lose is Proof's website personalization engine — if you need that, you'd want a dedicated personalization tool alongside NotiProof.</p>
+  </>
+);
 
 const data: ComparisonData = {
   competitorName: "Proof",
@@ -10,6 +34,7 @@ const data: ComparisonData = {
   canonical: "https://notiproof.com/comparisons/notiproof-vs-proof/",
   verdict: "Proof (now Proof.com) has shifted toward personalization and experiences, moving away from its social proof roots. NotiProof is purpose-built for social proof, testimonials, and reviews — making it the better choice for businesses focused on conversion optimization through social proof.",
   verdictWinner: "notiproof",
+  editorialContent,
   features: [
     { feature: "Real-time Notifications", notiproof: true, competitor: true },
     { feature: "Visitor Counter", notiproof: true, competitor: true },

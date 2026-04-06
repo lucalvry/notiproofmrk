@@ -10,7 +10,10 @@ const glossaryTerms: GlossaryTerm[] = [
     term: "A/B Testing",
     slug: "ab-testing",
     definition: "A method of comparing two versions of a webpage, notification, or campaign element to determine which performs better based on conversion metrics.",
-    relatedLinks: [{ label: "Campaign Builder", href: "/product/campaign-builder/" }],
+    relatedLinks: [
+      { label: "Campaign Builder", href: "/product/campaign-builder/" },
+      { label: "A/B Testing Social Proof", href: "/resources/conversion-analytics/ab-testing-social-proof/" },
+    ],
   },
   {
     term: "Bandwagon Effect",
@@ -43,6 +46,7 @@ const glossaryTerms: GlossaryTerm[] = [
     relatedLinks: [
       { label: "Visitor Counter", href: "/product/visitor-counter-live-visitors/" },
       { label: "Social Proof Notifications", href: "/product/social-proof-notifications/" },
+      { label: "FOMO Marketing Guide", href: "/resources/website-trust/fomo-marketing-guide/" },
     ],
   },
   {
@@ -61,7 +65,10 @@ const glossaryTerms: GlossaryTerm[] = [
     term: "Live Visitor Count",
     slug: "live-visitor-count",
     definition: "A real-time display of the number of people currently viewing a webpage or product, creating urgency and social validation through crowd wisdom.",
-    relatedLinks: [{ label: "Visitor Counter", href: "/product/visitor-counter-live-visitors/" }],
+    relatedLinks: [
+      { label: "Visitor Counter", href: "/product/visitor-counter-live-visitors/" },
+      { label: "FOMO Marketing Guide", href: "/resources/website-trust/fomo-marketing-guide/" },
+    ],
   },
   {
     term: "Notification Widget",
@@ -79,7 +86,10 @@ const glossaryTerms: GlossaryTerm[] = [
     term: "Review Aggregation",
     slug: "review-aggregation",
     definition: "The process of collecting and consolidating customer reviews from multiple platforms (Google, Trustpilot, Yelp, etc.) into a single, unified display.",
-    relatedLinks: [{ label: "Review Aggregation System", href: "/product/review-aggregation-showcase-system/" }],
+    relatedLinks: [
+      { label: "Review Aggregation System", href: "/product/review-aggregation-showcase-system/" },
+      { label: "Review Aggregation Guide", href: "/resources/reviews/review-aggregation-guide/" },
+    ],
   },
   {
     term: "Social Proof",
@@ -94,25 +104,37 @@ const glossaryTerms: GlossaryTerm[] = [
     term: "Testimonial",
     slug: "testimonial",
     definition: "A statement from a customer or user endorsing a product or service, typically including their experience and results. Can be text, image, or video format.",
-    relatedLinks: [{ label: "Testimonials Collection", href: "/product/testimonials-collection-text-image-video/" }],
+    relatedLinks: [
+      { label: "Testimonials Collection", href: "/product/testimonials-collection-text-image-video/" },
+      { label: "How to Collect Testimonials", href: "/resources/testimonials/how-to-collect-testimonials/" },
+    ],
   },
   {
     term: "Trust Badge",
     slug: "trust-badge",
     definition: "A visual indicator (icon, seal, or logo) placed on a website to signal security, credibility, or third-party verification, reducing buyer anxiety.",
-    relatedLinks: [{ label: "Social Proof for Websites", href: "/resources/social-proof/social-proof-for-websites/" }],
+    relatedLinks: [
+      { label: "Social Proof for Websites", href: "/resources/social-proof/social-proof-for-websites/" },
+      { label: "Trust Badges Guide", href: "/resources/website-trust/trust-badges-guide/" },
+    ],
   },
   {
     term: "Trust Signal",
     slug: "trust-signal",
     definition: "Any element on a website that helps build visitor confidence — including reviews, testimonials, security badges, live activity counters, and social proof notifications.",
-    relatedLinks: [{ label: "Website Trust", href: "/resources/website-trust/" }],
+    relatedLinks: [
+      { label: "Website Trust Guide", href: "/resources/website-trust/" },
+      { label: "Trust Signals for E-commerce", href: "/resources/website-trust/trust-signals-for-ecommerce/" },
+    ],
   },
   {
     term: "User-Generated Content (UGC)",
     slug: "ugc",
     definition: "Content created by customers rather than the brand — reviews, testimonials, photos, videos, and social media posts that serve as authentic social proof.",
-    relatedLinks: [{ label: "Video Testimonial Recorder", href: "/product/video-testimonial-recorder/" }],
+    relatedLinks: [
+      { label: "Video Testimonial Recorder", href: "/product/video-testimonial-recorder/" },
+      { label: "Video Testimonial Guide", href: "/resources/testimonials/video-testimonial-guide/" },
+    ],
   },
   {
     term: "Wisdom of the Crowd",

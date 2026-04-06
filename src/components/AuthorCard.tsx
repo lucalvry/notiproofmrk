@@ -19,7 +19,10 @@ export const defaultAuthor: AuthorData = {
   bio: "Olayinka is a CIM-certified digital marketer, content creator, and SEO specialist with an MBA in Digital Marketing and Business Transformation. With over 10 years of experience helping businesses in Nigeria, the UK, the US, Australia, and Dubai achieve their goals online, he brings deep expertise in conversion optimization, social proof strategy, and growth marketing.",
   credentials: "CIM Certified · MBA in Digital Marketing & Business Transformation",
   knowsAbout: ["Digital Marketing", "SEO", "Social Proof", "Conversion Rate Optimization", "Content Strategy", "Growth Marketing"],
-  sameAs: [],
+  sameAs: [
+    "https://www.linkedin.com/in/olayinkaolayokun/",
+    "https://x.com/olaboraelara",
+  ],
   profileUrl: "/resources/author/olayinka-olayokun/",
 };
 

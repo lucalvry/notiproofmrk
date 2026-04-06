@@ -35,7 +35,7 @@ export default function ABTestingSocialProof() {
       featuredImage={featuredAbTesting}
       content={
         <div className="space-y-8 text-foreground">
-          <p className="text-lg text-muted-foreground">Social proof increases conversions — but by how much depends entirely on what you show, where you show it, and how you show it. A/B testing removes the guesswork by measuring the actual impact of different social proof implementations against a control. Companies that systematically A/B test their social proof typically find 2-3x more conversion lift than those who just "set it and forget it."</p>
+          <p className="text-lg text-muted-foreground">Social proof increases conversions — but by how much depends entirely on what you show, where you show it, and how you show it. <dfn><Link to="/resources/glossary/">A/B testing</Link></dfn> removes the guesswork by measuring the actual impact of different social proof implementations against a control. Companies that systematically A/B test their social proof typically find 2-3x more conversion lift than those who just "set it and forget it."</p>
 
           <h2 id="what-is-ab-testing" className="text-2xl font-bold mt-12">What Is A/B Testing for Social Proof?</h2>
           <p className="font-medium text-foreground">A/B testing social proof means splitting your traffic between two or more versions of a page — each showing different social proof elements — and measuring which version produces more conversions with statistical significance.</p>

@@ -41,7 +41,7 @@ export const categories: CategoryData[] = [
     icon: BookOpen,
     title: "Social Proof",
     desc: "The complete guide to social proof: what it is, the six types, the psychology behind it, and how to implement it on your website.",
-    href: "/resources/blog/social-proof/",
+    href: "/resources/social-proof/",
     articles: [
       { title: "What Is Social Proof? The Complete Guide", href: "/resources/social-proof/what-is-social-proof/", desc: "A foundational overview of social proof, why it matters, and how businesses use it to build trust and increase conversions.", readTime: "12 min", date: "Jan 2025", isoDate: "2025-01-20", author: "Olayinka Olayokun" },
       { title: "6 Types of Social Proof (With Examples)", href: "/resources/social-proof/types-of-social-proof/", desc: "Expert, user, crowd wisdom, certification, celebrity, and friend — learn each type and when to use it.", readTime: "10 min", date: "Jan 2025", isoDate: "2025-01-25", author: "Olayinka Olayokun" },
@@ -49,6 +49,7 @@ export const categories: CategoryData[] = [
       { title: "Social Proof Examples That Convert", href: "/resources/social-proof/social-proof-example/", desc: "Real-world examples from e-commerce, SaaS, and local businesses showing social proof driving measurable results.", readTime: "9 min", date: "Feb 2025", isoDate: "2025-02-15", author: "Olayinka Olayokun" },
       { title: "Social Proof in Marketing", href: "/resources/social-proof/social-proof-in-marketing/", desc: "How to integrate social proof into email campaigns, landing pages, ads, and your overall marketing funnel.", readTime: "10 min", date: "Mar 2025", isoDate: "2025-03-01", author: "Olayinka Olayokun" },
       { title: "Social Proof for Websites", href: "/resources/social-proof/social-proof-for-websites/", desc: "A technical implementation guide: where to place notifications, widgets, and testimonials for maximum impact.", readTime: "11 min", date: "Mar 2025", isoDate: "2025-03-10", author: "Olayinka Olayokun" },
+      { title: "How Reviews Amplify Social Proof", href: "/resources/social-proof/reviews-and-social-proof/", desc: "How customer reviews function as the most powerful form of social proof and how to amplify them.", readTime: "12 min", date: "Apr 2025", isoDate: "2025-04-01", author: "Olayinka Olayokun" },
     ],
   },
   {
@@ -56,7 +57,7 @@ export const categories: CategoryData[] = [
     icon: Star,
     title: "Reviews",
     desc: "Learn how to collect, aggregate, and showcase customer reviews from Google, Trustpilot, and 15+ platforms.",
-    href: "/resources/blog/reviews/",
+    href: "/resources/reviews/",
     articles: [
       { title: "How to Get More Google Reviews", href: "/resources/reviews/how-to-collect-google-reviews/", desc: "Proven strategies to collect more Google reviews: email templates, automation tips, and direct review links.", readTime: "14 min", date: "Mar 2025", isoDate: "2025-03-15", author: "Olayinka Olayokun" },
       { title: "Review Aggregation Guide", href: "/resources/reviews/review-aggregation-guide/", desc: "How to combine reviews from Google, Trustpilot, G2, and more into a unified display on your website.", readTime: "12 min", date: "Mar 2025", isoDate: "2025-03-18", author: "Olayinka Olayokun" },
@@ -69,12 +70,13 @@ export const categories: CategoryData[] = [
     icon: BarChart3,
     title: "Conversion Analytics",
     desc: "Measure the ROI of every social proof element on your site with real-time dashboards and attribution.",
-    href: "/resources/blog/conversion-analytics/",
+    href: "/resources/conversion-analytics/",
     articles: [
       { title: "A/B Testing Social Proof", href: "/resources/conversion-analytics/ab-testing-social-proof/", desc: "What to test, how to run experiments, and how to interpret results for social proof optimization.", readTime: "13 min", date: "Mar 2025", isoDate: "2025-03-12", author: "Olayinka Olayokun" },
       { title: "Conversion Rate Benchmarks by Industry", href: "/resources/conversion-analytics/conversion-rate-benchmarks/", desc: "2025 benchmarks for e-commerce, SaaS, lead gen, and more — know where you stand and where to improve.", readTime: "11 min", date: "Mar 2025", isoDate: "2025-03-14", author: "Olayinka Olayokun" },
       { title: "Measuring Social Proof ROI", href: "/resources/conversion-analytics/measuring-social-proof-roi/", desc: "Formulas, attribution models, and dashboards to calculate the revenue impact of your social proof strategy.", readTime: "12 min", date: "Mar 2025", isoDate: "2025-03-16", author: "Olayinka Olayokun" },
       { title: "Heatmap Analytics for Social Proof", href: "/resources/conversion-analytics/heatmap-analytics-guide/", desc: "Use heatmaps and session recordings to optimize social proof placement and design for higher engagement.", readTime: "10 min", date: "Mar 2025", isoDate: "2025-03-19", author: "Olayinka Olayokun" },
+      { title: "Measuring Testimonial & Review ROI", href: "/resources/conversion-analytics/testimonial-review-roi/", desc: "Calculate the revenue impact of testimonials and reviews with attribution models and key metrics.", readTime: "13 min", date: "Apr 2025", isoDate: "2025-04-01", author: "Olayinka Olayokun" },
     ],
   },
   {
@@ -82,12 +84,13 @@ export const categories: CategoryData[] = [
     icon: Shield,
     title: "Website Trust",
     desc: "Build credibility signals that convert skeptical visitors into customers with trust badges and live activity.",
-    href: "/resources/blog/website-trust/",
+    href: "/resources/website-trust/",
     articles: [
       { title: "Trust Signals Every E-commerce Site Needs", href: "/resources/website-trust/trust-signals-for-ecommerce/", desc: "The essential trust signals for online stores: reviews, badges, payment security, and social proof placement.", readTime: "13 min", date: "Mar 2025", isoDate: "2025-03-13", author: "Olayinka Olayokun" },
       { title: "Trust Badges: Which Ones Matter", href: "/resources/website-trust/trust-badges-guide/", desc: "Which trust badges actually increase conversions, where to place them, and which ones are just noise.", readTime: "11 min", date: "Mar 2025", isoDate: "2025-03-17", author: "Olayinka Olayokun" },
       { title: "Building Website Credibility From Scratch", href: "/resources/website-trust/building-website-credibility/", desc: "A step-by-step guide for new businesses to build trust when you have zero reviews and no brand recognition.", readTime: "12 min", date: "Mar 2025", isoDate: "2025-03-21", author: "Olayinka Olayokun" },
       { title: "FOMO Marketing: Ethical Urgency", href: "/resources/website-trust/fomo-marketing-guide/", desc: "How to create urgency with visitor counters, stock alerts, and activity notifications — without manipulating customers.", readTime: "11 min", date: "Mar 2025", isoDate: "2025-03-23", author: "Olayinka Olayokun" },
+      { title: "Testimonials as Trust Signals", href: "/resources/website-trust/testimonials-as-trust-signals/", desc: "How testimonials function as trust signals and how to combine them with other credibility elements.", readTime: "11 min", date: "Apr 2025", isoDate: "2025-04-01", author: "Olayinka Olayokun" },
     ],
   },
   {
@@ -95,7 +98,7 @@ export const categories: CategoryData[] = [
     icon: MessageSquare,
     title: "Testimonials",
     desc: "Everything about collecting, curating, and displaying customer testimonials — text, image, and video.",
-    href: "/resources/blog/testimonials/",
+    href: "/resources/testimonials/",
     articles: [
       { title: "How to Collect Testimonials That Convert", href: "/resources/testimonials/how-to-collect-testimonials/", desc: "Automated workflows, timing strategies, and question prompts that produce compelling customer stories.", readTime: "13 min", date: "Mar 2025", isoDate: "2025-03-11", author: "Olayinka Olayokun" },
       { title: "Video Testimonials: Complete Guide", href: "/resources/testimonials/video-testimonial-guide/", desc: "Record, edit, and display video testimonials that convert 4× better than text — with zero friction for customers.", readTime: "14 min", date: "Mar 2025", isoDate: "2025-03-14", author: "Olayinka Olayokun" },

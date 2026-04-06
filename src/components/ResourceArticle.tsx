@@ -55,6 +55,7 @@ export default function ResourceArticle({
       jobTitle: author.jobTitle,
       description: author.bio,
       knowsAbout: author.knowsAbout,
+      sameAs: author.sameAs,
       url: `https://notiproof.com${author.profileUrl || "/resources/author/olayinka-olayokun/"}`,
     },
     publisher: { "@type": "Organization", name: "NotiProof", url: "https://notiproof.com" },
@@ -65,7 +66,19 @@ export default function ResourceArticle({
 
   return (
     <>
-      <SEOHead title={metaTitle} description={metaDescription} canonical={canonical} schema={extraSchema ? [articleSchema, ...(Array.isArray(extraSchema) ? extraSchema : [extraSchema])] : articleSchema} speakable={speakable} />
+      <SEOHead
+        title={metaTitle}
+        description={metaDescription}
+        canonical={canonical}
+        schema={extraSchema ? [articleSchema, ...(Array.isArray(extraSchema) ? extraSchema : [extraSchema])] : articleSchema}
+        speakable={speakable}
+        articleMeta={{
+          publishedTime: publishDate,
+          modifiedTime: updatedDate,
+          author: author.name,
+          section: pillarLink?.label,
+        }}
+      />
 
       <article className="section-padding" itemScope itemType="https://schema.org/Article">
         <div className="container-tight">

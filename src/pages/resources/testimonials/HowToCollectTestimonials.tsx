@@ -53,7 +53,7 @@ export default function HowToCollectTestimonials() {
       schema={howToSchema}
       content={
         <div className="space-y-8 text-foreground">
-          <p className="text-lg text-muted-foreground">Customer testimonials are the most trusted form of marketing content. According to Nielsen, 92% of consumers trust peer recommendations over brand advertising, and B2B buyers rank testimonials as the most reliable content type when making purchase decisions. Yet most businesses collect testimonials haphazardly — if at all. The result is a handful of generic quotes that fail to address specific buyer objections or demonstrate real outcomes.</p>
+          <p className="text-lg text-muted-foreground"><dfn><Link to="/resources/glossary/#testimonial" className="text-primary font-semibold hover:underline">Customer testimonials</Link></dfn> are the most trusted form of marketing content. According to Nielsen, 92% of consumers trust peer recommendations over brand advertising, and B2B buyers rank testimonials as the most reliable content type when making purchase decisions. Yet most businesses collect testimonials haphazardly — if at all. The result is a handful of generic quotes that fail to address specific buyer objections or demonstrate real outcomes.</p>
           <p className="text-muted-foreground">This guide covers a systematic approach to testimonial collection that produces compelling, conversion-driving customer stories at scale — covering timing, questions, formats, automation, and legal considerations.</p>
 
           <h2 id="why-testimonials-matter" className="text-2xl font-bold mt-12">Why Do Customer Testimonials Matter?</h2>

@@ -16,25 +16,33 @@ import imgExamples from "@/assets/featured-social-proof-examples.jpg";
 import imgMarketing from "@/assets/featured-social-proof-marketing.jpg";
 import imgWebsites from "@/assets/featured-social-proof-websites.jpg";
 // Reviews
+import imgReviewsPillar from "@/assets/featured-reviews-pillar.jpg";
 import imgGoogleReviews from "@/assets/featured-how-to-collect-google-reviews.jpg";
 import imgReviewAggregation from "@/assets/featured-review-aggregation-guide.jpg";
 import imgNegativeReviews from "@/assets/featured-responding-to-negative-reviews.jpg";
 import imgReviewWidgets from "@/assets/featured-review-widgets-for-websites.jpg";
 // Conversion Analytics
+import imgConversionPillar from "@/assets/featured-conversion-analytics-pillar.jpg";
 import imgAbTesting from "@/assets/featured-ab-testing-social-proof.jpg";
 import imgBenchmarks from "@/assets/featured-conversion-rate-benchmarks.jpg";
 import imgMeasuringRoi from "@/assets/featured-measuring-social-proof-roi.jpg";
 import imgHeatmap from "@/assets/featured-heatmap-analytics-guide.jpg";
 // Website Trust
+import imgTrustPillar from "@/assets/featured-website-trust-pillar.jpg";
 import imgTrustSignals from "@/assets/featured-trust-signals-ecommerce.jpg";
 import imgTrustBadges from "@/assets/featured-trust-badges-guide.jpg";
 import imgCredibility from "@/assets/featured-building-website-credibility.jpg";
 import imgFomo from "@/assets/featured-fomo-marketing-guide.jpg";
 // Testimonials
+import imgTestimonialsPillar from "@/assets/featured-testimonials-pillar.jpg";
 import imgCollectTestimonials from "@/assets/featured-how-to-collect-testimonials.jpg";
 import imgVideoTestimonial from "@/assets/featured-video-testimonial-guide.jpg";
 import imgTestimonialDesign from "@/assets/featured-testimonial-page-design.jpg";
 import imgTestimonialEmails from "@/assets/featured-testimonial-request-email-templates.jpg";
+// Bridge articles
+import imgReviewsSocialProof from "@/assets/featured-reviews-and-social-proof.jpg";
+import imgTestimonialsTrust from "@/assets/featured-testimonials-as-trust-signals.jpg";
+import imgTestimonialReviewRoi from "@/assets/featured-testimonial-review-roi.jpg";
 
 const articleImages: Record<string, string> = {
   // Social Proof
@@ -45,22 +53,29 @@ const articleImages: Record<string, string> = {
   "/resources/social-proof/social-proof-example/": imgExamples,
   "/resources/social-proof/social-proof-in-marketing/": imgMarketing,
   "/resources/social-proof/social-proof-for-websites/": imgWebsites,
+  "/resources/social-proof/reviews-and-social-proof/": imgReviewsSocialProof,
   // Reviews
+  "/resources/reviews/": imgReviewsPillar,
   "/resources/reviews/how-to-collect-google-reviews/": imgGoogleReviews,
   "/resources/reviews/review-aggregation-guide/": imgReviewAggregation,
   "/resources/reviews/responding-to-negative-reviews/": imgNegativeReviews,
   "/resources/reviews/review-widgets-for-websites/": imgReviewWidgets,
   // Conversion Analytics
+  "/resources/conversion-analytics/": imgConversionPillar,
   "/resources/conversion-analytics/ab-testing-social-proof/": imgAbTesting,
   "/resources/conversion-analytics/conversion-rate-benchmarks/": imgBenchmarks,
   "/resources/conversion-analytics/measuring-social-proof-roi/": imgMeasuringRoi,
   "/resources/conversion-analytics/heatmap-analytics-guide/": imgHeatmap,
+  "/resources/conversion-analytics/testimonial-review-roi/": imgTestimonialReviewRoi,
   // Website Trust
+  "/resources/website-trust/": imgTrustPillar,
   "/resources/website-trust/trust-signals-for-ecommerce/": imgTrustSignals,
   "/resources/website-trust/trust-badges-guide/": imgTrustBadges,
   "/resources/website-trust/building-website-credibility/": imgCredibility,
   "/resources/website-trust/fomo-marketing-guide/": imgFomo,
+  "/resources/website-trust/testimonials-as-trust-signals/": imgTestimonialsTrust,
   // Testimonials
+  "/resources/testimonials/": imgTestimonialsPillar,
   "/resources/testimonials/how-to-collect-testimonials/": imgCollectTestimonials,
   "/resources/testimonials/video-testimonial-guide/": imgVideoTestimonial,
   "/resources/testimonials/testimonial-page-design/": imgTestimonialDesign,
@@ -71,14 +86,27 @@ const fadeUp = { initial: { opacity: 0, y: 30 }, whileInView: { opacity: 1, y: 0
 
 const ARTICLES_PER_PAGE = 9;
 
-const blogSchema = {
-  "@context": "https://schema.org",
-  "@type": "Blog",
-  name: "NotiProof Blog – Social Proof Guides & Articles",
-  description: "In-depth guides on social proof, reviews, conversion analytics, website trust, and testimonials.",
-  url: "https://notiproof.com/resources/blog/",
-  publisher: { "@type": "Organization", name: "NotiProof", url: "https://notiproof.com" },
-};
+const blogSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    name: "NotiProof Blog – Social Proof Guides & Articles",
+    description: "In-depth guides on social proof, reviews, conversion analytics, website trust, and testimonials.",
+    url: "https://notiproof.com/resources/blog/",
+    publisher: { "@type": "Organization", name: "NotiProof", url: "https://notiproof.com" },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "NotiProof Blog Articles",
+    itemListElement: allArticles.map((a, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: a.title,
+      url: `https://notiproof.com${a.href}`,
+    })),
+  },
+];
 
 type ViewMode = "topics" | "articles";
 
@@ -156,69 +184,68 @@ export default function Blog() {
       {view === "topics" && (
         <section className="section-padding pt-0">
           <div className="container-tight">
-            {/* Topic cards grid */}
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-12">
-              {categories.map((c, i) => (
-                <motion.div
-                  key={c.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: i * 0.07 }}
-                >
-                  <Link
-                    to={c.href}
-                    className={`group block bg-card border border-border border-l-4 ${categoryAccents[c.id]} rounded-xl p-6 hover:shadow-lg hover:border-primary/20 transition-all h-full`}
-                  >
-                    <div className="flex items-start gap-3 mb-3">
-                      <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
-                        <c.icon className="w-5 h-5 text-primary" />
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <h2 className="text-base font-bold group-hover:text-primary transition-colors">{c.title}</h2>
-                      </div>
-                    </div>
-                    <p className="text-sm text-muted-foreground leading-relaxed mb-4">{c.desc}</p>
-                    <div className="flex items-center justify-between">
-                      <span className="text-xs font-medium text-primary bg-primary/10 px-2.5 py-1 rounded-full">
-                        {c.articles.length} {c.articles.length === 1 ? "article" : "articles"}
-                      </span>
-                      <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
-                    </div>
-                  </Link>
-                </motion.div>
-              ))}
-            </div>
+            {categories.map((c, ci) => (
+              <motion.div
+                key={c.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: ci * 0.05 }}
+                className="mb-14"
+              >
+                <div className="flex items-center gap-3 mb-5">
+                  <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center">
+                    <c.icon className="w-5 h-5 text-primary" />
+                  </div>
+                  <h2 className="text-xl font-bold">{c.title}</h2>
+                </div>
 
-            {/* Recent Articles under Browse Topics */}
-            <motion.div {...fadeUp}>
-              <div className="flex items-center justify-between mb-5">
-                <h2 className="text-2xl font-bold">Recent Articles</h2>
-                <button
-                  onClick={() => setView("articles")}
-                  className="text-sm text-primary font-semibold hover:underline inline-flex items-center gap-1"
+                {/* Pillar hero card */}
+                <Link
+                  to={c.href}
+                  className={`group block bg-card border border-border border-l-4 ${categoryAccents[c.id]} rounded-xl overflow-hidden hover:shadow-lg hover:border-primary/20 transition-all mb-5`}
                 >
-                  View all <ArrowRight className="w-3.5 h-3.5" />
-                </button>
-              </div>
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-                {recentArticles.map((a, i) => (
-                  <ArticleCard
-                    key={a.href}
-                    title={a.title}
-                    href={a.href}
-                    desc={a.desc}
-                    readTime={a.readTime}
-                    date={a.date}
-                    author={a.author}
-                    categoryTitle={a.categoryTitle}
-                    image={articleImages[a.href]}
-                    gradient={categoryGradients[a.categoryId]}
-                    index={i}
-                  />
-                ))}
-              </div>
-            </motion.div>
+                  <div className="md:flex">
+                    <div className="md:w-2/5">
+                      {articleImages[c.href] ? (
+                        <img src={articleImages[c.href]} alt={c.title} className="w-full h-48 md:h-full object-cover" loading="lazy" />
+                      ) : (
+                        <div className={`w-full h-48 md:h-full bg-gradient-to-br ${categoryGradients[c.id]}`} />
+                      )}
+                    </div>
+                    <div className="p-6 md:w-3/5 flex flex-col justify-center">
+                      <span className="text-[10px] font-bold uppercase tracking-wider text-primary bg-primary/10 px-2 py-0.5 rounded-full self-start mb-3">
+                        Complete Guide
+                      </span>
+                      <h3 className="text-lg font-bold mb-2 group-hover:text-primary transition-colors">{c.title}: The Complete Guide</h3>
+                      <p className="text-sm text-muted-foreground mb-4 leading-relaxed">{c.desc}</p>
+                      <span className="text-sm text-primary font-semibold inline-flex items-center gap-1 group-hover:underline">
+                        Read the complete guide <ArrowRight className="w-3.5 h-3.5" />
+                      </span>
+                    </div>
+                  </div>
+                </Link>
+
+                {/* Cluster articles */}
+                <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                  {c.articles.map((a, i) => (
+                    <ArticleCard
+                      key={a.href}
+                      title={a.title}
+                      href={a.href}
+                      desc={a.desc}
+                      readTime={a.readTime}
+                      date={a.date}
+                      author={a.author}
+                      categoryTitle={c.title}
+                      image={articleImages[a.href]}
+                      gradient={categoryGradients[c.id]}
+                      index={i}
+                    />
+                  ))}
+                </div>
+              </motion.div>
+            ))}
           </div>
         </section>
       )}

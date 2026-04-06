@@ -54,7 +54,7 @@ export default function HowToCollectGoogleReviews() {
       schema={howToSchema}
       content={
         <div className="space-y-8 text-foreground">
-          <p className="text-lg text-muted-foreground">Google reviews are the single most influential factor in local search rankings and consumer purchase decisions. According to BrightLocal's 2024 Consumer Review Survey, 87% of consumers read online reviews for local businesses, and 73% only pay attention to reviews written in the last month. Yet most businesses struggle to collect reviews consistently — not because customers are unhappy, but because they're never asked at the right time, in the right way.</p>
+          <p className="text-lg text-muted-foreground"><dfn><Link to="/resources/glossary/">Google reviews</Link></dfn> are the single most influential factor in local search rankings and consumer purchase decisions. According to BrightLocal's 2024 Consumer Review Survey, 87% of consumers read online reviews for local businesses, and 73% only pay attention to reviews written in the last month. Yet most businesses struggle to collect reviews consistently — not because customers are unhappy, but because they're never asked at the right time, in the right way.</p>
           <p className="text-muted-foreground">This guide covers every proven strategy for increasing your Google review volume, from direct link shortcuts to automated email sequences, while staying within Google's review policies.</p>
 
           <h2 id="why-google-reviews-matter" className="text-2xl font-bold mt-12">Why Do Google Reviews Matter?</h2>

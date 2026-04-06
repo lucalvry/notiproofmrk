@@ -1,5 +1,6 @@
 import ResourceArticle from "@/components/ResourceArticle";
 import { Link } from "react-router-dom";
+import featuredImg from "@/assets/featured-conversion-analytics-pillar.jpg";
 
 const clusterLinks = [
   { title: "A/B Testing Social Proof", href: "/resources/conversion-analytics/ab-testing-social-proof/", desc: "What to test and how to interpret results." },
@@ -33,10 +34,11 @@ export default function ConversionAnalyticsPillar() {
       updatedDate="2025-03-25"
       tocSections={tocSections}
       relatedArticles={clusterLinks}
+      featuredImage={featuredImg}
       speakable={["h1", "h2", "[data-speakable]"]}
       content={
         <div className="space-y-8 text-foreground">
-          <p className="text-lg text-muted-foreground">Conversion rate optimization without analytics is guesswork. Understanding which <Link to="/resources/social-proof/" className="text-primary font-semibold hover:underline">social proof</Link> elements actually drive conversions — and which are just noise — requires a structured approach to data collection, analysis, and experimentation. This guide covers everything from foundational metrics to advanced attribution modeling.</p>
+          <p className="text-lg text-muted-foreground"><dfn><Link to="/resources/glossary/">conversion rate optimization</Link></dfn> without analytics is guesswork. Understanding which <Link to="/resources/social-proof/" className="text-primary font-semibold hover:underline">social proof</Link> elements actually drive conversions — and which are just noise — requires a structured approach to data collection, analysis, and experimentation. This guide covers everything from foundational metrics to advanced attribution modeling.</p>
 
           <h2 id="why-analytics-matter" className="text-2xl font-bold mt-12">Why Do Conversion Analytics Matter?</h2>
           <p className="font-semibold text-foreground">Without analytics you can't distinguish between social proof elements delivering 25% lift and those delivering 2% — data-driven teams test systematically and achieve compounding gains over time.</p>

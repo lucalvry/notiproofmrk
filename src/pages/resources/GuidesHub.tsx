@@ -22,14 +22,27 @@ const readTimes: Record<string, string> = {
   testimonials: "16 min read",
 };
 
-const collectionSchema = {
-  "@context": "https://schema.org",
-  "@type": "CollectionPage",
-  name: "NotiProof Guides – Comprehensive Social Proof & CRO Pillar Guides",
-  description: "In-depth pillar guides covering social proof, customer reviews, conversion analytics, website trust, and testimonials.",
-  url: "https://notiproof.com/resources/guides/",
-  publisher: { "@type": "Organization", name: "NotiProof", url: "https://notiproof.com" },
-};
+const collectionSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: "NotiProof Guides – Comprehensive Social Proof & CRO Pillar Guides",
+    description: "In-depth pillar guides covering social proof, customer reviews, conversion analytics, website trust, and testimonials.",
+    url: "https://notiproof.com/resources/guides/",
+    publisher: { "@type": "Organization", name: "NotiProof", url: "https://notiproof.com" },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "NotiProof Pillar Guides",
+    itemListElement: categories.map((c, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: c.title,
+      url: `https://notiproof.com${pillarLinks[c.id] || c.href}`,
+    })),
+  },
+];
 
 export default function GuidesHub() {
   return (

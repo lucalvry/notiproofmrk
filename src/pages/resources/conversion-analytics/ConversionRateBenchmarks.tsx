@@ -35,7 +35,7 @@ export default function ConversionRateBenchmarks() {
       featuredImage={featuredConversionBenchmarks}
       content={
         <div className="space-y-8 text-foreground">
-          <p className="text-lg text-muted-foreground">Knowing your industry's average conversion rate tells you whether you're underperforming, competitive, or leading. Without benchmarks, a 2% conversion rate could be excellent (luxury goods) or terrible (free tool signups). This guide compiles the most current 2025 conversion rate data across industries, traffic sources, and devices — plus the measurable impact that <Link to="/resources/social-proof/" className="text-primary font-semibold hover:underline">social proof</Link> has on each.</p>
+          <p className="text-lg text-muted-foreground">Knowing your industry's average <dfn><Link to="/resources/glossary/">conversion rate</Link></dfn> tells you whether you're underperforming, competitive, or leading. Without benchmarks, a 2% conversion rate could be excellent (luxury goods) or terrible (free tool signups). This guide compiles the most current 2025 conversion rate data across industries, traffic sources, and devices — plus the measurable impact that <Link to="/resources/social-proof/" className="text-primary font-semibold hover:underline">social proof</Link> has on each.</p>
 
           <h2 id="why-benchmarks" className="text-2xl font-bold mt-12">Why Do Conversion Rate Benchmarks Matter?</h2>
           <p className="font-medium text-foreground">Benchmarks provide context for your performance data — they tell you whether your 2.5% conversion rate is a problem to fix or a success to protect, and they set realistic targets for optimization efforts.</p>

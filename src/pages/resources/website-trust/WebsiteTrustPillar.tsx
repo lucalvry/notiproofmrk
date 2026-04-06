@@ -1,5 +1,6 @@
 import ResourceArticle from "@/components/ResourceArticle";
 import { Link } from "react-router-dom";
+import featuredImg from "@/assets/featured-website-trust-pillar.jpg";
 
 const clusterLinks = [
   { title: "Trust Signals for E-commerce", href: "/resources/website-trust/trust-signals-for-ecommerce/", desc: "Essential trust signals for online stores." },
@@ -33,6 +34,7 @@ export default function WebsiteTrustPillar() {
       updatedDate="2025-03-25"
       tocSections={tocSections}
       relatedArticles={clusterLinks}
+      featuredImage={featuredImg}
       speakable={["h1", "h2", "[data-speakable]"]}
       content={
         <div className="space-y-8 text-foreground">
@@ -42,7 +44,7 @@ export default function WebsiteTrustPillar() {
           <p className="font-semibold text-foreground">Unlike physical stores, websites must overcome an inherent trust deficit — 75% of users judge credibility from design alone, and first-time visitors have zero context about your legitimacy.</p>
           <p className="text-muted-foreground">Unlike physical stores where customers can touch products, speak with staff, and observe other shoppers, websites must overcome an inherent trust deficit. A visitor landing on your site for the first time has zero context about your legitimacy, product quality, or service reliability.</p>
           <p className="text-muted-foreground">Research from the Stanford Web Credibility Project found that 75% of users judge a company's credibility based on their website design. The Nielsen Norman Group's studies show that trust is built incrementally through three layers: visual credibility, content credibility, and social credibility — where <Link to="/resources/social-proof/" className="text-primary font-semibold hover:underline">social proof</Link> plays its most critical role.</p>
-          <p className="text-muted-foreground">The trust problem is amplified for new businesses, unknown brands, and high-ticket purchases where the perceived risk is significant. A first-time visitor to a $200/month SaaS product needs far more trust signals than someone buying a $15 t-shirt. Understanding this risk calibration is essential for designing effective trust strategies.</p>
+          <p className="text-muted-foreground">The trust problem is amplified for new businesses, unknown brands, and high-ticket purchases where the perceived risk is significant. A first-time visitor to a $200/month SaaS product needs far more <dfn><Link to="/resources/glossary/">trust signal</Link></dfn>s than someone buying a $15 t-shirt. Understanding this risk calibration is essential for designing effective trust strategies.</p>
           <p className="text-muted-foreground">Mobile commerce has intensified the challenge further. Smaller screens mean fewer visible trust signals, faster page abandonment, and shorter attention spans. Mobile conversion rates are typically 50–60% lower than desktop — and insufficient trust is a primary factor.</p>
 
           <h2 id="trust-signals" className="text-2xl font-bold mt-12">What Are the 7 Types of Website Trust Signals?</h2>

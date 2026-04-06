@@ -66,7 +66,7 @@ export default function TestimonialRequestEmailTemplates() {
             <p className="text-sm text-muted-foreground mt-2 font-semibold">[Share Your Story →]</p>
             <p className="text-sm text-muted-foreground mt-2">Either way, congratulations on the milestone!<br />[Your Name], [Title]</p>
           </div>
-          <p className="text-muted-foreground">The celebration framing makes this feel like a reward rather than a request. The customer just achieved something meaningful, and you're acknowledging it — the testimonial request becomes a natural extension of the celebration rather than an intrusion.</p>
+          <p className="text-muted-foreground">The celebration framing makes this feel like a reward rather than a request. The customer just achieved something meaningful, and you're acknowledging it — the <dfn><Link to="/resources/glossary/">testimonial request</Link></dfn> becomes a natural extension of the celebration rather than an intrusion.</p>
 
           <h2 id="support-interaction" className="text-2xl font-bold mt-12">What About After a Positive Support Interaction?</h2>
           <p className="font-medium text-foreground">After a support ticket is rated 5/5 or the customer explicitly thanks your team, redirect that positive energy into a testimonial request within 24 hours.</p>

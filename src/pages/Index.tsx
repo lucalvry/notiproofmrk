@@ -1,10 +1,12 @@
-import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Copy, Check } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import NotificationDemo from "@/components/NotificationDemo";
 import SEOHead from "@/components/SEOHead";
+import TrustBadgeStrip from "@/components/home/TrustBadgeStrip";
+import IntegrationLogoStrip from "@/components/home/IntegrationLogoStrip";
+import HowItWorks from "@/components/home/HowItWorks";
 import TabbedFeatures from "@/components/home/TabbedFeatures";
 import ExpertBanner from "@/components/home/ExpertBanner";
 import TestimonialsSection from "@/components/home/TestimonialsSection";
@@ -19,8 +21,6 @@ const fadeUp = {
   viewport: { once: true, margin: "-50px" },
   transition: { duration: 0.5 },
 };
-
-const codeSnippet = `<script src="https://cdn.notiproof.com/widget.js" data-id="YOUR_ID"></script>`;
 
 const homepageSchema = [
   {
@@ -63,14 +63,6 @@ const homepageSchema = [
 ];
 
 export default function HomePage() {
-  const [copied, setCopied] = useState(false);
-
-  const handleCopy = () => {
-    navigator.clipboard.writeText(codeSnippet);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  };
-
   return (
     <>
       <SEOHead
@@ -90,20 +82,26 @@ export default function HomePage() {
               <span className="text-gradient">10–35%</span>{" "}
               With Real-Time Social Proof
             </h1>
-            <p className="text-lg text-muted-foreground mb-6 max-w-lg">
-              Boost conversions with real-time purchase alerts, testimonials, and engagement notifications. Set up in under 5 minutes.
+            <p className="text-lg text-muted-foreground mb-5 max-w-xl">
+              Show live purchase alerts, collect video testimonials, and aggregate reviews from 38+ platforms — all from one lightweight script that installs in 60 seconds.
             </p>
+
+            {/* Trust Badges */}
+            <div className="mb-6">
+              <TrustBadgeStrip />
+            </div>
+
             <div className="flex flex-col sm:flex-row gap-4">
               <Button variant="hero" size="xl" asChild>
-                <a href="https://app.notiproof.com/signup">
-                  Start Free 14-Day Trial <ArrowRight className="w-5 h-5" />
+                <a href="https://app.notiproof.com/signup" target="_blank" rel="noopener noreferrer">
+                  Start Free Trial <ArrowRight className="w-5 h-5" />
                 </a>
               </Button>
               <Button variant="hero-outline" size="xl" asChild>
                 <Link to="/pricing/">View Pricing</Link>
               </Button>
             </div>
-            <p className="text-sm text-muted-foreground mt-3">No credit card required · Setup in 60 seconds</p>
+            <p className="text-sm text-muted-foreground mt-3">No credit card required · 14-day free trial</p>
           </motion.div>
 
           <motion.div {...fadeUp} transition={{ duration: 0.5, delay: 0.2 }} className="mt-10 w-full max-w-5xl mx-auto">
@@ -112,17 +110,11 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Trust Strip */}
-      <section className="py-10 border-y border-border bg-surface">
-        <div className="container-tight text-center">
-          <p className="text-sm font-medium text-muted-foreground mb-6">Trusted by 2,000+ conversion-focused teams worldwide</p>
-          <div className="flex flex-wrap justify-center gap-x-10 gap-y-4">
-            {["Shopify", "WooCommerce", "Stripe", "GA4", "Zapier", "WordPress", "Webflow", "HubSpot"].map((name) => (
-              <span key={name} className="text-sm font-semibold text-muted-foreground/50">{name}</span>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Integration Logo Strip */}
+      <IntegrationLogoStrip />
+
+      {/* How It Works */}
+      <HowItWorks />
 
       {/* Wave-inspired sections */}
       <TabbedFeatures />

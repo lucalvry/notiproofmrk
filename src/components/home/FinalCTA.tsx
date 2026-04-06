@@ -18,16 +18,16 @@ export default function FinalCTA() {
             You didn't start your business to lose conversions
           </h2>
           <p className="text-lg text-dark-foreground/60 max-w-xl mx-auto mb-8">
-            Join 2,000+ businesses using NotiProof to turn visitors into
+            Join 4,000+ businesses using NotiProof to turn visitors into
             customers. Start free — no credit card required.
           </p>
           <Button variant="hero" size="xl" asChild>
             <a href="https://app.notiproof.com/signup">
-              Get started for free <ArrowRight className="w-5 h-5" />
+              Start Free Trial <ArrowRight className="w-5 h-5" />
             </a>
           </Button>
           <p className="text-sm text-dark-foreground/40 mt-4">
-            Free plan available · Setup in 60 seconds
+            14-day free trial · No credit card required
           </p>
         </motion.div>
       </div>

@@ -35,7 +35,7 @@ export default function FOMOMarketingGuide() {
       featuredImage={featuredFomoMarketing}
       content={
         <div className="space-y-8 text-foreground">
-          <p className="text-lg text-muted-foreground">FOMO — Fear of Missing Out — is one of the most powerful psychological drivers in marketing. When deployed ethically, FOMO techniques accelerate purchase decisions by highlighting genuine scarcity, real-time activity, and time-sensitive opportunities. When deployed manipulatively, they destroy trust and brand reputation. This guide shows you how to create authentic urgency that converts without crossing ethical lines.</p>
+          <p className="text-lg text-muted-foreground"><dfn><Link to="/resources/glossary/">FOMO</Link></dfn> — Fear of Missing Out — is one of the most powerful psychological drivers in marketing. When deployed ethically, FOMO techniques accelerate purchase decisions by highlighting genuine scarcity, real-time activity, and time-sensitive opportunities. When deployed manipulatively, they destroy trust and brand reputation. This guide shows you how to create authentic urgency that converts without crossing ethical lines.</p>
 
           <h2 id="what-is-fomo" className="text-2xl font-bold mt-12">What Is FOMO Marketing?</h2>
           <p className="font-medium text-foreground">FOMO marketing leverages the psychological fear of missing out on valuable opportunities — using scarcity signals, urgency cues, and social proof of others' actions to motivate faster purchase decisions.</p>

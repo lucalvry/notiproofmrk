@@ -38,6 +38,7 @@ export interface ComparisonData {
   faqs: { q: string; a: string }[];
   publishDate?: string;
   updatedDate?: string;
+  editorialContent?: React.ReactNode;
 }
 
 const fadeUp = { initial: { opacity: 0, y: 20 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true }, transition: { duration: 0.4 } };
@@ -95,11 +96,22 @@ export default function ComparisonPageTemplate({ data }: { data: ComparisonData 
   };
 
   return (
-    <>
-      <SEOHead title={data.metaTitle} description={data.metaDescription} canonical={data.canonical} schema={[articleSchema, faqSchema, reviewSchema]} />
+    <article itemScope itemType="https://schema.org/WebPage">
+      <SEOHead
+        title={data.metaTitle}
+        description={data.metaDescription}
+        canonical={data.canonical}
+        schema={[articleSchema, faqSchema, reviewSchema]}
+        articleMeta={{
+          publishedTime: data.publishDate,
+          modifiedTime: data.updatedDate,
+          author: "Olayinka Olayokun",
+          section: "Comparison",
+        }}
+      />
 
       {/* Hero */}
-      <section className="relative overflow-hidden bg-foreground text-background py-16 md:py-24">
+      <header className="relative overflow-hidden bg-foreground text-background py-16 md:py-24">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/10 pointer-events-none" />
         <div className="container-tight relative z-10 text-center">
           <motion.div {...fadeUp}>
@@ -110,7 +122,7 @@ export default function ComparisonPageTemplate({ data }: { data: ComparisonData 
             <p className="text-lg opacity-80 max-w-2xl mx-auto">Full feature-by-feature comparison to help you choose the right social proof platform.</p>
           </motion.div>
         </div>
-      </section>
+      </header>
 
       {/* Verdict */}
       <section className="section-padding">
@@ -180,6 +192,17 @@ export default function ComparisonPageTemplate({ data }: { data: ComparisonData 
           </motion.div>
         </div>
       </section>
+
+      {/* Editorial Content (buyer's guide Q&A) */}
+      {data.editorialContent && (
+        <section className="section-padding">
+          <div className="container-tight">
+            <div className="max-w-3xl mx-auto prose prose-lg">
+              {data.editorialContent}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Detailed Sections */}
       {data.sections.map((section, i) => (
@@ -285,6 +308,6 @@ export default function ComparisonPageTemplate({ data }: { data: ComparisonData 
       </section>
 
       <CTASection />
-    </>
+    </article>
   );
 }

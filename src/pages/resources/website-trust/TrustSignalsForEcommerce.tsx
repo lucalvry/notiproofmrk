@@ -35,7 +35,7 @@ export default function TrustSignalsForEcommerce() {
       featuredImage={featuredTrustSignals}
       content={
         <div className="space-y-8 text-foreground">
-          <p className="text-lg text-muted-foreground">Trust is the currency of e-commerce. Unlike physical stores where customers can touch products and see other shoppers, online stores must manufacture trust through deliberate signals. The Baymard Institute reports that 18% of cart abandonments are due to trust concerns about the site, and 17% are due to concerns about payment security. Every trust signal you add directly addresses these conversion-killing objections.</p>
+          <p className="text-lg text-muted-foreground">Trust is the currency of e-commerce. Unlike physical stores where customers can touch products and see other shoppers, online stores must manufacture trust through deliberate signals. The Baymard Institute reports that 18% of <dfn><Link to="/resources/glossary/#cart-abandonment" className="text-primary font-semibold hover:underline">cart abandonments</Link></dfn> are due to trust concerns about the site, and 17% are due to concerns about payment security. Every trust signal you add directly addresses these conversion-killing objections.</p>
 
           <h2 id="what-are-trust-signals" className="text-2xl font-bold mt-12">What Are Trust Signals?</h2>
           <p className="font-medium text-foreground">Trust signals are visual and contextual elements on your website that reduce perceived risk and increase visitor confidence — including reviews, security badges, social proof notifications, guarantees, contact information, and professional design.</p>

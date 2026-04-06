@@ -1,5 +1,6 @@
 import ResourceArticle from "@/components/ResourceArticle";
 import { Link } from "react-router-dom";
+import featuredImg from "@/assets/featured-testimonials-pillar.jpg";
 
 const clusterLinks = [
   { title: "How to Collect Testimonials That Convert", href: "/resources/testimonials/how-to-collect-testimonials/", desc: "Automated workflows and timing strategies." },
@@ -33,10 +34,11 @@ export default function TestimonialsPillar() {
       updatedDate="2025-03-25"
       tocSections={tocSections}
       relatedArticles={clusterLinks}
+      featuredImage={featuredImg}
       speakable={["h1", "h2", "[data-speakable]"]}
       content={
         <div className="space-y-8 text-foreground">
-          <p className="text-lg text-muted-foreground">Customer testimonials are the backbone of any <Link to="/resources/social-proof/" className="text-primary font-semibold hover:underline">social proof strategy</Link>. A single compelling testimonial can be more persuasive than pages of marketing copy because it provides authentic, third-party validation of your product's value. This comprehensive guide covers every aspect of testimonial strategy — from automated collection to conversion-optimized display.</p>
+          <p className="text-lg text-muted-foreground"><dfn><Link to="/resources/glossary/">Customer testimonials</Link></dfn> are the backbone of any <Link to="/resources/social-proof/" className="text-primary font-semibold hover:underline">social proof strategy</Link>. A single compelling testimonial can be more persuasive than pages of marketing copy because it provides authentic, third-party validation of your product's value. This comprehensive guide covers every aspect of testimonial strategy — from automated collection to conversion-optimized display.</p>
 
           <h2 id="why-testimonials" className="text-2xl font-bold mt-12">Why Are Customer Testimonials Essential?</h2>
           <p className="font-semibold text-foreground">Testimonials bridge the trust gap between marketing claims and buyer proof — 79% of consumers trust them as much as personal recommendations, and pages with testimonials convert 34% better on average.</p>
