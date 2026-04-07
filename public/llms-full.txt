@@ -113,6 +113,7 @@ NotiProof offers free tools to help marketers:
 - The Complete Guide to Testimonials: https://notiproof.com/resources/testimonials/
 - Conversion Analytics Guide: https://notiproof.com/resources/conversion-analytics/
 - Website Trust Signals Guide: https://notiproof.com/resources/website-trust/
+- Conversion Rate Optimization Guide: https://notiproof.com/resources/cro/
 
 ### Social Proof Articles
 - What Is Social Proof? The Complete Guide: https://notiproof.com/resources/social-proof/what-is-social-proof/
@@ -121,6 +122,10 @@ NotiProof offers free tools to help marketers:
 - Social Proof Examples That Convert: https://notiproof.com/resources/social-proof/social-proof-example/
 - Social Proof in Marketing: https://notiproof.com/resources/social-proof/social-proof-in-marketing/
 - Social Proof for Websites: https://notiproof.com/resources/social-proof/social-proof-for-websites/
+- Social Proof Notifications: The Complete Guide: https://notiproof.com/resources/social-proof/social-proof-notifications/
+- Social Proof for B2B and SaaS Websites: https://notiproof.com/resources/social-proof/social-proof-b2b-saas/
+- User-Generated Content as Social Proof: https://notiproof.com/resources/social-proof/user-generated-content-social-proof/
+- Social Proof for Landing Pages: https://notiproof.com/resources/social-proof/social-proof-landing-pages/
 
 ### Reviews Articles
 - How to Collect Google Reviews: https://notiproof.com/resources/reviews/how-to-collect-google-reviews/
@@ -139,12 +144,22 @@ NotiProof offers free tools to help marketers:
 - Conversion Rate Benchmarks: https://notiproof.com/resources/conversion-analytics/conversion-rate-benchmarks/
 - Measuring Social Proof ROI: https://notiproof.com/resources/conversion-analytics/measuring-social-proof-roi/
 - Heatmap Analytics Guide: https://notiproof.com/resources/conversion-analytics/heatmap-analytics-guide/
+- Testimonial & Review ROI: https://notiproof.com/resources/conversion-analytics/testimonial-review-roi/
 
 ### Website Trust Articles
 - Trust Signals for E-commerce: https://notiproof.com/resources/website-trust/trust-signals-for-ecommerce/
 - Trust Badges Guide: https://notiproof.com/resources/website-trust/trust-badges-guide/
 - Building Website Credibility: https://notiproof.com/resources/website-trust/building-website-credibility/
 - FOMO Marketing Guide: https://notiproof.com/resources/website-trust/fomo-marketing-guide/
+- Testimonials as Trust Signals: https://notiproof.com/resources/website-trust/testimonials-as-trust-signals/
+
+### CRO Articles
+- Landing Page Optimization Guide: https://notiproof.com/resources/cro/landing-page-optimization/
+- E-commerce Conversion Optimization: https://notiproof.com/resources/cro/ecommerce-cro/
+- SaaS Conversion Optimization: Trial to Paid: https://notiproof.com/resources/cro/saas-cro/
+- Cart Abandonment: Causes and Solutions: https://notiproof.com/resources/cro/cart-abandonment/
+- CTA Optimization: Button Copy, Color & Placement: https://notiproof.com/resources/cro/cta-optimization/
+- Exit Intent Strategies That Recover Revenue: https://notiproof.com/resources/cro/exit-intent-strategies/
 
 ### Glossary
 Comprehensive glossary of social proof, CRO, and digital marketing terms: https://notiproof.com/resources/glossary/

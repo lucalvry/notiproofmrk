@@ -42,6 +42,7 @@ NotiProof is a SaaS platform that helps businesses boost website conversions thr
 - Comparisons: https://notiproof.com/comparisons/
 - Free Tools: https://notiproof.com/free-tools/
 - Resources & Blog: https://notiproof.com/resources/
+- CRO Guide: https://notiproof.com/resources/cro/
 - Help Center: https://notiproof.com/resources/help-center/
 
 ## Contact

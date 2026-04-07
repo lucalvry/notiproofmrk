@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { BookOpen, FileText, BookMarked, BarChart3, HelpCircle, Briefcase, Package, Wrench, ArrowRight, Shield, Star, MessageSquare } from "lucide-react";
+import { BookOpen, FileText, BookMarked, BarChart3, HelpCircle, Briefcase, Package, Wrench, ArrowRight, Shield, Star, MessageSquare, TrendingUp } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
 
 const fadeUp = { initial: { opacity: 0, y: 30 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true }, transition: { duration: 0.5 } };
@@ -59,6 +59,17 @@ const pillarGuides = [
       { title: "Trust Signals for E-commerce", href: "/resources/website-trust/trust-signals-for-ecommerce/", readTime: "11 min" },
       { title: "Trust Badges Guide", href: "/resources/website-trust/trust-badges-guide/", readTime: "10 min" },
       { title: "FOMO Marketing Guide", href: "/resources/website-trust/fomo-marketing-guide/", readTime: "12 min" },
+    ],
+  },
+  {
+    icon: TrendingUp,
+    title: "Conversion Rate Optimization",
+    desc: "Practical CRO tactics — landing page optimization, cart abandonment solutions, CTA best practices, and exit intent strategies.",
+    href: "/resources/cro/",
+    articles: [
+      { title: "Landing Page Optimization", href: "/resources/cro/landing-page-optimization/", readTime: "12 min" },
+      { title: "Cart Abandonment Solutions", href: "/resources/cro/cart-abandonment/", readTime: "10 min" },
+      { title: "Exit Intent Strategies", href: "/resources/cro/exit-intent-strategies/", readTime: "10 min" },
     ],
   },
 ];

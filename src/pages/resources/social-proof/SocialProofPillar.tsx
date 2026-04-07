@@ -9,6 +9,10 @@ const clusterLinks = [
   { title: "Social Proof Examples", href: "/resources/social-proof/social-proof-example/", desc: "Real examples from top brands." },
   { title: "Social Proof in Marketing", href: "/resources/social-proof/social-proof-in-marketing/", desc: "Strategies for marketers." },
   { title: "Social Proof for Websites", href: "/resources/social-proof/social-proof-for-websites/", desc: "Implementation guide for any website." },
+  { title: "Social Proof Notifications", href: "/resources/social-proof/social-proof-notifications/", desc: "Complete guide to real-time social proof popups." },
+  { title: "Social Proof for B2B & SaaS", href: "/resources/social-proof/social-proof-b2b-saas/", desc: "Industry-specific strategies for B2B." },
+  { title: "User-Generated Content as Social Proof", href: "/resources/social-proof/user-generated-content-social-proof/", desc: "Leverage UGC for trust and conversions." },
+  { title: "Social Proof for Landing Pages", href: "/resources/social-proof/social-proof-landing-pages/", desc: "Optimize landing pages with social proof." },
 ];
 
 const tocSections = [

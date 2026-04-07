@@ -3,6 +3,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
 import { lazy, Suspense } from "react";
 import Layout from "./components/Layout";
 import CookieConsentBanner from "./components/CookieConsent";
@@ -80,6 +81,21 @@ const MeasuringSocialProofROI = lazy(() => import("./pages/resources/conversion-
 const HeatmapAnalyticsGuide = lazy(() => import("./pages/resources/conversion-analytics/HeatmapAnalyticsGuide"));
 const TestimonialReviewROI = lazy(() => import("./pages/resources/conversion-analytics/TestimonialReviewROI"));
 
+// CRO cluster
+const CROPillar = lazy(() => import("./pages/resources/cro/CROPillar"));
+const LandingPageOptimization = lazy(() => import("./pages/resources/cro/LandingPageOptimization"));
+const EcommerceCRO = lazy(() => import("./pages/resources/cro/EcommerceCRO"));
+const SaaSCRO = lazy(() => import("./pages/resources/cro/SaaSCRO"));
+const CartAbandonment = lazy(() => import("./pages/resources/cro/CartAbandonment"));
+const CTAOptimization = lazy(() => import("./pages/resources/cro/CTAOptimization"));
+const ExitIntentStrategies = lazy(() => import("./pages/resources/cro/ExitIntentStrategies"));
+
+// Social Proof expansion
+const SocialProofNotificationsGuide = lazy(() => import("./pages/resources/social-proof/SocialProofNotifications"));
+const SocialProofB2BSaaS = lazy(() => import("./pages/resources/social-proof/SocialProofB2BSaaS"));
+const UserGeneratedContentSocialProof = lazy(() => import("./pages/resources/social-proof/UserGeneratedContentSocialProof"));
+const SocialProofLandingPages = lazy(() => import("./pages/resources/social-proof/SocialProofLandingPages"));
+
 // Website Trust cluster
 const WebsiteTrustPillar = lazy(() => import("./pages/resources/website-trust/WebsiteTrustPillar"));
 const TrustSignalsForEcommerce = lazy(() => import("./pages/resources/website-trust/TrustSignalsForEcommerce"));
@@ -136,6 +152,7 @@ function SuspenseWrap({ children }: { children: React.ReactNode }) {
 }
 
 const App = () => (
+  <HelmetProvider>
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
@@ -192,6 +209,10 @@ const App = () => (
             <Route path="/resources/social-proof/types-of-social-proof/" element={<SuspenseWrap><TypesOfSocialProof /></SuspenseWrap>} />
             <Route path="/resources/social-proof/social-proof-psychology/" element={<SuspenseWrap><SocialProofPsychology /></SuspenseWrap>} />
             <Route path="/resources/social-proof/reviews-and-social-proof/" element={<SuspenseWrap><ReviewsAndSocialProof /></SuspenseWrap>} />
+            <Route path="/resources/social-proof/social-proof-notifications-guide/" element={<SuspenseWrap><SocialProofNotificationsGuide /></SuspenseWrap>} />
+            <Route path="/resources/social-proof/social-proof-b2b-saas/" element={<SuspenseWrap><SocialProofB2BSaaS /></SuspenseWrap>} />
+            <Route path="/resources/social-proof/user-generated-content-social-proof/" element={<SuspenseWrap><UserGeneratedContentSocialProof /></SuspenseWrap>} />
+            <Route path="/resources/social-proof/social-proof-for-landing-pages/" element={<SuspenseWrap><SocialProofLandingPages /></SuspenseWrap>} />
 
             {/* Resources — Reviews cluster */}
             <Route path="/resources/reviews/" element={<SuspenseWrap><ReviewsPillar /></SuspenseWrap>} />
@@ -214,6 +235,15 @@ const App = () => (
             <Route path="/resources/conversion-analytics/measuring-social-proof-roi/" element={<SuspenseWrap><MeasuringSocialProofROI /></SuspenseWrap>} />
             <Route path="/resources/conversion-analytics/heatmap-analytics-guide/" element={<SuspenseWrap><HeatmapAnalyticsGuide /></SuspenseWrap>} />
             <Route path="/resources/conversion-analytics/testimonial-review-roi/" element={<SuspenseWrap><TestimonialReviewROI /></SuspenseWrap>} />
+
+            {/* Resources — CRO cluster */}
+            <Route path="/resources/cro/" element={<SuspenseWrap><CROPillar /></SuspenseWrap>} />
+            <Route path="/resources/cro/landing-page-optimization/" element={<SuspenseWrap><LandingPageOptimization /></SuspenseWrap>} />
+            <Route path="/resources/cro/ecommerce-conversion-optimization/" element={<SuspenseWrap><EcommerceCRO /></SuspenseWrap>} />
+            <Route path="/resources/cro/saas-conversion-optimization/" element={<SuspenseWrap><SaaSCRO /></SuspenseWrap>} />
+            <Route path="/resources/cro/cart-abandonment/" element={<SuspenseWrap><CartAbandonment /></SuspenseWrap>} />
+            <Route path="/resources/cro/cta-optimization/" element={<SuspenseWrap><CTAOptimization /></SuspenseWrap>} />
+            <Route path="/resources/cro/exit-intent-strategies/" element={<SuspenseWrap><ExitIntentStrategies /></SuspenseWrap>} />
 
             {/* Resources — Website Trust cluster */}
             <Route path="/resources/website-trust/" element={<SuspenseWrap><WebsiteTrustPillar /></SuspenseWrap>} />
@@ -274,6 +304,7 @@ const App = () => (
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
+  </HelmetProvider>
 );
 
 export default App;

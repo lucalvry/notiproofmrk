@@ -1,4 +1,4 @@
-import { BookOpen, Star, BarChart3, Shield, MessageSquare, type LucideIcon } from "lucide-react";
+import { BookOpen, Star, BarChart3, Shield, MessageSquare, TrendingUp, type LucideIcon } from "lucide-react";
 
 export interface ArticleData {
   title: string;
@@ -25,6 +25,7 @@ export const categoryGradients: Record<string, string> = {
   "conversion-analytics": "from-emerald-500/20 to-teal-500/20",
   "website-trust": "from-violet-500/20 to-purple-500/20",
   testimonials: "from-pink-500/20 to-rose-500/20",
+  cro: "from-cyan-500/20 to-blue-500/20",
 };
 
 export const categoryAccents: Record<string, string> = {
@@ -33,6 +34,7 @@ export const categoryAccents: Record<string, string> = {
   "conversion-analytics": "border-l-emerald-500",
   "website-trust": "border-l-violet-500",
   testimonials: "border-l-pink-500",
+  cro: "border-l-cyan-500",
 };
 
 export const categories: CategoryData[] = [
@@ -50,6 +52,10 @@ export const categories: CategoryData[] = [
       { title: "Social Proof in Marketing", href: "/resources/social-proof/social-proof-in-marketing/", desc: "How to integrate social proof into email campaigns, landing pages, ads, and your overall marketing funnel.", readTime: "10 min", date: "Mar 2025", isoDate: "2025-03-01", author: "Olayinka Olayokun" },
       { title: "Social Proof for Websites", href: "/resources/social-proof/social-proof-for-websites/", desc: "A technical implementation guide: where to place notifications, widgets, and testimonials for maximum impact.", readTime: "11 min", date: "Mar 2025", isoDate: "2025-03-10", author: "Olayinka Olayokun" },
       { title: "How Reviews Amplify Social Proof", href: "/resources/social-proof/reviews-and-social-proof/", desc: "How customer reviews function as the most powerful form of social proof and how to amplify them.", readTime: "12 min", date: "Apr 2025", isoDate: "2025-04-01", author: "Olayinka Olayokun" },
+      { title: "Social Proof Notifications: Complete Guide", href: "/resources/social-proof/social-proof-notifications-guide/", desc: "How real-time purchase and activity notifications drive 10–35% conversion lifts.", readTime: "15 min", date: "Apr 2025", isoDate: "2025-04-05", author: "Olayinka Olayokun" },
+      { title: "Social Proof for B2B & SaaS", href: "/resources/social-proof/social-proof-b2b-saas/", desc: "How B2B and SaaS companies deploy social proof for longer sales cycles and enterprise buyers.", readTime: "14 min", date: "Apr 2025", isoDate: "2025-04-06", author: "Olayinka Olayokun" },
+      { title: "User-Generated Content as Social Proof", href: "/resources/social-proof/user-generated-content-social-proof/", desc: "Collect, curate, and display customer content that converts — reviews, photos, and videos.", readTime: "13 min", date: "Apr 2025", isoDate: "2025-04-06", author: "Olayinka Olayokun" },
+      { title: "Social Proof for Landing Pages", href: "/resources/social-proof/social-proof-for-landing-pages/", desc: "Where to place trust signals on landing pages for maximum conversion impact.", readTime: "12 min", date: "Apr 2025", isoDate: "2025-04-07", author: "Olayinka Olayokun" },
     ],
   },
   {
@@ -104,6 +110,21 @@ export const categories: CategoryData[] = [
       { title: "Video Testimonials: Complete Guide", href: "/resources/testimonials/video-testimonial-guide/", desc: "Record, edit, and display video testimonials that convert 4× better than text — with zero friction for customers.", readTime: "14 min", date: "Mar 2025", isoDate: "2025-03-14", author: "Olayinka Olayokun" },
       { title: "Testimonial Page Design Guide", href: "/resources/testimonials/testimonial-page-design/", desc: "Design a testimonial page that builds trust: layouts, filtering, media formats, and conversion-optimized structure.", readTime: "11 min", date: "Mar 2025", isoDate: "2025-03-18", author: "Olayinka Olayokun" },
       { title: "Testimonial Request Email Templates", href: "/resources/testimonials/testimonial-request-email-templates/", desc: "Copy-paste email templates for requesting testimonials that get 3–5× higher response rates.", readTime: "10 min", date: "Mar 2025", isoDate: "2025-03-22", author: "Olayinka Olayokun" },
+    ],
+  },
+  {
+    id: "cro",
+    icon: TrendingUp,
+    title: "Conversion Rate Optimization",
+    desc: "The complete CRO guide: frameworks, tactics, and tools to systematically increase your website conversion rate.",
+    href: "/resources/cro/",
+    articles: [
+      { title: "Landing Page Optimization Guide", href: "/resources/cro/landing-page-optimization/", desc: "Optimize every element of your landing pages for maximum conversion rates.", readTime: "14 min", date: "Apr 2025", isoDate: "2025-04-02", author: "Olayinka Olayokun" },
+      { title: "E-commerce Conversion Optimization", href: "/resources/cro/ecommerce-conversion-optimization/", desc: "Increase online store revenue with product page, checkout, and social proof tactics.", readTime: "13 min", date: "Apr 2025", isoDate: "2025-04-03", author: "Olayinka Olayokun" },
+      { title: "SaaS Conversion: Trial to Paid", href: "/resources/cro/saas-conversion-optimization/", desc: "Optimize the SaaS funnel from visitor to trial to paid customer.", readTime: "14 min", date: "Apr 2025", isoDate: "2025-04-03", author: "Olayinka Olayokun" },
+      { title: "Cart Abandonment: Causes & Solutions", href: "/resources/cro/cart-abandonment/", desc: "Why 70% of carts are abandoned and how to recover lost revenue.", readTime: "13 min", date: "Apr 2025", isoDate: "2025-04-04", author: "Olayinka Olayokun" },
+      { title: "CTA Optimization Guide", href: "/resources/cro/cta-optimization/", desc: "Button copy, color, placement, and psychology for higher click-through rates.", readTime: "12 min", date: "Apr 2025", isoDate: "2025-04-04", author: "Olayinka Olayokun" },
+      { title: "Exit Intent Strategies", href: "/resources/cro/exit-intent-strategies/", desc: "Recover 3–15% of leaving visitors with smart exit-intent triggers.", readTime: "12 min", date: "Apr 2025", isoDate: "2025-04-05", author: "Olayinka Olayokun" },
     ],
   },
 ];

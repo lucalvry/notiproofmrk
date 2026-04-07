@@ -51,6 +51,10 @@ export const staticRoutes = [
   "/resources/social-proof/types-of-social-proof/",
   "/resources/social-proof/social-proof-psychology/",
   "/resources/social-proof/reviews-and-social-proof/",
+  "/resources/social-proof/social-proof-notifications-guide/",
+  "/resources/social-proof/social-proof-b2b-saas/",
+  "/resources/social-proof/user-generated-content-social-proof/",
+  "/resources/social-proof/social-proof-for-landing-pages/",
 
   // Resources — Reviews cluster
   "/resources/reviews/",
@@ -73,6 +77,15 @@ export const staticRoutes = [
   "/resources/conversion-analytics/measuring-social-proof-roi/",
   "/resources/conversion-analytics/heatmap-analytics-guide/",
   "/resources/conversion-analytics/testimonial-review-roi/",
+
+  // Resources — CRO cluster
+  "/resources/cro/",
+  "/resources/cro/landing-page-optimization/",
+  "/resources/cro/ecommerce-conversion-optimization/",
+  "/resources/cro/saas-conversion-optimization/",
+  "/resources/cro/cart-abandonment/",
+  "/resources/cro/cta-optimization/",
+  "/resources/cro/exit-intent-strategies/",
 
   // Resources — Website Trust cluster
   "/resources/website-trust/",

@@ -47,6 +47,26 @@ const allArticles = [
   { title: "NotiProof vs TrustPulse: Full Comparison", href: "/comparisons/notiproof-vs-trustpulse/", readTime: "8 min", date: "2025-05-12", category: "Comparisons" },
   { title: "NotiProof vs Proof: Full Comparison", href: "/comparisons/notiproof-vs-proof/", readTime: "8 min", date: "2025-05-14", category: "Comparisons" },
   { title: "NotiProof vs ProveSource: Full Comparison", href: "/comparisons/notiproof-vs-provesource/", readTime: "8 min", date: "2025-05-16", category: "Comparisons" },
+
+  // CRO cluster
+  { title: "Conversion Rate Optimization: The Complete Guide", href: "/resources/cro/", readTime: "20 min", date: "2025-05-20", category: "CRO" },
+  { title: "Landing Page Optimization Guide", href: "/resources/cro/landing-page-optimization/", readTime: "12 min", date: "2025-05-22", category: "CRO" },
+  { title: "E-commerce Conversion Optimization", href: "/resources/cro/ecommerce-cro/", readTime: "11 min", date: "2025-05-25", category: "CRO" },
+  { title: "SaaS Conversion Optimization: Trial to Paid", href: "/resources/cro/saas-cro/", readTime: "11 min", date: "2025-05-28", category: "CRO" },
+  { title: "Cart Abandonment: Causes and Solutions", href: "/resources/cro/cart-abandonment/", readTime: "10 min", date: "2025-06-01", category: "CRO" },
+  { title: "CTA Optimization: Button Copy, Color & Placement", href: "/resources/cro/cta-optimization/", readTime: "9 min", date: "2025-06-05", category: "CRO" },
+  { title: "Exit Intent Strategies That Recover Revenue", href: "/resources/cro/exit-intent-strategies/", readTime: "10 min", date: "2025-06-08", category: "CRO" },
+
+  // Social Proof expansion
+  { title: "Social Proof Notifications: The Complete Guide", href: "/resources/social-proof/social-proof-notifications/", readTime: "11 min", date: "2025-06-10", category: "Social Proof" },
+  { title: "Social Proof for B2B and SaaS Websites", href: "/resources/social-proof/social-proof-b2b-saas/", readTime: "10 min", date: "2025-06-12", category: "Social Proof" },
+  { title: "User-Generated Content as Social Proof", href: "/resources/social-proof/user-generated-content-social-proof/", readTime: "10 min", date: "2025-06-15", category: "Social Proof" },
+  { title: "Social Proof for Landing Pages", href: "/resources/social-proof/social-proof-landing-pages/", readTime: "9 min", date: "2025-06-18", category: "Social Proof" },
+
+  // Missing existing articles
+  { title: "Testimonials as Trust Signals", href: "/resources/website-trust/testimonials-as-trust-signals/", readTime: "10 min", date: "2025-05-03", category: "Website Trust" },
+  { title: "Testimonial & Review ROI", href: "/resources/conversion-analytics/testimonial-review-roi/", readTime: "10 min", date: "2025-04-20", category: "Conversion Analytics" },
+  { title: "Reviews & Social Proof", href: "/resources/social-proof/reviews-and-social-proof/", readTime: "10 min", date: "2025-03-08", category: "Social Proof" },
 ];
 
 const author = defaultAuthor;
