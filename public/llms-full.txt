@@ -8,7 +8,7 @@ NotiProof is a comprehensive SaaS platform that helps businesses of all sizes bo
 
 ## Product Features
 
-### Social Proof Notifications
+### Social Proof Notifications.
 Real-time purchase, signup, and activity alerts displayed on your website. Configurable position, timing, animation, and styling. Supports Shopify orders, Stripe payments, form submissions, and custom events.
 
 ### Testimonials Collection
