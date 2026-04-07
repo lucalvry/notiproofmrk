@@ -70,6 +70,9 @@ export default function VisitorCounter() {
       canonical="https://notiproof.com/product/visitor-counter-live-visitors/"
       headline="Show Live Visitor Counts to Build Social Proof"
       description="Display how many people are currently viewing your site or specific pages. Create a sense of popularity and urgency that drives conversions."
+      descriptionContent={
+        <p>Display how many people are currently viewing your site or specific pages. Combine with <Link to="/product/social-proof-notifications/">social proof notifications</Link> and <Link to="/product/recent-activity-notifications/">recent activity feeds</Link> for layered social proof. Learn about <Link to="/resources/website-trust/fomo-marketing-guide/">FOMO marketing strategies</Link>.</p>
+      }
       icon={Eye}
       benefits={[
         "Real-time live visitor counting",

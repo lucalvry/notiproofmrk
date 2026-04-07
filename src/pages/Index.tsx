@@ -40,6 +40,11 @@ const homepageSchema = [
     "@type": "WebSite",
     name: "NotiProof",
     url: "https://notiproof.com",
+    potentialAction: {
+      "@type": "SearchAction",
+      target: "https://notiproof.com/resources/glossary/?q={search_term_string}",
+      "query-input": "required name=search_term_string",
+    },
   },
   {
     "@context": "https://schema.org",

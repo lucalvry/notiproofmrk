@@ -86,8 +86,6 @@ export const staticRoutes = [
   "/resources/help-center/",
   "/resources/glossary/",
 
-  // SEO Landing pages
-  "/social-proof-notifications/",
 
   // Comparisons
   "/comparisons/",

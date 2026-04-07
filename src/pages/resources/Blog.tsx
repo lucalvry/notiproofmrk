@@ -131,7 +131,15 @@ export default function Blog() {
 
   const totalPages = Math.ceil(filteredArticles.length / ARTICLES_PER_PAGE);
   const paginatedArticles = filteredArticles.slice(0, page * ARTICLES_PER_PAGE);
-  const recentArticles = allArticles.slice(0, 3);
+
+  // Latest updates: sort by date descending, take 3
+  const latestArticles = useMemo(() => {
+    return [...allArticles].sort((a, b) => {
+      const dateA = a.date || "";
+      const dateB = b.date || "";
+      return dateB.localeCompare(dateA);
+    }).slice(0, 3);
+  }, []);
 
   return (
     <>
@@ -150,6 +158,28 @@ export default function Blog() {
             <p className="text-lg text-muted-foreground">
               In-depth guides on social proof, conversion optimization, and building trust online.
             </p>
+          </motion.div>
+
+          {/* Latest Updates */}
+          <motion.div {...fadeUp} className="mb-10">
+            <h2 className="text-xl font-bold mb-5">Latest Updates</h2>
+            <div className="grid sm:grid-cols-3 gap-4">
+              {latestArticles.map((a, i) => (
+                <ArticleCard
+                  key={a.href}
+                  title={a.title}
+                  href={a.href}
+                  desc={a.desc}
+                  readTime={a.readTime}
+                  date={a.date}
+                  author={a.author}
+                  categoryTitle={a.categoryTitle}
+                  image={articleImages[a.href]}
+                  gradient={categoryGradients[a.categoryId]}
+                  index={i}
+                />
+              ))}
+            </div>
           </motion.div>
 
           {/* Toggle */}

@@ -78,6 +78,9 @@ export default function CampaignBuilder() {
       canonical="https://notiproof.com/product/campaign-builder/"
       headline="Build Targeted Social Proof Campaigns"
       description="Create notification campaigns with smart targeting rules, scheduling, A/B testing, and audience segmentation. Show the right message to the right visitor at the right time."
+      descriptionContent={
+        <p>Create notification campaigns with smart targeting rules, scheduling, A/B testing, and audience segmentation. Pair with <Link to="/product/social-proof-notifications/">social proof notifications</Link> and track results in the <Link to="/product/analytics-conversion-insights/">analytics dashboard</Link>. Learn more about <Link to="/resources/conversion-analytics/ab-testing-social-proof/">A/B testing social proof</Link>.</p>
+      }
       icon={Zap}
       benefits={[
         "Visual drag-and-drop campaign builder",
@@ -108,7 +111,7 @@ export default function CampaignBuilder() {
       ]}
       featureDetails={[
         { icon: Target, title: "Smart Targeting", desc: "Show different notifications based on page URL, visitor location, device type, referral source, and more." },
-        { icon: FlaskConical, title: "A/B Testing", desc: "Test notification variants with automatic traffic splitting. Statistical significance tells you which wins." },
+        { icon: FlaskConical, title: "A/B Testing", desc: "Test notification variants with automatic traffic splitting. Statistical significance tells you which wins.", featured: true },
         { icon: Calendar, title: "Campaign Scheduling", desc: "Set start and end dates, day-of-week rules, and time-of-day targeting for seasonal or event-driven campaigns." },
       ]}
       testimonial={{

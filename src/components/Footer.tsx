@@ -55,10 +55,13 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 mb-12">
           <div className="col-span-2 md:col-span-4 lg:col-span-1">
             <Link to="/">
-              <img src={logo} alt="NotiProof" className="h-8 mb-4 brightness-0 invert" />
+              <img src={logo} alt="NotiProof — Social Proof & Testimonial Platform" className="h-8 mb-4 brightness-0 invert" />
             </Link>
+            <p className="text-sm font-semibold text-dark-foreground/80 mb-2">
+              NotiProof — Social Proof & Testimonial Platform
+            </p>
             <p className="text-sm text-dark-foreground/60 max-w-xs mb-6">
-              Increase conversions with real-time social proof notifications, testimonials, and trust widgets.
+              Increase website conversions by 10–35% with real-time social proof notifications, testimonial collection, review aggregation, and trust widgets. Trusted by 4,000+ businesses worldwide.
             </p>
           </div>
           {Object.entries(footerLinks).map(([title, links]) => (

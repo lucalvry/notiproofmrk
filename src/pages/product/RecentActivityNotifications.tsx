@@ -79,6 +79,9 @@ export default function RecentActivityNotifications() {
       canonical="https://notiproof.com/product/recent-activity-notifications/"
       headline="Show a Live Feed of Recent Activity on Your Website"
       description="Display recent purchases, signups, reviews, and other actions in a live activity feed. Build trust by showing that real people are engaging with your business."
+      descriptionContent={
+        <p>Display recent purchases, signups, reviews, and other actions in a live activity feed. Combine with <Link to="/product/social-proof-notifications/">pop-up notifications</Link> and the <Link to="/product/visitor-counter-live-visitors/">visitor counter</Link> for layered social proof. Explore the <Link to="/resources/social-proof/social-proof-psychology/">psychology behind social proof</Link>.</p>
+      }
       icon={Activity}
       benefits={[
         "Real-time activity feed widget",

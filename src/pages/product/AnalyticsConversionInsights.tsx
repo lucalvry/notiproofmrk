@@ -66,6 +66,9 @@ export default function AnalyticsConversionInsights() {
       canonical="https://notiproof.com/product/analytics-conversion-insights/"
       headline="Measure Your Social Proof ROI With Real-Time Analytics"
       description="Track impressions, clicks, conversion rates, and revenue lift with a comprehensive analytics dashboard. Know exactly how much revenue your social proof generates."
+      descriptionContent={
+        <p>Track impressions, clicks, conversion rates, and revenue lift with a comprehensive analytics dashboard. Optimize campaigns in the <Link to="/product/campaign-builder/">Campaign Builder</Link> and measure results across <Link to="/product/social-proof-notifications/">notifications</Link>, <Link to="/product/testimonials-widget-reviews-widget/">widgets</Link>, and more. See our <Link to="/resources/conversion-analytics/measuring-social-proof-roi/">social proof ROI guide</Link>.</p>
+      }
       icon={BarChart3}
       benefits={[
         "Real-time impression and click tracking",

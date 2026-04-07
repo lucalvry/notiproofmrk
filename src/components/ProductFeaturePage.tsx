@@ -11,7 +11,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 interface FAQ { q: string; a: string; }
 interface ResourceLink { label: string; href: string; context: string; }
 interface Testimonial { quote: string; name: string; role: string; metric?: string; }
-interface FeatureDetail { icon: LucideIcon; title: string; desc: string; }
+interface FeatureDetail { icon: LucideIcon; title: string; desc: string; featured?: boolean; }
 
 interface ProductFeaturePageProps {
   title: string;
@@ -123,12 +123,12 @@ export default function ProductFeaturePage({
             {/* Notification preview mockup */}
             <motion.div {...fadeUp} transition={{ duration: 0.5, delay: 0.2 }}>
               {heroMockup ? (
-                <div className="bg-gradient-to-br from-primary/5 via-background to-primary/10 border border-border rounded-2xl p-8 aspect-[4/3] flex items-center justify-center relative overflow-hidden">
+                <div className="bg-gradient-to-br from-primary/5 via-background to-primary/10 border border-border rounded-2xl p-8 aspect-[4/3] flex items-center justify-center relative overflow-hidden" role="img" aria-label={`NotiProof ${metaTitle} feature preview showing a sample notification widget`}>
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,hsl(var(--primary)/0.06),transparent_70%)]" />
                   <div className="relative z-10 w-full">{heroMockup}</div>
                 </div>
               ) : (
-                <div className="bg-gradient-to-br from-primary/5 via-background to-primary/10 border border-border rounded-2xl p-8 aspect-[4/3] flex items-center justify-center relative overflow-hidden">
+                <div className="bg-gradient-to-br from-primary/5 via-background to-primary/10 border border-border rounded-2xl p-8 aspect-[4/3] flex items-center justify-center relative overflow-hidden" role="img" aria-label={`NotiProof ${metaTitle} — social proof notification preview showing a recent purchase alert`}>
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,hsl(var(--primary)/0.06),transparent_70%)]" />
                   <div className="bg-card border border-border rounded-xl p-5 shadow-xl max-w-xs w-full relative z-10">
                     <div className="flex items-center gap-3 mb-3">
@@ -155,66 +155,7 @@ export default function ProductFeaturePage({
         </div>
       </header>
 
-      {/* Key Benefits */}
-      <section className="section-padding bg-surface">
-        <div className="container-tight">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Key Benefits</h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-4xl mx-auto">
-            {benefits.map((b, i) => (
-              <motion.div key={b} {...fadeUp} transition={{ duration: 0.5, delay: i * 0.05 }} className="flex items-start gap-3 bg-card border border-border rounded-xl p-5 hover:border-primary/20 transition-colors">
-                <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 shrink-0" />
-                <span className="text-sm font-medium">{b}</span>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Feature Details */}
-      {featureDetails && featureDetails.length > 0 && (
-        <section className="section-padding">
-          <div className="container-tight">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Feature Highlights</h2>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
-              {featureDetails.map((f, i) => (
-                <motion.div key={f.title} {...fadeUp} transition={{ duration: 0.5, delay: i * 0.1 }} className="bg-card border border-border rounded-xl overflow-hidden hover:shadow-lg hover:border-primary/30 hover:-translate-y-1 transition-all duration-300">
-                  <div className="h-1 bg-gradient-to-r from-primary to-primary/60" />
-                  <div className="p-7">
-                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
-                      <f.icon className="w-6 h-6 text-primary" />
-                    </div>
-                    <h3 className="font-bold mb-2 text-base">{f.title}</h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed">{f.desc}</p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* How It Works */}
-      <section className="section-padding bg-surface">
-        <div className="container-tight">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">How It Works</h2>
-          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto relative">
-            <div className="hidden md:block absolute top-7 left-[calc(16.67%+20px)] right-[calc(16.67%+20px)] h-px border-t-2 border-dashed border-primary/20" />
-            {howItWorks.map((step, i) => (
-              <motion.div key={step.step} {...fadeUp} transition={{ duration: 0.5, delay: i * 0.1 }} className="text-center relative">
-                <div className="bg-gradient-to-br from-primary/5 to-primary/10 rounded-xl p-6">
-                  <div className="w-14 h-14 rounded-full bg-primary text-primary-foreground font-extrabold text-lg flex items-center justify-center mx-auto mb-4 relative z-10 shadow-md">
-                    {i + 1}
-                  </div>
-                  <h3 className="font-bold mb-2">{step.step}</h3>
-                  <p className="text-sm text-muted-foreground">{step.desc}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Without / With Comparison */}
+      {/* Without / With Comparison — MOVED BEFORE deep dive for better contextual flow */}
       {hasComparison && (
         <section className="section-padding">
           <div className="container-tight">
@@ -254,7 +195,7 @@ export default function ProductFeaturePage({
         </section>
       )}
 
-      {/* Deep Dive Sections — styled as visual cards, not article prose */}
+      {/* Deep Dive Sections */}
       {deepDiveContent && (
         <section className="section-padding bg-surface">
           <div className="container-tight">
@@ -279,6 +220,65 @@ export default function ProductFeaturePage({
               <Button size="xl" variant="secondary" className="shrink-0 font-bold" asChild>
                 <a href="https://app.notiproof.com/signup">Get Started Free <ArrowRight className="w-5 h-5 ml-1" /></a>
               </Button>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* How It Works */}
+      <section className="section-padding bg-surface">
+        <div className="container-tight">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">How It Works</h2>
+          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto relative">
+            <div className="hidden md:block absolute top-7 left-[calc(16.67%+20px)] right-[calc(16.67%+20px)] h-px border-t-2 border-dashed border-primary/20" />
+            {howItWorks.map((step, i) => (
+              <motion.div key={step.step} {...fadeUp} transition={{ duration: 0.5, delay: i * 0.1 }} className="text-center relative">
+                <div className="bg-gradient-to-br from-primary/5 to-primary/10 rounded-xl p-6">
+                  <div className="w-14 h-14 rounded-full bg-primary text-primary-foreground font-extrabold text-lg flex items-center justify-center mx-auto mb-4 relative z-10 shadow-md">
+                    {i + 1}
+                  </div>
+                  <h3 className="font-bold mb-2">{step.step}</h3>
+                  <p className="text-sm text-muted-foreground">{step.desc}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Key Benefits */}
+      <section className="section-padding">
+        <div className="container-tight">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Key Benefits</h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-4xl mx-auto">
+            {benefits.map((b, i) => (
+              <motion.div key={b} {...fadeUp} transition={{ duration: 0.5, delay: i * 0.05 }} className="flex items-start gap-3 bg-card border border-border rounded-xl p-5 hover:border-primary/20 transition-colors">
+                <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 shrink-0" />
+                <span className="text-sm font-medium">{b}</span>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Feature Details — with featured attribute prominence */}
+      {featureDetails && featureDetails.length > 0 && (
+        <section className="section-padding bg-surface">
+          <div className="container-tight">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Feature Highlights</h2>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
+              {featureDetails.map((f, i) => (
+                <motion.div key={f.title} {...fadeUp} transition={{ duration: 0.5, delay: i * 0.1 }} className={`bg-card border rounded-xl overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300 ${f.featured ? "border-primary/40 ring-2 ring-primary/20 sm:col-span-2 lg:col-span-2" : "border-border hover:border-primary/30"}`}>
+                  <div className={`h-1 ${f.featured ? "bg-gradient-to-r from-primary via-primary/80 to-primary/60" : "bg-gradient-to-r from-primary to-primary/60"}`} />
+                  <div className="p-7">
+                    <div className={`rounded-xl bg-primary/10 flex items-center justify-center mb-4 ${f.featured ? "w-14 h-14" : "w-12 h-12"}`}>
+                      <f.icon className={`text-primary ${f.featured ? "w-7 h-7" : "w-6 h-6"}`} />
+                    </div>
+                    <h3 className={`font-bold mb-2 ${f.featured ? "text-lg" : "text-base"}`}>{f.title}</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{f.desc}</p>
+                  </div>
+                </motion.div>
+              ))}
             </div>
           </div>
         </section>

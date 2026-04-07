@@ -68,7 +68,7 @@ import BuildingWebsiteCredibility from "./pages/resources/website-trust/Building
 import FOMOMarketingGuide from "./pages/resources/website-trust/FOMOMarketingGuide";
 import HelpCenter from "./pages/resources/HelpCenter";
 import Glossary from "./pages/resources/Glossary";
-import SocialProofNotificationsLanding from "./pages/SocialProofNotificationsLanding";
+
 import ComparisonsHub from "./pages/comparisons/ComparisonsHub";
 import NotiProofVsFomo from "./pages/comparisons/NotiProofVsFomo";
 import NotiProofVsTrustPulse from "./pages/comparisons/NotiProofVsTrustPulse";
@@ -171,7 +171,7 @@ function AppShell({ url }: { url: string }) {
                 <Route path="/resources/help-center/" element={<HelpCenter />} />
                 <Route path="/resources/glossary/" element={<Glossary />} />
 
-                <Route path="/social-proof-notifications/" element={<SocialProofNotificationsLanding />} />
+                <Route path="/social-proof-notifications/" element={<Navigate to="/product/social-proof-notifications/" replace />} />
 
                 <Route path="/comparisons/" element={<ComparisonsHub />} />
                 <Route path="/comparisons/notiproof-vs-fomo/" element={<NotiProofVsFomo />} />
@@ -279,7 +279,7 @@ export async function prerender() {
                   <Route path="/resources/website-trust/fomo-marketing-guide/" element={<FOMOMarketingGuide />} />
                   <Route path="/resources/help-center/" element={<HelpCenter />} />
                   <Route path="/resources/glossary/" element={<Glossary />} />
-                  <Route path="/social-proof-notifications/" element={<SocialProofNotificationsLanding />} />
+                  <Route path="/social-proof-notifications/" element={<Navigate to="/product/social-proof-notifications/" replace />} />
                   <Route path="/comparisons/" element={<ComparisonsHub />} />
                   <Route path="/comparisons/notiproof-vs-fomo/" element={<NotiProofVsFomo />} />
                   <Route path="/comparisons/notiproof-vs-trustpulse/" element={<NotiProofVsTrustPulse />} />

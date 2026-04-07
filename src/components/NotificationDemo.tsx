@@ -280,7 +280,7 @@ export default function NotificationDemo() {
   const notif = notifications[current];
 
   return (
-    <div className="w-full">
+    <div className="w-full" role="img" aria-label="NotiProof social proof notification live preview — showing real-time purchase alerts, visitor counts, reviews, and testimonials on an e-commerce product page">
       {/* Label */}
       <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-3 text-center">
         ▶ Live Preview

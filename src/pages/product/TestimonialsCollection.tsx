@@ -73,6 +73,9 @@ export default function TestimonialsCollection() {
       canonical="https://notiproof.com/product/testimonials-collection-text-image-video/"
       headline="Collect Customer Testimonials Effortlessly"
       description="Gather text, image, and video testimonials from happy customers with automated collection workflows. Build trust at scale with genuine customer stories."
+      descriptionContent={
+        <p>Gather text, image, and video testimonials from happy customers with automated collection workflows. Record authentic stories with the <Link to="/product/video-testimonial-recorder/">Video Testimonial Recorder</Link>, then display them in the <Link to="/product/testimonials-widget-reviews-widget/">testimonials widget</Link>. Learn <Link to="/resources/testimonials/how-to-collect-testimonials/">how to collect testimonials</Link> effectively.</p>
+      }
       icon={MessageSquare}
       benefits={[
         "Collect text, image, and video testimonials",

@@ -58,6 +58,9 @@ export default function IntegrationsEcosystem() {
       canonical="https://notiproof.com/product/integrations-ecosystem/"
       headline="38+ Integrations for Every Platform"
       description="Connect NotiProof with the tools you already use. Shopify, WordPress, WooCommerce, Stripe, GA4, Zapier, HubSpot, and 30+ more — all included on every plan."
+      descriptionContent={
+        <p>Connect NotiProof with the tools you already use — <Link to="/integrations/shopify/">Shopify</Link>, <Link to="/integrations/wordpress/">WordPress</Link>, WooCommerce, Stripe, GA4, <Link to="/integrations/zapier/">Zapier</Link>, HubSpot, and 30+ more. All integrations are included on every plan, powering <Link to="/product/social-proof-notifications/">real-time notifications</Link> with live data.</p>
+      }
       icon={LinkIcon}
       benefits={[
         "38+ integrations included on every plan",

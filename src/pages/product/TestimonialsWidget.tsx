@@ -76,6 +76,9 @@ export default function TestimonialsWidget() {
       canonical="https://notiproof.com/product/testimonials-widget-reviews-widget/"
       headline="Beautiful, Embeddable Testimonial & Review Widgets"
       description="Display customer testimonials and reviews in stunning grids, carousels, or masonry walls. Customize every detail to match your brand and embed anywhere."
+      descriptionContent={
+        <p>Display customer testimonials and reviews in stunning grids, carousels, or masonry walls. Collect stories with our <Link to="/product/testimonials-collection-text-image-video/">testimonials collection tool</Link>, aggregate external reviews via <Link to="/product/review-aggregation-showcase-system/">review aggregation</Link>, and learn <Link to="/resources/testimonials/testimonial-page-design/">testimonial page design</Link> best practices.</p>
+      }
       icon={Layout}
       benefits={[
         "Multiple display formats: grid, carousel, wall, list",

@@ -73,6 +73,9 @@ export default function VideoTestimonialRecorder() {
       canonical="https://notiproof.com/product/video-testimonial-recorder/"
       headline="Capture Authentic Video Testimonials in Minutes"
       description="Let customers record video reviews directly from their browser. No app downloads, no complicated setup. Just authentic social proof from real customers."
+      descriptionContent={
+        <p>Let customers record video reviews directly from their browser — no app downloads, no friction. Videos integrate seamlessly with the <Link to="/product/testimonials-widget-reviews-widget/">testimonials widget</Link> and pair with <Link to="/product/testimonials-collection-text-image-video/">text and image testimonials</Link>. Read our <Link to="/resources/testimonials/video-testimonial-guide/">video testimonial guide</Link>.</p>
+      }
       icon={Video}
       benefits={[
         "Browser-based recording — no app needed",
@@ -102,7 +105,7 @@ export default function VideoTestimonialRecorder() {
         { step: "Publish", desc: "Review, approve, and publish video testimonials on your website with one click." },
       ]}
       featureDetails={[
-        { icon: Mic, title: "Guided Prompts", desc: "Pre-written questions guide customers through their story — producing focused, compelling testimonials every time." },
+        { icon: Mic, title: "Guided Prompts", desc: "Pre-written questions guide customers through their story — producing focused, compelling testimonials every time.", featured: true },
         { icon: Globe, title: "Global CDN Hosting", desc: "Videos are hosted on a worldwide CDN for instant playback anywhere, with adaptive quality streaming." },
         { icon: Sparkles, title: "Auto Transcription", desc: "AI-powered transcription generates captions automatically — improving accessibility and adding SEO value." },
       ]}

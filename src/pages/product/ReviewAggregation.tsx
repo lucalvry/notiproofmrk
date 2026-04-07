@@ -71,6 +71,9 @@ export default function ReviewAggregation() {
       canonical="https://notiproof.com/product/review-aggregation-showcase-system/"
       headline="Aggregate and Showcase Reviews From Every Platform"
       description="Pull reviews from Google, Trustpilot, G2, Capterra, and more into one beautiful, unified showcase. Let your best reviews work harder for you."
+      descriptionContent={
+        <p>Pull reviews from Google, Trustpilot, G2, Capterra, and more into one beautiful, unified showcase. Display them in the <Link to="/product/testimonials-widget-reviews-widget/">testimonials & reviews widget</Link> and combine with <Link to="/product/social-proof-notifications/">social proof notifications</Link> for maximum impact. Read our <Link to="/resources/reviews/review-aggregation-guide/">review aggregation guide</Link>.</p>
+      }
       icon={Star}
       benefits={[
         "Aggregate reviews from 15+ platforms",
@@ -101,7 +104,7 @@ export default function ReviewAggregation() {
       ]}
       featureDetails={[
         { icon: RefreshCw, title: "Auto-Sync", desc: "New reviews from connected platforms are pulled automatically on your schedule — daily, hourly, or in real-time." },
-        { icon: Search, title: "Rich Snippets", desc: "JSON-LD structured data markup enables review stars to appear alongside your pages in Google search results." },
+        { icon: Search, title: "Rich Snippets", desc: "JSON-LD structured data markup enables review stars to appear alongside your pages in Google search results.", featured: true },
         { icon: Layers, title: "Multi-Platform Unified", desc: "Reviews from Google, Trustpilot, G2, Capterra, Yelp, Facebook, and more — all in one place." },
       ]}
       testimonial={{

@@ -93,10 +93,6 @@ const HelpCenter = lazy(() => import("./pages/resources/HelpCenter"));
 const Glossary = lazy(() => import("./pages/resources/Glossary"));
 const TopicDetail = lazy(() => import("./pages/resources/TopicDetail"));
 
-// SEO Landing pages
-const BestSocialProofSoftware = lazy(() => import("./pages/BestSocialProofSoftware"));
-const SocialProofNotificationsLanding = lazy(() => import("./pages/SocialProofNotificationsLanding"));
-const ConversionOptimizationTools = lazy(() => import("./pages/ConversionOptimizationTools"));
 
 // Comparisons
 const ComparisonsHub = lazy(() => import("./pages/comparisons/ComparisonsHub"));
@@ -233,8 +229,10 @@ const App = () => (
             <Route path="/resources/glossary/" element={<SuspenseWrap><Glossary /></SuspenseWrap>} />
             <Route path="/resources/blog/:topicId/" element={<SuspenseWrap><TopicDetail /></SuspenseWrap>} />
 
-            {/* SEO Landing pages */}
-            <Route path="/social-proof-notifications/" element={<SuspenseWrap><SocialProofNotificationsLanding /></SuspenseWrap>} />
+            {/* SEO Redirects — canonical consolidation */}
+            <Route path="/social-proof-notifications/" element={<Navigate to="/product/social-proof-notifications/" replace />} />
+            <Route path="/best-social-proof-software/" element={<Navigate to="/comparisons/" replace />} />
+            <Route path="/conversion-optimization-tools/" element={<Navigate to="/free-tools/" replace />} />
 
             {/* Comparisons */}
             <Route path="/comparisons/" element={<SuspenseWrap><ComparisonsHub /></SuspenseWrap>} />
@@ -270,8 +268,6 @@ const App = () => (
             {/* Redirects */}
             <Route path="/home/" element={<Navigate to="/" replace />} />
             <Route path="/home" element={<Navigate to="/" replace />} />
-            <Route path="/best-social-proof-software/" element={<Navigate to="/comparisons/" replace />} />
-            <Route path="/conversion-optimization-tools/" element={<Navigate to="/free-tools/" replace />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>

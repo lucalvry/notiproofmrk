@@ -31,7 +31,7 @@ const glossaryTerms: GlossaryTerm[] = [
     term: "Conversion Rate Optimization (CRO)",
     slug: "conversion-rate-optimization",
     definition: "The systematic process of increasing the percentage of website visitors who take a desired action, using data analysis, testing, and UX improvements.",
-    relatedLinks: [{ label: "Conversion Optimization Tools", href: "/conversion-optimization-tools/" }],
+    relatedLinks: [{ label: "Free CRO Tools", href: "/free-tools/" }],
   },
   {
     term: "Expert Social Proof",

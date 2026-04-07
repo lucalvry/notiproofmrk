@@ -119,10 +119,6 @@ const routes = [
   { path: '/resources/help-center/', priority: '0.6', changefreq: 'monthly', lastmod: d('company') },
   { path: '/resources/glossary/', priority: '0.6', changefreq: 'monthly', lastmod: d('resource') },
 
-  // SEO landing pages
-  { path: '/social-proof-notifications/', priority: '0.8', changefreq: 'monthly', lastmod: d('core') },
-  { path: '/best-social-proof-software/', priority: '0.8', changefreq: 'monthly', lastmod: d('comparison') },
-  { path: '/conversion-optimization-tools/', priority: '0.8', changefreq: 'monthly', lastmod: d('comparison') },
 
   // Alternatives pages
   { path: '/comparisons/best-fomo-alternatives/', priority: '0.8', changefreq: 'monthly', lastmod: d('comparison') },

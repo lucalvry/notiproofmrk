@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Calculator, DollarSign, Star, Mail, ShieldCheck } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
 import CTASection from "@/components/CTASection";
+import KeyTakeaway from "@/components/KeyTakeaway";
 
 const fadeUp = { initial: { opacity: 0, y: 20 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true }, transition: { duration: 0.4 } };
 
@@ -54,6 +55,31 @@ export default function FreeToolsHub() {
             <p className="text-lg opacity-80 max-w-2xl mx-auto">
               No signup required. Use these free tools to optimize your conversions, collect reviews, and build trust.
             </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* CRO Strategy Editorial */}
+      <section className="section-padding pb-0">
+        <div className="container-tight">
+          <motion.div {...fadeUp} className="max-w-3xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-bold mb-6">Why Conversion Optimization Matters</h2>
+            <div className="prose prose-sm text-muted-foreground max-w-none space-y-4">
+              <p>
+                Conversion optimization (CRO) helps you increase the percentage of website visitors who take a desired action — purchasing a product, signing up for a trial, or booking a demo. Instead of spending more on traffic acquisition, CRO tools help you extract more revenue from your existing traffic.
+              </p>
+              <p>
+                The most effective CRO stack combines <Link to="/resources/social-proof/" className="text-primary font-semibold hover:underline">social proof</Link> (for trust), A/B testing (for optimization), and analytics (for measurement). NotiProof includes all three in a single platform, but these free tools give you a head start on understanding your conversion potential — no signup required.
+              </p>
+              <p>
+                For a deeper dive into CRO strategy, read our guides on <Link to="/resources/conversion-analytics/ab-testing-social-proof/" className="text-primary font-semibold hover:underline">A/B testing social proof</Link>, <Link to="/resources/conversion-analytics/conversion-rate-benchmarks/" className="text-primary font-semibold hover:underline">conversion rate benchmarks</Link>, and <Link to="/resources/conversion-analytics/measuring-social-proof-roi/" className="text-primary font-semibold hover:underline">measuring social proof ROI</Link>.
+              </p>
+            </div>
+            <div className="mt-6">
+              <KeyTakeaway>
+                The average return on conversion optimization is $92 for every $1 spent. These free tools help you identify opportunities before committing to a full CRO stack.
+              </KeyTakeaway>
+            </div>
           </motion.div>
         </div>
       </section>
