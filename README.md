@@ -1,58 +1,57 @@
-# Welcome to your Lovable project
+# NotiProof
 
-## Project info
+## Project overview
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+This repository powers the NotiProof marketing website at https://notiproof.com.
 
-## How can I edit this code?
+NotiProof helps businesses increase website conversions by 10–35% using real-time social proof notifications, testimonial collection, review aggregation, and trust widgets.
 
-There are several ways of editing your application.
+## What this project includes
 
-**Use Lovable**
+- Real-time social proof notifications for purchases, signups, reviews, and visitor activity
+- Testimonial and review collection tools
+- Conversion analytics and ROI tracking
+- Integrations with Shopify, WordPress, Zapier, Stripe, Google Reviews, and more
+- Fast install with a lightweight script that can be live in under 60 seconds
+- A free forever plan with no credit card required
+- Support for custom notification design, timing, and targeting rules
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+## How to edit this code
 
-Changes made via Lovable will be committed automatically to this repo.
+Edit locally using your preferred IDE.
 
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+The only requirement is having Node.js and npm installed. If needed, install Node using nvm: https://github.com/nvm-sh/nvm#installing-and-updating
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
+# Clone the repository using the project's Git URL
 git clone <YOUR_GIT_URL>
 
-# Step 2: Navigate to the project directory.
+# Navigate to the project directory
 cd <YOUR_PROJECT_NAME>
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Install dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start the local development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+## GitHub editing
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+- Open the repository in GitHub
+- Navigate to the file you want to update
+- Click the pencil icon to edit
+- Commit your changes directly from the GitHub UI
 
-**Use GitHub Codespaces**
+## GitHub Codespaces
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+- Open the repository page on GitHub
+- Click the green "Code" button
+- Select the "Codespaces" tab
+- Create a new Codespace
+- Edit files and commit changes from within the Codespace environment
 
-## What technologies are used for this project?
-
-This project is built with:
+## Technologies used
 
 - Vite
 - TypeScript
@@ -60,14 +59,16 @@ This project is built with:
 - shadcn-ui
 - Tailwind CSS
 
-## How can I deploy this project?
+## Deployment
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+Deploy this project using your chosen static site host or platform.
 
-## Can I connect a custom domain to my Lovable project?
+This site is built for modern web hosting and can be deployed to services like Vercel, Netlify, or any provider that supports Vite apps.
 
-Yes, you can!
+## Learn more
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+Project website: https://notiproof.com
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Signup: https://app.notiproof.com/signup
+
+Resources: https://notiproof.com/resources/
