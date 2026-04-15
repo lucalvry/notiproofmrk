@@ -7,7 +7,7 @@ const tocSections = [
   { id: "psychology-behind-reviews", label: "What Psychology Makes Reviews So Persuasive?" },
   { id: "review-types-social-proof", label: "Which Review Types Generate the Strongest Social Proof?" },
   { id: "amplifying-with-notifications", label: "How Do Real-Time Notifications Amplify Review Social Proof?" },
-  { id: "placement-strategies", label: "Where Should You Display Reviews for Maximum Social Proof?" },
+  { id: "placement-strategies", label: "Where Do You Display Reviews for Maximum Social Proof?" },
   { id: "aggregation-multiplier", label: "How Does Review Aggregation Multiply Social Proof?" },
   { id: "measuring-impact", label: "How Do You Measure the Social Proof Impact of Reviews?" },
 ];
@@ -27,7 +27,7 @@ export default function ReviewsAndSocialProof() {
       canonical="https://notiproof.com/resources/social-proof/reviews-and-social-proof/"
       title="How Customer Reviews Amplify Social Proof"
       readingTime="12 min read"
-      publishDate="2025-04-01"
+      publishDate="2025-04-09"
       updatedDate="2025-04-01"
       tocSections={tocSections}
       relatedArticles={relatedArticles}
@@ -78,7 +78,7 @@ export default function ReviewsAndSocialProof() {
           </section>
 
           <section id="placement-strategies">
-            <h2 className="text-2xl font-bold mt-8 mb-3">Where Should You Display Reviews for Maximum Social Proof?</h2>
+            <h2 className="text-2xl font-bold mt-8 mb-3">Where Do You Display Reviews for Maximum Social Proof?</h2>
             <p className="text-muted-foreground font-semibold mb-4" data-speakable>Place review social proof at the three critical decision points: landing page hero sections, product detail pages above the fold, and checkout/signup pages to reduce last-minute objections.</p>
             <p className="text-muted-foreground">The effectiveness of review social proof depends heavily on placement. The <Link to="/resources/social-proof/social-proof-for-websites/" className="text-primary hover:underline">social proof for websites guide</Link> covers this in detail, but for reviews specifically:</p>
             <ul className="text-muted-foreground space-y-2">

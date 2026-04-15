@@ -11,13 +11,13 @@ const clusterLinks = [
 
 const tocSections = [
   { id: "why-analytics-matter", label: "Why Do Conversion Analytics Matter?" },
-  { id: "key-metrics", label: "What Metrics Should You Track?" },
-  { id: "attribution-models", label: "Which Attribution Model Should You Use?" },
+  { id: "key-metrics", label: "What Metrics Do You Track?" },
+  { id: "attribution-models", label: "Which Attribution Model Do You Use?" },
   { id: "ab-testing", label: "How Do You A/B Test Social Proof?" },
   { id: "dashboards", label: "How Do You Build an Analytics Dashboard?" },
   { id: "social-proof-roi", label: "How Do You Measure Social Proof ROI?" },
   { id: "advanced-techniques", label: "What Advanced Techniques Drive Results?" },
-  { id: "common-mistakes", label: "What Analytics Mistakes Should You Avoid?" },
+  { id: "common-mistakes", label: "What Analytics Mistakes Do You Avoid?" },
   { id: "tools-stack", label: "What Analytics Tools Do You Need?" },
   { id: "explore", label: "Explore Related Resources" },
 ];
@@ -30,7 +30,7 @@ export default function ConversionAnalyticsPillar() {
       canonical="https://notiproof.com/resources/conversion-analytics/"
       title="Conversion Analytics: The Complete Guide to Measuring & Optimizing Your Conversion Rate"
       readingTime="15 min read"
-      publishDate="2025-01-22"
+      publishDate="2025-01-13"
       updatedDate="2025-03-25"
       tocSections={tocSections}
       relatedArticles={clusterLinks}
@@ -41,13 +41,12 @@ export default function ConversionAnalyticsPillar() {
           <p className="text-lg text-muted-foreground"><dfn><Link to="/resources/glossary/">conversion rate optimization</Link></dfn> without analytics is guesswork. Understanding which <Link to="/resources/social-proof/" className="text-primary font-semibold hover:underline">social proof</Link> elements actually drive conversions — and which are just noise — requires a structured approach to data collection, analysis, and experimentation. This guide covers everything from foundational metrics to advanced attribution modeling.</p>
 
           <h2 id="why-analytics-matter" className="text-2xl font-bold mt-12">Why Do Conversion Analytics Matter?</h2>
-          <p className="font-semibold text-foreground">Without analytics you can't distinguish between social proof elements delivering 25% lift and those delivering 2% — data-driven teams test systematically and achieve compounding gains over time.</p>
-          <p className="text-muted-foreground">Every social proof element on your website — <Link to="/product/social-proof-notifications/" className="text-primary font-semibold hover:underline">purchase notifications</Link>, <Link to="/resources/reviews/" className="text-primary font-semibold hover:underline">review widgets</Link>, <Link to="/resources/testimonials/" className="text-primary font-semibold hover:underline">testimonial displays</Link>, <Link to="/product/visitor-counter-live-visitors/" className="text-primary font-semibold hover:underline">visitor counters</Link> — has a measurable impact on conversions. Without analytics, you can't distinguish between elements that deliver a 25% conversion lift and those that deliver 2%.</p>
-          <p className="text-muted-foreground">The best conversion optimization teams make decisions based on statistical significance, not intuition. They test systematically, measure precisely, and iterate continuously. The result is compounding gains — a series of 5–10% improvements that multiply into transformative growth over time.</p>
+          <p className="text-foreground"><strong>Without analytics you can't distinguish between social proof elements delivering 25% lift and those delivering 2% — data-driven teams test systematically and achieve compounding gains over time.</strong></p>
+          <p className="text-muted-foreground">Every social proof element on your website — <Link to="/product/social-proof-notifications/" className="text-primary font-semibold hover:underline">purchase notifications</Link>, <Link to="/resources/reviews/" className="text-primary font-semibold hover:underline">review widgets</Link>, <Link to="/resources/testimonials/" className="text-primary font-semibold hover:underline">testimonial displays</Link>, <Link to="/product/visitor-counter-live-visitors/" className="text-primary font-semibold hover:underline">visitor counters</Link> — has a measurable impact on conversions. Without analytics, you can't distinguish between elements that deliver a 25% conversion lift and those that deliver 2%. The best conversion optimization teams make decisions based on statistical significance, not intuition — they test systematically, measure precisely, and iterate continuously, producing compounding gains that multiply into transformative growth over time.</p>
           <p className="text-muted-foreground">Analytics also reveal insights you'd never discover through observation alone. You might find that <Link to="/product/recent-activity-notifications/" className="text-primary font-semibold hover:underline">recent activity notifications</Link> perform 3× better on pricing pages than on the homepage, or that video testimonials convert mobile users but not desktop users. These granular insights are impossible without proper measurement infrastructure.</p>
 
-          <h2 id="key-metrics" className="text-2xl font-bold mt-12">What Conversion Metrics Should You Track?</h2>
-          <p className="font-semibold text-foreground">Focus on conversion rate, revenue per visitor, social proof engagement rate, time to conversion, bounce rate by exposure, and notification click-through rate — segmented by source and device.</p>
+          <h2 id="key-metrics" className="text-2xl font-bold mt-12">What Conversion Metrics Do You Track?</h2>
+          <p className="text-foreground"><strong>Focus on conversion rate, revenue per visitor, social proof engagement rate, time to conversion, bounce rate by exposure, and notification click-through rate — segmented by source and device.</strong></p>
           <p className="text-muted-foreground">Not all metrics are created equal. Focus on these high-signal metrics to understand your conversion performance:</p>
           <ul className="list-disc pl-6 space-y-3 text-muted-foreground">
             <li><strong className="text-foreground">Conversion rate (CR):</strong> The percentage of visitors who complete your desired action. Segment by traffic source, device, page, and user type for actionable insights. Industry benchmarks: e-commerce 2–4%, SaaS free trial 5–15%, lead gen 10–20%.</li>
@@ -58,8 +57,8 @@ export default function ConversionAnalyticsPillar() {
             <li><strong className="text-foreground">Notification click-through rate:</strong> The percentage of <Link to="/product/social-proof-notifications/" className="text-primary font-semibold hover:underline">social proof notification</Link> impressions that result in clicks. Benchmark: 2–8% depending on notification type and placement.</li>
           </ul>
 
-          <h2 id="attribution-models" className="text-2xl font-bold mt-12">Which Attribution Model Should You Use for Social Proof?</h2>
-          <p className="font-semibold text-foreground">Position-based (U-shaped) attribution is usually best — it gives 40% credit to first and last touchpoints, acknowledging both the initial trust signal and the final conversion trigger.</p>
+          <h2 id="attribution-models" className="text-2xl font-bold mt-12">Which Attribution Model Do You Use for Social Proof?</h2>
+          <p className="text-foreground"><strong>Position-based (U-shaped) attribution is usually best — it gives 40% credit to first and last touchpoints, acknowledging both the initial trust signal and the final conversion trigger.</strong></p>
           <p className="text-muted-foreground">Social proof doesn't exist in isolation — it works alongside other elements (CTAs, pricing, content) to drive conversions. Attribution modeling helps you understand social proof's contribution within this system.</p>
           <p className="text-muted-foreground"><strong className="text-foreground">Last-touch attribution:</strong> Gives 100% credit to the last interaction before conversion. Simple but misleading — it ignores the cumulative effect of multiple social proof touchpoints throughout the journey.</p>
           <p className="text-muted-foreground"><strong className="text-foreground">First-touch attribution:</strong> Credits the first interaction. Useful for understanding which social proof elements bring visitors into the funnel but ignores their role in the decision phase.</p>
@@ -68,7 +67,7 @@ export default function ConversionAnalyticsPillar() {
           <p className="text-muted-foreground">NotiProof's analytics support all four models, letting you switch between them to understand how social proof contributes at different stages. Start with position-based attribution and adjust as you gather more data.</p>
 
           <h2 id="ab-testing" className="text-2xl font-bold mt-12">How Do You A/B Test Social Proof Elements?</h2>
-          <p className="font-semibold text-foreground">Test one variable at a time — notification design, message content, placement, timing, or frequency — with at least 30,000 visitors per variation at 95% confidence before declaring a winner.</p>
+          <p className="text-foreground"><strong>Test one variable at a time — notification design, message content, placement, timing, or frequency — with at least 30,000 visitors per variation at 95% confidence before declaring a winner.</strong></p>
           <p className="text-muted-foreground">A/B testing is the most reliable way to determine which social proof configurations perform best. Use NotiProof's <Link to="/product/campaign-builder/" className="text-primary font-semibold hover:underline">campaign builder</Link> to create and run tests with statistical rigor.</p>
           <p className="text-muted-foreground"><strong className="text-foreground">What to test:</strong> Notification design (toast vs. banner vs. inline), message content ("Sarah from Austin just purchased" vs. "12 people bought this today"), placement (bottom-left vs. bottom-right vs. top), timing (immediate vs. delayed vs. scroll-triggered), and frequency (every 30s vs. every 60s vs. every 90s).</p>
           <p className="text-muted-foreground"><strong className="text-foreground">Sample size requirements:</strong> Don't call a test early. For a baseline 3% conversion rate and a minimum detectable effect of 10%, you need approximately 30,000 visitors per variation. At 95% confidence with 80% power, this ensures your results are statistically valid — not just noise.</p>
@@ -76,28 +75,28 @@ export default function ConversionAnalyticsPillar() {
           <p className="text-muted-foreground"><strong className="text-foreground">Test duration:</strong> Run tests for at least 2 full business cycles (typically 2 weeks) to account for day-of-week and time-of-day effects. Weekend traffic often behaves differently from weekday traffic, and a test that only runs Monday–Wednesday will produce skewed results.</p>
 
           <h2 id="dashboards" className="text-2xl font-bold mt-12">How Do You Build an Effective Analytics Dashboard?</h2>
-          <p className="font-semibold text-foreground">Structure dashboards in three layers: executive KPIs (4–6 tiles), tactical campaign metrics for your CRO team, and diagnostic event-level data for investigating unexpected results.</p>
+          <p className="text-foreground"><strong>Structure dashboards in three layers: executive KPIs (4–6 tiles), tactical campaign metrics for your CRO team, and diagnostic event-level data for investigating unexpected results.</strong></p>
           <p className="text-muted-foreground">An effective conversion analytics dashboard provides both high-level KPIs for leadership and granular drill-down capabilities for optimization teams. NotiProof's built-in dashboard covers social proof metrics out of the box.</p>
           <p className="text-muted-foreground"><strong className="text-foreground">Executive layer:</strong> Overall conversion rate, revenue attributed to social proof, month-over-month trend, and active campaign performance. Keep this to 4–6 tiles that answer "is it working?" at a glance.</p>
           <p className="text-muted-foreground"><strong className="text-foreground">Tactical layer:</strong> Per-campaign metrics, per-widget engagement rates, A/B test results, notification performance by type and placement. This layer helps your CRO team decide what to optimize next.</p>
           <p className="text-muted-foreground"><strong className="text-foreground">Diagnostic layer:</strong> Event-level data, session replays of social proof interactions, funnel drop-off analysis with and without social proof exposure. Use this when investigating why a test produced unexpected results.</p>
 
           <h2 id="social-proof-roi" className="text-2xl font-bold mt-12">How Do You Calculate Social Proof ROI?</h2>
-          <p className="font-semibold text-foreground">Calculate ROI by comparing revenue from social-proof-influenced conversions minus tool cost, divided by cost × 100. NotiProof customers typically see 800–2,500% ROI because marginal cost per visitor is near zero.</p>
+          <p className="text-foreground"><strong>Calculate ROI by comparing revenue from social-proof-influenced conversions minus tool cost, divided by cost × 100. NotiProof customers typically see 800–2,500% ROI because marginal cost per visitor is near zero.</strong></p>
           <p className="text-muted-foreground">Calculating the ROI of social proof requires comparing the revenue generated by social-proof-influenced conversions against the cost of implementation (tool subscription, team time, content creation).</p>
           <p className="text-muted-foreground"><strong className="text-foreground">Formula:</strong> ROI = (Revenue from social proof conversions − Cost of social proof tools and effort) / Cost × 100. NotiProof customers typically see 800–2,500% ROI based on our internal benchmarks, because the marginal cost of displaying notifications to additional visitors is essentially zero.</p>
           <p className="text-muted-foreground"><strong className="text-foreground">Incremental revenue calculation:</strong> Compare your conversion rate before and after implementing social proof. Multiply the conversion rate lift by your total traffic and average order value. For example: 50,000 monthly visitors × 1.5% conversion rate lift × $75 AOV = $56,250 additional monthly revenue.</p>
           <p className="text-muted-foreground">Don't forget indirect ROI: social proof reduces customer acquisition costs (lower CPC needed when landing pages convert better), increases customer lifetime value (higher confidence purchases lead to lower return rates), and generates user-created content that supports SEO.</p>
 
           <h2 id="advanced-techniques" className="text-2xl font-bold mt-12">What Advanced Analytics Techniques Drive the Best Results?</h2>
-          <p className="font-semibold text-foreground">Advanced teams use cohort analysis, user segmentation, predictive modeling, and incrementality testing with holdout groups to prove causation and discover non-obvious optimization opportunities.</p>
+          <p className="text-foreground"><strong>Advanced teams use cohort analysis, user segmentation, predictive modeling, and incrementality testing with holdout groups to prove causation and discover non-obvious optimization opportunities.</strong></p>
           <p className="text-muted-foreground"><strong className="text-foreground">Cohort analysis:</strong> Group users by their first social proof exposure and track their conversion behavior over time. This reveals whether social proof accelerates purchase decisions or merely concentrates them (pulling forward purchases that would have happened anyway).</p>
           <p className="text-muted-foreground"><strong className="text-foreground">Segmentation:</strong> Break down social proof performance by user segments — new vs. returning visitors, mobile vs. desktop, traffic source, geographic region, and customer intent level. You'll discover that the same notification type can perform 5× better for one segment than another.</p>
           <p className="text-muted-foreground"><strong className="text-foreground">Predictive modeling:</strong> Use historical data to predict which social proof configurations will perform best for specific traffic patterns. Machine learning models can identify non-obvious correlations between visitor characteristics and social proof responsiveness.</p>
           <p className="text-muted-foreground"><strong className="text-foreground">Incrementality testing:</strong> Use holdout groups (a small percentage of traffic that never sees social proof) to measure the true incremental impact. This is the gold standard for proving causation rather than just correlation.</p>
 
-          <h2 id="common-mistakes" className="text-2xl font-bold mt-12">What Analytics Mistakes Should You Avoid?</h2>
-          <p className="font-semibold text-foreground">The top mistakes are calling A/B tests too early, optimizing for vanity metrics instead of revenue, ignoring segment-level results, and tracking too many metrics simultaneously.</p>
+          <h2 id="common-mistakes" className="text-2xl font-bold mt-12">What Analytics Mistakes Do You Avoid?</h2>
+          <p className="text-foreground"><strong>The top mistakes are calling A/B tests too early, optimizing for vanity metrics instead of revenue, ignoring segment-level results, and tracking too many metrics simultaneously.</strong></p>
           <ul className="list-disc pl-6 space-y-3 text-muted-foreground">
             <li><strong className="text-foreground">Calling tests too early:</strong> The most common mistake. A test showing +40% after 500 visitors is almost certainly noise, not signal. Wait for statistical significance before drawing conclusions.</li>
             <li><strong className="text-foreground">Optimizing for the wrong metric:</strong> A notification with a high click-through rate but no impact on actual conversions is a distraction, not an optimization. Always tie metrics back to revenue.</li>
@@ -107,7 +106,7 @@ export default function ConversionAnalyticsPillar() {
           </ul>
 
           <h2 id="tools-stack" className="text-2xl font-bold mt-12">What Analytics Tools Do You Need?</h2>
-          <p className="font-semibold text-foreground">A complete stack includes NotiProof Analytics for social proof metrics, Google Analytics 4 for traffic data, a heatmap tool like Hotjar, and optionally a data warehouse for custom analysis.</p>
+          <p className="text-foreground"><strong>A complete stack includes NotiProof Analytics for social proof metrics, Google Analytics 4 for traffic data, a heatmap tool like Hotjar, and optionally a data warehouse for custom analysis.</strong></p>
           <p className="text-muted-foreground">A comprehensive conversion analytics setup typically includes:</p>
           <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
             <li><strong className="text-foreground">NotiProof Analytics:</strong> Purpose-built for <Link to="/resources/social-proof/" className="text-primary font-semibold hover:underline">social proof</Link> metrics — notification performance, widget engagement, A/B test results, and conversion attribution. Integrates with your existing analytics stack.</li>

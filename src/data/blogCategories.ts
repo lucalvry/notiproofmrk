@@ -56,6 +56,15 @@ export const categories: CategoryData[] = [
       { title: "Social Proof for B2B & SaaS", href: "/resources/social-proof/social-proof-b2b-saas/", desc: "How B2B and SaaS companies deploy social proof for longer sales cycles and enterprise buyers.", readTime: "14 min", date: "Apr 2025", isoDate: "2025-04-06", author: "Olayinka Olayokun" },
       { title: "User-Generated Content as Social Proof", href: "/resources/social-proof/user-generated-content-social-proof/", desc: "Collect, curate, and display customer content that converts — reviews, photos, and videos.", readTime: "13 min", date: "Apr 2025", isoDate: "2025-04-06", author: "Olayinka Olayokun" },
       { title: "Social Proof for Landing Pages", href: "/resources/social-proof/social-proof-for-landing-pages/", desc: "Where to place trust signals on landing pages for maximum conversion impact.", readTime: "12 min", date: "Apr 2025", isoDate: "2025-04-07", author: "Olayinka Olayokun" },
+      { title: "Social Proof Statistics 2026", href: "/resources/social-proof/social-proof-statistics/", desc: "50+ data points proving social proof ROI across reviews, notifications, and trust signals.", readTime: "18 min", date: "Jan 2026", isoDate: "2026-01-15", author: "Olayinka Olayokun" },
+      { title: "Social Proof for E-commerce", href: "/resources/social-proof/social-proof-ecommerce/", desc: "How to use reviews, purchase notifications, and trust badges to increase online store sales.", readTime: "16 min", date: "Feb 2026", isoDate: "2026-02-01", author: "Olayinka Olayokun" },
+      { title: "Social Proof for Local Businesses", href: "/resources/social-proof/social-proof-local-business/", desc: "Google reviews, community proof, and website trust signals for local customer acquisition.", readTime: "14 min", date: "Feb 2026", isoDate: "2026-02-10", author: "Olayinka Olayokun" },
+      { title: "Social Proof for Agencies", href: "/resources/social-proof/social-proof-agencies/", desc: "Win more clients and offer social proof as a white-label service.", readTime: "14 min", date: "Feb 2026", isoDate: "2026-02-15", author: "Olayinka Olayokun" },
+      { title: "Social Proof for Coaches & Creators", href: "/resources/social-proof/social-proof-coaches-creators/", desc: "Transformation stories, student counts, and launch strategies for digital education.", readTime: "14 min", date: "Feb 2026", isoDate: "2026-02-20", author: "Olayinka Olayokun" },
+      { title: "Social Proof for Restaurants", href: "/resources/social-proof/social-proof-restaurants/", desc: "Review management, food photography proof, and reservation notifications for hospitality.", readTime: "13 min", date: "Feb 2026", isoDate: "2026-02-25", author: "Olayinka Olayokun" },
+      { title: "AI-Generated Social Proof: Risks & Best Practices", href: "/resources/social-proof/ai-generated-social-proof/", desc: "Is AI social proof ethical? Risks of fake reviews, legal issues, and legitimate AI uses.", readTime: "13 min", date: "Mar 2026", isoDate: "2026-03-01", author: "Olayinka Olayokun" },
+      { title: "Negative Social Proof: What It Is & How to Avoid It", href: "/resources/social-proof/negative-social-proof/", desc: "How well-meaning messages accidentally normalize the wrong behavior and hurt conversions.", readTime: "12 min", date: "Mar 2026", isoDate: "2026-03-10", author: "Olayinka Olayokun" },
+      { title: "Social Proof on Social Media", href: "/resources/social-proof/social-proof-social-media/", desc: "Leverage likes, shares, UGC, and influencer endorsements to drive website conversions.", readTime: "14 min", date: "Mar 2026", isoDate: "2026-03-15", author: "Olayinka Olayokun" },
     ],
   },
   {
@@ -69,6 +78,14 @@ export const categories: CategoryData[] = [
       { title: "Review Aggregation Guide", href: "/resources/reviews/review-aggregation-guide/", desc: "How to combine reviews from Google, Trustpilot, G2, and more into a unified display on your website.", readTime: "12 min", date: "Mar 2025", isoDate: "2025-03-18", author: "Olayinka Olayokun" },
       { title: "Responding to Negative Reviews", href: "/resources/reviews/responding-to-negative-reviews/", desc: "Templates and strategies for responding to negative reviews professionally and turning them into trust signals.", readTime: "13 min", date: "Mar 2025", isoDate: "2025-03-20", author: "Olayinka Olayokun" },
       { title: "Best Review Widgets for Websites", href: "/resources/reviews/review-widgets-for-websites/", desc: "Compare review widget types, placement strategies, and design best practices for maximum conversion impact.", readTime: "12 min", date: "Mar 2025", isoDate: "2025-03-22", author: "Olayinka Olayokun" },
+      { title: "Trustpilot Reviews Guide", href: "/resources/reviews/trustpilot-reviews-guide/", desc: "How to set up, manage, and maximize your Trustpilot presence for trust and conversions.", readTime: "14 min", date: "Apr 2026", isoDate: "2026-04-01", author: "Olayinka Olayokun" },
+      { title: "G2 Reviews Guide for B2B", href: "/resources/reviews/g2-reviews-guide/", desc: "Leverage G2 reviews to build credibility in the B2B software market.", readTime: "13 min", date: "Apr 2026", isoDate: "2026-04-02", author: "Olayinka Olayokun" },
+      { title: "Yelp Reviews Guide", href: "/resources/reviews/yelp-reviews-guide/", desc: "Optimize your Yelp profile and manage reviews for local business success.", readTime: "12 min", date: "Apr 2026", isoDate: "2026-04-03", author: "Olayinka Olayokun" },
+      { title: "Online Review Statistics 2026", href: "/resources/reviews/online-review-statistics/", desc: "40+ statistics on how online reviews influence purchasing decisions.", readTime: "16 min", date: "Apr 2026", isoDate: "2026-04-04", author: "Olayinka Olayokun" },
+      { title: "How to Embed Google Reviews on Your Website", href: "/resources/reviews/embed-google-reviews/", desc: "Step-by-step methods for displaying Google reviews on any website platform.", readTime: "11 min", date: "Apr 2026", isoDate: "2026-04-05", author: "Olayinka Olayokun" },
+      { title: "Fake Reviews Detection Guide", href: "/resources/reviews/fake-reviews-detection/", desc: "How to spot, report, and protect your business from fake reviews.", readTime: "13 min", date: "Apr 2026", isoDate: "2026-04-06", author: "Olayinka Olayokun" },
+      { title: "Review Generation Strategies", href: "/resources/reviews/review-generation-strategies/", desc: "Proven systems to generate a consistent flow of authentic customer reviews.", readTime: "14 min", date: "Apr 2026", isoDate: "2026-04-07", author: "Olayinka Olayokun" },
+      { title: "Star Rating Psychology", href: "/resources/reviews/star-rating-psychology/", desc: "How star ratings influence buying decisions and what rating sweet spot drives the most sales.", readTime: "12 min", date: "Apr 2026", isoDate: "2026-04-08", author: "Olayinka Olayokun" },
     ],
   },
   {
@@ -110,6 +127,13 @@ export const categories: CategoryData[] = [
       { title: "Video Testimonials: Complete Guide", href: "/resources/testimonials/video-testimonial-guide/", desc: "Record, edit, and display video testimonials that convert 4× better than text — with zero friction for customers.", readTime: "14 min", date: "Mar 2025", isoDate: "2025-03-14", author: "Olayinka Olayokun" },
       { title: "Testimonial Page Design Guide", href: "/resources/testimonials/testimonial-page-design/", desc: "Design a testimonial page that builds trust: layouts, filtering, media formats, and conversion-optimized structure.", readTime: "11 min", date: "Mar 2025", isoDate: "2025-03-18", author: "Olayinka Olayokun" },
       { title: "Testimonial Request Email Templates", href: "/resources/testimonials/testimonial-request-email-templates/", desc: "Copy-paste email templates for requesting testimonials that get 3–5× higher response rates.", readTime: "10 min", date: "Mar 2025", isoDate: "2025-03-22", author: "Olayinka Olayokun" },
+      { title: "Video vs Text Testimonials", href: "/resources/testimonials/video-vs-text-testimonials/", desc: "Which format converts better? Data-driven comparison of video and text testimonials.", readTime: "11 min", date: "Apr 2026", isoDate: "2026-04-01", author: "Olayinka Olayokun" },
+      { title: "How to Ask for Video Testimonials", href: "/resources/testimonials/ask-for-video-testimonials/", desc: "Scripts, timing, and incentives that get customers to record video testimonials.", readTime: "12 min", date: "Apr 2026", isoDate: "2026-04-02", author: "Olayinka Olayokun" },
+      { title: "Video Testimonial Examples", href: "/resources/testimonials/video-testimonial-examples/", desc: "15 outstanding video testimonial examples and what makes each one effective.", readTime: "14 min", date: "Apr 2026", isoDate: "2026-04-03", author: "Olayinka Olayokun" },
+      { title: "Testimonials for SaaS Companies", href: "/resources/testimonials/testimonials-for-saas/", desc: "How SaaS companies collect and display testimonials to reduce trial-to-paid friction.", readTime: "13 min", date: "Apr 2026", isoDate: "2026-04-04", author: "Olayinka Olayokun" },
+      { title: "Case Study vs Testimonial", href: "/resources/testimonials/case-study-vs-testimonial/", desc: "When to use case studies vs testimonials and how to create each for maximum impact.", readTime: "11 min", date: "Apr 2026", isoDate: "2026-04-05", author: "Olayinka Olayokun" },
+      { title: "Testimonial A/B Testing", href: "/resources/testimonials/testimonial-ab-testing/", desc: "How to test testimonial placement, format, and content for higher conversions.", readTime: "12 min", date: "Apr 2026", isoDate: "2026-04-06", author: "Olayinka Olayokun" },
+      { title: "Wall of Love Guide", href: "/resources/testimonials/wall-of-love-guide/", desc: "How to create a stunning wall of love page that overwhelms visitors with social proof.", readTime: "11 min", date: "Apr 2026", isoDate: "2026-04-07", author: "Olayinka Olayokun" },
     ],
   },
   {
@@ -125,6 +149,13 @@ export const categories: CategoryData[] = [
       { title: "Cart Abandonment: Causes & Solutions", href: "/resources/cro/cart-abandonment/", desc: "Why 70% of carts are abandoned and how to recover lost revenue.", readTime: "13 min", date: "Apr 2025", isoDate: "2025-04-04", author: "Olayinka Olayokun" },
       { title: "CTA Optimization Guide", href: "/resources/cro/cta-optimization/", desc: "Button copy, color, placement, and psychology for higher click-through rates.", readTime: "12 min", date: "Apr 2025", isoDate: "2025-04-04", author: "Olayinka Olayokun" },
       { title: "Exit Intent Strategies", href: "/resources/cro/exit-intent-strategies/", desc: "Recover 3–15% of leaving visitors with smart exit-intent triggers.", readTime: "12 min", date: "Apr 2025", isoDate: "2025-04-05", author: "Olayinka Olayokun" },
+      { title: "Product Page CRO", href: "/resources/cro/product-page-cro/", desc: "Optimize product pages with reviews, imagery, and social proof for higher add-to-cart rates.", readTime: "14 min", date: "Apr 2026", isoDate: "2026-04-01", author: "Olayinka Olayokun" },
+      { title: "Checkout Optimization Guide", href: "/resources/cro/checkout-optimization/", desc: "Reduce checkout friction with trust signals, form optimization, and guest checkout.", readTime: "13 min", date: "Apr 2026", isoDate: "2026-04-02", author: "Olayinka Olayokun" },
+      { title: "Pricing Page Optimization", href: "/resources/cro/pricing-page-optimization/", desc: "Design pricing pages that convert with anchoring, social proof, and plan comparison.", readTime: "12 min", date: "Apr 2026", isoDate: "2026-04-03", author: "Olayinka Olayokun" },
+      { title: "Mobile CRO Guide", href: "/resources/cro/mobile-cro/", desc: "Optimize mobile conversions with touch-friendly design, speed, and mobile social proof.", readTime: "13 min", date: "Apr 2026", isoDate: "2026-04-04", author: "Olayinka Olayokun" },
+      { title: "Above-the-Fold Optimization", href: "/resources/cro/above-the-fold-optimization/", desc: "Maximize impact in the first viewport with hero copy, trust signals, and CTAs.", readTime: "11 min", date: "Apr 2026", isoDate: "2026-04-05", author: "Olayinka Olayokun" },
+      { title: "CRO for Agencies", href: "/resources/cro/cro-for-agencies/", desc: "How agencies can offer CRO services and deliver measurable results for clients.", readTime: "14 min", date: "Apr 2026", isoDate: "2026-04-06", author: "Olayinka Olayokun" },
+      { title: "GA4 Social Proof Tracking", href: "/resources/cro/ga4-social-proof-tracking/", desc: "Set up GA4 events and reports to measure social proof notification performance.", readTime: "12 min", date: "Apr 2026", isoDate: "2026-04-07", author: "Olayinka Olayokun" },
     ],
   },
 ];
@@ -136,7 +167,6 @@ export const allArticles = categories
 
 export const articleImages: Record<string, string> = {};
 
-// Will be populated by importing images in the component that needs them
 export function getCategoryById(id: string) {
   return categories.find((c) => c.id === id);
 }

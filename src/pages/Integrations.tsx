@@ -6,7 +6,7 @@ import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
 import SEOHead from "@/components/SEOHead";
 
-const categories = ["All", "E-commerce", "CMS", "Marketing", "Analytics", "CRM", "Payment", "Automation"];
+const categories = ["All", "E-commerce", "CMS", "Marketing", "Analytics", "CRM", "Payment", "Automation", "Funnel"];
 
 const integrationsList = [
   { name: "Shopify", category: "E-commerce", desc: "Show live purchase notifications on your Shopify store." },
@@ -20,6 +20,7 @@ const integrationsList = [
   { name: "Squarespace", category: "CMS", desc: "Add social proof to Squarespace sites." },
   { name: "Wix", category: "CMS", desc: "Easy Wix website integration." },
   { name: "Ghost", category: "CMS", desc: "Social proof for Ghost publications." },
+  { name: "Framer", category: "CMS", desc: "Social proof for Framer websites." },
   { name: "Bubble", category: "CMS", desc: "No-code Bubble app integration." },
   { name: "GA4", category: "Analytics", desc: "Sync with Google Analytics 4 data." },
   { name: "Google Tag Manager", category: "Analytics", desc: "Deploy via GTM containers." },
@@ -47,6 +48,8 @@ const integrationsList = [
   { name: "REST API", category: "Automation", desc: "Full API access for custom setups." },
   { name: "Teachable", category: "E-commerce", desc: "Course enrollment notifications." },
   { name: "Gumroad", category: "E-commerce", desc: "Digital product sale alerts." },
+  { name: "GoHighLevel", category: "Funnel", desc: "Social proof for GHL funnels and websites." },
+  { name: "Kajabi", category: "E-commerce", desc: "Course enrollment notifications." },
 ];
 
 export default function IntegrationsPage() {
@@ -63,6 +66,16 @@ export default function IntegrationsPage() {
     Shopify: "/integrations/shopify/",
     WordPress: "/integrations/wordpress/",
     Zapier: "/integrations/zapier/",
+    WooCommerce: "/integrations/woocommerce/",
+    Webflow: "/integrations/webflow/",
+    Wix: "/integrations/wix/",
+    Squarespace: "/integrations/squarespace/",
+    BigCommerce: "/integrations/bigcommerce/",
+    HubSpot: "/integrations/hubspot/",
+    Stripe: "/integrations/stripe/",
+    Framer: "/integrations/framer/",
+    GoHighLevel: "/integrations/gohighlevel/",
+    Kajabi: "/integrations/kajabi/",
   };
 
   return (

@@ -1,5 +1,6 @@
 import ResourceArticle from "@/components/ResourceArticle";
 import { Link } from "react-router-dom";
+import featuredImg from "@/assets/featured-social-proof-b2b-saas.jpg";
 
 const related = [
   { title: "SaaS Conversion Optimization", href: "/resources/cro/saas-conversion-optimization/", desc: "Trial to paid guide." },
@@ -25,17 +26,18 @@ export default function SocialProofB2BSaaS() {
       metaDescription="Learn how B2B and SaaS companies use social proof differently — from case studies and logo bars to real-time signup notifications and peer review platforms."
       canonical="https://notiproof.com/resources/social-proof/social-proof-b2b-saas/"
       title="Social Proof for B2B and SaaS: The Complete Strategy Guide"
-      publishDate="2025-04-06"
+      publishDate="2025-05-07"
       readingTime="14 min read"
       tocSections={tocSections}
       pillarLink={{ label: "Social Proof Guide", href: "/resources/social-proof/" }}
+      featuredImage={featuredImg}
       relatedArticles={related}
       content={
         <div className="space-y-6 text-muted-foreground">
           <p className="text-lg">B2B buying decisions involve longer sales cycles, multiple stakeholders, and higher stakes than consumer purchases — making <Link to="/resources/social-proof/" className="text-primary font-semibold hover:underline">social proof</Link> even more critical. 97% of B2B buyers say peer reviews and testimonials are the most reliable type of content. This guide covers how B2B and SaaS companies deploy social proof differently.</p>
 
           <h2 id="why-b2b-different" className="text-2xl font-bold text-foreground">Why Is B2B Social Proof Different?</h2>
-          <p className="font-medium text-foreground">B2B social proof differs because decisions involve 6–10 stakeholders, sales cycles last 3–9 months, average deal values are higher, and buyers need to justify the purchase to their organization — requiring more detailed, data-driven proof.</p>
+          <p className="text-foreground"><strong>B2B social proof differs because decisions involve 6–10 stakeholders, sales cycles last 3–9 months, average deal values are higher, and buyers need to justify the purchase to their organization — requiring more detailed, data-driven proof.</strong></p>
           <p>Consumer social proof ("Sarah just purchased!") works because individual decisions are fast and emotional. B2B decisions are slow, rational, and committee-driven. This means B2B social proof needs to:</p>
           <ul className="list-disc pl-6 space-y-2">
             <li><strong className="text-foreground">Address multiple stakeholders:</strong> The CEO cares about ROI, the VP of Marketing cares about features, the IT team cares about security. You need different proof for each.</li>
@@ -45,7 +47,7 @@ export default function SocialProofB2BSaaS() {
           </ul>
 
           <h2 id="best-types" className="text-2xl font-bold text-foreground">What Social Proof Types Work Best for B2B?</h2>
-          <p className="font-medium text-foreground">The five most effective B2B social proof types are: client logo bars (instant credibility), case studies with ROI data (justification), peer review platform ratings (independent validation), executive testimonials (authority), and real-time signup activity (momentum).</p>
+          <p className="text-foreground"><strong>The five most effective B2B social proof types are: client logo bars (instant credibility), case studies with ROI data (justification), peer review platform ratings (independent validation), executive testimonials (authority), and real-time signup activity (momentum).</strong></p>
           <ul className="list-disc pl-6 space-y-3">
             <li><strong className="text-foreground">Client logos:</strong> Recognizable brand logos create instant credibility. "Trusted by Shopify, HubSpot, and Stripe" tells the visitor they're in good company. Place logos above the fold on every key page.</li>
             <li><strong className="text-foreground">Case studies with ROI:</strong> The gold standard for B2B proof. "How [Company] achieved [specific metric] in [timeframe]" gives buyers the evidence they need to justify the purchase. See our <Link to="/case-studies/" className="text-primary font-semibold hover:underline">case studies</Link> for examples.</li>
@@ -55,7 +57,7 @@ export default function SocialProofB2BSaaS() {
           </ul>
 
           <h2 id="saas-specific" className="text-2xl font-bold text-foreground">How Do SaaS Companies Use Social Proof?</h2>
-          <p className="font-medium text-foreground">SaaS social proof maps to the funnel: logo bars and metrics for awareness, case studies and reviews for consideration, real-time signup notifications for decision, and community metrics for retention.</p>
+          <p className="text-foreground"><strong>SaaS social proof maps to the funnel: logo bars and metrics for awareness, case studies and reviews for consideration, real-time signup notifications for decision, and community metrics for retention.</strong></p>
           <p><Link to="/use-cases/saas-social-proof-tools-drive-sign-ups/" className="text-primary font-semibold hover:underline">SaaS companies</Link> need social proof at every funnel stage:</p>
           <ul className="list-disc pl-6 space-y-2">
             <li><strong className="text-foreground">Homepage:</strong> Logo bar + "Trusted by X,000 teams" + aggregate G2 rating</li>
@@ -66,7 +68,7 @@ export default function SocialProofB2BSaaS() {
           </ul>
 
           <h2 id="case-studies" className="text-2xl font-bold text-foreground">How Do You Build Compelling B2B Case Studies?</h2>
-          <p className="font-medium text-foreground">Compelling case studies follow a Problem → Solution → Results structure with specific, quantified metrics — "31% conversion lift in 30 days" is infinitely more persuasive than "great results" for B2B decision-makers.</p>
+          <p className="text-foreground"><strong>Compelling case studies follow a Problem → Solution → Results structure with specific, quantified metrics — "31% conversion lift in 30 days" is infinitely more persuasive than "great results" for B2B decision-makers.</strong></p>
           <p>The case study structure that consistently drives B2B conversions:</p>
           <ol className="list-decimal pl-6 space-y-2">
             <li><strong className="text-foreground">Company context:</strong> Industry, size, and specific challenge they faced</li>
@@ -78,15 +80,15 @@ export default function SocialProofB2BSaaS() {
           <p>See examples: <Link to="/case-studies/saas-conversion/" className="text-primary font-semibold hover:underline">SaaS case study</Link> · <Link to="/case-studies/ecommerce-stylehaven/" className="text-primary font-semibold hover:underline">E-commerce case study</Link> · <Link to="/case-studies/agency-brightpath/" className="text-primary font-semibold hover:underline">Agency case study</Link></p>
 
           <h2 id="website-placement" className="text-2xl font-bold text-foreground">Where Do You Place B2B Social Proof on Your Website?</h2>
-          <p className="font-medium text-foreground">B2B social proof placement follows the decision journey: logos above the fold (awareness), testimonials in feature sections (consideration), case studies on dedicated pages (evaluation), and real-time notifications on pricing/signup pages (decision).</p>
+          <p className="text-foreground"><strong>B2B social proof placement follows the decision journey: logos above the fold (awareness), testimonials in feature sections (consideration), case studies on dedicated pages (evaluation), and real-time notifications on pricing/signup pages (decision).</strong></p>
           <p>The key difference from B2C: B2B visitors explore more pages before converting. Social proof should be present on every page they visit, matched to the page's role in the buyer journey. <Link to="/product/campaign-builder/" className="text-primary font-semibold hover:underline">NotiProof's campaign builder</Link> lets you configure page-specific notification rules for each stage.</p>
 
           <h2 id="enterprise" className="text-2xl font-bold text-foreground">How Do You Handle Enterprise Social Proof?</h2>
-          <p className="font-medium text-foreground">Enterprise social proof requires named logos (not just counts), security certifications (SOC 2, GDPR), industry-specific case studies, and NDA-compliant anonymized references — plus direct peer connections for high-value deals.</p>
+          <p className="text-foreground"><strong>Enterprise social proof requires named logos (not just counts), security certifications (SOC 2, GDPR), industry-specific case studies, and NDA-compliant anonymized references — plus direct peer connections for high-value deals.</strong></p>
           <p>Enterprise buyers have unique social proof requirements. Security certifications (SOC 2, ISO 27001) are table stakes. Industry-specific references matter more than general testimonials. And for large deals, buyers will want to speak directly with existing customers — so build a formal customer reference program.</p>
 
           <h2 id="metrics" className="text-2xl font-bold text-foreground">How Do You Measure B2B Social Proof Impact?</h2>
-          <p className="font-medium text-foreground">Measure B2B social proof impact through demo request rate, trial activation rate, case study page engagement, notification click-through rate, and pipeline velocity — tracking how social proof exposure correlates with faster and larger deal closures.</p>
+          <p className="text-foreground"><strong>Measure B2B social proof impact through demo request rate, trial activation rate, case study page engagement, notification click-through rate, and pipeline velocity — tracking how social proof exposure correlates with faster and larger deal closures.</strong></p>
           <p>B2B measurement is more complex than B2C because conversion cycles are longer. Key metrics:</p>
           <ul className="list-disc pl-6 space-y-2">
             <li><strong className="text-foreground">Demo/trial request rate:</strong> By page and social proof exposure</li>

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import logo from "@/assets/notiproof-logo.png";
 
 const footerLinks = {
-  Platform: [
+  Product: [
     { label: "Notifications", href: "/product/social-proof-notifications/" },
     { label: "Testimonials", href: "/product/testimonials-collection-text-image-video/" },
     { label: "Video Recorder", href: "/product/video-testimonial-recorder/" },
@@ -21,30 +21,30 @@ const footerLinks = {
   Integrations: [
     { label: "Shopify", href: "/integrations/shopify/" },
     { label: "WordPress", href: "/integrations/wordpress/" },
+    { label: "WooCommerce", href: "/integrations/woocommerce/" },
+    { label: "Webflow", href: "/integrations/webflow/" },
+    { label: "Wix", href: "/integrations/wix/" },
     { label: "Zapier", href: "/integrations/zapier/" },
+    { label: "Stripe", href: "/integrations/stripe/" },
+    { label: "All Integrations →", href: "/integrations/" },
   ],
-  Learn: [
+  Resources: [
     { label: "Blog", href: "/resources/blog/" },
-    { label: "Social Proof Guide", href: "/resources/social-proof/" },
-    { label: "Reviews Guide", href: "/resources/reviews/" },
-    { label: "Testimonials Guide", href: "/resources/testimonials/" },
-    { label: "Conversion Analytics", href: "/resources/conversion-analytics/" },
-    { label: "Website Trust Guide", href: "/resources/website-trust/" },
+    { label: "Help Center", href: "/resources/help-center/" },
+    { label: "Glossary", href: "/resources/glossary/" },
+    { label: "Free Tools", href: "/free-tools/" },
     { label: "Comparisons", href: "/comparisons/" },
     { label: "Case Studies", href: "/case-studies/" },
-    { label: "Free Tools", href: "/free-tools/" },
-    { label: "Glossary", href: "/resources/glossary/" },
-    { label: "Help Center", href: "/resources/help-center/" },
   ],
   Company: [
     { label: "About", href: "/company/about/" },
     { label: "Contact", href: "/company/contact/" },
     { label: "Careers", href: "/company/careers/" },
     { label: "Testimonials", href: "/testimonials/" },
+    { label: "Pricing", href: "/pricing/" },
     { label: "Privacy Policy", href: "/privacy-policy/" },
     { label: "Terms of Service", href: "/terms-of-service/" },
     { label: "Cookie Policy", href: "/cookie-policy/" },
-    { label: "Pricing", href: "/pricing/" },
   ],
 };
 
@@ -52,8 +52,9 @@ export default function Footer() {
   return (
     <footer className="bg-dark text-dark-foreground" role="contentinfo">
       <div className="container-tight section-padding">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 mb-12">
-          <div className="col-span-2 md:col-span-4 lg:col-span-1">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-7 gap-8 mb-12">
+          {/* Brand column — spans 2 */}
+          <div className="col-span-2">
             <Link to="/">
               <img src={logo} alt="NotiProof — Social Proof & Testimonial Platform" className="h-8 mb-4 brightness-0 invert" />
             </Link>

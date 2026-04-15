@@ -136,9 +136,9 @@ export default function TopicDetail() {
       {/* Key Topics / Sub-topic cards */}
       <section className="section-padding pt-4 pb-8">
         <div className="container-tight max-w-5xl">
-          <motion.h2 {...fadeUp} className="text-xl font-bold mb-4">Key Topics</motion.h2>
+          <motion.h2 {...fadeUp} className="text-xl font-bold mb-4">Featured Articles</motion.h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {category.articles.map((a, i) => (
+            {category.articles.slice(0, 4).map((a, i) => (
               <motion.div
                 key={a.href}
                 initial={{ opacity: 0, y: 16 }}

@@ -1,5 +1,6 @@
 import ResourceArticle from "@/components/ResourceArticle";
 import { Link } from "react-router-dom";
+import featuredImg from "@/assets/featured-social-proof-notifications.jpg";
 
 const related = [
   { title: "What Is Social Proof?", href: "/resources/social-proof/what-is-social-proof/", desc: "The complete social proof definition." },
@@ -11,11 +12,11 @@ const tocSections = [
   { id: "what-are-notifications", label: "What Are Social Proof Notifications?" },
   { id: "types", label: "What Types of Notifications Exist?" },
   { id: "psychology", label: "Why Do Notifications Convert?" },
-  { id: "placement", label: "Where Should You Display Notifications?" },
+  { id: "placement", label: "Where Do You Display Notifications?" },
   { id: "design", label: "How Do You Design Effective Notifications?" },
   { id: "implementation", label: "How Do You Implement Notifications?" },
   { id: "testing", label: "How Do You Optimize Notification Performance?" },
-  { id: "mistakes", label: "What Mistakes Should You Avoid?" },
+  { id: "mistakes", label: "What Mistakes Do You Avoid?" },
   { id: "key-takeaways", label: "Key Takeaways" },
 ];
 
@@ -26,23 +27,24 @@ export default function SocialProofNotificationsGuide() {
       metaDescription="Learn how social proof notifications work, which types drive the most conversions, and how to implement them on any website for 10–35% conversion lifts."
       canonical="https://notiproof.com/resources/social-proof/social-proof-notifications-guide/"
       title="Social Proof Notifications: The Complete Guide to Real-Time Trust Signals"
-      publishDate="2025-04-05"
+      publishDate="2025-04-18"
       readingTime="15 min read"
       tocSections={tocSections}
       pillarLink={{ label: "Social Proof Guide", href: "/resources/social-proof/" }}
+      featuredImage={featuredImg}
       relatedArticles={related}
       content={
         <div className="space-y-6 text-muted-foreground">
           <p className="text-lg"><dfn><Link to="/resources/glossary/#social-proof-notification" className="text-primary font-semibold hover:underline">Social proof notifications</Link></dfn> are real-time alerts displayed on your website showing visitor activity — recent purchases, signups, reviews, and page views — that create trust and urgency for other visitors. They're the digital equivalent of a busy store: when people see others buying, they're more likely to buy too.</p>
 
           <h2 id="what-are-notifications" className="text-2xl font-bold text-foreground">What Are Social Proof Notifications?</h2>
-          <p className="font-medium text-foreground">Social proof notifications are small, non-intrusive popups that display real visitor activity on your website — "Sarah from Austin just purchased Product X" or "47 people are viewing this page" — creating trust and urgency that increases conversions by 10–35%.</p>
+          <p className="text-foreground"><strong>Social proof notifications are small, non-intrusive popups that display real visitor activity on your website — "Sarah from Austin just purchased Product X" or "47 people are viewing this page" — creating trust and urgency that increases conversions by 10–35%.</strong></p>
           <p>These notifications typically appear as small toast-style popups in the corner of the screen, showing recent activity from real visitors. They leverage <Link to="/resources/social-proof/social-proof-psychology/" className="text-primary font-semibold hover:underline">social proof psychology</Link> — the tendency to follow others' behavior — in the most direct way possible: showing the behavior happening in real time.</p>
           <p>Unlike static testimonials or review widgets, social proof notifications are dynamic and timely. They create a sense of a living, active marketplace — transforming a static webpage into a place where things are happening right now. This immediacy is what makes them so effective at driving conversions.</p>
           <p><Link to="/product/social-proof-notifications/" className="text-primary font-semibold hover:underline">NotiProof's notification system</Link> displays real events from your website, integrations, and review platforms — never fabricated data. Authenticity is non-negotiable for sustainable social proof.</p>
 
           <h2 id="types" className="text-2xl font-bold text-foreground">What Types of Social Proof Notifications Exist?</h2>
-          <p className="font-medium text-foreground">The six main notification types are recent activity (purchases/signups), live visitor counts, review notifications, aggregate statistics, milestone alerts, and trending/popular indicators — each suited to different business models and funnel stages.</p>
+          <p className="text-foreground"><strong>The six main notification types are recent activity (purchases/signups), live visitor counts, review notifications, aggregate statistics, milestone alerts, and trending/popular indicators — each suited to different business models and funnel stages.</strong></p>
           <ul className="list-disc pl-6 space-y-3">
             <li><strong className="text-foreground">Recent purchase/signup notifications:</strong> "Sarah from Austin just purchased [Product]" — the most common type. Creates urgency and validates the specific product. Best for: e-commerce, SaaS signups.</li>
             <li><strong className="text-foreground">Live visitor counters:</strong> "47 people are viewing this page right now" via <Link to="/product/visitor-counter-live-visitors/" className="text-primary font-semibold hover:underline">NotiProof's visitor counter</Link>. Creates crowd wisdom and scarcity signals. Best for: product pages, pricing pages.</li>
@@ -53,7 +55,7 @@ export default function SocialProofNotificationsGuide() {
           </ul>
 
           <h2 id="psychology" className="text-2xl font-bold text-foreground">Why Do Social Proof Notifications Convert?</h2>
-          <p className="font-medium text-foreground">Notifications convert because they trigger three psychological mechanisms simultaneously: informational influence (others' behavior signals correct behavior), the bandwagon effect (desire to join the majority), and FOMO (fear of missing what others are getting).</p>
+          <p className="text-foreground"><strong>Notifications convert because they trigger three psychological mechanisms simultaneously: informational influence (others' behavior signals correct behavior), the bandwagon effect (desire to join the majority), and FOMO (fear of missing what others are getting).</strong></p>
           <p>Social proof notifications are uniquely effective because they compress multiple <Link to="/resources/social-proof/social-proof-psychology/" className="text-primary font-semibold hover:underline">psychological triggers</Link> into a single, timely signal:</p>
           <ul className="list-disc pl-6 space-y-2">
             <li><strong className="text-foreground">Informational influence:</strong> "Others are buying, so it must be good" reduces uncertainty</li>
@@ -64,8 +66,8 @@ export default function SocialProofNotificationsGuide() {
           </ul>
           <p>Research shows that real-time social proof is 3–5× more persuasive than static testimonials because of the immediacy and perceived authenticity. A notification saying "purchased 2 minutes ago" feels more trustworthy than a testimonial from "last year" because it's clearly current and automated rather than curated.</p>
 
-          <h2 id="placement" className="text-2xl font-bold text-foreground">Where Should You Display Notifications?</h2>
-          <p className="font-medium text-foreground">Display notifications on product pages (purchase notifications), pricing pages (signup activity + visitor counts), landing pages (aggregate stats), and checkout (trust reinforcement) — but never on pages where they distract from the primary action.</p>
+          <h2 id="placement" className="text-2xl font-bold text-foreground">Where Do You Display Notifications?</h2>
+          <p className="text-foreground"><strong>Display notifications on product pages (purchase notifications), pricing pages (signup activity + visitor counts), landing pages (aggregate stats), and checkout (trust reinforcement) — but never on pages where they distract from the primary action.</strong></p>
           <p>Notification placement should match the page's conversion goal:</p>
           <ul className="list-disc pl-6 space-y-2">
             <li><strong className="text-foreground">Product pages:</strong> Recent purchases for the specific product, "X people viewing this," and review notifications</li>
@@ -77,7 +79,7 @@ export default function SocialProofNotificationsGuide() {
           <p>NotiProof's <Link to="/product/campaign-builder/" className="text-primary font-semibold hover:underline">campaign builder</Link> lets you set page-specific rules, so each page type shows the most relevant notification type.</p>
 
           <h2 id="design" className="text-2xl font-bold text-foreground">How Do You Design Effective Notifications?</h2>
-          <p className="font-medium text-foreground">Effective notifications use a compact toast format, include a human element (name + location), display specific details (product name + time), use subtle animation to attract attention without disrupting, and match your brand's visual design.</p>
+          <p className="text-foreground"><strong>Effective notifications use a compact toast format, include a human element (name + location), display specific details (product name + time), use subtle animation to attract attention without disrupting, and match your brand's visual design.</strong></p>
           <p>Design principles for social proof notifications:</p>
           <ul className="list-disc pl-6 space-y-2">
             <li><strong className="text-foreground">Human element:</strong> Include first name and location — "Sarah from Austin" is more persuasive than anonymous data</li>
@@ -89,7 +91,7 @@ export default function SocialProofNotificationsGuide() {
           </ul>
 
           <h2 id="implementation" className="text-2xl font-bold text-foreground">How Do You Implement Social Proof Notifications?</h2>
-          <p className="font-medium text-foreground">With NotiProof, implementation takes under 5 minutes: install one script tag, connect your data sources (Shopify, Stripe, manual events), configure notification design and rules in the dashboard, and go live — no coding required.</p>
+          <p className="text-foreground"><strong>With NotiProof, implementation takes under 5 minutes: install one script tag, connect your data sources (Shopify, Stripe, manual events), configure notification design and rules in the dashboard, and go live — no coding required.</strong></p>
           <p>NotiProof works with every major platform:</p>
           <ul className="list-disc pl-6 space-y-2">
             <li><strong className="text-foreground"><Link to="/integrations/shopify/" className="text-primary font-semibold hover:underline">Shopify</Link>:</strong> Automatic purchase event tracking — install and it works</li>
@@ -99,7 +101,7 @@ export default function SocialProofNotificationsGuide() {
           </ul>
 
           <h2 id="testing" className="text-2xl font-bold text-foreground">How Do You Optimize Notification Performance?</h2>
-          <p className="font-medium text-foreground">Optimize by A/B testing notification design, message content, display frequency (every 30s vs. 60s vs. 90s), position (bottom-left vs. bottom-right), and timing (immediate vs. scroll-triggered) — track click-through rate and downstream conversions.</p>
+          <p className="text-foreground"><strong>Optimize by A/B testing notification design, message content, display frequency (every 30s vs. 60s vs. 90s), position (bottom-left vs. bottom-right), and timing (immediate vs. scroll-triggered) — track click-through rate and downstream conversions.</strong></p>
           <p>NotiProof's built-in <Link to="/resources/conversion-analytics/ab-testing-social-proof/" className="text-primary font-semibold hover:underline">A/B testing</Link> lets you test notification variants against each other. Key variables to test:</p>
           <ul className="list-disc pl-6 space-y-2">
             <li><strong className="text-foreground">Message format:</strong> "[Name] from [City] just purchased [Product]" vs. "[X] people bought [Product] today"</li>
@@ -108,8 +110,8 @@ export default function SocialProofNotificationsGuide() {
             <li><strong className="text-foreground">Trigger:</strong> Show on page load vs. after 10 seconds vs. on scroll past 25%</li>
           </ul>
 
-          <h2 id="mistakes" className="text-2xl font-bold text-foreground">What Social Proof Notification Mistakes Should You Avoid?</h2>
-          <p className="font-medium text-foreground">The biggest mistakes are using fake data (destroys trust permanently), showing notifications too frequently (creates annoyance), ignoring mobile optimization (40% of visitors), and not tracking actual conversion impact.</p>
+          <h2 id="mistakes" className="text-2xl font-bold text-foreground">What Social Proof Notification Mistakes Do You Avoid?</h2>
+          <p className="text-foreground"><strong>The biggest mistakes are using fake data (destroys trust permanently), showing notifications too frequently (creates annoyance), ignoring mobile optimization (40% of visitors), and not tracking actual conversion impact.</strong></p>
           <ul className="list-disc pl-6 space-y-2">
             <li><strong className="text-foreground">Fake notifications:</strong> Never fabricate purchase data. Consumers can detect fake social proof, and the backlash is severe. NotiProof only displays real, verified events.</li>
             <li><strong className="text-foreground">Over-notification:</strong> Showing alerts every 15 seconds overwhelms visitors. Use frequency capping.</li>

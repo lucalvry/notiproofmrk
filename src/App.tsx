@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { lazy, Suspense } from "react";
 import Layout from "./components/Layout";
+import ScrollToTop from "./components/ScrollToTop";
 import CookieConsentBanner from "./components/CookieConsent";
 
 // Existing pages
@@ -39,6 +40,16 @@ const LocalBusinessUseCase = lazy(() => import("./pages/use-cases/LocalBusiness"
 const ShopifyIntegration = lazy(() => import("./pages/integrations/ShopifyIntegration"));
 const WordPressIntegration = lazy(() => import("./pages/integrations/WordPressIntegration"));
 const ZapierIntegration = lazy(() => import("./pages/integrations/ZapierIntegration"));
+const WooCommerceIntegration = lazy(() => import("./pages/integrations/WooCommerceIntegration"));
+const WebflowIntegration = lazy(() => import("./pages/integrations/WebflowIntegration"));
+const WixIntegration = lazy(() => import("./pages/integrations/WixIntegration"));
+const SquarespaceIntegration = lazy(() => import("./pages/integrations/SquarespaceIntegration"));
+const BigCommerceIntegration = lazy(() => import("./pages/integrations/BigCommerceIntegration"));
+const HubSpotIntegration = lazy(() => import("./pages/integrations/HubSpotIntegration"));
+const StripeIntegration = lazy(() => import("./pages/integrations/StripeIntegration"));
+const FramerIntegration = lazy(() => import("./pages/integrations/FramerIntegration"));
+const GoHighLevelIntegration = lazy(() => import("./pages/integrations/GoHighLevelIntegration"));
+const KajabiIntegration = lazy(() => import("./pages/integrations/KajabiIntegration"));
 
 // Company pages
 const CompanyHub = lazy(() => import("./pages/company/CompanyHub"));
@@ -65,6 +76,14 @@ const HowToCollectGoogleReviews = lazy(() => import("./pages/resources/reviews/H
 const ReviewAggregationGuide = lazy(() => import("./pages/resources/reviews/ReviewAggregationGuide"));
 const RespondingToNegativeReviews = lazy(() => import("./pages/resources/reviews/RespondingToNegativeReviews"));
 const ReviewWidgetsForWebsites = lazy(() => import("./pages/resources/reviews/ReviewWidgetsForWebsites"));
+const TrustpilotReviewsGuide = lazy(() => import("./pages/resources/reviews/TrustpilotReviewsGuide"));
+const G2ReviewsGuide = lazy(() => import("./pages/resources/reviews/G2ReviewsGuide"));
+const YelpReviewsGuide = lazy(() => import("./pages/resources/reviews/YelpReviewsGuide"));
+const OnlineReviewStatistics = lazy(() => import("./pages/resources/reviews/OnlineReviewStatistics"));
+const EmbedGoogleReviews = lazy(() => import("./pages/resources/reviews/EmbedGoogleReviews"));
+const FakeReviewsDetection = lazy(() => import("./pages/resources/reviews/FakeReviewsDetection"));
+const ReviewGenerationStrategies = lazy(() => import("./pages/resources/reviews/ReviewGenerationStrategies"));
+const StarRatingPsychology = lazy(() => import("./pages/resources/reviews/StarRatingPsychology"));
 
 // Testimonials cluster
 const TestimonialsPillar = lazy(() => import("./pages/resources/testimonials/TestimonialsPillar"));
@@ -72,6 +91,13 @@ const HowToCollectTestimonials = lazy(() => import("./pages/resources/testimonia
 const VideoTestimonialGuide = lazy(() => import("./pages/resources/testimonials/VideoTestimonialGuide"));
 const TestimonialPageDesign = lazy(() => import("./pages/resources/testimonials/TestimonialPageDesign"));
 const TestimonialRequestEmailTemplates = lazy(() => import("./pages/resources/testimonials/TestimonialRequestEmailTemplates"));
+const VideoVsTextTestimonials = lazy(() => import("./pages/resources/testimonials/VideoVsTextTestimonials"));
+const AskForVideoTestimonials = lazy(() => import("./pages/resources/testimonials/AskForVideoTestimonials"));
+const VideoTestimonialExamples = lazy(() => import("./pages/resources/testimonials/VideoTestimonialExamples"));
+const TestimonialsForSaaS = lazy(() => import("./pages/resources/testimonials/TestimonialsForSaaS"));
+const CaseStudyVsTestimonial = lazy(() => import("./pages/resources/testimonials/CaseStudyVsTestimonial"));
+const TestimonialABTesting = lazy(() => import("./pages/resources/testimonials/TestimonialABTesting"));
+const WallOfLoveGuide = lazy(() => import("./pages/resources/testimonials/WallOfLoveGuide"));
 
 // Conversion Analytics cluster
 const ConversionAnalyticsPillar = lazy(() => import("./pages/resources/conversion-analytics/ConversionAnalyticsPillar"));
@@ -89,12 +115,28 @@ const SaaSCRO = lazy(() => import("./pages/resources/cro/SaaSCRO"));
 const CartAbandonment = lazy(() => import("./pages/resources/cro/CartAbandonment"));
 const CTAOptimization = lazy(() => import("./pages/resources/cro/CTAOptimization"));
 const ExitIntentStrategies = lazy(() => import("./pages/resources/cro/ExitIntentStrategies"));
+const ProductPageCRO = lazy(() => import("./pages/resources/cro/ProductPageCRO"));
+const CheckoutOptimization = lazy(() => import("./pages/resources/cro/CheckoutOptimization"));
+const PricingPageOptimization = lazy(() => import("./pages/resources/cro/PricingPageOptimization"));
+const MobileCRO = lazy(() => import("./pages/resources/cro/MobileCRO"));
+const AboveTheFoldOptimization = lazy(() => import("./pages/resources/cro/AboveTheFoldOptimization"));
+const CROForAgencies = lazy(() => import("./pages/resources/cro/CROForAgencies"));
+const GA4SocialProofTracking = lazy(() => import("./pages/resources/cro/GA4SocialProofTracking"));
 
 // Social Proof expansion
 const SocialProofNotificationsGuide = lazy(() => import("./pages/resources/social-proof/SocialProofNotifications"));
 const SocialProofB2BSaaS = lazy(() => import("./pages/resources/social-proof/SocialProofB2BSaaS"));
 const UserGeneratedContentSocialProof = lazy(() => import("./pages/resources/social-proof/UserGeneratedContentSocialProof"));
 const SocialProofLandingPages = lazy(() => import("./pages/resources/social-proof/SocialProofLandingPages"));
+const SocialProofStatistics = lazy(() => import("./pages/resources/social-proof/SocialProofStatistics"));
+const SocialProofEcommerce = lazy(() => import("./pages/resources/social-proof/SocialProofEcommerce"));
+const SocialProofLocalBusiness = lazy(() => import("./pages/resources/social-proof/SocialProofLocalBusiness"));
+const SocialProofAgencies = lazy(() => import("./pages/resources/social-proof/SocialProofAgencies"));
+const SocialProofCoachesCreators = lazy(() => import("./pages/resources/social-proof/SocialProofCoachesCreators"));
+const SocialProofRestaurants = lazy(() => import("./pages/resources/social-proof/SocialProofRestaurants"));
+const AIGeneratedSocialProof = lazy(() => import("./pages/resources/social-proof/AIGeneratedSocialProof"));
+const NegativeSocialProof = lazy(() => import("./pages/resources/social-proof/NegativeSocialProof"));
+const SocialProofSocialMedia = lazy(() => import("./pages/resources/social-proof/SocialProofSocialMedia"));
 
 // Website Trust cluster
 const WebsiteTrustPillar = lazy(() => import("./pages/resources/website-trust/WebsiteTrustPillar"));
@@ -120,6 +162,9 @@ const BestFomoAlternatives = lazy(() => import("./pages/comparisons/BestFomoAlte
 const BestTrustPulseAlternatives = lazy(() => import("./pages/comparisons/BestTrustPulseAlternatives"));
 const BestProveSourceAlternatives = lazy(() => import("./pages/comparisons/BestProveSourceAlternatives"));
 const SocialProofPricingComparison = lazy(() => import("./pages/comparisons/SocialProofPricingComparison"));
+const NotiProofVsYotpo = lazy(() => import("./pages/comparisons/NotiProofVsYotpo"));
+const NotiProofVsTrustmary = lazy(() => import("./pages/comparisons/NotiProofVsTrustmary"));
+const FreeSocialProofTools = lazy(() => import("./pages/comparisons/FreeSocialProofTools"));
 
 // Case Studies
 const CaseStudiesHub = lazy(() => import("./pages/case-studies/CaseStudiesHub"));
@@ -135,6 +180,10 @@ const SocialProofROICalculator = lazy(() => import("./pages/tools/SocialProofROI
 const GoogleReviewLinkGenerator = lazy(() => import("./pages/tools/GoogleReviewLinkGenerator"));
 const TestimonialEmailGenerator = lazy(() => import("./pages/tools/TestimonialEmailGenerator"));
 const WebsiteTrustScoreChecker = lazy(() => import("./pages/tools/WebsiteTrustScoreChecker"));
+const ConversionRateCalculator = lazy(() => import("./pages/tools/ConversionRateCalculator"));
+const SocialProofAuditChecklist = lazy(() => import("./pages/tools/SocialProofAuditChecklist"));
+const CartAbandonmentCalculator = lazy(() => import("./pages/tools/CartAbandonmentCalculator"));
+const ReviewResponseGenerator = lazy(() => import("./pages/tools/ReviewResponseGenerator"));
 
 // Legal
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
@@ -158,6 +207,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop />
         <CookieConsentBanner />
         <Routes>
           <Route element={<Layout />}>
@@ -190,6 +240,16 @@ const App = () => (
             <Route path="/integrations/shopify/" element={<SuspenseWrap><ShopifyIntegration /></SuspenseWrap>} />
             <Route path="/integrations/wordpress/" element={<SuspenseWrap><WordPressIntegration /></SuspenseWrap>} />
             <Route path="/integrations/zapier/" element={<SuspenseWrap><ZapierIntegration /></SuspenseWrap>} />
+            <Route path="/integrations/woocommerce/" element={<SuspenseWrap><WooCommerceIntegration /></SuspenseWrap>} />
+            <Route path="/integrations/webflow/" element={<SuspenseWrap><WebflowIntegration /></SuspenseWrap>} />
+            <Route path="/integrations/wix/" element={<SuspenseWrap><WixIntegration /></SuspenseWrap>} />
+            <Route path="/integrations/squarespace/" element={<SuspenseWrap><SquarespaceIntegration /></SuspenseWrap>} />
+            <Route path="/integrations/bigcommerce/" element={<SuspenseWrap><BigCommerceIntegration /></SuspenseWrap>} />
+            <Route path="/integrations/hubspot/" element={<SuspenseWrap><HubSpotIntegration /></SuspenseWrap>} />
+            <Route path="/integrations/stripe/" element={<SuspenseWrap><StripeIntegration /></SuspenseWrap>} />
+            <Route path="/integrations/framer/" element={<SuspenseWrap><FramerIntegration /></SuspenseWrap>} />
+            <Route path="/integrations/gohighlevel/" element={<SuspenseWrap><GoHighLevelIntegration /></SuspenseWrap>} />
+            <Route path="/integrations/kajabi/" element={<SuspenseWrap><KajabiIntegration /></SuspenseWrap>} />
 
             {/* Company */}
             <Route path="/company/" element={<SuspenseWrap><CompanyHub /></SuspenseWrap>} />
@@ -213,6 +273,15 @@ const App = () => (
             <Route path="/resources/social-proof/social-proof-b2b-saas/" element={<SuspenseWrap><SocialProofB2BSaaS /></SuspenseWrap>} />
             <Route path="/resources/social-proof/user-generated-content-social-proof/" element={<SuspenseWrap><UserGeneratedContentSocialProof /></SuspenseWrap>} />
             <Route path="/resources/social-proof/social-proof-for-landing-pages/" element={<SuspenseWrap><SocialProofLandingPages /></SuspenseWrap>} />
+            <Route path="/resources/social-proof/social-proof-statistics/" element={<SuspenseWrap><SocialProofStatistics /></SuspenseWrap>} />
+            <Route path="/resources/social-proof/social-proof-ecommerce/" element={<SuspenseWrap><SocialProofEcommerce /></SuspenseWrap>} />
+            <Route path="/resources/social-proof/social-proof-local-business/" element={<SuspenseWrap><SocialProofLocalBusiness /></SuspenseWrap>} />
+            <Route path="/resources/social-proof/social-proof-agencies/" element={<SuspenseWrap><SocialProofAgencies /></SuspenseWrap>} />
+            <Route path="/resources/social-proof/social-proof-coaches-creators/" element={<SuspenseWrap><SocialProofCoachesCreators /></SuspenseWrap>} />
+            <Route path="/resources/social-proof/social-proof-restaurants/" element={<SuspenseWrap><SocialProofRestaurants /></SuspenseWrap>} />
+            <Route path="/resources/social-proof/ai-generated-social-proof/" element={<SuspenseWrap><AIGeneratedSocialProof /></SuspenseWrap>} />
+            <Route path="/resources/social-proof/negative-social-proof/" element={<SuspenseWrap><NegativeSocialProof /></SuspenseWrap>} />
+            <Route path="/resources/social-proof/social-proof-social-media/" element={<SuspenseWrap><SocialProofSocialMedia /></SuspenseWrap>} />
 
             {/* Resources — Reviews cluster */}
             <Route path="/resources/reviews/" element={<SuspenseWrap><ReviewsPillar /></SuspenseWrap>} />
@@ -220,6 +289,14 @@ const App = () => (
             <Route path="/resources/reviews/review-aggregation-guide/" element={<SuspenseWrap><ReviewAggregationGuide /></SuspenseWrap>} />
             <Route path="/resources/reviews/responding-to-negative-reviews/" element={<SuspenseWrap><RespondingToNegativeReviews /></SuspenseWrap>} />
             <Route path="/resources/reviews/review-widgets-for-websites/" element={<SuspenseWrap><ReviewWidgetsForWebsites /></SuspenseWrap>} />
+            <Route path="/resources/reviews/trustpilot-reviews-guide/" element={<SuspenseWrap><TrustpilotReviewsGuide /></SuspenseWrap>} />
+            <Route path="/resources/reviews/g2-reviews-guide/" element={<SuspenseWrap><G2ReviewsGuide /></SuspenseWrap>} />
+            <Route path="/resources/reviews/yelp-reviews-guide/" element={<SuspenseWrap><YelpReviewsGuide /></SuspenseWrap>} />
+            <Route path="/resources/reviews/online-review-statistics/" element={<SuspenseWrap><OnlineReviewStatistics /></SuspenseWrap>} />
+            <Route path="/resources/reviews/embed-google-reviews/" element={<SuspenseWrap><EmbedGoogleReviews /></SuspenseWrap>} />
+            <Route path="/resources/reviews/fake-reviews-detection/" element={<SuspenseWrap><FakeReviewsDetection /></SuspenseWrap>} />
+            <Route path="/resources/reviews/review-generation-strategies/" element={<SuspenseWrap><ReviewGenerationStrategies /></SuspenseWrap>} />
+            <Route path="/resources/reviews/star-rating-psychology/" element={<SuspenseWrap><StarRatingPsychology /></SuspenseWrap>} />
 
             {/* Resources — Testimonials cluster */}
             <Route path="/resources/testimonials/" element={<SuspenseWrap><TestimonialsPillar /></SuspenseWrap>} />
@@ -227,6 +304,13 @@ const App = () => (
             <Route path="/resources/testimonials/video-testimonial-guide/" element={<SuspenseWrap><VideoTestimonialGuide /></SuspenseWrap>} />
             <Route path="/resources/testimonials/testimonial-page-design/" element={<SuspenseWrap><TestimonialPageDesign /></SuspenseWrap>} />
             <Route path="/resources/testimonials/testimonial-request-email-templates/" element={<SuspenseWrap><TestimonialRequestEmailTemplates /></SuspenseWrap>} />
+            <Route path="/resources/testimonials/video-vs-text-testimonials/" element={<SuspenseWrap><VideoVsTextTestimonials /></SuspenseWrap>} />
+            <Route path="/resources/testimonials/ask-for-video-testimonials/" element={<SuspenseWrap><AskForVideoTestimonials /></SuspenseWrap>} />
+            <Route path="/resources/testimonials/video-testimonial-examples/" element={<SuspenseWrap><VideoTestimonialExamples /></SuspenseWrap>} />
+            <Route path="/resources/testimonials/testimonials-for-saas/" element={<SuspenseWrap><TestimonialsForSaaS /></SuspenseWrap>} />
+            <Route path="/resources/testimonials/case-study-vs-testimonial/" element={<SuspenseWrap><CaseStudyVsTestimonial /></SuspenseWrap>} />
+            <Route path="/resources/testimonials/testimonial-ab-testing/" element={<SuspenseWrap><TestimonialABTesting /></SuspenseWrap>} />
+            <Route path="/resources/testimonials/wall-of-love-guide/" element={<SuspenseWrap><WallOfLoveGuide /></SuspenseWrap>} />
 
             {/* Resources — Conversion Analytics cluster */}
             <Route path="/resources/conversion-analytics/" element={<SuspenseWrap><ConversionAnalyticsPillar /></SuspenseWrap>} />
@@ -244,6 +328,13 @@ const App = () => (
             <Route path="/resources/cro/cart-abandonment/" element={<SuspenseWrap><CartAbandonment /></SuspenseWrap>} />
             <Route path="/resources/cro/cta-optimization/" element={<SuspenseWrap><CTAOptimization /></SuspenseWrap>} />
             <Route path="/resources/cro/exit-intent-strategies/" element={<SuspenseWrap><ExitIntentStrategies /></SuspenseWrap>} />
+            <Route path="/resources/cro/product-page-cro/" element={<SuspenseWrap><ProductPageCRO /></SuspenseWrap>} />
+            <Route path="/resources/cro/checkout-optimization/" element={<SuspenseWrap><CheckoutOptimization /></SuspenseWrap>} />
+            <Route path="/resources/cro/pricing-page-optimization/" element={<SuspenseWrap><PricingPageOptimization /></SuspenseWrap>} />
+            <Route path="/resources/cro/mobile-cro/" element={<SuspenseWrap><MobileCRO /></SuspenseWrap>} />
+            <Route path="/resources/cro/above-the-fold-optimization/" element={<SuspenseWrap><AboveTheFoldOptimization /></SuspenseWrap>} />
+            <Route path="/resources/cro/cro-for-agencies/" element={<SuspenseWrap><CROForAgencies /></SuspenseWrap>} />
+            <Route path="/resources/cro/ga4-social-proof-tracking/" element={<SuspenseWrap><GA4SocialProofTracking /></SuspenseWrap>} />
 
             {/* Resources — Website Trust cluster */}
             <Route path="/resources/website-trust/" element={<SuspenseWrap><WebsiteTrustPillar /></SuspenseWrap>} />
@@ -274,6 +365,9 @@ const App = () => (
             <Route path="/comparisons/best-trustpulse-alternatives/" element={<SuspenseWrap><BestTrustPulseAlternatives /></SuspenseWrap>} />
             <Route path="/comparisons/best-provesource-alternatives/" element={<SuspenseWrap><BestProveSourceAlternatives /></SuspenseWrap>} />
             <Route path="/comparisons/social-proof-pricing-comparison/" element={<SuspenseWrap><SocialProofPricingComparison /></SuspenseWrap>} />
+            <Route path="/comparisons/notiproof-vs-yotpo/" element={<SuspenseWrap><NotiProofVsYotpo /></SuspenseWrap>} />
+            <Route path="/comparisons/notiproof-vs-trustmary/" element={<SuspenseWrap><NotiProofVsTrustmary /></SuspenseWrap>} />
+            <Route path="/comparisons/free-social-proof-tools/" element={<SuspenseWrap><FreeSocialProofTools /></SuspenseWrap>} />
 
             {/* Case Studies */}
             <Route path="/case-studies/" element={<SuspenseWrap><CaseStudiesHub /></SuspenseWrap>} />
@@ -289,6 +383,10 @@ const App = () => (
             <Route path="/free-tools/google-review-link-generator/" element={<SuspenseWrap><GoogleReviewLinkGenerator /></SuspenseWrap>} />
             <Route path="/free-tools/testimonial-email-generator/" element={<SuspenseWrap><TestimonialEmailGenerator /></SuspenseWrap>} />
             <Route path="/free-tools/website-trust-score-checker/" element={<SuspenseWrap><WebsiteTrustScoreChecker /></SuspenseWrap>} />
+            <Route path="/free-tools/conversion-rate-calculator/" element={<SuspenseWrap><ConversionRateCalculator /></SuspenseWrap>} />
+            <Route path="/free-tools/social-proof-audit-checklist/" element={<SuspenseWrap><SocialProofAuditChecklist /></SuspenseWrap>} />
+            <Route path="/free-tools/cart-abandonment-calculator/" element={<SuspenseWrap><CartAbandonmentCalculator /></SuspenseWrap>} />
+            <Route path="/free-tools/review-response-generator/" element={<SuspenseWrap><ReviewResponseGenerator /></SuspenseWrap>} />
 
             {/* Legal */}
             <Route path="/privacy-policy/" element={<SuspenseWrap><PrivacyPolicy /></SuspenseWrap>} />

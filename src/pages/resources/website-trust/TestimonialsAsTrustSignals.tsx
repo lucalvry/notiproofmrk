@@ -6,7 +6,7 @@ const tocSections = [
   { id: "testimonials-as-trust", label: "How Do Testimonials Function as Trust Signals?" },
   { id: "trust-hierarchy", label: "Where Do Testimonials Rank in the Trust Signal Hierarchy?" },
   { id: "video-vs-text-trust", label: "Do Video Testimonials Build More Trust Than Text?" },
-  { id: "placement-for-trust", label: "Where Should You Place Testimonials to Maximize Trust?" },
+  { id: "placement-for-trust", label: "Where Do You Place Testimonials to Maximize Trust?" },
   { id: "authenticity-markers", label: "What Makes a Testimonial Feel Authentic and Trustworthy?" },
   { id: "combining-with-badges", label: "How Do You Combine Testimonials With Other Trust Signals?" },
   { id: "measuring-trust-impact", label: "How Do You Measure the Trust Impact of Testimonials?" },
@@ -27,7 +27,7 @@ export default function TestimonialsAsTrustSignals() {
       canonical="https://notiproof.com/resources/website-trust/testimonials-as-trust-signals/"
       title="Using Testimonials as Trust Signals on Your Website"
       readingTime="11 min read"
-      publishDate="2025-04-01"
+      publishDate="2025-02-28"
       updatedDate="2025-04-01"
       tocSections={tocSections}
       relatedArticles={relatedArticles}
@@ -73,7 +73,7 @@ export default function TestimonialsAsTrustSignals() {
           </section>
 
           <section id="placement-for-trust">
-            <h2 className="text-2xl font-bold mt-8 mb-3">Where Should You Place Testimonials to Maximize Trust?</h2>
+            <h2 className="text-2xl font-bold mt-8 mb-3">Where Do You Place Testimonials to Maximize Trust?</h2>
             <p className="text-muted-foreground font-semibold mb-4" data-speakable>Place testimonials at the three critical trust friction points: immediately after your value proposition (to validate claims), near pricing (to justify investment), and on checkout/signup pages (to overcome final objections).</p>
             <p className="text-muted-foreground">The <Link to="/resources/testimonials/testimonial-page-design/" className="text-primary hover:underline">testimonial page design guide</Link> covers dedicated testimonial pages, but for trust maximization, testimonials need to appear contextually throughout your site:</p>
             <ul className="text-muted-foreground space-y-2">

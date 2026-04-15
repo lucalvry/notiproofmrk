@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowRight, Calculator, DollarSign, Star, Mail, ShieldCheck } from "lucide-react";
+import { ArrowRight, Calculator, DollarSign, Star, Mail, ShieldCheck, BarChart3, ClipboardCheck, ShoppingCart, MessageSquare } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
 import CTASection from "@/components/CTASection";
 import KeyTakeaway from "@/components/KeyTakeaway";
@@ -13,6 +13,10 @@ const tools = [
   { icon: Star, title: "Google Review Link Generator", desc: "Generate a direct Google review link for your business to share with customers via email or SMS.", href: "/free-tools/google-review-link-generator/" },
   { icon: Mail, title: "Testimonial Request Email Generator", desc: "Generate copy-paste email templates to request testimonials from happy customers.", href: "/free-tools/testimonial-email-generator/" },
   { icon: ShieldCheck, title: "Website Trust Score Checker", desc: "Audit your website's trust signals with an interactive checklist and get a score plus recommendations.", href: "/free-tools/website-trust-score-checker/" },
+  { icon: BarChart3, title: "Conversion Rate Calculator", desc: "Calculate your conversion rate instantly and see how many more conversions you need to hit key benchmarks.", href: "/free-tools/conversion-rate-calculator/" },
+  { icon: ClipboardCheck, title: "Social Proof Audit Checklist", desc: "Score your website's social proof with a 27-point interactive checklist and get a grade plus recommendations.", href: "/free-tools/social-proof-audit-checklist/" },
+  { icon: ShoppingCart, title: "Cart Abandonment Calculator", desc: "Calculate revenue lost to cart abandonment and see potential recovery with social proof and exit-intent.", href: "/free-tools/cart-abandonment-calculator/" },
+  { icon: MessageSquare, title: "Review Response Generator", desc: "Generate professional, personalized responses to positive, neutral, and negative customer reviews.", href: "/free-tools/review-response-generator/" },
 ];
 
 const schema = [

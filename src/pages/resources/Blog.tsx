@@ -258,7 +258,7 @@ export default function Blog() {
 
                 {/* Cluster articles */}
                 <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                  {c.articles.map((a, i) => (
+                  {c.articles.slice(0, 4).map((a, i) => (
                     <ArticleCard
                       key={a.href}
                       title={a.title}
@@ -274,6 +274,17 @@ export default function Blog() {
                     />
                   ))}
                 </div>
+
+                {c.articles.length > 4 && (
+                  <div className="mt-4 text-center">
+                    <Link
+                      to={`/resources/blog/${c.id}/`}
+                      className="text-sm font-semibold text-primary hover:underline inline-flex items-center gap-1"
+                    >
+                      View all {c.articles.length} {c.title} articles <ArrowRight className="w-3.5 h-3.5" />
+                    </Link>
+                  </div>
+                )}
               </motion.div>
             ))}
           </div>

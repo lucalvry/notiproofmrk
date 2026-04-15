@@ -14,6 +14,16 @@ const comparisons = [
   { name: "TrustPulse", slug: "notiproof-vs-trustpulse", desc: "See how analytics, targeting, and value stack up." },
   { name: "Proof", slug: "notiproof-vs-proof", desc: "Feature depth, testimonial tools, and ROI compared." },
   { name: "ProveSource", slug: "notiproof-vs-provesource", desc: "Side-by-side on notifications, video, and support." },
+  { name: "Yotpo", slug: "notiproof-vs-yotpo", desc: "Reviews, UGC, and social proof — compare features and pricing." },
+  { name: "Trustmary", slug: "notiproof-vs-trustmary", desc: "Testimonial collection, video, and widget capabilities compared." },
+];
+
+const alternativePages = [
+  { name: "Best Fomo Alternatives", slug: "best-fomo-alternatives", desc: "Top alternatives to Fomo for social proof notifications." },
+  { name: "Best TrustPulse Alternatives", slug: "best-trustpulse-alternatives", desc: "TrustPulse alternatives with more features and better value." },
+  { name: "Best ProveSource Alternatives", slug: "best-provesource-alternatives", desc: "ProveSource alternatives for growing businesses." },
+  { name: "Free Social Proof Tools", slug: "free-social-proof-tools", desc: "Compare free social proof tools and their limitations." },
+  { name: "Social Proof Pricing Comparison", slug: "social-proof-pricing-comparison", desc: "Side-by-side pricing for every major social proof platform." },
 ];
 
 const summaryFeatures = [
@@ -31,22 +41,24 @@ function BoolIcon({ val }: { val: boolean }) {
   return val ? <Check className="w-4 h-4 text-green-600 mx-auto" /> : <X className="w-4 h-4 text-muted-foreground/40 mx-auto" />;
 }
 
+const allPages = [...comparisons.map(c => ({ name: `NotiProof vs ${c.name}`, slug: c.slug })), ...alternativePages.map(a => ({ name: a.name, slug: a.slug }))];
+
 const schema = [
   {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     name: "Social Proof Software Comparisons – NotiProof",
-    description: "Compare NotiProof with Fomo, TrustPulse, Proof, and ProveSource. Detailed feature tables, pricing, and verdicts.",
+    description: "Compare NotiProof with Fomo, TrustPulse, Proof, ProveSource, Yotpo, and Trustmary. Detailed feature tables, pricing, and verdicts.",
     url: "https://notiproof.com/comparisons/",
   },
   {
     "@context": "https://schema.org",
     "@type": "ItemList",
     name: "Social Proof Software Comparisons",
-    itemListElement: comparisons.map((c, i) => ({
+    itemListElement: allPages.map((c, i) => ({
       "@type": "ListItem",
       position: i + 1,
-      name: `NotiProof vs ${c.name}`,
+      name: c.name,
       url: `https://notiproof.com/comparisons/${c.slug}/`,
     })),
   },
@@ -119,7 +131,28 @@ export default function ComparisonsHub() {
         </div>
       </section>
 
-      {/* Summary Table */}
+      {/* Alternatives & Roundups */}
+      <section className="section-padding pt-0">
+        <div className="container-tight">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-10">Alternatives & Roundups</h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {alternativePages.map((a, i) => (
+              <motion.div key={a.slug} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.05 }}>
+                <Link
+                  to={`/comparisons/${a.slug}/`}
+                  className="group flex flex-col h-full bg-card border border-border rounded-2xl p-6 hover:shadow-lg hover:border-primary/30 transition-all"
+                >
+                  <h3 className="text-lg font-bold mb-1 group-hover:text-primary transition-colors">{a.name}</h3>
+                  <p className="text-sm text-muted-foreground flex-1">{a.desc}</p>
+                  <span className="mt-4 text-sm font-semibold text-primary flex items-center gap-1">
+                    Read more <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </span>
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
       <section className="py-12 bg-muted/30">
         <div className="container-tight">
           <motion.div {...fadeUp}>

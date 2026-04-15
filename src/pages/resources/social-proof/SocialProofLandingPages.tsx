@@ -1,5 +1,6 @@
 import ResourceArticle from "@/components/ResourceArticle";
 import { Link } from "react-router-dom";
+import featuredImg from "@/assets/featured-social-proof-landing-pages.jpg";
 
 const related = [
   { title: "Landing Page Optimization", href: "/resources/cro/landing-page-optimization/", desc: "Optimize every landing page element." },
@@ -25,22 +26,23 @@ export default function SocialProofLandingPages() {
       metaDescription="Learn exactly where and how to place social proof on landing pages — from trust bars above the fold to testimonials near CTAs and notifications at pricing sections."
       canonical="https://notiproof.com/resources/social-proof/social-proof-for-landing-pages/"
       title="Social Proof for Landing Pages: Where to Place Trust Signals for Maximum Conversions"
-      publishDate="2025-04-07"
+      publishDate="2025-04-28"
       readingTime="12 min read"
       tocSections={tocSections}
       pillarLink={{ label: "Social Proof Guide", href: "/resources/social-proof/" }}
+      featuredImage={featuredImg}
       relatedArticles={related}
       content={
         <div className="space-y-6 text-muted-foreground">
           <p className="text-lg">Landing pages without <Link to="/resources/social-proof/" className="text-primary font-semibold hover:underline">social proof</Link> rely entirely on your own claims to convince visitors. That's like asking a jury to convict based on the prosecutor's opening statement alone — no witnesses, no evidence, no testimony. This guide covers exactly where and how to place social proof on landing pages for maximum conversion impact.</p>
 
           <h2 id="why-landing-pages" className="text-2xl font-bold text-foreground">Why Do Landing Pages Need Social Proof?</h2>
-          <p className="font-medium text-foreground">Landing pages are single-purpose conversion pages where visitors make a binary decision — convert or leave. Social proof tips this decision by providing third-party validation that reduces the perceived risk of taking action.</p>
+          <p className="text-foreground"><strong>Landing pages are single-purpose conversion pages where visitors make a binary decision — convert or leave. Social proof tips this decision by providing third-party validation that reduces the perceived risk of taking action.</strong></p>
           <p>Landing pages face a unique challenge: visitors arrive with intent but also skepticism. They're interested (they clicked the ad or link) but uncertain (they don't know if they can trust you). Social proof bridges this gap by answering the visitor's unspoken question: "Have other people like me made this decision and been happy with it?"</p>
           <p>Research from VWO analyzing 2,500 landing page tests found that adding social proof elements increased conversion rates by an average of 12.5%, with some implementations achieving 35%+ lifts. The impact is particularly strong for new brands with low awareness.</p>
 
           <h2 id="types" className="text-2xl font-bold text-foreground">What Social Proof Types Work on Landing Pages?</h2>
-          <p className="font-medium text-foreground">The most effective landing page social proof types are trust bars (logo strips), customer counts, star ratings, short testimonials, real-time notifications, and security/certification badges — each serving a different psychological purpose.</p>
+          <p className="text-foreground"><strong>The most effective landing page social proof types are trust bars (logo strips), customer counts, star ratings, short testimonials, real-time notifications, and security/certification badges — each serving a different psychological purpose.</strong></p>
           <ul className="list-disc pl-6 space-y-2">
             <li><strong className="text-foreground">Trust bar:</strong> A strip of client logos or platform badges below the hero. Establishes instant credibility.</li>
             <li><strong className="text-foreground">Customer/user counts:</strong> "Join 10,000+ businesses" creates bandwagon effect</li>
@@ -51,7 +53,7 @@ export default function SocialProofLandingPages() {
           </ul>
 
           <h2 id="placement-zones" className="text-2xl font-bold text-foreground">What Are the Three Critical Placement Zones?</h2>
-          <p className="font-medium text-foreground">Landing page social proof should appear in three zones: above the fold (credibility establishment), adjacent to CTAs (decision validation), and near pricing/commitment sections (objection handling) — each zone addresses different visitor psychology.</p>
+          <p className="text-foreground"><strong>Landing page social proof should appear in three zones: above the fold (credibility establishment), adjacent to CTAs (decision validation), and near pricing/commitment sections (objection handling) — each zone addresses different visitor psychology.</strong></p>
           <p>Think of your landing page as three psychological zones, each requiring different social proof:</p>
           <ol className="list-decimal pl-6 space-y-2">
             <li><strong className="text-foreground">Zone 1 — Above the fold (Credibility):</strong> Visitors decide in 3 seconds whether to stay. A trust bar, customer count, or aggregate rating immediately says "this is legitimate."</li>
@@ -60,7 +62,7 @@ export default function SocialProofLandingPages() {
           </ol>
 
           <h2 id="above-fold" className="text-2xl font-bold text-foreground">How Do You Build Trust Above the Fold?</h2>
-          <p className="font-medium text-foreground">Above-the-fold social proof should be compact, scannable, and credibility-focused — a strip of 4–6 client logos, an aggregate metric ("Trusted by 10,000+ teams"), or a platform rating badge that visitors can process in under 2 seconds.</p>
+          <p className="text-foreground"><strong>Above-the-fold social proof should be compact, scannable, and credibility-focused — a strip of 4–6 client logos, an aggregate metric ("Trusted by 10,000+ teams"), or a platform rating badge that visitors can process in under 2 seconds.</strong></p>
           <p>Above-the-fold social proof needs to be processed almost subconsciously. Visitors shouldn't need to "read" it — they should absorb it while scanning the headline and CTA. The most effective formats:</p>
           <ul className="list-disc pl-6 space-y-2">
             <li><strong className="text-foreground">Logo strip:</strong> 4–6 recognizable client/partner logos in grayscale (less visually distracting, more professional)</li>
@@ -69,7 +71,7 @@ export default function SocialProofLandingPages() {
           </ul>
 
           <h2 id="near-ctas" className="text-2xl font-bold text-foreground">How Do You Validate Near CTAs?</h2>
-          <p className="font-medium text-foreground">Place a 1–2 sentence testimonial directly adjacent to your CTA button — "This tool paid for itself in the first week" next to "Start Free Trial" reduces clicking anxiety by up to 25%.</p>
+          <p className="text-foreground"><strong>Place a 1–2 sentence testimonial directly adjacent to your CTA button — "This tool paid for itself in the first week" next to "Start Free Trial" reduces clicking anxiety by up to 25%.</strong></p>
           <p>The area around your CTA is the most psychologically charged space on the page. Visitors are considering action — and social proof at this moment provides the final push. Effective CTA-adjacent social proof:</p>
           <ul className="list-disc pl-6 space-y-2">
             <li><strong className="text-foreground">Testimonial snippet:</strong> A short, specific quote with the reviewer's photo, name, and title</li>
@@ -79,7 +81,7 @@ export default function SocialProofLandingPages() {
           </ul>
 
           <h2 id="pricing-proof" className="text-2xl font-bold text-foreground">How Do You Support Pricing Decisions with Social Proof?</h2>
-          <p className="font-medium text-foreground">Near pricing sections, use ROI-focused social proof — case study excerpts showing measurable returns, "Most Popular" badges on recommended plans, and real-time signup notifications that validate the investment.</p>
+          <p className="text-foreground"><strong>Near pricing sections, use ROI-focused social proof — case study excerpts showing measurable returns, "Most Popular" badges on recommended plans, and real-time signup notifications that validate the investment.</strong></p>
           <p>When visitors reach pricing, they've already decided your product might be right. Now they need justification that it's worth the price. This is where ROI-focused social proof shines:</p>
           <ul className="list-disc pl-6 space-y-2">
             <li><strong className="text-foreground">ROI metrics:</strong> "Average customer ROI: 800%" or "Customers see 25% conversion lift in 30 days"</li>
@@ -89,7 +91,7 @@ export default function SocialProofLandingPages() {
           </ul>
 
           <h2 id="testing" className="text-2xl font-bold text-foreground">How Do You Test Landing Page Social Proof?</h2>
-          <p className="font-medium text-foreground">Test social proof on landing pages by varying type (testimonials vs. notifications vs. counters), placement (above fold vs. near CTA), specificity level (aggregate metrics vs. individual stories), and presence/absence — using your landing page's primary conversion as the success metric.</p>
+          <p className="text-foreground"><strong>Test social proof on landing pages by varying type (testimonials vs. notifications vs. counters), placement (above fold vs. near CTA), specificity level (aggregate metrics vs. individual stories), and presence/absence — using your landing page's primary conversion as the success metric.</strong></p>
           <p>Social proof testing follows the same principles as any <Link to="/resources/conversion-analytics/ab-testing-social-proof/" className="text-primary font-semibold hover:underline">A/B test</Link>. Start with the highest-impact tests:</p>
           <ol className="list-decimal pl-6 space-y-2">
             <li><strong className="text-foreground">Presence vs. absence:</strong> Does adding social proof to a clean page improve or clutter?</li>

@@ -32,6 +32,16 @@ export const staticRoutes = [
   "/integrations/shopify/",
   "/integrations/wordpress/",
   "/integrations/zapier/",
+  "/integrations/woocommerce/",
+  "/integrations/webflow/",
+  "/integrations/wix/",
+  "/integrations/squarespace/",
+  "/integrations/bigcommerce/",
+  "/integrations/hubspot/",
+  "/integrations/stripe/",
+  "/integrations/framer/",
+  "/integrations/gohighlevel/",
+  "/integrations/kajabi/",
 
   // Company
   "/company/",
@@ -55,6 +65,15 @@ export const staticRoutes = [
   "/resources/social-proof/social-proof-b2b-saas/",
   "/resources/social-proof/user-generated-content-social-proof/",
   "/resources/social-proof/social-proof-for-landing-pages/",
+  "/resources/social-proof/social-proof-statistics/",
+  "/resources/social-proof/social-proof-ecommerce/",
+  "/resources/social-proof/social-proof-local-business/",
+  "/resources/social-proof/social-proof-agencies/",
+  "/resources/social-proof/social-proof-coaches-creators/",
+  "/resources/social-proof/social-proof-restaurants/",
+  "/resources/social-proof/ai-generated-social-proof/",
+  "/resources/social-proof/negative-social-proof/",
+  "/resources/social-proof/social-proof-social-media/",
 
   // Resources — Reviews cluster
   "/resources/reviews/",
@@ -62,6 +81,14 @@ export const staticRoutes = [
   "/resources/reviews/review-aggregation-guide/",
   "/resources/reviews/responding-to-negative-reviews/",
   "/resources/reviews/review-widgets-for-websites/",
+  "/resources/reviews/trustpilot-reviews-guide/",
+  "/resources/reviews/g2-reviews-guide/",
+  "/resources/reviews/yelp-reviews-guide/",
+  "/resources/reviews/online-review-statistics/",
+  "/resources/reviews/embed-google-reviews/",
+  "/resources/reviews/fake-reviews-detection/",
+  "/resources/reviews/review-generation-strategies/",
+  "/resources/reviews/star-rating-psychology/",
 
   // Resources — Testimonials cluster
   "/resources/testimonials/",
@@ -69,6 +96,13 @@ export const staticRoutes = [
   "/resources/testimonials/video-testimonial-guide/",
   "/resources/testimonials/testimonial-page-design/",
   "/resources/testimonials/testimonial-request-email-templates/",
+  "/resources/testimonials/video-vs-text-testimonials/",
+  "/resources/testimonials/ask-for-video-testimonials/",
+  "/resources/testimonials/video-testimonial-examples/",
+  "/resources/testimonials/testimonials-for-saas/",
+  "/resources/testimonials/case-study-vs-testimonial/",
+  "/resources/testimonials/testimonial-ab-testing/",
+  "/resources/testimonials/wall-of-love-guide/",
 
   // Resources — Conversion Analytics cluster
   "/resources/conversion-analytics/",
@@ -86,6 +120,13 @@ export const staticRoutes = [
   "/resources/cro/cart-abandonment/",
   "/resources/cro/cta-optimization/",
   "/resources/cro/exit-intent-strategies/",
+  "/resources/cro/product-page-cro/",
+  "/resources/cro/checkout-optimization/",
+  "/resources/cro/pricing-page-optimization/",
+  "/resources/cro/mobile-cro/",
+  "/resources/cro/above-the-fold-optimization/",
+  "/resources/cro/cro-for-agencies/",
+  "/resources/cro/ga4-social-proof-tracking/",
 
   // Resources — Website Trust cluster
   "/resources/website-trust/",
@@ -99,7 +140,6 @@ export const staticRoutes = [
   "/resources/help-center/",
   "/resources/glossary/",
 
-
   // Comparisons
   "/comparisons/",
   "/comparisons/notiproof-vs-fomo/",
@@ -110,6 +150,9 @@ export const staticRoutes = [
   "/comparisons/best-trustpulse-alternatives/",
   "/comparisons/best-provesource-alternatives/",
   "/comparisons/social-proof-pricing-comparison/",
+  "/comparisons/notiproof-vs-yotpo/",
+  "/comparisons/notiproof-vs-trustmary/",
+  "/comparisons/free-social-proof-tools/",
 
   // Case Studies
   "/case-studies/",
@@ -125,6 +168,10 @@ export const staticRoutes = [
   "/free-tools/google-review-link-generator/",
   "/free-tools/testimonial-email-generator/",
   "/free-tools/website-trust-score-checker/",
+  "/free-tools/conversion-rate-calculator/",
+  "/free-tools/social-proof-audit-checklist/",
+  "/free-tools/cart-abandonment-calculator/",
+  "/free-tools/review-response-generator/",
 
   // Legal
   "/privacy-policy/",

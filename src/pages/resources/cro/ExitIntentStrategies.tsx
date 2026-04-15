@@ -1,5 +1,6 @@
 import ResourceArticle from "@/components/ResourceArticle";
 import { Link } from "react-router-dom";
+import featuredImg from "@/assets/featured-exit-intent.jpg";
 
 const related = [
   { title: "Cart Abandonment Solutions", href: "/resources/cro/cart-abandonment/", desc: "Recover 5–15% of lost revenue." },
@@ -25,27 +26,28 @@ export default function ExitIntentStrategies() {
       metaDescription="Learn how to use exit-intent popups to recover 3–15% of abandoning visitors with social proof, targeted offers, and smart targeting rules."
       canonical="https://notiproof.com/resources/cro/exit-intent-strategies/"
       title="Exit Intent Strategies That Recover Revenue From Leaving Visitors"
-      publishDate="2025-04-05"
+      publishDate="2025-03-26"
       readingTime="12 min read"
       tocSections={tocSections}
       pillarLink={{ label: "CRO Guide", href: "/resources/cro/" }}
+      featuredImage={featuredImg}
       relatedArticles={related}
       content={
         <div className="space-y-6 text-muted-foreground">
           <p className="text-lg">98% of website visitors leave without converting, and most never return. <dfn><Link to="/resources/glossary/#exit-intent" className="text-primary font-semibold hover:underline">Exit intent</Link></dfn> technology detects when visitors are about to leave and presents a last-chance intervention — recovering 3–15% of otherwise lost visitors. When combined with <Link to="/resources/social-proof/" className="text-primary font-semibold hover:underline">social proof</Link>, exit-intent popups become one of the highest-ROI <Link to="/resources/cro/" className="text-primary font-semibold hover:underline">CRO</Link> tactics available.</p>
 
           <h2 id="what-is-exit-intent" className="text-2xl font-bold text-foreground">What Is Exit Intent Technology?</h2>
-          <p className="font-medium text-foreground">Exit intent is a behavioral detection technology that identifies when a visitor is about to leave your website — by tracking mouse movement toward the browser's close button (desktop) or back-button behavior (mobile) — and triggers a targeted intervention.</p>
+          <p className="text-foreground"><strong>Exit intent is a behavioral detection technology that identifies when a visitor is about to leave your website — by tracking mouse movement toward the browser's close button (desktop) or back-button behavior (mobile) — and triggers a targeted intervention.</strong></p>
           <p>Exit-intent technology monitors cursor trajectory, scroll velocity, tab switching, and navigation patterns to predict when a visitor intends to leave. When exit behavior is detected, a targeted overlay appears — typically a popup, slide-in, or full-screen offer.</p>
           <p>Unlike intrusive popups that interrupt the browsing experience, exit-intent interventions only appear when the visitor has already decided to leave. This timing difference is crucial: visitors perceive exit-intent popups as helpful (a last chance to capture value) rather than annoying (an interruption to browsing).</p>
 
           <h2 id="how-it-works" className="text-2xl font-bold text-foreground">How Does Exit Intent Detection Work?</h2>
-          <p className="font-medium text-foreground">Desktop exit detection tracks mouse movement toward the top browser chrome, while mobile detection uses scroll-up velocity, back-button taps, and tab-switching events — each requiring different intervention strategies.</p>
+          <p className="text-foreground"><strong>Desktop exit detection tracks mouse movement toward the top browser chrome, while mobile detection uses scroll-up velocity, back-button taps, and tab-switching events — each requiring different intervention strategies.</strong></p>
           <p><strong className="text-foreground">Desktop:</strong> The primary signal is mouse cursor movement toward the top of the browser viewport (where the address bar, tabs, and close button are). When cursor velocity and trajectory indicate an intent to leave, the popup fires. Advanced systems also detect tab switching and rapid scrolling to the top.</p>
           <p><strong className="text-foreground">Mobile:</strong> Without a visible cursor, mobile exit detection relies on different signals: rapid upward scrolling (reaching for the back button), switching between tabs/apps, or a long period of inactivity followed by navigation away. These signals are less precise, so mobile exit-intent popups should be less aggressive.</p>
 
           <h2 id="popup-types" className="text-2xl font-bold text-foreground">What Types of Exit-Intent Popups Work Best?</h2>
-          <p className="font-medium text-foreground">The five highest-performing exit popup types are discount offers (10–15% recovery), content upgrades (8–12%), cart savers (5–11%), social proof displays (5–10%), and email capture for retargeting (3–8%).</p>
+          <p className="text-foreground"><strong>The five highest-performing exit popup types are discount offers (10–15% recovery), content upgrades (8–12%), cart savers (5–11%), social proof displays (5–10%), and email capture for retargeting (3–8%).</strong></p>
           <p>Different popup types work best for different page types and visitor segments:</p>
           <ul className="list-disc pl-6 space-y-2">
             <li><strong className="text-foreground">Discount/incentive popup:</strong> "Wait! Get 15% off your first order." Most effective on product and checkout pages. Recovers 10–15% of abandoning visitors but impacts margins.</li>
@@ -56,7 +58,7 @@ export default function ExitIntentStrategies() {
           </ul>
 
           <h2 id="social-proof-exit" className="text-2xl font-bold text-foreground">How Does Social Proof Enhance Exit Intent?</h2>
-          <p className="font-medium text-foreground">Social proof exit-intent popups recover 5–10% of abandoning visitors without offering a discount — by displaying customer testimonials, aggregate review scores, or real-time activity data that addresses the trust gap causing the visitor to leave.</p>
+          <p className="text-foreground"><strong>Social proof exit-intent popups recover 5–10% of abandoning visitors without offering a discount — by displaying customer testimonials, aggregate review scores, or real-time activity data that addresses the trust gap causing the visitor to leave.</strong></p>
           <p>Most visitors leave because they're not convinced, not because the price is wrong. Social proof exit-intent popups address the actual objection — lack of trust — rather than throwing money at it through discounts. This preserves margin while still recovering conversions.</p>
           <p>Effective social proof exit popups include:</p>
           <ul className="list-disc pl-6 space-y-2">
@@ -67,7 +69,7 @@ export default function ExitIntentStrategies() {
           </ul>
 
           <h2 id="design-principles" className="text-2xl font-bold text-foreground">How Do You Design Effective Exit Popups?</h2>
-          <p className="font-medium text-foreground">Effective exit popups use a single clear CTA, benefit-driven headline, minimal copy (under 50 words), high contrast with the page behind, and an obvious close button — respecting the visitor's autonomy increases conversion by 15–25%.</p>
+          <p className="text-foreground"><strong>Effective exit popups use a single clear CTA, benefit-driven headline, minimal copy (under 50 words), high contrast with the page behind, and an obvious close button — respecting the visitor's autonomy increases conversion by 15–25%.</strong></p>
           <p>Design principles for exit-intent popups:</p>
           <ul className="list-disc pl-6 space-y-2">
             <li><strong className="text-foreground">One clear offer:</strong> Don't overwhelm with choices. One headline, one value proposition, one CTA.</li>
@@ -78,11 +80,11 @@ export default function ExitIntentStrategies() {
           </ul>
 
           <h2 id="mobile-exit-intent" className="text-2xl font-bold text-foreground">How Do You Handle Mobile Exit Intent?</h2>
-          <p className="font-medium text-foreground">Mobile exit intent requires different triggers (scroll velocity, inactivity, back-button taps), smaller overlays (bottom sheet vs. center popup), and shorter copy — with careful attention to not violating Google's interstitial guidelines.</p>
+          <p className="text-foreground"><strong>Mobile exit intent requires different triggers (scroll velocity, inactivity, back-button taps), smaller overlays (bottom sheet vs. center popup), and shorter copy — with careful attention to not violating Google's interstitial guidelines.</strong></p>
           <p>Google penalizes intrusive interstitials on mobile, so mobile exit-intent must be implemented carefully. Use slide-up banners (covering &lt;30% of the viewport) instead of full-screen overlays. Trigger on back-button behavior or extended inactivity rather than scroll position. Always provide a clear dismiss action.</p>
 
           <h2 id="targeting-rules" className="text-2xl font-bold text-foreground">What Targeting Rules Maximize Recovery?</h2>
-          <p className="font-medium text-foreground">Maximize recovery by targeting exit popups based on page type (different offers for product vs. blog pages), visit frequency (returning visitors get different messages), time on page (2+ minutes indicates consideration), and cart value (higher-value carts justify bigger incentives).</p>
+          <p className="text-foreground"><strong>Maximize recovery by targeting exit popups based on page type (different offers for product vs. blog pages), visit frequency (returning visitors get different messages), time on page (2+ minutes indicates consideration), and cart value (higher-value carts justify bigger incentives).</strong></p>
           <p>Not every exiting visitor should see the same popup. Advanced targeting rules include:</p>
           <ul className="list-disc pl-6 space-y-2">
             <li><strong className="text-foreground">Page-specific:</strong> Product pages → discount; blog → content upgrade; pricing → social proof</li>

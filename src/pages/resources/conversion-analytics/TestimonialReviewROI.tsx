@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import featuredImg from "@/assets/featured-testimonial-review-roi.jpg";
 
 const tocSections = [
-  { id: "why-measure-roi", label: "Why Should You Measure Testimonial & Review ROI Separately?" },
-  { id: "roi-framework", label: "What Framework Should You Use for Testimonial & Review ROI?" },
+  { id: "why-measure-roi", label: "Why Do You Measure Testimonial & Review ROI Separately?" },
+  { id: "roi-framework", label: "What Framework Do You Use for Testimonial & Review ROI?" },
   { id: "testimonial-metrics", label: "What Metrics Matter for Testimonial ROI?" },
   { id: "review-metrics", label: "What Metrics Matter for Review ROI?" },
   { id: "attribution-models", label: "Which Attribution Model Works Best for Social Proof?" },
@@ -27,7 +27,7 @@ export default function TestimonialReviewROI() {
       canonical="https://notiproof.com/resources/conversion-analytics/testimonial-review-roi/"
       title="Measuring Testimonial & Review ROI"
       readingTime="13 min read"
-      publishDate="2025-04-01"
+      publishDate="2025-03-24"
       updatedDate="2025-04-01"
       tocSections={tocSections}
       relatedArticles={relatedArticles}
@@ -39,7 +39,7 @@ export default function TestimonialReviewROI() {
           </p>
 
           <section id="why-measure-roi">
-            <h2 className="text-2xl font-bold mt-8 mb-3">Why Should You Measure Testimonial & Review ROI Separately?</h2>
+            <h2 className="text-2xl font-bold mt-8 mb-3">Why Do You Measure Testimonial & Review ROI Separately?</h2>
             <p className="text-muted-foreground font-semibold mb-4" data-speakable>Testimonials and reviews serve different functions in the buyer journey — reviews reduce risk during consideration, while testimonials build aspiration during evaluation — so measuring them together masks their individual contribution to revenue.</p>
             <p className="text-muted-foreground">The <Link to="/resources/conversion-analytics/measuring-social-proof-roi/" className="text-primary hover:underline">general social proof ROI guide</Link> provides a broad framework, but testimonials and reviews deserve separate analysis because they influence different stages of the funnel:</p>
             <ul className="text-muted-foreground space-y-2">
@@ -50,7 +50,7 @@ export default function TestimonialReviewROI() {
           </section>
 
           <section id="roi-framework">
-            <h2 className="text-2xl font-bold mt-8 mb-3">What Framework Should You Use for Testimonial & Review ROI?</h2>
+            <h2 className="text-2xl font-bold mt-8 mb-3">What Framework Do You Use for Testimonial & Review ROI?</h2>
             <p className="text-muted-foreground font-semibold mb-4" data-speakable>Use the "Cost-of-Collection vs. Revenue-Attributed" framework — calculate what it costs to collect and display each testimonial or review, then compare to the revenue attributed to interactions with that content.</p>
             <p className="text-muted-foreground">The ROI formula is straightforward:</p>
             <div className="bg-muted/50 border border-border rounded-xl p-6 my-4">

@@ -13,9 +13,9 @@ const tocSections = [
   { id: "why-testimonials", label: "Why Are Customer Testimonials Essential?" },
   { id: "testimonial-types", label: "What Types of Testimonials Exist?" },
   { id: "collection-strategies", label: "What Are the Best Collection Strategies?" },
-  { id: "asking-questions", label: "What Questions Should You Ask Customers?" },
+  { id: "asking-questions", label: "What Questions Do You Ask Customers?" },
   { id: "video-testimonials", label: "Why Are Video Testimonials the Gold Standard?" },
-  { id: "display-strategies", label: "How Should You Display Testimonials?" },
+  { id: "display-strategies", label: "How Do You Display Testimonials?" },
   { id: "testimonial-design", label: "What Design Best Practices Build Trust?" },
   { id: "industry-strategies", label: "How Do Strategies Differ by Industry?" },
   { id: "measuring-performance", label: "How Do You Measure Testimonial Performance?" },
@@ -30,7 +30,7 @@ export default function TestimonialsPillar() {
       canonical="https://notiproof.com/resources/testimonials/"
       title="Testimonials: The Complete Guide to Collecting, Displaying & Leveraging Customer Stories"
       readingTime="16 min read"
-      publishDate="2025-01-28"
+      publishDate="2025-01-10"
       updatedDate="2025-03-25"
       tocSections={tocSections}
       relatedArticles={clusterLinks}
@@ -41,14 +41,14 @@ export default function TestimonialsPillar() {
           <p className="text-lg text-muted-foreground"><dfn><Link to="/resources/glossary/">Customer testimonials</Link></dfn> are the backbone of any <Link to="/resources/social-proof/" className="text-primary font-semibold hover:underline">social proof strategy</Link>. A single compelling testimonial can be more persuasive than pages of marketing copy because it provides authentic, third-party validation of your product's value. This comprehensive guide covers every aspect of testimonial strategy — from automated collection to conversion-optimized display.</p>
 
           <h2 id="why-testimonials" className="text-2xl font-bold mt-12">Why Are Customer Testimonials Essential?</h2>
-          <p className="font-semibold text-foreground">Testimonials bridge the trust gap between marketing claims and buyer proof — 79% of consumers trust them as much as personal recommendations, and pages with testimonials convert 34% better on average.</p>
-          <p className="text-muted-foreground">Testimonials bridge the trust gap between a business's marketing claims and a buyer's need for proof. According to BrightLocal research, 79% of consumers trust online testimonials as much as personal recommendations from friends and family. For businesses, this means testimonials are your most cost-effective trust-building tool.</p>
+          <p className="text-foreground"><strong>Testimonials bridge the trust gap between marketing claims and buyer proof — 79% of consumers trust them as much as personal recommendations, and pages with testimonials convert 34% better on average.</strong></p>
+          <p className="text-muted-foreground">Testimonials bridge the trust gap between a business's marketing claims and a buyer's need for proof. According to <dfn>BrightLocal</dfn> — a local SEO and reputation management research firm — 79% of consumers trust online testimonials as much as personal recommendations from friends and family. For businesses, this means testimonials are your most cost-effective trust-building tool.</p>
           <p className="text-muted-foreground">The <Link to="/resources/social-proof/social-proof-psychology/" className="text-primary font-semibold hover:underline">psychology</Link> is straightforward: when potential customers see someone like them describing a positive experience, it triggers both informational social influence ("this product works for people like me") and the bandwagon effect ("many people are choosing this"). Combined, these psychological drivers significantly reduce purchase hesitation.</p>
           <p className="text-muted-foreground">Testimonials also serve a practical function beyond psychology. They answer specific questions potential buyers have: "Will this work for my industry?" "How long did implementation take?" "What was the actual ROI?" Good testimonials function as peer-to-peer sales conversations, addressing objections that your marketing copy cannot.</p>
           <p className="text-muted-foreground">Conversion data consistently shows the impact: pages with testimonials convert 34% better on average. For <Link to="/use-cases/saas-social-proof-tools-drive-sign-ups/" className="text-primary font-semibold hover:underline">SaaS companies</Link>, well-placed testimonials on pricing pages can increase plan selection by 20–40%. For <Link to="/use-cases/ecommerce/" className="text-primary font-semibold hover:underline">e-commerce</Link>, product testimonials reduce return rates because customers have more realistic expectations.</p>
 
           <h2 id="testimonial-types" className="text-2xl font-bold mt-12">What Types of Testimonials Exist?</h2>
-          <p className="font-semibold text-foreground">The six main types are text quotes, photo testimonials, video testimonials, case studies, social media testimonials, and star rating reviews — each with different persuasive power and collection difficulty.</p>
+          <p className="text-foreground"><strong>The six main types are text quotes, photo testimonials, video testimonials, case studies, social media testimonials, and star rating reviews — each with different persuasive power and collection difficulty.</strong></p>
           <p className="text-muted-foreground">Not all testimonials are created equal. Understanding the different formats and their relative persuasive power helps you prioritize collection efforts:</p>
           <ul className="list-disc pl-6 space-y-3 text-muted-foreground">
             <li><strong className="text-foreground">Text testimonials:</strong> The simplest format — a written quote with the customer's name, title, and company. Easy to collect and display, but lower in perceived authenticity than richer formats. Most effective when specific and results-oriented rather than generic praise.</li>
@@ -60,7 +60,7 @@ export default function TestimonialsPillar() {
           </ul>
 
           <h2 id="collection-strategies" className="text-2xl font-bold mt-12">What Are the Best Testimonial Collection Strategies?</h2>
-          <p className="font-semibold text-foreground">The most effective strategies use automated trigger-based workflows that request testimonials at peak satisfaction moments — right after onboarding, delivery, or a positive support interaction.</p>
+          <p className="text-foreground"><strong>The most effective strategies use automated trigger-based workflows that request testimonials at peak satisfaction moments — right after onboarding, delivery, or a positive support interaction.</strong></p>
           <p className="text-muted-foreground">The biggest challenge isn't getting customers to say nice things — it's capturing those positive sentiments in a structured, usable format at scale. NotiProof's <Link to="/product/testimonials-collection-text-image-video/" className="text-primary font-semibold hover:underline">testimonial collection system</Link> automates this entire process.</p>
           <p className="text-muted-foreground"><strong className="text-foreground">Timing is everything:</strong> The optimal moment to request a testimonial is immediately after a positive milestone. For SaaS: after onboarding completion, first value realization, or contract renewal. For e-commerce: 3–7 days after delivery (enough time to use the product, but while the experience is still fresh). For services: immediately after project completion or a positive support interaction.</p>
           <p className="text-muted-foreground"><strong className="text-foreground">Automated workflows:</strong> Set up trigger-based collection sequences that fire at the right moment without manual intervention. NotiProof integrates with your CRM, e-commerce platform, and support tools to identify happy customers and send personalized collection requests automatically.</p>
@@ -68,7 +68,7 @@ export default function TestimonialsPillar() {
           <p className="text-muted-foreground"><strong className="text-foreground">Follow-up sequences:</strong> The first request gets a 5–10% response rate. A polite follow-up 3–5 days later captures another 3–5%. A final "last chance" request after another week adds 1–2% more. Automated sequences ensure you don't leave testimonials on the table while respecting the customer's time.</p>
           <p className="text-muted-foreground"><strong className="text-foreground">NPS-driven collection:</strong> If you run NPS surveys, immediately invite promoters (9–10 scores) to leave a testimonial. These customers have already expressed high satisfaction — they just need a channel to formalize it.</p>
 
-          <h2 id="asking-questions" className="text-2xl font-bold mt-12">What Questions Should You Ask Customers?</h2>
+          <h2 id="asking-questions" className="text-2xl font-bold mt-12">What Questions Do You Ask Customers?</h2>
           <p className="text-muted-foreground">Generic "tell us about your experience" requests produce generic testimonials. Structured prompts produce specific, persuasive content. Guide customers with questions that naturally create the "problem → solution → result" narrative:</p>
           <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
             <li><strong className="text-foreground">"What challenge were you facing before using [product]?"</strong> — Establishes the relatable problem</li>
@@ -80,15 +80,15 @@ export default function TestimonialsPillar() {
           <p className="text-muted-foreground">These prompts work because they mirror the decision process of potential buyers. When a visitor reads answers to these questions, they're essentially getting advice from a peer who was in their exact situation.</p>
 
           <h2 id="video-testimonials" className="text-2xl font-bold mt-12">Why Are Video Testimonials the Gold Standard?</h2>
-          <p className="font-semibold text-foreground">Video testimonials convert up to 4× better than text because they engage multiple senses, convey authenticity through body language, and are nearly impossible to fabricate.</p>
+          <p className="text-foreground"><strong>Video testimonials convert up to 4× better than text because they engage multiple senses, convey authenticity through body language, and are nearly impossible to fabricate.</strong></p>
           <p className="text-muted-foreground">Video testimonials convert up to 4× better than text because they engage multiple senses, convey authenticity through non-verbal cues, and are nearly impossible to fabricate. NotiProof's <Link to="/product/video-testimonial-recorder/" className="text-primary font-semibold hover:underline">browser-based video testimonial recorder</Link> makes collection frictionless — no app downloads or scheduling required.</p>
           <p className="text-muted-foreground"><strong className="text-foreground">Keep it simple:</strong> The best video testimonials are 60–90 seconds of authentic, unscripted conversation. Customers don't need professional lighting or a perfect backdrop — in fact, polished productions can feel less authentic than a simple webcam recording.</p>
           <p className="text-muted-foreground"><strong className="text-foreground">Guide, don't script:</strong> Provide the question prompts above as on-screen guides during recording. This gives customers structure without making them feel rehearsed. NotiProof's recorder displays prompts one at a time, creating a natural conversational flow.</p>
           <p className="text-muted-foreground"><strong className="text-foreground">Remove friction:</strong> Every barrier between "customer agrees to record" and "video is submitted" reduces completion rates. Browser-based recording (no app install), one-click start, and automatic upload eliminate the friction that kills video collection campaigns.</p>
           <p className="text-muted-foreground"><strong className="text-foreground">Repurpose extensively:</strong> A single 90-second video testimonial can be used as: a full video on your testimonials page, a 30-second clip for social media, a pull quote for your homepage, a case study foundation, ad creative for paid campaigns, and email marketing content. The ROI per video is extraordinary.</p>
 
-          <h2 id="display-strategies" className="text-2xl font-bold mt-12">How Should You Display Testimonials for Maximum Impact?</h2>
-          <p className="font-semibold text-foreground">Place your strongest testimonials on the homepage hero, pricing page, and feature pages. Use dedicated testimonial walls for browsing and real-time notification pop-ups for dynamic social proof.</p>
+          <h2 id="display-strategies" className="text-2xl font-bold mt-12">How Do You Display Testimonials for Maximum Impact?</h2>
+          <p className="text-foreground"><strong>Place your strongest testimonials on the homepage hero, pricing page, and feature pages. Use dedicated testimonial walls for browsing and real-time notification pop-ups for dynamic social proof.</strong></p>
           <p className="text-muted-foreground">Collecting great testimonials is only half the battle — displaying them where and how they'll have the most impact on conversions is equally important. Use NotiProof's <Link to="/product/testimonials-widget-reviews-widget/" className="text-primary font-semibold hover:underline">testimonial widgets</Link> for embeddable, customizable displays.</p>
           <p className="text-muted-foreground"><strong className="text-foreground">Homepage hero section:</strong> Feature 1–2 of your strongest testimonials alongside your value proposition. This immediately establishes credibility for first-time visitors. Rotate testimonials to maintain freshness.</p>
           <p className="text-muted-foreground"><strong className="text-foreground">Pricing page:</strong> Display testimonials that specifically mention ROI, value for money, or comparison to alternatives. This is the highest-impact placement for testimonials because visitors are actively evaluating whether to purchase.</p>
@@ -97,7 +97,7 @@ export default function TestimonialsPillar() {
           <p className="text-muted-foreground"><strong className="text-foreground">Real-time testimonial notifications:</strong> Use NotiProof's <Link to="/product/social-proof-notifications/" className="text-primary font-semibold hover:underline">notification system</Link> to display recent testimonials as real-time pop-ups, creating dynamic social proof that feels current and authentic.</p>
 
           <h2 id="testimonial-design" className="text-2xl font-bold mt-12">What Design Best Practices Build Maximum Trust?</h2>
-          <p className="font-semibold text-foreground">Always include a customer photo, full name and title, and highlighted key phrases. Use star ratings alongside text, and keep quotes authentic — minor imperfections signal credibility.</p>
+          <p className="text-foreground"><strong>Always include a customer photo, full name and title, and highlighted key phrases. Use star ratings alongside text, and keep quotes authentic — minor imperfections signal credibility.</strong></p>
           <p className="text-muted-foreground">Design affects how testimonials are perceived and how much trust they generate:</p>
           <ul className="list-disc pl-6 space-y-3 text-muted-foreground">
             <li><strong className="text-foreground">Always include a photo:</strong> Testimonials with real photos are 35% more engaging. Even a small headshot alongside the quote makes the testimonial feel more human and credible.</li>
@@ -109,14 +109,14 @@ export default function TestimonialsPillar() {
           </ul>
 
           <h2 id="industry-strategies" className="text-2xl font-bold mt-12">How Do Testimonial Strategies Differ by Industry?</h2>
-          <p className="font-semibold text-foreground">E-commerce needs product-specific UGC with photos, SaaS requires case studies with ROI metrics, local businesses need Google review integration, and agencies need before/after results.</p>
+          <p className="text-foreground"><strong>E-commerce needs product-specific UGC with photos, SaaS requires case studies with ROI metrics, local businesses need Google review integration, and agencies need before/after results.</strong></p>
           <p className="text-muted-foreground"><strong className="text-foreground"><Link to="/use-cases/ecommerce/" className="text-primary font-semibold hover:underline">E-commerce:</Link></strong> Focus on product-specific testimonials with photos showing the product in use. User-generated content (UGC) testimonials double as marketing assets. Emphasize quality, shipping speed, and customer service in collection prompts.</p>
           <p className="text-muted-foreground"><strong className="text-foreground"><Link to="/use-cases/saas-social-proof-tools-drive-sign-ups/" className="text-primary font-semibold hover:underline">SaaS:</Link></strong> Prioritize case study testimonials with specific ROI metrics. Video testimonials from recognizable companies carry exceptional weight. Collect testimonials at renewal time — the act of renewing is itself a strong endorsement.</p>
           <p className="text-muted-foreground"><strong className="text-foreground"><Link to="/use-cases/local-business-social-proof-convert-website-visitors/" className="text-primary font-semibold hover:underline">Local Businesses:</Link></strong> Google review integration is essential. Supplement with video testimonials from local customers — seeing a familiar neighborhood or accent creates strong connection. Display testimonials on Google Business Profile, not just your website.</p>
           <p className="text-muted-foreground"><strong className="text-foreground"><Link to="/use-cases/social-proof-for-marketing-agencies-impress-clients/" className="text-primary font-semibold hover:underline">Agencies:</Link></strong> Case study testimonials with before/after metrics are the standard. Include client logos prominently, and create industry-specific testimonial collections for different prospect verticals.</p>
 
           <h2 id="measuring-performance" className="text-2xl font-bold mt-12">How Do You Measure Testimonial Performance?</h2>
-          <p className="font-semibold text-foreground">Track conversion rates on pages with vs. without testimonials, measure click-through rates on testimonial widgets, and monitor revenue attributed to <Link to="/resources/conversion-analytics/" className="text-primary font-semibold hover:underline">social proof interactions</Link>.</p>
+          <p className="text-foreground"><strong>Track conversion rates on pages with vs. without testimonials, measure click-through rates on testimonial widgets, and monitor revenue attributed to <Link to="/resources/conversion-analytics/" className="text-primary font-semibold hover:underline">social proof interactions</Link>.</strong></p>
           <p className="text-muted-foreground">Track testimonial impact with NotiProof's <Link to="/product/analytics-conversion-insights/" className="text-primary font-semibold hover:underline">analytics dashboard</Link> and your web analytics platform:</p>
           <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
             <li><strong className="text-foreground">Widget engagement:</strong> Views, clicks, scroll depth, and video play rates for each testimonial display</li>

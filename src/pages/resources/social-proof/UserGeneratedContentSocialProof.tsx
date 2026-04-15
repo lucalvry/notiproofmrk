@@ -1,5 +1,6 @@
 import ResourceArticle from "@/components/ResourceArticle";
 import { Link } from "react-router-dom";
+import featuredImg from "@/assets/featured-ugc-social-proof.jpg";
 
 const related = [
   { title: "How to Collect Testimonials", href: "/resources/testimonials/how-to-collect-testimonials/", desc: "Automated collection workflows." },
@@ -25,27 +26,28 @@ export default function UserGeneratedContentSocialProof() {
       metaDescription="Learn how to collect, curate, and display user-generated content (UGC) as social proof — reviews, testimonials, photos, and videos that convert visitors into customers."
       canonical="https://notiproof.com/resources/social-proof/user-generated-content-social-proof/"
       title="User-Generated Content as Social Proof: How Customer Content Drives Conversions"
-      publishDate="2025-04-06"
+      publishDate="2025-05-16"
       readingTime="13 min read"
       tocSections={tocSections}
       pillarLink={{ label: "Social Proof Guide", href: "/resources/social-proof/" }}
+      featuredImage={featuredImg}
       relatedArticles={related}
       content={
         <div className="space-y-6 text-muted-foreground">
           <p className="text-lg"><dfn><Link to="/resources/glossary/#user-generated-content" className="text-primary font-semibold hover:underline">User-generated content (UGC)</Link></dfn> is any content — reviews, testimonials, photos, videos, social media posts — created by customers rather than your brand. It's the most authentic and trusted form of <Link to="/resources/social-proof/" className="text-primary font-semibold hover:underline">social proof</Link> available, and it scales infinitely because your customers create it for you.</p>
 
           <h2 id="what-is-ugc" className="text-2xl font-bold text-foreground">What Is User-Generated Content?</h2>
-          <p className="font-medium text-foreground">UGC is any content created by customers about your brand — including reviews, testimonials, social media posts, photos, videos, and forum discussions — that serves as authentic, third-party validation of your product or service.</p>
+          <p className="text-foreground"><strong>UGC is any content created by customers about your brand — including reviews, testimonials, social media posts, photos, videos, and forum discussions — that serves as authentic, third-party validation of your product or service.</strong></p>
           <p>UGC encompasses everything from a 5-star Google review to an Instagram photo of someone using your product to a detailed YouTube video review. What makes it powerful is its source: potential customers trust content from other customers 12× more than content from the brand itself.</p>
           <p>The most effective UGC for conversion optimization includes: <Link to="/resources/reviews/" className="text-primary font-semibold hover:underline">customer reviews</Link>, text and <Link to="/product/video-testimonial-recorder/" className="text-primary font-semibold hover:underline">video testimonials</Link>, customer photos with your product, social media mentions, community forum posts, and unboxing/demo videos.</p>
 
           <h2 id="ugc-as-social-proof" className="text-2xl font-bold text-foreground">Why Is UGC the Most Trusted Form of Social Proof?</h2>
-          <p className="font-medium text-foreground">UGC is trusted because it's perceived as unbiased — customers have no financial incentive to promote your product, making their content 2.4× more likely to be viewed as authentic compared to brand-created content.</p>
+          <p className="text-foreground"><strong>UGC is trusted because it's perceived as unbiased — customers have no financial incentive to promote your product, making their content 2.4× more likely to be viewed as authentic compared to brand-created content.</strong></p>
           <p>According to Stackla, 79% of consumers say UGC highly impacts their purchasing decisions, and content created by customers is 2.4× more likely to be perceived as authentic compared to brand-created content. This authenticity gap is the core advantage of UGC as social proof.</p>
           <p>The <Link to="/resources/social-proof/social-proof-psychology/" className="text-primary font-semibold hover:underline">psychological mechanism</Link> is simple: when a brand says "our product is great," it's expected and discounted. When a customer says it, they have no incentive to mislead — so the message carries credibility weight that advertising can never match.</p>
 
           <h2 id="types-of-ugc" className="text-2xl font-bold text-foreground">What Types of UGC Drive Conversions?</h2>
-          <p className="font-medium text-foreground">The UGC types with the highest conversion impact are video testimonials (4× more effective than text), detailed reviews with photos, before/after comparisons, social media endorsements, and customer case stories.</p>
+          <p className="text-foreground"><strong>The UGC types with the highest conversion impact are video testimonials (4× more effective than text), detailed reviews with photos, before/after comparisons, social media endorsements, and customer case stories.</strong></p>
           <ul className="list-disc pl-6 space-y-3">
             <li><strong className="text-foreground">Video testimonials:</strong> The most powerful UGC format. <Link to="/resources/testimonials/video-testimonial-guide/" className="text-primary font-semibold hover:underline">Video testimonials</Link> convert 4× better than text because they show real emotion, body language, and authenticity. NotiProof's <Link to="/product/video-testimonial-recorder/" className="text-primary font-semibold hover:underline">video recorder</Link> lets customers record directly in their browser.</li>
             <li><strong className="text-foreground">Detailed reviews:</strong> Reviews with specific details ("I used it for 3 months and my conversion rate went from 2.1% to 3.4%") are 10× more persuasive than generic 5-star ratings</li>
@@ -55,7 +57,7 @@ export default function UserGeneratedContentSocialProof() {
           </ul>
 
           <h2 id="collecting-ugc" className="text-2xl font-bold text-foreground">How Do You Collect UGC at Scale?</h2>
-          <p className="font-medium text-foreground">Collect UGC at scale through automated post-purchase email sequences, in-app prompts at milestone moments, dedicated testimonial collection pages, social listening tools, and hashtag campaigns — timing the request 7–14 days after value delivery.</p>
+          <p className="text-foreground"><strong>Collect UGC at scale through automated post-purchase email sequences, in-app prompts at milestone moments, dedicated testimonial collection pages, social listening tools, and hashtag campaigns — timing the request 7–14 days after value delivery.</strong></p>
           <p>The key to UGC collection is timing and ease. Ask for content when the customer has just experienced value — not too early (no experience yet) and not too late (enthusiasm has faded).</p>
           <ul className="list-disc pl-6 space-y-2">
             <li><strong className="text-foreground">Automated email sequences:</strong> Send <Link to="/resources/testimonials/testimonial-request-email-templates/" className="text-primary font-semibold hover:underline">testimonial request emails</Link> 7–14 days after purchase/onboarding</li>
@@ -66,7 +68,7 @@ export default function UserGeneratedContentSocialProof() {
           </ul>
 
           <h2 id="displaying-ugc" className="text-2xl font-bold text-foreground">How Do You Display UGC Effectively?</h2>
-          <p className="font-medium text-foreground">Display UGC through review aggregation widgets, testimonial walls, real-time notification feeds, social media embeds, and dedicated case study pages — always placing the most impactful UGC near conversion points.</p>
+          <p className="text-foreground"><strong>Display UGC through review aggregation widgets, testimonial walls, real-time notification feeds, social media embeds, and dedicated case study pages — always placing the most impactful UGC near conversion points.</strong></p>
           <p>Collection is half the battle — display is equally important. The most effective display methods:</p>
           <ul className="list-disc pl-6 space-y-2">
             <li><strong className="text-foreground">Review widgets:</strong> <Link to="/product/testimonials-widget-reviews-widget/" className="text-primary font-semibold hover:underline">NotiProof's review widget</Link> embeds aggregated reviews from Google, G2, and other platforms directly on your website</li>
@@ -76,11 +78,11 @@ export default function UserGeneratedContentSocialProof() {
           </ul>
 
           <h2 id="ugc-seo" className="text-2xl font-bold text-foreground">How Does UGC Impact SEO?</h2>
-          <p className="font-medium text-foreground">UGC improves SEO through fresh, keyword-rich content (reviews contain natural long-tail keywords), increased dwell time, lower bounce rates, rich snippet eligibility (star ratings in search results), and expanded page content volume.</p>
+          <p className="text-foreground"><strong>UGC improves SEO through fresh, keyword-rich content (reviews contain natural long-tail keywords), increased dwell time, lower bounce rates, rich snippet eligibility (star ratings in search results), and expanded page content volume.</strong></p>
           <p>Reviews and testimonials on your website create a continuous stream of fresh, keyword-rich content that search engines love. Product pages with reviews rank for long-tail queries that the product description alone wouldn't capture. Star ratings in search results (via Schema markup) increase click-through rates by 20–30%.</p>
 
           <h2 id="legal" className="text-2xl font-bold text-foreground">What Are the Legal Considerations for UGC?</h2>
-          <p className="font-medium text-foreground">UGC legal requirements include obtaining explicit permission to use customer content, complying with FTC disclosure guidelines for incentivized reviews, GDPR consent for EU customers, and clear terms of service for submitted content.</p>
+          <p className="text-foreground"><strong>UGC legal requirements include obtaining explicit permission to use customer content, complying with FTC disclosure guidelines for incentivized reviews, GDPR consent for EU customers, and clear terms of service for submitted content.</strong></p>
           <p>Always get explicit permission before using customer content in marketing. If you incentivize reviews (discounts, free products), the incentive must be disclosed per FTC guidelines. For EU customers, ensure GDPR compliance in how you collect, store, and display personal data in reviews and testimonials.</p>
 
           <div className="bg-primary/5 border border-primary/20 rounded-xl p-6 my-8">
