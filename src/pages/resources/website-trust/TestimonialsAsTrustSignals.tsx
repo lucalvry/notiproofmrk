@@ -56,7 +56,7 @@ export default function TestimonialsAsTrustSignals() {
               <li><strong className="text-foreground">Trust badges & certifications</strong> — baseline credibility, not differentiating</li>
               <li><strong className="text-foreground">Company claims & marketing copy</strong> — lowest trust, often ignored</li>
             </ol>
-            <p className="text-muted-foreground">The key insight: testimonials should be treated as your <strong className="text-foreground">primary</strong> trust signal, not a supporting one. Trust badges and security seals provide a baseline, but testimonials do the heavy lifting of actually persuading visitors to convert.</p>
+            <p className="text-muted-foreground">The key insight: testimonials must be treated as your <strong className="text-foreground">primary</strong> trust signal, not a supporting one. Trust badges and security seals provide a baseline, but testimonials do the heavy lifting of actually persuading visitors to convert.</p>
           </section>
 
           <section id="video-vs-text-trust">
@@ -82,7 +82,7 @@ export default function TestimonialsAsTrustSignals() {
               <li><strong className="text-foreground">Checkout/signup page</strong> — short, punchy quotes that overcome last-moment hesitation</li>
               <li><strong className="text-foreground">Feature sections</strong> — testimonials that reference specific features as users scroll past them</li>
             </ul>
-            <p className="text-muted-foreground">The key principle: testimonials should appear <em>where trust is needed most</em>, not just on a dedicated testimonials page that visitors may never reach. Use NotiProof's <Link to="/product/testimonials-widget-reviews-widget/" className="text-primary hover:underline">testimonial widgets</Link> to embed testimonials contextually across your site.</p>
+            <p className="text-muted-foreground">The key principle: testimonials must appear <em>where trust is needed most</em>, not just on a dedicated testimonials page that visitors may never reach. Use NotiProof's <Link to="/product/testimonials-widget-reviews-widget/" className="text-primary hover:underline">testimonial widgets</Link> to embed testimonials contextually across your site.</p>
           </section>
 
           <section id="authenticity-markers">
@@ -115,7 +115,7 @@ export default function TestimonialsAsTrustSignals() {
             <p className="text-muted-foreground font-semibold mb-4" data-speakable>Measure testimonial trust impact through A/B testing pages with and without testimonials, tracking testimonial widget engagement rates, and monitoring conversion rate changes after adding testimonials to key decision pages.</p>
             <p className="text-muted-foreground">Trust is harder to measure than clicks, but there are reliable proxy metrics. The <Link to="/resources/conversion-analytics/measuring-social-proof-roi/" className="text-primary hover:underline">measuring social proof ROI guide</Link> covers the full framework. For testimonial-specific trust measurement:</p>
             <ul className="text-muted-foreground space-y-2">
-              <li><strong className="text-foreground">Bounce rate reduction</strong> — testimonials near the top of the page should reduce bounce rates by 10-25%</li>
+              <li><strong className="text-foreground">Bounce rate reduction</strong> — testimonials near the top of the page must reduce bounce rates by 10-25%</li>
               <li><strong className="text-foreground">Time on page increase</strong> — visitors who read testimonials spend longer on site, indicating deeper engagement</li>
               <li><strong className="text-foreground">Conversion lift</strong> — <Link to="/resources/conversion-analytics/ab-testing-social-proof/" className="text-primary hover:underline">A/B test</Link> key pages with and without testimonials</li>
               <li><strong className="text-foreground">Return visit rate</strong> — trust leads to bookmarking and returning, measurable via analytics</li>

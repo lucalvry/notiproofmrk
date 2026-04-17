@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { BookOpen, FileText, BookMarked, BarChart3, HelpCircle, Wrench, Scale, Briefcase, ArrowRight } from "lucide-react";
+import { BookOpen, FileText, BookMarked, BarChart3, HelpCircle, Wrench, Scale, Briefcase, ArrowRight, Network } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
 
 const fadeUp = { initial: { opacity: 0, y: 30 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true }, transition: { duration: 0.5 } };
@@ -61,6 +61,13 @@ const categories = [
     desc: "Detailed feature walkthroughs for notifications, testimonials, review aggregation, campaign builder, analytics, and widgets.",
     href: "/product/",
     cta: "View product",
+  },
+  {
+    icon: Network,
+    title: "Topical Map",
+    desc: "The documented content hierarchy behind every article — 6 macro pillars, 66+ clusters, with explicit Wikipedia entity references for full topical authority transparency.",
+    href: "/resources/topical-map/",
+    cta: "View topical map",
   },
 ];
 

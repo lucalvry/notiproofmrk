@@ -41,7 +41,7 @@ export default function TestimonialsForSaaS() {
           <p className="text-foreground"><strong>SaaS testimonials must address ongoing value, implementation complexity, team adoption, and ROI over time — unlike e-commerce testimonials that focus on a single purchase moment, SaaS testimonials need to prove sustained value across the customer lifecycle.</strong></p>
           <p className="text-muted-foreground">Key differences that shape SaaS testimonial strategy:</p>
           <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
-            <li><strong className="text-foreground">Subscription model:</strong> Buyers aren't just deciding "should I buy this?" — they're deciding "should I commit to this monthly cost indefinitely?" Testimonials must demonstrate sustained satisfaction, not just initial excitement.</li>
+            <li><strong className="text-foreground">Subscription model:</strong> Buyers are not just deciding on a one-time purchase — they are committing to a recurring monthly cost indefinitely. Testimonials must demonstrate sustained satisfaction, not just initial excitement.</li>
             <li><strong className="text-foreground">Multiple stakeholders:</strong> B2B SaaS purchases involve end users, managers, and budget holders. You need testimonials from each persona: users who love the product, managers who saw team impact, and executives who measured ROI.</li>
             <li><strong className="text-foreground">Implementation risk:</strong> "Was it easy to set up?" and "Did your team actually adopt it?" are top concerns. Testimonials addressing smooth onboarding and team adoption directly reduce perceived risk.</li>
             <li><strong className="text-foreground">Intangible value:</strong> Unlike physical products, SaaS value isn't visible. Testimonials must make abstract benefits concrete: "Saved us 10 hours per week" is better than "great software."</li>
@@ -83,7 +83,7 @@ export default function TestimonialsForSaaS() {
           <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
             <li><strong className="text-foreground">Onboarding emails:</strong> Include a customer quote in each drip email: "Day 1 setup email → implementation testimonial. Day 7 → quick win testimonial. Day 14 → ROI testimonial."</li>
             <li><strong className="text-foreground">In-app upgrade prompts:</strong> When a trial user hits a feature limit, show a testimonial from a customer who upgraded and saw specific results.</li>
-            <li><strong className="text-foreground">Trial expiration page:</strong> The "your trial is ending" page should feature the strongest ROI testimonial alongside the upgrade CTA.</li>
+            <li><strong className="text-foreground">Trial expiration page:</strong> The "your trial is ending" page must feature the strongest ROI testimonial alongside the upgrade CTA.</li>
           </ul>
 
           <h2 id="enterprise-testimonials" className="text-2xl font-bold mt-12">How Do You Get Enterprise Customer Testimonials?</h2>

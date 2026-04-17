@@ -1,6 +1,14 @@
 import ResourceArticle from "@/components/ResourceArticle";
 import { Link } from "react-router-dom";
 import featuredImg from "@/assets/featured-social-proof-guide.jpg";
+import { buildLearningResourceSchema } from "@/lib/learningResourceSchema";
+
+const learningResourceSchema = buildLearningResourceSchema({
+  pillarName: "Social Proof",
+  description: "Complete curriculum on social proof: psychology, types, statistics, examples, and implementation across every business model.",
+  url: "https://notiproof.com/resources/social-proof/",
+  dateModified: "2025-03-20",
+});
 
 const clusterLinks = [
   { title: "What Is Social Proof?", href: "/resources/social-proof/what-is-social-proof/", desc: "Definition, history, and core concepts." },
@@ -43,6 +51,7 @@ export default function SocialProofPillar() {
       pillarLink={{ label: "Social Proof", href: "/resources/social-proof/" }}
       relatedArticles={clusterLinks}
       speakable={["h1", "h2", "[data-speakable]"]}
+      schema={learningResourceSchema || undefined}
       content={
         <div className="space-y-8 text-foreground">
           <p className="text-lg text-muted-foreground"><dfn><Link to="/resources/glossary/">Social proof</Link></dfn> is the psychological phenomenon where people look to the actions and opinions of others to guide their own decisions. In digital marketing, social proof is one of the most powerful conversion optimization tools available — backed by decades of behavioral psychology research and proven to increase website conversions by 10–35%. This comprehensive guide covers everything from the foundational psychology to practical implementation strategies, whether you're running an e-commerce store, a SaaS platform, or a local business website.</p>
@@ -75,7 +84,7 @@ export default function SocialProofPillar() {
 
           <h2 id="statistics-2025" className="text-2xl font-bold mt-12">What Do the 2025 Social Proof Statistics Show?</h2>
           <p className="text-foreground"><strong>Data shows 92% of consumers trust peer recommendations over ads, 87% read reviews for local businesses, and social proof notifications deliver 10–35% conversion lifts on average.</strong></p>
-          <p className="text-muted-foreground">The data on social proof's effectiveness is overwhelming. Here are the key statistics every marketer and business owner should know:</p>
+          <p className="text-muted-foreground">The data on social proof's effectiveness is overwhelming. Here are the key statistics every marketer and business owner must know:</p>
           <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
             <li><strong className="text-foreground">92%</strong> of consumers trust peer recommendations over advertising (Nielsen)</li>
             <li><strong className="text-foreground">87%</strong> of consumers read online reviews for local businesses (BrightLocal)</li>
@@ -99,7 +108,7 @@ export default function SocialProofPillar() {
           <h2 id="implementation" className="text-2xl font-bold mt-12">How Do You Add Social Proof to Your Website?</h2>
           <p className="text-foreground"><strong>Adding social proof takes four steps: choose the right types for your business model, place them at decision points, install a single script tag, and continuously A/B test for optimal performance.</strong></p>
           <p className="text-muted-foreground">Implementing social proof on your website doesn't require extensive development work. With platforms like <Link to="/" className="text-primary font-semibold hover:underline">NotiProof</Link>, you can add real-time notifications, testimonial walls, visitor counters, and review widgets with a single line of code.</p>
-          <p className="text-muted-foreground"><strong className="text-foreground">Step 1 — Choose Your Social Proof Types:</strong> Match your social proof to your business model. E-commerce stores benefit most from purchase notifications and product reviews. <Link to="/use-cases/saas-social-proof-tools-drive-sign-ups/" className="text-primary font-semibold hover:underline">SaaS companies</Link> should focus on signup activity and user counts. Service businesses do best with booking notifications and review aggregation.</p>
+          <p className="text-muted-foreground"><strong className="text-foreground">Step 1 — Choose Your Social Proof Types:</strong> Match your social proof to your business model. E-commerce stores benefit most from purchase notifications and product reviews. <Link to="/use-cases/saas-social-proof-tools-drive-sign-ups/" className="text-primary font-semibold hover:underline">SaaS companies</Link> must focus on signup activity and user counts. Service businesses do best with booking notifications and review aggregation.</p>
           <p className="text-muted-foreground"><strong className="text-foreground">Step 2 — Strategic Placement:</strong> Place social proof where decisions happen: above the fold, next to CTAs, on pricing pages, during checkout, and on landing pages. Each placement addresses specific friction points in the conversion funnel.</p>
           <p className="text-muted-foreground"><strong className="text-foreground">Step 3 — Install and Configure:</strong> NotiProof works with any platform — <Link to="/integrations/shopify/" className="text-primary font-semibold hover:underline">Shopify</Link>, <Link to="/integrations/wordpress/" className="text-primary font-semibold hover:underline">WordPress</Link>, Webflow, Squarespace, or custom HTML. One script tag, configure in the dashboard, and go live in under 60 seconds.</p>
           <p className="text-muted-foreground"><strong className="text-foreground">Step 4 — Test and Optimize:</strong> Use <Link to="/product/analytics-conversion-insights/" className="text-primary font-semibold hover:underline">analytics and A/B testing</Link> to find the highest-converting designs, messages, and placements. Continuously iterate based on data.</p>

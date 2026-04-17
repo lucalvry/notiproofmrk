@@ -75,7 +75,7 @@ export default function SocialProofInMarketing() {
             <li><strong className="text-foreground"><Link to="/product/video-testimonial-recorder/" className="text-primary font-semibold hover:underline">Video testimonials</Link> as ad creative:</strong> Customer story ads consistently outperform brand-produced creative</li>
             <li><strong className="text-foreground">UGC (user-generated content):</strong> Real customer photos and experiences as ad creative feel authentic and outperform polished brand assets</li>
           </ul>
-          <p>The key is ensuring continuity — when a prospect clicks an ad featuring a testimonial, the landing page they arrive at should reinforce that proof with additional testimonials, live activity, and trust signals.</p>
+          <p>The key is ensuring continuity — when a prospect clicks an ad featuring a testimonial, the landing page they arrive at must reinforce that proof with additional testimonials, live activity, and trust signals.</p>
 
           <h2 id="combining" className="text-2xl font-bold text-foreground">Why Combine Multiple Types of Social Proof?</h2>
           <p className="text-foreground"><strong>Combining multiple <Link to="/resources/social-proof/types-of-social-proof/" className="text-primary font-semibold hover:underline">types of social proof</Link> on a single page addresses different psychological needs — trust, urgency, popularity, and authority — and significantly outperforms any single type used in isolation.</strong></p>
@@ -95,7 +95,7 @@ export default function SocialProofInMarketing() {
           <p>NotiProof's <Link to="/product/analytics-conversion-insights/" className="text-primary font-semibold hover:underline">analytics dashboard</Link> provides these metrics automatically, showing exactly how social proof notifications impact your <Link to="/resources/conversion-analytics/" className="text-primary font-semibold hover:underline">conversion funnel</Link>. Built-in A/B testing lets you compare different social proof strategies and optimize based on data.</p>
 
           <h2 id="industry-strategies" className="text-2xl font-bold text-foreground">What Are the Best Industry-Specific Social Proof Strategies?</h2>
-          <p className="text-foreground"><strong>Each industry has optimal social proof combinations: e-commerce thrives on purchase notifications and reviews, SaaS needs signup activity and ROI testimonials, agencies benefit from case studies, and local businesses should prioritize Google review aggregation.</strong></p>
+          <p className="text-foreground"><strong>Each industry has optimal social proof combinations: e-commerce thrives on purchase notifications and reviews, SaaS needs signup activity and ROI testimonials, agencies benefit from case studies, and local businesses must prioritize Google review aggregation.</strong></p>
           <div className="bg-primary/5 border border-primary/20 rounded-xl p-6 my-4">
             <ul className="list-disc pl-6 space-y-2">
               <li><strong className="text-foreground"><Link to="/use-cases/ecommerce/" className="text-primary hover:underline">E-commerce</Link>:</strong> Purchase notifications + product reviews + stock alerts + bestseller badges</li>

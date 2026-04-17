@@ -53,7 +53,7 @@ export default function MobileCRO() {
           <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
             <li><strong className="text-foreground">Sticky CTA bar:</strong> A persistent bar at the bottom with the primary action button. This keeps the conversion action always one thumb-tap away, regardless of scroll position.</li>
             <li><strong className="text-foreground">Bottom navigation:</strong> If using navigation, place it at the bottom of the screen, not the top. Users hold their phones one-handed; bottom nav is reachable, top nav requires a grip change.</li>
-            <li><strong className="text-foreground">Tap target size:</strong> All interactive elements should be at least 44x44px (Apple's Human Interface Guidelines). Small links and tiny buttons cause frustration and accidental taps.</li>
+            <li><strong className="text-foreground">Tap target size:</strong> All interactive elements measure at least 44x44px (Apple's Human Interface Guidelines). Small links and tiny buttons cause frustration and accidental taps.</li>
             <li><strong className="text-foreground">Spacing:</strong> Space interactive elements at least 8px apart to prevent accidental taps on adjacent elements.</li>
           </ul>
 
@@ -82,8 +82,8 @@ export default function MobileCRO() {
           <p className="text-foreground"><strong>On mobile, social proof must be compact and non-intrusive — use bottom-corner notification popups (not full-width banners), inline star ratings (not expandable review sections above the fold), and swipeable testimonial carousels instead of grids.</strong></p>
           <p className="text-muted-foreground">Mobile social proof adaptations:</p>
           <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
-            <li><strong className="text-foreground">Notification positioning:</strong> <Link to="/product/social-proof-notifications/" className="text-primary font-semibold hover:underline">Social proof notifications</Link> should appear in the bottom-left corner on mobile, not top corners where they compete with the navigation bar and status bar.</li>
-            <li><strong className="text-foreground">Compact format:</strong> Mobile notifications should be smaller than desktop versions. One line of text + a dismiss button. No images in notification popups on mobile — they take too much screen real estate.</li>
+            <li><strong className="text-foreground">Notification positioning:</strong> <Link to="/product/social-proof-notifications/" className="text-primary font-semibold hover:underline">Social proof notifications</Link> appear in the bottom-left corner on mobile, not top corners where they compete with the navigation bar and status bar.</li>
+            <li><strong className="text-foreground">Compact format:</strong> Mobile notifications stay smaller than desktop versions. One line of text + a dismiss button. No images in notification popups on mobile — they take too much screen real estate.</li>
             <li><strong className="text-foreground">Testimonial carousels:</strong> Swipeable horizontal carousels work better than stacked testimonial cards on mobile. Users naturally swipe horizontally, and carousels don't add scroll depth.</li>
             <li><strong className="text-foreground">Star ratings inline:</strong> Show compact star ratings (★★★★★ 4.8) inline with product titles rather than separate review sections above the fold.</li>
           </ul>
@@ -92,7 +92,7 @@ export default function MobileCRO() {
           <p className="text-foreground"><strong>Prioritize express payment options (Apple Pay, Google Pay) that skip form-filling entirely, use a single-page checkout with progressive sections, implement a sticky order total bar, and reduce fields to the absolute minimum.</strong></p>
           <p className="text-muted-foreground">Mobile checkout priorities:</p>
           <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
-            <li><strong className="text-foreground">Express payments first:</strong> Apple Pay and Google Pay should be the most prominent checkout options on mobile. They skip the entire form-filling process.</li>
+            <li><strong className="text-foreground">Express payments first:</strong> Apple Pay and Google Pay must be the most prominent checkout options on mobile. They skip the entire form-filling process.</li>
             <li><strong className="text-foreground">Single-page accordion:</strong> Shipping → Payment → Review as expandable sections on one page. No page reloads between steps.</li>
             <li><strong className="text-foreground">Sticky total bar:</strong> A bar showing "Total: $XX.XX — Place Order" that follows as users scroll through the checkout form.</li>
             <li><strong className="text-foreground">Address autocomplete:</strong> Use Google Places API for address autocompletion. Users type a few characters and select their full address from a dropdown.</li>

@@ -139,6 +139,7 @@ export const staticRoutes = [
   // Resources — Other
   "/resources/help-center/",
   "/resources/glossary/",
+  "/resources/topical-map/",
 
   // Comparisons
   "/comparisons/",

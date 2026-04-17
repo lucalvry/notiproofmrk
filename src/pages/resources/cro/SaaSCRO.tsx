@@ -60,7 +60,7 @@ export default function SaaSCRO() {
 
           <h2 id="activation-to-paid" className="text-2xl font-bold text-foreground">How Do You Convert Activated Users to Paid?</h2>
           <p className="text-foreground"><strong>Activation-to-paid conversion requires demonstrating measurable value — show ROI dashboards, usage reports, and case studies from similar companies to make the upgrade decision feel like protecting an investment, not making a new one.</strong></p>
-          <p>Once users experience value, the conversion to paid should feel like protecting something they already have, not buying something new. Key tactics:</p>
+          <p>Once users experience value, the conversion to paid feels like protecting something they already have, not buying something new. Key tactics:</p>
           <ul className="list-disc pl-6 space-y-2">
             <li><strong className="text-foreground">Value dashboards:</strong> Show measurable impact: "Your social proof notifications were seen 5,240 times and influenced 47 conversions this month." NotiProof's <Link to="/product/analytics-conversion-insights/" className="text-primary font-semibold hover:underline">analytics dashboard</Link> makes this impact visible.</li>
             <li><strong className="text-foreground">Peer comparison:</strong> "Companies like yours typically see 25% higher conversion rates on our paid plan" uses social proof to frame the upgrade as joining a successful peer group.</li>

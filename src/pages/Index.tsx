@@ -32,7 +32,16 @@ const homepageSchema = [
     description: "Social proof and testimonial platform that increases website conversions by 10–35%.",
     foundingDate: "2024",
     areaServed: "Worldwide",
-    knowsAbout: ["Social Proof", "Conversion Rate Optimization", "Testimonial Management", "FOMO Marketing", "Real-Time Notifications", "A/B Testing", "Customer Reviews", "Website Trust Signals"],
+    knowsAbout: [
+      { "@type": "DefinedTerm", name: "Social Proof", url: "https://en.wikipedia.org/wiki/Social_proof", inDefinedTermSet: "https://notiproof.com/resources/glossary/" },
+      { "@type": "DefinedTerm", name: "Conversion Rate Optimization", url: "https://en.wikipedia.org/wiki/Conversion_rate_optimization", inDefinedTermSet: "https://notiproof.com/resources/glossary/" },
+      { "@type": "DefinedTerm", name: "Testimonial", url: "https://en.wikipedia.org/wiki/Testimonial", inDefinedTermSet: "https://notiproof.com/resources/glossary/" },
+      { "@type": "DefinedTerm", name: "Fear of Missing Out", url: "https://en.wikipedia.org/wiki/Fear_of_missing_out", inDefinedTermSet: "https://notiproof.com/resources/glossary/" },
+      { "@type": "DefinedTerm", name: "A/B Testing", url: "https://en.wikipedia.org/wiki/A/B_testing", inDefinedTermSet: "https://notiproof.com/resources/glossary/" },
+      { "@type": "DefinedTerm", name: "Customer Review", url: "https://en.wikipedia.org/wiki/Customer_review", inDefinedTermSet: "https://notiproof.com/resources/glossary/" },
+      { "@type": "DefinedTerm", name: "Trust", url: "https://en.wikipedia.org/wiki/Trust_(social_science)", inDefinedTermSet: "https://notiproof.com/resources/glossary/" },
+      { "@type": "DefinedTerm", name: "Web Analytics", url: "https://en.wikipedia.org/wiki/Web_analytics", inDefinedTermSet: "https://notiproof.com/resources/glossary/" },
+    ],
     sameAs: ["https://twitter.com/notiproof", "https://linkedin.com/company/notiproof"],
   },
   {

@@ -1,6 +1,14 @@
 import ResourceArticle from "@/components/ResourceArticle";
 import { Link } from "react-router-dom";
 import featuredImg from "@/assets/featured-cro-pillar.jpg";
+import { buildLearningResourceSchema } from "@/lib/learningResourceSchema";
+
+const learningResourceSchema = buildLearningResourceSchema({
+  pillarName: "Conversion Rate Optimization",
+  description: "Complete CRO curriculum: frameworks, page-level optimization, behavioral testing, and channel-specific tactics.",
+  url: "https://notiproof.com/resources/cro/",
+  dateModified: "2025-04-07",
+});
 
 const clusterLinks = [
   { title: "Landing Page Optimization Guide", href: "/resources/cro/landing-page-optimization/", desc: "Optimize every element of your landing pages for maximum conversions." },
@@ -40,6 +48,7 @@ export default function CROPillar() {
       featuredImage={featuredImg}
       relatedArticles={clusterLinks}
       speakable={["h1", "h2", "[data-speakable]"]}
+      schema={learningResourceSchema || undefined}
       content={
         <div className="space-y-8 text-foreground">
           <p className="text-lg text-muted-foreground"><dfn><Link to="/resources/glossary/#conversion-rate-optimization" className="text-primary font-semibold hover:underline">Conversion rate optimization (CRO)</Link></dfn> is the systematic process of increasing the percentage of website visitors who take a desired action — whether that's making a purchase, signing up for a trial, or submitting a lead form. Unlike traffic acquisition, CRO focuses on getting more value from visitors you already have, making it one of the highest-ROI marketing activities available.</p>
@@ -59,8 +68,8 @@ export default function CROPillar() {
           <h2 id="cro-framework" className="text-2xl font-bold mt-12">What Is the CRO Process Framework?</h2>
           <p className="text-foreground"><strong>The CRO process follows five stages: Research → Hypothesize → Prioritize → Test → Analyze — then repeat. The best teams run this cycle continuously, producing 3–5% monthly conversion improvements that compound into transformative annual growth.</strong></p>
           <p className="text-muted-foreground"><strong className="text-foreground">1. Research:</strong> Identify where and why visitors drop off. Use <Link to="/resources/conversion-analytics/heatmap-analytics-guide/" className="text-primary font-semibold hover:underline">heatmaps</Link>, session recordings, user surveys, and <Link to="/resources/conversion-analytics/" className="text-primary font-semibold hover:underline">analytics data</Link> to find friction points. Common culprits: confusing navigation, weak value propositions, missing trust signals, and slow page loads.</p>
-          <p className="text-muted-foreground"><strong className="text-foreground">2. Hypothesize:</strong> Form specific, testable hypotheses. Not "the page should be better" but "Adding real-time purchase notifications to the product page will increase add-to-cart rate by 15% because visitors will feel validated by seeing others buying."</p>
-          <p className="text-muted-foreground"><strong className="text-foreground">3. Prioritize:</strong> Use the <dfn>ICE framework</dfn> — a prioritization method that scores each hypothesis on Impact (potential uplift), Confidence (evidence strength), and Ease (implementation effort) — to rank hypotheses. High-impact, high-confidence, easy-to-implement changes — like adding <Link to="/product/social-proof-notifications/" className="text-primary font-semibold hover:underline">social proof notifications</Link> — should always be tested first.</p>
+          <p className="text-muted-foreground"><strong className="text-foreground">2. Hypothesize:</strong> Form specific, testable hypotheses. Not "the page must be better" but "Adding real-time purchase notifications to the product page will increase add-to-cart rate by 15% because visitors will feel validated by seeing others buying."</p>
+          <p className="text-muted-foreground"><strong className="text-foreground">3. Prioritize:</strong> Use the <dfn>ICE framework</dfn> — a prioritization method that scores each hypothesis on Impact (potential uplift), Confidence (evidence strength), and Ease (implementation effort) — to rank hypotheses. High-impact, high-confidence, easy-to-implement changes — like adding <Link to="/product/social-proof-notifications/" className="text-primary font-semibold hover:underline">social proof notifications</Link> — must be tested first.</p>
           <p className="text-muted-foreground"><strong className="text-foreground">4. Test:</strong> Run statistically rigorous <Link to="/resources/conversion-analytics/ab-testing-social-proof/" className="text-primary font-semibold hover:underline">A/B tests</Link> with sufficient sample size and duration. Don't peek at results early — let tests reach 95% confidence before drawing conclusions.</p>
           <p className="text-muted-foreground"><strong className="text-foreground">5. Analyze and Iterate:</strong> Document winners and losers. Understand <em>why</em> a test won, not just that it won. Apply learnings to generate new hypotheses and start the cycle again.</p>
 
@@ -86,7 +95,7 @@ export default function CROPillar() {
           <h2 id="landing-pages" className="text-2xl font-bold mt-12">How Do You Optimize Landing Pages?</h2>
           <p className="text-foreground"><strong>Landing page optimization focuses on five elements: headline clarity, value proposition strength, social proof placement, CTA design, and friction reduction — each of which can be independently tested for maximum impact.</strong></p>
           <p className="text-muted-foreground">Landing pages are where CRO produces the biggest, fastest wins. Every element on the page either helps or hurts conversion — and most pages have significant optimization potential. The key areas to focus on:</p>
-          <p className="text-muted-foreground"><strong className="text-foreground">Headline and value proposition:</strong> Your headline should immediately answer "What's in it for me?" Test benefit-driven headlines vs. feature-driven ones. The best headlines combine a clear benefit with a trust signal: "Join 10,000+ businesses that increased conversions by 25%."</p>
+          <p className="text-muted-foreground"><strong className="text-foreground">Headline and value proposition:</strong> Your headline must immediately answer "What's in it for me?" Test benefit-driven headlines vs. feature-driven ones. The best headlines combine a clear benefit with a trust signal: "Join 10,000+ businesses that increased conversions by 25%."</p>
           <p className="text-muted-foreground"><strong className="text-foreground">Social proof placement:</strong> Place <Link to="/resources/social-proof/social-proof-for-websites/" className="text-primary font-semibold hover:underline">social proof elements</Link> near CTAs, above the fold, and at key decision points. A testimonial next to a pricing table reduces price objections. A <Link to="/product/visitor-counter-live-visitors/" className="text-primary font-semibold hover:underline">live visitor counter</Link> creates urgency. <Link to="/product/recent-activity-notifications/" className="text-primary font-semibold hover:underline">Recent activity notifications</Link> validate the action visitors are about to take.</p>
           <p className="text-muted-foreground">For the complete landing page playbook: <Link to="/resources/cro/landing-page-optimization/" className="text-primary font-semibold hover:underline">Landing Page Optimization Guide →</Link></p>
 

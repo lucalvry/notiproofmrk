@@ -115,7 +115,7 @@ export default function VideoTestimonialExamples() {
           <h2 id="key-takeaways" className="text-2xl font-bold mt-12">Key Takeaways</h2>
           <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
             <li>Great video testimonials combine relatable problems, genuine emotion, specific results, natural delivery, and clear recommendations</li>
-            <li>SaaS testimonials should feature decision-makers with metrics; e-commerce should show products in real contexts</li>
+            <li>SaaS testimonials must feature decision-makers with metrics; e-commerce must show products in real contexts</li>
             <li>Short-form (15-30s) clips outperform longer videos on social media and in ad campaigns</li>
             <li>Over-scripting, poor audio, and excessive length are the top mistakes that ruin video testimonials</li>
             <li>Browser-based recording + auto captions + minimal editing produces the best balance of quality and authenticity</li>

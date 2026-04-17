@@ -53,7 +53,7 @@ export default function SocialProofLandingPages() {
           </ul>
 
           <h2 id="placement-zones" className="text-2xl font-bold text-foreground">What Are the Three Critical Placement Zones?</h2>
-          <p className="text-foreground"><strong>Landing page social proof should appear in three zones: above the fold (credibility establishment), adjacent to CTAs (decision validation), and near pricing/commitment sections (objection handling) — each zone addresses different visitor psychology.</strong></p>
+          <p className="text-foreground"><strong>Landing page social proof must appear in three zones: above the fold (credibility establishment), adjacent to CTAs (decision validation), and near pricing/commitment sections (objection handling) — each zone addresses different visitor psychology.</strong></p>
           <p>Think of your landing page as three psychological zones, each requiring different social proof:</p>
           <ol className="list-decimal pl-6 space-y-2">
             <li><strong className="text-foreground">Zone 1 — Above the fold (Credibility):</strong> Visitors decide in 3 seconds whether to stay. A trust bar, customer count, or aggregate rating immediately says "this is legitimate."</li>
@@ -62,8 +62,8 @@ export default function SocialProofLandingPages() {
           </ol>
 
           <h2 id="above-fold" className="text-2xl font-bold text-foreground">How Do You Build Trust Above the Fold?</h2>
-          <p className="text-foreground"><strong>Above-the-fold social proof should be compact, scannable, and credibility-focused — a strip of 4–6 client logos, an aggregate metric ("Trusted by 10,000+ teams"), or a platform rating badge that visitors can process in under 2 seconds.</strong></p>
-          <p>Above-the-fold social proof needs to be processed almost subconsciously. Visitors shouldn't need to "read" it — they should absorb it while scanning the headline and CTA. The most effective formats:</p>
+          <p className="text-foreground"><strong>Above-the-fold social proof must be compact, scannable, and credibility-focused — a strip of 4–6 client logos, an aggregate metric ("Trusted by 10,000+ teams"), or a platform rating badge that visitors can process in under 2 seconds.</strong></p>
+          <p>Above-the-fold social proof must be processed almost subconsciously. Visitors absorb it while scanning the headline and CTA — never forced to "read" it. The most effective formats:</p>
           <ul className="list-disc pl-6 space-y-2">
             <li><strong className="text-foreground">Logo strip:</strong> 4–6 recognizable client/partner logos in grayscale (less visually distracting, more professional)</li>
             <li><strong className="text-foreground">Metric badge:</strong> "Trusted by 10,000+ businesses" or "4.9/5 on G2" — one specific, impressive number</li>
@@ -105,7 +105,7 @@ export default function SocialProofLandingPages() {
             <ul className="list-disc pl-6 space-y-2">
               <li>Landing pages without social proof rely entirely on your own claims — add third-party validation</li>
               <li>Three critical placement zones: above fold (credibility), near CTAs (validation), at pricing (justification)</li>
-              <li>Above-fold social proof should be scannable in under 2 seconds — logos, metrics, or badges</li>
+              <li>Above-fold social proof must be scannable in under 2 seconds — logos, metrics, or badges</li>
               <li>A testimonial next to a CTA reduces clicking anxiety by up to 25%</li>
               <li>Near pricing, use ROI-focused proof: case study metrics, "Most Popular" badges, satisfaction guarantees</li>
               <li>Test type, placement, and specificity level — start with presence/absence tests</li>

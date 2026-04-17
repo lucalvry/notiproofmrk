@@ -77,7 +77,7 @@ export default function CROForAgencies() {
           </ul>
 
           <h2 id="reporting" className="text-2xl font-bold mt-12">What Do CRO Reports Include?</h2>
-          <p className="text-foreground"><strong>Monthly CRO reports should include three sections: results (conversion rate changes and revenue impact), insights (what you learned from tests and data), and next steps (upcoming tests and optimizations) — always lead with revenue impact, not vanity metrics.</strong></p>
+          <p className="text-foreground"><strong>Monthly CRO reports must include three sections: results (conversion rate changes and revenue impact), insights (what you learned from tests and data), and next steps (upcoming tests and optimizations) — always lead with revenue impact, not vanity metrics.</strong></p>
           <p className="text-muted-foreground">Report template:</p>
           <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
             <li><strong className="text-foreground">Executive summary:</strong> One paragraph: "This month's optimizations increased checkout completion by 8%, adding an estimated $23,000 in monthly revenue."</li>
@@ -103,7 +103,7 @@ export default function CROForAgencies() {
             <li>Offer three tiers: one-time audit, monthly optimization retainer, and performance-based premium</li>
             <li>Systematic audits cover analytics, UX, trust signals, competition, and technical performance</li>
             <li>Social proof implementation is a natural CRO service component with clear, measurable results</li>
-            <li>Reports should lead with revenue impact, followed by insights and next steps</li>
+            <li>Reports must lead with revenue impact, followed by insights and next steps</li>
             <li>Price based on client revenue and value delivered, not hours worked</li>
           </ul>
         </div>

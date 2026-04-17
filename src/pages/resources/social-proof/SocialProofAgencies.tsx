@@ -63,7 +63,7 @@ export default function SocialProofAgencies() {
 
           <h2 id="own-website" className="text-2xl font-bold text-foreground">What Social Proof Do Agency Websites Display?</h2>
           <p className="text-foreground"><strong>Agency websites need a hierarchy: hero section with 3–5 headline client logos, a results counter ("$50M+ in client revenue"), a case study carousel, team expertise badges, and partner/certification logos — structured so that every scroll reveals another layer of credibility.</strong></p>
-          <p>The best agency websites treat every section as an opportunity for social proof. The hero has logos, the services section has result metrics, the team section has credentials, and the footer has awards. Your website should answer the prospect's question at every stage: "Can I trust these people with my budget?"</p>
+          <p>The best agency websites treat every section as an opportunity for social proof. The hero has logos, the services section has result metrics, the team section has credentials, and the footer has awards. Your website must answer the prospect's question at every stage: "Can I trust these people with my budget?"</p>
 
           <h2 id="client-retention" className="text-2xl font-bold text-foreground">How Does Social Proof Help with Client Retention?</h2>
           <p className="text-foreground"><strong>Agencies that provide monthly social proof performance reports — showing notification conversion lifts, review growth, and testimonial impact — have 40% higher client retention because clients can see tangible, data-backed value rather than relying on the agency's word alone.</strong></p>

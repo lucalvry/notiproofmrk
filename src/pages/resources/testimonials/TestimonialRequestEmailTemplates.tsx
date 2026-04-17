@@ -40,10 +40,10 @@ export default function TestimonialRequestEmailTemplates() {
           <h2 id="why-templates-matter" className="text-2xl font-bold mt-12">Why Do Email Templates Matter for Collection?</h2>
           <p className="text-foreground"><strong>Templates provide consistency and scalability — ensuring every happy customer receives a well-crafted request at the right moment, while freeing your team from writing individual emails each time.</strong></p>
           <p className="text-muted-foreground">Without templates, testimonial collection becomes ad-hoc and inconsistent. Someone remembers to ask one customer, forgets the next ten, and when they do ask, the email is rushed and unpersuasive. Templates solve this by providing a proven starting point that can be automated through tools like <Link to="/product/testimonials-collection-text-image-video/" className="text-primary font-semibold hover:underline">NotiProof's collection system</Link>.</p>
-          <p className="text-muted-foreground">The key insight: templates should be starting points for personalization, not fixed scripts. A template that says "Hi [First Name], congratulations on [specific milestone]" works because the structure is proven and the personalization makes it feel genuine. A template used verbatim for every customer feels automated and impersonal.</p>
+          <p className="text-muted-foreground">The key insight: templates must be starting points for personalization, not fixed scripts. A template that says "Hi [First Name], congratulations on [specific milestone]" works because the structure is proven and the personalization makes it feel genuine. A template used verbatim for every customer feels automated and impersonal.</p>
 
           <h2 id="post-purchase" className="text-2xl font-bold mt-12">What Template Works Best After a Purchase?</h2>
-          <p className="text-foreground"><strong>The post-purchase template should arrive 3-7 days after delivery, reference the specific product, express genuine interest in their experience, and include a single CTA linking to a guided testimonial form.</strong></p>
+          <p className="text-foreground"><strong>The post-purchase template must arrive 3-7 days after delivery, reference the specific product, express genuine interest in their experience, and include a single CTA linking to a guided testimonial form.</strong></p>
           <div className="bg-muted/50 border border-border rounded-xl p-6 my-4">
             <p className="text-sm font-semibold text-foreground mb-2">Template: Post-Purchase (E-commerce)</p>
             <p className="text-sm text-muted-foreground"><strong>Subject:</strong> How's your [Product Name]?</p>
@@ -94,7 +94,7 @@ export default function TestimonialRequestEmailTemplates() {
           <p className="text-muted-foreground">Follow-ups typically capture an additional 5-8% of originally unresponsive customers. After two attempts, stop — you never want testimonial requests to feel like spam, as it damages the customer relationship you're trying to celebrate.</p>
 
           <h2 id="video-request" className="text-2xl font-bold mt-12">How Do You Request Video Testimonials via Email?</h2>
-          <p className="text-foreground"><strong>Video requests should emphasize ease ("just click the link and talk for 60 seconds"), provide guided prompts, and highlight the impact their story will have — focus on reducing the perceived effort and building motivation.</strong></p>
+          <p className="text-foreground"><strong>Video requests must emphasize ease ("just click the link and talk for 60 seconds"), provide guided prompts, and highlight the impact their story will have — focus on reducing the perceived effort and building motivation.</strong></p>
           <div className="bg-muted/50 border border-border rounded-xl p-6 my-4">
             <p className="text-sm font-semibold text-foreground mb-2">Template: Video Testimonial Request</p>
             <p className="text-sm text-muted-foreground"><strong>Subject:</strong> Would you share your story? (60-second video)</p>
@@ -128,7 +128,7 @@ export default function TestimonialRequestEmailTemplates() {
             <li><strong className="text-foreground">"So glad we could help!"</strong> — Post-support warmth, 45-55% open rate</li>
             <li><strong className="text-foreground">"Would you share your story? (60 seconds)"</strong> — Time commitment clarity, 30-40% open rate</li>
           </ul>
-          <p className="text-muted-foreground">Avoid: "We need your feedback," "Leave us a review," "Help us improve" — these generic subjects have been overused and typically achieve under 20% open rates. The subject line should feel personal and relevant, not transactional.</p>
+          <p className="text-muted-foreground">Avoid: "We need your feedback," "Leave us a review," "Help us improve" — these generic subjects have been overused and typically achieve under 20% open rates. The subject line must feel personal and relevant, not transactional.</p>
         </div>
       }
     />

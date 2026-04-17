@@ -60,17 +60,17 @@ export default function WallOfLoveGuide() {
           <p className="text-muted-foreground">Design best practices:</p>
           <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
             <li><strong className="text-foreground">Masonry layout:</strong> Pinterest-style columns with varying card heights create visual interest and prevent the monotonous grid that makes testimonial pages boring.</li>
-            <li><strong className="text-foreground">Hero cards:</strong> Make 3-5 testimonials visually larger — these should be your strongest stories with specific results. They anchor the wall and draw attention first.</li>
+            <li><strong className="text-foreground">Hero cards:</strong> Make 3-5 testimonials visually larger — these must be your strongest stories with specific results. They anchor the wall and draw attention first.</li>
             <li><strong className="text-foreground">Visual variety:</strong> Alternate between text cards, video thumbnails with play buttons, tweet screenshots, star rating cards, and photo testimonials. Monotony kills engagement.</li>
-            <li><strong className="text-foreground">Brand-consistent styling:</strong> Cards should feel cohesive with your brand while preserving the authentic look of original content (especially tweets and social posts).</li>
-            <li><strong className="text-foreground">Mobile optimization:</strong> Single column on mobile with swipeable video cards. The masonry layout should gracefully collapse to 1-2 columns.</li>
+            <li><strong className="text-foreground">Brand-consistent styling:</strong> Cards must feel cohesive with your brand while preserving the authentic look of original content (especially tweets and social posts).</li>
+            <li><strong className="text-foreground">Mobile optimization:</strong> Single column on mobile with swipeable video cards. The masonry layout must gracefully collapse to 1-2 columns.</li>
           </ul>
 
           <h2 id="content-curation" className="text-2xl font-bold mt-12">How Do You Curate Content for Maximum Impact?</h2>
           <p className="text-foreground"><strong>Curate for diversity across industries, company sizes, use cases, and content types — lead with your 5 strongest testimonials (specific results, recognizable names), then fill with authentic variety that represents your full customer base.</strong></p>
           <p className="text-muted-foreground">Curation framework:</p>
           <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
-            <li><strong className="text-foreground">Top 5 hero testimonials:</strong> These should feature specific metrics, recognizable companies or people, and represent your ideal customer profiles. Place them at the top of the wall.</li>
+            <li><strong className="text-foreground">Top 5 hero testimonials:</strong> These must feature specific metrics, recognizable companies or people, and represent your ideal customer profiles. Place them at the top of the wall.</li>
             <li><strong className="text-foreground">Industry diversity:</strong> If you serve multiple industries, ensure each is represented. Visitors scan for "someone like me" before anything else.</li>
             <li><strong className="text-foreground">Use case coverage:</strong> Include testimonials about different features, benefits, and use cases so the wall addresses multiple buyer concerns simultaneously.</li>
             <li><strong className="text-foreground">Authenticity signals:</strong> Keep some testimonials that are enthusiastic but not perfect. "Really love the product, though the setup wizard could be clearer — 5/5 otherwise" is more credible than universal perfection.</li>

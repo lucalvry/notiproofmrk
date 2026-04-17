@@ -43,7 +43,7 @@ export default function EcommerceCRO() {
 
           <h2 id="product-page" className="text-2xl font-bold text-foreground">How Do You Optimize Product Pages?</h2>
           <p className="text-foreground"><strong>Product page optimization focuses on five elements: high-quality imagery, benefit-driven descriptions, prominent reviews, urgency indicators, and a frictionless add-to-cart experience.</strong></p>
-          <p>The product page is where the buying decision happens. Every element should reduce uncertainty and increase confidence:</p>
+          <p>The product page is where the buying decision happens. Every element reduces uncertainty and increases confidence:</p>
           <ul className="list-disc pl-6 space-y-2">
             <li><strong className="text-foreground">Reviews and ratings:</strong> Display star ratings prominently near the product title. Products with 50+ reviews convert 4.6× better than those with zero. Use NotiProof's <Link to="/product/review-aggregation-showcase-system/" className="text-primary font-semibold hover:underline">review aggregation</Link> to pull reviews from Google, Trustpilot, and other platforms.</li>
             <li><strong className="text-foreground">Social proof notifications:</strong> "Sarah from Austin just purchased this item" creates urgency and validates the purchase decision. <Link to="/product/social-proof-notifications/" className="text-primary font-semibold hover:underline">NotiProof notifications</Link> display real purchases in real time.</li>
@@ -73,7 +73,7 @@ export default function EcommerceCRO() {
           <p>NotiProof's <Link to="/product/campaign-builder/" className="text-primary font-semibold hover:underline">campaign builder</Link> lets you configure different social proof types for each page, ensuring the right message appears at the right moment.</p>
 
           <h2 id="category-pages" className="text-2xl font-bold text-foreground">How Do You Optimize Category Pages?</h2>
-          <p className="text-foreground"><strong>Category pages should highlight best sellers, display aggregate review scores, offer smart filtering, and use social proof badges ("Most Popular," "Trending") to guide choices and reduce decision fatigue.</strong></p>
+          <p className="text-foreground"><strong>Category pages highlight best sellers, display aggregate review scores, offer smart filtering, and use social proof badges ("Most Popular," "Trending") to guide choices and reduce decision fatigue.</strong></p>
           <p>Category pages are often overlooked in CRO but they're critical for guiding visitors toward products they're likely to buy. Key optimizations include prominent "Best Seller" tags based on real purchase data, visible star ratings on product cards, and clear filtering options that help visitors narrow choices quickly.</p>
 
           <h2 id="urgency-scarcity" className="text-2xl font-bold text-foreground">How Do You Use Urgency Ethically?</h2>

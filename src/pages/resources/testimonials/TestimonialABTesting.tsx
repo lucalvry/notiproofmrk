@@ -38,7 +38,7 @@ export default function TestimonialABTesting() {
           <p className="text-lg text-muted-foreground">Most businesses add testimonials and hope they work. But which testimonial, where it's placed, and how it's displayed can mean the difference between a 2% and 15% conversion lift. A/B testing testimonials systematically reveals what actually moves the needle for your specific audience, turning social proof from a "nice to have" into a measurable revenue driver.</p>
 
           <h2 id="why-test" className="text-2xl font-bold mt-12">Why Do You A/B Test Testimonials?</h2>
-          <p className="text-foreground"><strong>Because intuition about which testimonials "should" work is wrong 60% of the time — A/B testing reveals that the testimonial you think is strongest often isn't, and small changes in placement, format, or attribution can produce 20-50% differences in conversion impact.</strong></p>
+          <p className="text-foreground"><strong>Intuition about which testimonials work is wrong 60% of the time — A/B testing reveals that the testimonial you think is strongest often is not, and small changes in placement, format, or attribution produce 20-50% differences in conversion impact.</strong></p>
           <p className="text-muted-foreground">Common assumptions that testing disproves:</p>
           <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
             <li><strong className="text-foreground">"Celebrity endorsements beat customer quotes":</strong> In many niches, testimonials from relatable peers outperform famous names because of stronger identification.</li>

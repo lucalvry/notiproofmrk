@@ -44,7 +44,7 @@ export default function ExitIntentStrategies() {
           <h2 id="how-it-works" className="text-2xl font-bold text-foreground">How Does Exit Intent Detection Work?</h2>
           <p className="text-foreground"><strong>Desktop exit detection tracks mouse movement toward the top browser chrome, while mobile detection uses scroll-up velocity, back-button taps, and tab-switching events — each requiring different intervention strategies.</strong></p>
           <p><strong className="text-foreground">Desktop:</strong> The primary signal is mouse cursor movement toward the top of the browser viewport (where the address bar, tabs, and close button are). When cursor velocity and trajectory indicate an intent to leave, the popup fires. Advanced systems also detect tab switching and rapid scrolling to the top.</p>
-          <p><strong className="text-foreground">Mobile:</strong> Without a visible cursor, mobile exit detection relies on different signals: rapid upward scrolling (reaching for the back button), switching between tabs/apps, or a long period of inactivity followed by navigation away. These signals are less precise, so mobile exit-intent popups should be less aggressive.</p>
+          <p><strong className="text-foreground">Mobile:</strong> Without a visible cursor, mobile exit detection relies on different signals: rapid upward scrolling (reaching for the back button), switching between tabs/apps, or a long period of inactivity followed by navigation away. These signals are less precise, so mobile exit-intent popups must be less aggressive.</p>
 
           <h2 id="popup-types" className="text-2xl font-bold text-foreground">What Types of Exit-Intent Popups Work Best?</h2>
           <p className="text-foreground"><strong>The five highest-performing exit popup types are discount offers (10–15% recovery), content upgrades (8–12%), cart savers (5–11%), social proof displays (5–10%), and email capture for retargeting (3–8%).</strong></p>
@@ -75,7 +75,7 @@ export default function ExitIntentStrategies() {
             <li><strong className="text-foreground">One clear offer:</strong> Don't overwhelm with choices. One headline, one value proposition, one CTA.</li>
             <li><strong className="text-foreground">Benefit-driven headline:</strong> "Don't Miss Out on 25% More Conversions" beats "Wait! Before You Go..."</li>
             <li><strong className="text-foreground">Easy dismiss:</strong> A clear X button and clicking outside to close. Making popups hard to close destroys trust.</li>
-            <li><strong className="text-foreground">Visual hierarchy:</strong> Headline → social proof → CTA, in that order. The visitor's eye should flow naturally to the action.</li>
+            <li><strong className="text-foreground">Visual hierarchy:</strong> Headline → social proof → CTA, in that order. The visitor's eye flows naturally to the action.</li>
             <li><strong className="text-foreground">Contrast with page:</strong> Use a dimmed overlay behind the popup so the offer stands out.</li>
           </ul>
 
@@ -85,7 +85,7 @@ export default function ExitIntentStrategies() {
 
           <h2 id="targeting-rules" className="text-2xl font-bold text-foreground">What Targeting Rules Maximize Recovery?</h2>
           <p className="text-foreground"><strong>Maximize recovery by targeting exit popups based on page type (different offers for product vs. blog pages), visit frequency (returning visitors get different messages), time on page (2+ minutes indicates consideration), and cart value (higher-value carts justify bigger incentives).</strong></p>
-          <p>Not every exiting visitor should see the same popup. Advanced targeting rules include:</p>
+          <p>Not every exiting visitor must see the same popup. Advanced targeting rules include:</p>
           <ul className="list-disc pl-6 space-y-2">
             <li><strong className="text-foreground">Page-specific:</strong> Product pages → discount; blog → content upgrade; pricing → social proof</li>
             <li><strong className="text-foreground">New vs. returning:</strong> First-time visitors → introductory offer; returning visitors → different message (they've already seen the first popup)</li>

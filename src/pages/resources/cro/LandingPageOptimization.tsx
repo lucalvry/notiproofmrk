@@ -39,18 +39,18 @@ export default function LandingPageOptimization() {
 
           <h2 id="anatomy" className="text-2xl font-bold text-foreground">What Makes a High-Converting Landing Page?</h2>
           <p className="text-foreground"><strong>High-converting landing pages share five elements: a clear headline matching visitor intent, a specific value proposition, strategically placed social proof, a prominent CTA, and minimal distractions.</strong></p>
-          <p>The best landing pages follow a psychological sequence: <strong className="text-foreground">attention → interest → trust → action</strong>. The headline grabs attention, the value proposition creates interest, <Link to="/resources/social-proof/" className="text-primary font-semibold hover:underline">social proof</Link> builds trust, and the CTA drives action. Every element on the page should serve one of these four purposes — anything else is a distraction.</p>
+          <p>The best landing pages follow a psychological sequence: <strong className="text-foreground">attention → interest → trust → action</strong>. The headline grabs attention, the value proposition creates interest, <Link to="/resources/social-proof/" className="text-primary font-semibold hover:underline">social proof</Link> builds trust, and the CTA drives action. Every element on the page serves one of these four purposes — anything else is a distraction.</p>
           <p>Research from Unbounce analyzing 64,000 landing pages found that the average conversion rate is 4.02%, but the top 25% convert at 5.31% or higher. The difference isn't design trends — it's strategic optimization of these five core elements.</p>
 
           <h2 id="headline" className="text-2xl font-bold text-foreground">How Do You Write Headlines That Convert?</h2>
           <p className="text-foreground"><strong>The best headlines combine a specific benefit with a trust signal — "Join 10,000+ businesses that increased conversions by 25%" outperforms generic headlines by 30–50% in A/B tests.</strong></p>
-          <p>Your headline has approximately 3 seconds to convince a visitor to stay. It needs to answer three questions instantly: What is this? What's in it for me? Why should I trust it?</p>
+          <p>Your headline has approximately 3 seconds to convince a visitor to stay. It must answer three questions instantly: What is this? What's in it for me? Why trust it?</p>
           <p><strong className="text-foreground">Benefit-driven headlines</strong> outperform feature-driven ones consistently. "Increase your conversion rate by 25%" beats "AI-powered notification platform" because it speaks to the outcome visitors want, not the technology you built.</p>
           <p><strong className="text-foreground">Social proof in headlines</strong> adds instant credibility. "Trusted by 2,000+ conversion-focused teams" or "The #1 rated social proof platform on G2" gives visitors a reason to believe your claim. NotiProof's <Link to="/product/visitor-counter-live-visitors/" className="text-primary font-semibold hover:underline">visitor counter</Link> can dynamically display real metrics that reinforce this trust.</p>
 
           <h2 id="value-prop" className="text-2xl font-bold text-foreground">How Do You Craft a Compelling Value Proposition?</h2>
           <p className="text-foreground"><strong>A strong value proposition answers "Why you over the alternative?" — test the format: [Outcome] + [Timeframe] + [Without the usual pain], such as "Boost conversions in 5 minutes without writing code."</strong></p>
-          <p>Your value proposition should be the subheading or first body paragraph. It needs to differentiate you from competitors and clearly state the transformation you deliver. The formula that consistently tests best:</p>
+          <p>Your value proposition must be the subheading or first body paragraph. It needs to differentiate you from competitors and clearly state the transformation you deliver. The formula that consistently tests best:</p>
           <p><strong className="text-foreground">[Desired outcome] + [Specific timeframe] + [Without the usual pain point]</strong></p>
           <p>Example: "Increase website conversions by 10–35% in under 5 minutes, without developers or complex setup." This communicates the benefit (more conversions), sets expectations (fast implementation), and removes objections (no dev resources needed).</p>
 
@@ -64,12 +64,12 @@ export default function LandingPageOptimization() {
           </ul>
 
           <h2 id="cta-design" className="text-2xl font-bold text-foreground">How Do You Design CTAs That Get Clicks?</h2>
-          <p className="text-foreground"><strong>CTAs should use action-oriented, benefit-focused copy ("Start Converting More" vs. "Submit"), contrasting colors, generous whitespace, and be visible without scrolling — test button copy before design.</strong></p>
+          <p className="text-foreground"><strong>CTAs must use action-oriented, benefit-focused copy ("Start Converting More" vs. "Submit"), contrasting colors, generous whitespace, and be visible without scrolling — test button copy before design.</strong></p>
           <p>CTA optimization is often the fastest path to a measurable conversion lift. Key principles from thousands of A/B tests:</p>
           <ul className="list-disc pl-6 space-y-2">
             <li><strong className="text-foreground">Copy:</strong> Use first-person, benefit-driven language. "Start My Free Trial" outperforms "Sign Up" by 25–90% in most tests. For the full playbook: <Link to="/resources/cro/cta-optimization/" className="text-primary font-semibold hover:underline">CTA Optimization Guide →</Link></li>
-            <li><strong className="text-foreground">Color:</strong> The CTA should be the most visually prominent element. High contrast with the surrounding design is more important than specific color. Green doesn't always win — contrast does.</li>
-            <li><strong className="text-foreground">Size and spacing:</strong> Generously sized buttons with ample whitespace. On mobile, CTAs should be at least 48px tall for comfortable tapping.</li>
+            <li><strong className="text-foreground">Color:</strong> The CTA must be the most visually prominent element. High contrast with the surrounding design is more important than specific color. Green doesn't always win — contrast does.</li>
+            <li><strong className="text-foreground">Size and spacing:</strong> Generously sized buttons with ample whitespace. On mobile, CTAs must be at least 48px tall for comfortable tapping.</li>
           </ul>
 
           <h2 id="friction-reduction" className="text-2xl font-bold text-foreground">How Do You Reduce Landing Page Friction?</h2>
@@ -109,7 +109,7 @@ export default function LandingPageOptimization() {
             <ul className="list-disc pl-6 space-y-2">
               <li>Landing pages follow a psychological sequence: attention → interest → trust → action</li>
               <li>Benefit-driven headlines outperform feature-driven ones by 30–50%</li>
-              <li>Social proof should appear in three zones: above fold, next to CTAs, and at pricing</li>
+              <li>Social proof must appear in three zones: above fold, next to CTAs, and at pricing</li>
               <li>Reducing form fields by even one can improve conversions by 5–10%</li>
               <li>Mobile optimization is the biggest untapped CRO opportunity for most businesses</li>
               <li>Test headlines first — they have the highest impact potential of any single element</li>

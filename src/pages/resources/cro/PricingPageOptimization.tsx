@@ -51,8 +51,8 @@ export default function PricingPageOptimization() {
           <p className="text-muted-foreground">Tier structure best practices:</p>
           <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
             <li><strong className="text-foreground">Three tiers:</strong> Two creates a 50/50 split with no guidance. Four creates decision paralysis. Three provides a clear recommendation with a natural "Goldilocks" middle option.</li>
-            <li><strong className="text-foreground">Visual hierarchy:</strong> The recommended plan should be visually larger, bordered, or elevated. Use a "Most Popular" or "Best Value" badge. Color it differently from the other two.</li>
-            <li><strong className="text-foreground">Naming:</strong> Use aspirational names (Starter → Growth → Scale) rather than generic ones (Basic → Standard → Premium). Names should reflect what the customer becomes, not what they pay for.</li>
+            <li><strong className="text-foreground">Visual hierarchy:</strong> The recommended plan must be visually larger, bordered, or elevated. Use a "Most Popular" or "Best Value" badge. Color it differently from the other two.</li>
+            <li><strong className="text-foreground">Naming:</strong> Use aspirational names (Starter → Growth → Scale) rather than generic ones (Basic → Standard → Premium). Names reflect what the customer becomes, not what they pay for.</li>
             <li><strong className="text-foreground">Feature comparison:</strong> Show a simplified feature list on the pricing cards, with a "Compare all features" link to a detailed comparison table below.</li>
           </ul>
 

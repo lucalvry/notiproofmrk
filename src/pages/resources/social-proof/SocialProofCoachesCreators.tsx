@@ -56,9 +56,9 @@ export default function SocialProofCoachesCreators() {
           </ul>
 
           <h2 id="coaching-proof" className="text-2xl font-bold text-foreground">How Do Coaches Display Client Results?</h2>
-          <p className="text-foreground"><strong>Coaches should organize testimonials by transformation type (not chronologically), include before/after metrics, feature clients from diverse backgrounds to broaden relatability, and place the most compelling result story as a hero case study at the top of the sales page — because prospects scan for "someone like me who got the result I want."</strong></p>
+          <p className="text-foreground"><strong>Coaches must organize testimonials by transformation type (not chronologically), include before/after metrics, feature clients from diverse backgrounds to broaden relatability, and place the most compelling result story as a hero case study at the top of the sales page — because prospects scan for "someone like me who got the result I want."</strong></p>
           <p><strong className="text-foreground">Organize by outcome:</strong> Group testimonials by the result achieved — "Revenue Growth," "Work-Life Balance," "Career Transition." This helps prospects find stories from people who share their specific goal.</p>
-          <p><strong className="text-foreground">Feature diversity:</strong> Show clients from different industries, experience levels, and backgrounds. Each testimonial should help a different segment of your audience see themselves in the success story.</p>
+          <p><strong className="text-foreground">Feature diversity:</strong> Show clients from different industries, experience levels, and backgrounds. Each testimonial must help a different segment of your audience see themselves in the success story.</p>
           <p><strong className="text-foreground">Hero case study:</strong> Your single best client result deserves a full case study section at the top of your sales page — not buried in a testimonial carousel. NotiProof's <Link to="/product/testimonials-widget-reviews-widget/" className="text-primary font-semibold hover:underline">testimonials widget</Link> lets you feature hero stories prominently.</p>
 
           <h2 id="launch-proof" className="text-2xl font-bold text-foreground">How Do You Use Social Proof During Product Launches?</h2>

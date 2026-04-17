@@ -11,13 +11,13 @@ const DOMAIN = 'https://notiproof.com';
 
 // Differentiated lastmod dates by page type
 const dates = {
-  core: '2026-04-06',      // Homepage, pricing, product hub
-  product: '2026-03-28',   // Product feature pages
-  resource: '2026-03-15',  // Resource articles
-  comparison: '2026-03-20',// Comparison pages
+  core: '2026-04-17',      // Homepage, pricing, product hub
+  product: '2026-04-17',   // Product feature pages
+  resource: '2026-04-17',  // Resource articles
+  comparison: '2026-04-17',// Comparison pages
   legal: '2025-12-01',     // Privacy, terms
-  company: '2026-02-10',   // About, contact, careers
-  tool: '2026-03-01',      // Free tools
+  company: '2026-04-17',   // About, contact, careers
+  tool: '2026-04-17',      // Free tools
 };
 
 const d = (type) => dates[type] || dates.core;
@@ -174,6 +174,7 @@ const routes = [
   { path: '/resources/author/olayinka-olayokun/', priority: '0.6', changefreq: 'monthly', lastmod: d('resource') },
   { path: '/resources/help-center/', priority: '0.6', changefreq: 'monthly', lastmod: d('company') },
   { path: '/resources/glossary/', priority: '0.6', changefreq: 'monthly', lastmod: d('resource') },
+  { path: '/resources/topical-map/', priority: '0.7', changefreq: 'monthly', lastmod: d('resource') },
 
 
   // Alternatives pages

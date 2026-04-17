@@ -68,7 +68,7 @@ export default function SocialProofNotificationsGuide() {
 
           <h2 id="placement" className="text-2xl font-bold text-foreground">Where Do You Display Notifications?</h2>
           <p className="text-foreground"><strong>Display notifications on product pages (purchase notifications), pricing pages (signup activity + visitor counts), landing pages (aggregate stats), and checkout (trust reinforcement) — but never on pages where they distract from the primary action.</strong></p>
-          <p>Notification placement should match the page's conversion goal:</p>
+          <p>Notification placement must match the page's conversion goal:</p>
           <ul className="list-disc pl-6 space-y-2">
             <li><strong className="text-foreground">Product pages:</strong> Recent purchases for the specific product, "X people viewing this," and review notifications</li>
             <li><strong className="text-foreground">Pricing pages:</strong> Signup activity ("Another team just upgraded to Pro"), aggregate statistics</li>

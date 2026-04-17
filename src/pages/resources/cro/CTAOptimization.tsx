@@ -57,14 +57,14 @@ export default function CTAOptimization() {
           <p>The color debate is one of the most misunderstood topics in CRO. Studies claiming "red buttons increase conversions by 21%" are misleading — the red button won because it created more contrast in that specific design. Key design principles:</p>
           <ul className="list-disc pl-6 space-y-2">
             <li><strong className="text-foreground">Contrast is king:</strong> The CTA must visually pop against the background. Use a color that appears nowhere else on the page.</li>
-            <li><strong className="text-foreground">Size matters:</strong> The button should be large enough to be noticed but not so large it feels aggressive. 44×44px minimum for mobile touch targets; 200–300px wide for desktop.</li>
+            <li><strong className="text-foreground">Size matters:</strong> The button must be large enough to be noticed but not so large it feels aggressive. 44×44px minimum for mobile touch targets; 200–300px wide for desktop.</li>
             <li><strong className="text-foreground">Whitespace:</strong> Give CTAs breathing room. Crowded buttons feel less clickable.</li>
-            <li><strong className="text-foreground">Visual hierarchy:</strong> Primary CTA should be visually dominant, secondary CTA subdued (ghost button or text link). Never make two CTAs compete equally.</li>
+            <li><strong className="text-foreground">Visual hierarchy:</strong> Primary CTA must be visually dominant, secondary CTA subdued (ghost button or text link). Never make two CTAs compete equally.</li>
           </ul>
 
           <h2 id="placement" className="text-2xl font-bold text-foreground">Where Do You Place CTAs?</h2>
           <p className="text-foreground"><strong>Place primary CTAs above the fold for immediate action, after value propositions for considered action, at natural scroll breaks, and as sticky elements on long pages — test single vs. repeated CTAs for your content length.</strong></p>
-          <p>CTA placement follows a principle: the CTA should appear when the visitor has enough information and motivation to act, but before they lose interest or get distracted.</p>
+          <p>CTA placement follows a principle: the CTA must appear when the visitor has enough information and motivation to act, but before they lose interest or get distracted.</p>
           <ul className="list-disc pl-6 space-y-2">
             <li><strong className="text-foreground">Above the fold:</strong> For high-intent traffic (branded search, retargeting, returning visitors) who already know what they want</li>
             <li><strong className="text-foreground">After the value proposition:</strong> For new visitors who need to understand the offer before committing</li>

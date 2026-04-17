@@ -33,7 +33,7 @@ export default function AIGeneratedSocialProof() {
       relatedArticles={r}
       content={
         <div className="space-y-6 text-muted-foreground">
-          <p className="text-lg">As AI tools become capable of generating convincing text, images, and even video, a critical question emerges for marketers: should you use AI to create or enhance <Link to="/resources/social-proof/what-is-social-proof/" className="text-primary font-semibold hover:underline">social proof</Link>? The answer is nuanced — there are legitimate uses and dangerous pitfalls. Here's what every marketer needs to know.</p>
+          <p className="text-lg">As AI tools become capable of generating convincing text, images, and even video, marketers face a critical question: does AI belong in the creation or enhancement of <Link to="/resources/social-proof/what-is-social-proof/" className="text-primary font-semibold hover:underline">social proof</Link>? The answer is nuanced — there are legitimate uses and dangerous pitfalls. Here's what every marketer needs to know.</p>
 
           <h2 id="what-is-ai-social-proof" className="text-2xl font-bold text-foreground">What Is AI-Generated Social Proof?</h2>
           <p className="text-foreground"><strong>AI-generated social proof refers to any trust signal created or significantly altered by artificial intelligence — from entirely fabricated reviews and testimonials to AI-enhanced real customer quotes, synthetic customer photos, and algorithmically generated social activity signals. The spectrum ranges from outright fraud to legitimate optimization.</strong></p>
@@ -66,7 +66,7 @@ export default function AIGeneratedSocialProof() {
             <li><strong className="text-foreground">Translation:</strong> AI translates authentic reviews into the visitor's language, expanding social proof's reach without fabricating content.</li>
             <li><strong className="text-foreground">Sentiment analysis:</strong> AI identifies the most impactful genuine testimonials to feature prominently.</li>
           </ul>
-          <p>The ethical line is clear: <strong className="text-foreground">AI should optimize the presentation of real social proof, never fabricate it.</strong></p>
+          <p>The ethical line is clear: <strong className="text-foreground">AI must optimize the presentation of real social proof, never fabricate it.</strong></p>
 
           <h2 id="detection" className="text-2xl font-bold text-foreground">How Can Consumers and Platforms Detect AI-Generated Reviews?</h2>
           <p className="text-foreground"><strong>AI-generated reviews share telltale patterns: overly consistent writing style across reviews, lack of specific product details, generic phrasing ("exceeded my expectations"), perfect grammar in every review, and temporal clustering (many reviews posted within a short window) — and platforms now use machine learning classifiers with 95%+ accuracy to flag these patterns.</strong></p>
@@ -83,7 +83,7 @@ export default function AIGeneratedSocialProof() {
               <li>AI-fabricated social proof (fake reviews, synthetic testimonials) is both unethical and increasingly illegal</li>
               <li>FTC penalties can reach $50,000 per fake review — and platforms actively detect them</li>
               <li>Ethical AI uses: review writing assistance, summarization, display optimization, translation</li>
-              <li>The ethical line: AI should optimize presentation of real proof, never create fake proof</li>
+              <li>The ethical line: AI must optimize presentation of real proof, never create fake proof</li>
               <li>Detection technology is advancing faster than generation technology — fakes will be caught</li>
               <li>The real solution is systematic collection of authentic social proof at scale</li>
             </ul>

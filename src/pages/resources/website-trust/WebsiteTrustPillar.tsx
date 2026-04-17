@@ -1,6 +1,14 @@
 import ResourceArticle from "@/components/ResourceArticle";
 import { Link } from "react-router-dom";
 import featuredImg from "@/assets/featured-website-trust-pillar.jpg";
+import { buildLearningResourceSchema } from "@/lib/learningResourceSchema";
+
+const learningResourceSchema = buildLearningResourceSchema({
+  pillarName: "Website Trust",
+  description: "Complete curriculum on website trust: trust signals, badges, FOMO marketing, and credibility engineering.",
+  url: "https://notiproof.com/resources/website-trust/",
+  dateModified: "2025-03-25",
+});
 
 const clusterLinks = [
   { title: "Trust Signals for E-commerce", href: "/resources/website-trust/trust-signals-for-ecommerce/", desc: "Essential trust signals for online stores." },
@@ -36,6 +44,7 @@ export default function WebsiteTrustPillar() {
       relatedArticles={clusterLinks}
       featuredImage={featuredImg}
       speakable={["h1", "h2", "[data-speakable]"]}
+      schema={learningResourceSchema || undefined}
       content={
         <div className="space-y-8 text-foreground">
           <p className="text-lg text-muted-foreground">Trust is the invisible currency of the internet. Visitors decide within seconds whether your website is credible enough to deserve their attention — and their money. With online fraud costing consumers $10+ billion annually, building demonstrable trust isn't optional; it's the foundation of every successful online business. This guide covers the complete trust-building framework.</p>
@@ -94,7 +103,7 @@ export default function WebsiteTrustPillar() {
           <p className="text-muted-foreground"><strong className="text-foreground"><Link to="/use-cases/ecommerce/" className="text-primary font-semibold hover:underline">E-commerce:</Link></strong> Product reviews with photos, real-time purchase notifications, trust badges at checkout, clear return policies, and visible shipping information. Layer these progressively — homepage social proof draws visitors in, product page reviews build confidence, and checkout badges close the deal.</p>
           <p className="text-muted-foreground"><strong className="text-foreground"><Link to="/use-cases/saas-social-proof-tools-drive-sign-ups/" className="text-primary font-semibold hover:underline">SaaS:</Link></strong> Customer logos, user count notifications, video case studies, free trial with easy cancellation, and G2/Capterra review badges. SaaS trust is about proving that real businesses use and benefit from the product — signup activity notifications and <Link to="/product/visitor-counter-live-visitors/" className="text-primary font-semibold hover:underline">visitor counters</Link> provide this evidence dynamically.</p>
           <p className="text-muted-foreground"><strong className="text-foreground"><Link to="/use-cases/local-business-social-proof-convert-website-visitors/" className="text-primary font-semibold hover:underline">Local Business:</Link></strong> Google review aggregation, recent booking/appointment activity, local customer testimonials, physical address with map, and staff photos. Local businesses need to bridge the gap between online presence and physical credibility.</p>
-          <p className="text-muted-foreground"><strong className="text-foreground"><Link to="/use-cases/social-proof-for-marketing-agencies-impress-clients/" className="text-primary font-semibold hover:underline">Agencies:</Link></strong> Client portfolio with results, detailed case studies, industry certifications, team expertise profiles, and client testimonials. Agencies sell expertise, so trust signals should emphasize competence and proven results.</p>
+          <p className="text-muted-foreground"><strong className="text-foreground"><Link to="/use-cases/social-proof-for-marketing-agencies-impress-clients/" className="text-primary font-semibold hover:underline">Agencies:</Link></strong> Client portfolio with results, detailed case studies, industry certifications, team expertise profiles, and client testimonials. Agencies sell expertise, so trust signals must emphasize competence and proven results.</p>
 
           <h2 id="measuring-trust" className="text-2xl font-bold mt-12">How Do You Measure Trust Impact?</h2>
           <p className="text-foreground"><strong>Track conversion rate changes before and after deploying trust signals, bounce rate reduction, time on site, cart abandonment rate, and return customer rate using your <Link to="/resources/conversion-analytics/" className="text-primary font-semibold hover:underline">analytics dashboard</Link>.</strong></p>

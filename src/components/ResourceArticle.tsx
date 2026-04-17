@@ -6,11 +6,27 @@ import CTASection from "@/components/CTASection";
 import AuthorCard, { defaultAuthor, type AuthorData } from "@/components/AuthorCard";
 import TableOfContents, { type TocSection } from "@/components/TableOfContents";
 import ArticleSidebar from "@/components/ArticleSidebar";
+import { getTopicalContext } from "@/data/topicalMap";
 
 interface ArticleLink {
   title: string;
   href: string;
   desc: string;
+}
+
+interface EntityRef {
+  name: string;
+  sameAs?: string;
+}
+
+/** Q&A pair used to derive FAQPage schema with deep-link anchor URLs. */
+export interface ArticleFaq {
+  /** The question text — should match the H2 in the article body */
+  question: string;
+  /** The 30–40 word answer snippet (plain text, no markup) */
+  answer: string;
+  /** The id of the H2 anchor in the body — used to deep-link via canonical#id */
+  anchorId?: string;
 }
 
 interface ResourceArticleProps {
@@ -30,10 +46,32 @@ interface ResourceArticleProps {
   featuredImageGradient?: string;
   speakable?: string[];
   schema?: object | object[];
+  /** Koray Rule 11: macro context — the primary entity this page is about */
+  about?: EntityRef | EntityRef[];
+  /** Koray Rule 12: micro context — secondary entities discussed in the body */
+  mentions?: EntityRef[];
+  /** Comma-separated entity keywords for semantic vector reinforcement */
+  keywords?: string[];
+  /** Approximate word count of articleBody — Article schema property */
+  wordCount?: number;
+  /** Section/cluster name (e.g. "Social Proof", "CRO") — overrides pillarLink.label if set */
+  articleSection?: string;
+  /** Last editorial review date (Koray content-freshness signal) — defaults to updatedDate */
+  lastReviewed?: string;
+  /** Q&A pairs — emits FAQPage schema with anchor-deep-linked Question nodes (Koray G1+G2) */
+  faqs?: ArticleFaq[];
 }
 
 function formatDate(iso: string) {
   return new Date(iso).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
+}
+
+function entityToSchema(e: EntityRef) {
+  return {
+    "@type": "Thing",
+    name: e.name,
+    ...(e.sameAs && { sameAs: e.sameAs }),
+  };
 }
 
 export default function ResourceArticle({
@@ -41,16 +79,45 @@ export default function ResourceArticle({
   publishDate, updatedDate, content, relatedArticles, pillarLink, tocSections, author = defaultAuthor,
   featuredImage, featuredImageGradient = "from-primary/20 to-primary/10",
   speakable, schema: extraSchema,
+  about, mentions, keywords, wordCount, articleSection, lastReviewed, faqs,
 }: ResourceArticleProps) {
+  // Auto-derive macro/micro entity context from the topical map when the page
+  // doesn't pass explicit overrides. This wires Koray Pillar 1 (topical map)
+  // into Article schema for every cluster page automatically.
+  const canonicalPath = canonical.replace(/^https?:\/\/[^/]+/, "");
+  const ctx = getTopicalContext(canonicalPath);
+  const resolvedAbout = about ?? ctx?.about;
+  const resolvedMentions = mentions ?? ctx?.mentions;
+  const resolvedKeywords = keywords ?? ctx?.keywords;
+  const resolvedSection = articleSection || ctx?.articleSection || pillarLink?.label;
+  const aboutArr = resolvedAbout ? (Array.isArray(resolvedAbout) ? resolvedAbout : [resolvedAbout]) : undefined;
+
+  // Koray G8 — featured image as a full ImageObject entity (creator/credit/license)
+  const imageUrl = featuredImage
+    ? (featuredImage.startsWith("http") ? featuredImage : `https://notiproof.com${featuredImage}`)
+    : undefined;
+  const imageObject = imageUrl
+    ? {
+        "@type": "ImageObject",
+        url: imageUrl,
+        contentUrl: imageUrl,
+        creator: { "@type": "Organization", name: "NotiProof", url: "https://notiproof.com/" },
+        creditText: "NotiProof",
+        copyrightNotice: `© ${new Date().getFullYear()} NotiProof`,
+        license: "https://notiproof.com/legal/terms-of-service/",
+      }
+    : undefined;
+
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: title,
     datePublished: publishDate,
     ...(updatedDate && { dateModified: updatedDate }),
-    ...(featuredImage && { image: featuredImage.startsWith("http") ? featuredImage : `https://notiproof.com${featuredImage}` }),
+    ...(imageObject && { image: imageObject }),
     author: {
       "@type": "Person",
+      "@id": `https://notiproof.com${author.profileUrl || "/resources/author/olayinka-olayokun/"}#person`,
       name: author.name,
       jobTitle: author.jobTitle,
       description: author.bio,
@@ -60,7 +127,17 @@ export default function ResourceArticle({
     },
     publisher: { "@type": "Organization", name: "NotiProof", url: "https://notiproof.com" },
     url: canonical,
+    ...(aboutArr && { about: aboutArr.map(entityToSchema) }),
+    ...(resolvedMentions && resolvedMentions.length > 0 && { mentions: resolvedMentions.map(entityToSchema) }),
+    ...(resolvedKeywords && resolvedKeywords.length > 0 && { keywords: resolvedKeywords.join(", ") }),
+    ...(wordCount && { wordCount }),
+    ...(resolvedSection && { articleSection: resolvedSection }),
   };
+
+  // Koray G10 — derive sibling cluster URLs from the topical map for relatedLink
+  // schema (machine-readable contextual layer connection within the silo).
+  const relatedLink = relatedArticles
+    .map((a) => (a.href.startsWith("http") ? a.href : `https://notiproof.com${a.href}`));
 
   const sidebarRelated = relatedArticles.map((a) => ({ title: a.title, href: a.href }));
 
@@ -72,11 +149,17 @@ export default function ResourceArticle({
         canonical={canonical}
         schema={extraSchema ? [articleSchema, ...(Array.isArray(extraSchema) ? extraSchema : [extraSchema])] : articleSchema}
         speakable={speakable}
+        ogImage={featuredImage && featuredImage.startsWith("http") ? featuredImage : featuredImage ? `https://notiproof.com${featuredImage}` : undefined}
+        ogImageAlt={featuredImage ? title : undefined}
+        primaryImageOfPage={featuredImage}
+        relatedLink={relatedLink}
+        lastReviewed={lastReviewed || updatedDate}
+        reviewedBy={{ name: author.name, url: `https://notiproof.com${author.profileUrl || "/resources/author/olayinka-olayokun/"}` }}
         articleMeta={{
           publishedTime: publishDate,
           modifiedTime: updatedDate,
           author: author.name,
-          section: pillarLink?.label,
+          section: resolvedSection,
         }}
       />
 

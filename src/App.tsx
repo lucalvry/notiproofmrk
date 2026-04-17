@@ -150,6 +150,7 @@ const AuthorProfile = lazy(() => import("./pages/resources/AuthorProfile"));
 const HelpCenter = lazy(() => import("./pages/resources/HelpCenter"));
 const Glossary = lazy(() => import("./pages/resources/Glossary"));
 const TopicDetail = lazy(() => import("./pages/resources/TopicDetail"));
+const TopicalMapPage = lazy(() => import("./pages/resources/TopicalMap"));
 
 
 // Comparisons
@@ -348,6 +349,7 @@ const App = () => (
             <Route path="/resources/author/:slug/" element={<SuspenseWrap><AuthorProfile /></SuspenseWrap>} />
             <Route path="/resources/help-center/" element={<SuspenseWrap><HelpCenter /></SuspenseWrap>} />
             <Route path="/resources/glossary/" element={<SuspenseWrap><Glossary /></SuspenseWrap>} />
+            <Route path="/resources/topical-map/" element={<SuspenseWrap><TopicalMapPage /></SuspenseWrap>} />
             <Route path="/resources/blog/:topicId/" element={<SuspenseWrap><TopicDetail /></SuspenseWrap>} />
 
             {/* SEO Redirects — canonical consolidation */}

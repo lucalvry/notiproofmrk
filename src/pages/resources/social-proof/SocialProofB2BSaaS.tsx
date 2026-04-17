@@ -81,7 +81,7 @@ export default function SocialProofB2BSaaS() {
 
           <h2 id="website-placement" className="text-2xl font-bold text-foreground">Where Do You Place B2B Social Proof on Your Website?</h2>
           <p className="text-foreground"><strong>B2B social proof placement follows the decision journey: logos above the fold (awareness), testimonials in feature sections (consideration), case studies on dedicated pages (evaluation), and real-time notifications on pricing/signup pages (decision).</strong></p>
-          <p>The key difference from B2C: B2B visitors explore more pages before converting. Social proof should be present on every page they visit, matched to the page's role in the buyer journey. <Link to="/product/campaign-builder/" className="text-primary font-semibold hover:underline">NotiProof's campaign builder</Link> lets you configure page-specific notification rules for each stage.</p>
+          <p>The key difference from B2C: B2B visitors explore more pages before converting. Social proof must be present on every page they visit, matched to the page's role in the buyer journey. <Link to="/product/campaign-builder/" className="text-primary font-semibold hover:underline">NotiProof's campaign builder</Link> lets you configure page-specific notification rules for each stage.</p>
 
           <h2 id="enterprise" className="text-2xl font-bold text-foreground">How Do You Handle Enterprise Social Proof?</h2>
           <p className="text-foreground"><strong>Enterprise social proof requires named logos (not just counts), security certifications (SOC 2, GDPR), industry-specific case studies, and NDA-compliant anonymized references — plus direct peer connections for high-value deals.</strong></p>

@@ -95,14 +95,14 @@ export default function ProductPageCRO() {
           <p className="text-muted-foreground">Mobile-specific optimizations:</p>
           <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
             <li><strong className="text-foreground">Sticky CTA bar:</strong> As the user scrolls past the Add to Cart button, a sticky bar appears at the bottom with price + "Add to Cart." This keeps the conversion action always accessible.</li>
-            <li><strong className="text-foreground">Thumb-zone design:</strong> Primary actions (add to cart, select variant) should be in the bottom 40% of the screen where thumbs naturally reach.</li>
+            <li><strong className="text-foreground">Thumb-zone design:</strong> Primary actions (add to cart, select variant) must be in the bottom 40% of the screen where thumbs naturally reach.</li>
             <li><strong className="text-foreground">Swipeable gallery:</strong> Horizontal swipe for images with dot indicators. Support pinch-to-zoom for detail inspection.</li>
             <li><strong className="text-foreground">Accordion sections:</strong> Collapse description, specs, and shipping info into expandable sections to reduce scroll depth.</li>
             <li><strong className="text-foreground">Page speed:</strong> Target under 3-second load on 4G connections. Compress images, defer non-critical scripts, use skeleton loading states.</li>
           </ul>
 
           <h2 id="testing-framework" className="text-2xl font-bold mt-12">What Do You A/B Test First?</h2>
-          <p className="text-foreground"><strong>Test in order of typical impact: CTA button copy and color, social proof placement, product image sequence, price presentation, and description format — each test should run for 2+ weeks with 1,000+ visitors per variant at 95% confidence.</strong></p>
+          <p className="text-foreground"><strong>Test in order of typical impact: CTA button copy and color, social proof placement, product image sequence, price presentation, and description format — each test must run for 2+ weeks with 1,000+ visitors per variant at 95% confidence.</strong></p>
           <p className="text-muted-foreground">Priority testing roadmap:</p>
           <ol className="list-decimal pl-6 space-y-2 text-muted-foreground">
             <li><strong className="text-foreground">CTA button:</strong> Color, copy ("Add to Cart" vs. "Add to Bag" vs. "Buy Now"), size, and position. Typically produces 5-15% conversion differences.</li>

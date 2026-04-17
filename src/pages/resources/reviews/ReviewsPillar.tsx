@@ -1,6 +1,14 @@
 import ResourceArticle from "@/components/ResourceArticle";
 import { Link } from "react-router-dom";
 import featuredImg from "@/assets/featured-reviews-pillar.jpg";
+import { buildLearningResourceSchema } from "@/lib/learningResourceSchema";
+
+const learningResourceSchema = buildLearningResourceSchema({
+  pillarName: "Customer Reviews",
+  description: "Complete curriculum on customer reviews: collection, aggregation, response, and platform-specific guides.",
+  url: "https://notiproof.com/resources/reviews/",
+  dateModified: "2025-03-25",
+});
 
 const clusterLinks = [
   { title: "How to Get More Google Reviews", href: "/resources/reviews/how-to-collect-google-reviews/", desc: "Proven strategies to collect more Google reviews." },
@@ -36,6 +44,7 @@ export default function ReviewsPillar() {
       relatedArticles={clusterLinks}
       featuredImage={featuredImg}
       speakable={["h1", "h2", "[data-speakable]"]}
+      schema={learningResourceSchema || undefined}
       content={
         <div className="space-y-8 text-foreground">
           <p className="text-lg text-muted-foreground"><dfn><Link to="/resources/glossary/">customer reviews</Link></dfn> are the single most influential form of <Link to="/resources/social-proof/" className="text-primary font-semibold hover:underline">social proof</Link> for online businesses. Research consistently shows that 93% of consumers say online reviews influence their purchasing decisions, and 72% won't take action until they've read reviews. This guide covers everything from collection strategies to display optimization.</p>
@@ -59,7 +68,7 @@ export default function ReviewsPillar() {
           <p className="text-muted-foreground"><strong className="text-foreground">Post-purchase automation:</strong> Set up automated email or SMS requests 3–7 days after delivery (for physical products) or 14–30 days after signup (for SaaS). NotiProof's <Link to="/product/testimonials-collection-text-image-video/" className="text-primary font-semibold hover:underline">testimonial collection system</Link> automates this with customizable timing and follow-up sequences.</p>
           <p className="text-muted-foreground"><strong className="text-foreground">In-app prompts:</strong> For SaaS products, trigger review requests after key milestones — completing onboarding, achieving a goal, or reaching a usage threshold. Context-aware prompts get 3–5× higher response rates than generic asks.</p>
           <p className="text-muted-foreground"><strong className="text-foreground">Make it frictionless:</strong> Every additional step in the review process reduces completion rates by 20–30%. Provide direct links to the review form, pre-fill information where possible, and offer multiple format options (text, star rating, video). Mobile-optimized forms are essential — over 60% of reviews are written on mobile devices.</p>
-          <p className="text-muted-foreground"><strong className="text-foreground">Incentivize thoughtfully:</strong> While you cannot pay for positive reviews (and shouldn't — it violates most platform terms), you can offer small incentives for leaving any honest review. Discount codes, loyalty points, or charitable donations are all effective and ethical approaches.</p>
+          <p className="text-muted-foreground"><strong className="text-foreground">Incentivize thoughtfully:</strong> Paying for positive reviews violates most platform terms and is forbidden, but small incentives for any honest review are allowed. Discount codes, loyalty points, or charitable donations are all effective and ethical approaches.</p>
           <p className="text-muted-foreground"><strong className="text-foreground">Respond to every review:</strong> Businesses that respond to reviews receive 12% more reviews on average. Responses signal that you value customer feedback, encouraging others to share their experiences. For <Link to="/use-cases/local-business-social-proof-convert-website-visitors/" className="text-primary font-semibold hover:underline">local businesses</Link>, responding to Google reviews also improves local SEO rankings.</p>
 
           <h2 id="review-platforms" className="text-2xl font-bold mt-12">Which Review Platforms Do You Use?</h2>
@@ -70,7 +79,7 @@ export default function ReviewsPillar() {
             <li><strong className="text-foreground">Trustpilot:</strong> Strong for e-commerce and international businesses. Their TrustBox widgets are widely recognized and carry brand authority. Free tier available with paid plans for advanced features.</li>
             <li><strong className="text-foreground">G2 & Capterra:</strong> Essential for B2B SaaS companies. Buyer intent on these platforms is extremely high, and reviews directly influence enterprise purchasing decisions. G2 reviews can generate significant organic traffic through their marketplace.</li>
             <li><strong className="text-foreground">Yelp:</strong> Critical for restaurants, healthcare, home services, and local businesses. Yelp's algorithm favors detailed, organic reviews and actively filters suspected fakes.</li>
-            <li><strong className="text-foreground">Industry-specific platforms:</strong> TripAdvisor (hospitality), Zillow (real estate), Healthgrades (healthcare), Avvo (legal) — if one exists for your industry, it should be part of your strategy.</li>
+            <li><strong className="text-foreground">Industry-specific platforms:</strong> TripAdvisor (hospitality), Zillow (real estate), Healthgrades (healthcare), Avvo (legal) — if one exists for your industry, it must be part of your strategy.</li>
           </ul>
           <p className="text-muted-foreground">The smartest approach is to focus on 2–3 primary platforms where your target audience actively searches, then use <Link to="/product/review-aggregation-showcase-system/" className="text-primary font-semibold hover:underline">NotiProof's review aggregation</Link> to consolidate all reviews on your website.</p>
 
@@ -83,7 +92,7 @@ export default function ReviewsPillar() {
 
           <h2 id="displaying-reviews" className="text-2xl font-bold mt-12">How Do You Display Reviews for Maximum Impact?</h2>
           <p className="text-foreground"><strong>Place reviews at decision points — near pricing/CTA buttons, in the homepage hero, during checkout, and on dedicated testimonial pages — for a typical 15–25% conversion lift.</strong></p>
-          <p className="text-muted-foreground">Where and how you display reviews dramatically affects their conversion impact. The key principle is placement at decision points — reviews should appear where visitors are evaluating whether to take action.</p>
+          <p className="text-muted-foreground">Where and how you display reviews dramatically affects their conversion impact. The key principle is placement at decision points — reviews must appear where visitors are evaluating whether to take action.</p>
           <p className="text-muted-foreground"><strong className="text-foreground">Product/pricing pages:</strong> Display star ratings and review counts near the price and CTA button. Include 2–3 featured reviews that address common objections. This placement typically delivers a 15–25% conversion lift.</p>
           <p className="text-muted-foreground"><strong className="text-foreground">Homepage hero section:</strong> A summary stat like "Trusted by 5,000+ businesses — 4.9/5 average rating" provides immediate credibility. Pair with <Link to="/product/social-proof-notifications/" className="text-primary font-semibold hover:underline">real-time social proof notifications</Link> for dynamic trust signals.</p>
           <p className="text-muted-foreground"><strong className="text-foreground">Checkout flow:</strong> Display reviews on cart and checkout pages to reduce abandonment. Reviews at this stage address last-minute hesitation and can reduce cart abandonment by 10–15%.</p>

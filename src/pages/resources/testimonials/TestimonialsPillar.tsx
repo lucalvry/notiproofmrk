@@ -1,6 +1,14 @@
 import ResourceArticle from "@/components/ResourceArticle";
 import { Link } from "react-router-dom";
 import featuredImg from "@/assets/featured-testimonials-pillar.jpg";
+import { buildLearningResourceSchema } from "@/lib/learningResourceSchema";
+
+const learningResourceSchema = buildLearningResourceSchema({
+  pillarName: "Testimonials",
+  description: "Complete curriculum on testimonials: collection workflows, video production, design, and conversion impact.",
+  url: "https://notiproof.com/resources/testimonials/",
+  dateModified: "2025-03-25",
+});
 
 const clusterLinks = [
   { title: "How to Collect Testimonials That Convert", href: "/resources/testimonials/how-to-collect-testimonials/", desc: "Automated workflows and timing strategies." },
@@ -36,6 +44,7 @@ export default function TestimonialsPillar() {
       relatedArticles={clusterLinks}
       featuredImage={featuredImg}
       speakable={["h1", "h2", "[data-speakable]"]}
+      schema={learningResourceSchema || undefined}
       content={
         <div className="space-y-8 text-foreground">
           <p className="text-lg text-muted-foreground"><dfn><Link to="/resources/glossary/">Customer testimonials</Link></dfn> are the backbone of any <Link to="/resources/social-proof/" className="text-primary font-semibold hover:underline">social proof strategy</Link>. A single compelling testimonial can be more persuasive than pages of marketing copy because it provides authentic, third-party validation of your product's value. This comprehensive guide covers every aspect of testimonial strategy — from automated collection to conversion-optimized display.</p>
@@ -69,6 +78,7 @@ export default function TestimonialsPillar() {
           <p className="text-muted-foreground"><strong className="text-foreground">NPS-driven collection:</strong> If you run NPS surveys, immediately invite promoters (9–10 scores) to leave a testimonial. These customers have already expressed high satisfaction — they just need a channel to formalize it.</p>
 
           <h2 id="asking-questions" className="text-2xl font-bold mt-12">What Questions Do You Ask Customers?</h2>
+          <p className="text-foreground"><strong>Ask five structured questions that follow the "problem → choice → solution → result → recommendation" arc — generic "tell us about your experience" prompts produce generic testimonials, while guided questions produce specific, persuasive narratives buyers actually trust.</strong></p>
           <p className="text-muted-foreground">Generic "tell us about your experience" requests produce generic testimonials. Structured prompts produce specific, persuasive content. Guide customers with questions that naturally create the "problem → solution → result" narrative:</p>
           <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
             <li><strong className="text-foreground">"What challenge were you facing before using [product]?"</strong> — Establishes the relatable problem</li>

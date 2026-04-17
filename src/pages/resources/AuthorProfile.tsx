@@ -70,19 +70,41 @@ const allArticles = [
 ];
 
 const author = defaultAuthor;
+const PROFILE_URL = "https://notiproof.com/resources/author/olayinka-olayokun/";
 
-const schema = {
+// Koray Pillar 7 — full E-E-A-T: ProfilePage + standalone Person node with
+// @id-anchored references so search engines can resolve the same author entity
+// across every Article schema on the site.
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": `${PROFILE_URL}#person`,
+  name: author.name,
+  url: PROFILE_URL,
+  jobTitle: author.jobTitle,
+  description: author.bio,
+  knowsAbout: author.knowsAbout,
+  sameAs: author.sameAs,
+  worksFor: { "@type": "Organization", name: "NotiProof", url: "https://notiproof.com/" },
+  hasCredential: author.credentials.split("·").map((c) => ({
+    "@type": "EducationalOccupationalCredential",
+    name: c.trim(),
+  })),
+};
+
+const profilePageSchema = {
   "@context": "https://schema.org",
   "@type": "ProfilePage",
-  mainEntity: {
-    "@type": "Person",
-    name: author.name,
-    jobTitle: author.jobTitle,
-    description: author.bio,
-    knowsAbout: author.knowsAbout,
-    sameAs: author.sameAs,
-  },
+  "@id": `${PROFILE_URL}#profilepage`,
+  url: PROFILE_URL,
+  name: `${author.name} – Author & Digital Marketing Expert`,
+  dateCreated: "2024-09-01",
+  dateModified: new Date().toISOString().split("T")[0],
+  mainEntity: { "@id": `${PROFILE_URL}#person` },
+  about: { "@id": `${PROFILE_URL}#person` },
 };
+
+const schema = [personSchema, profilePageSchema];
 
 export default function AuthorProfile() {
   return (
