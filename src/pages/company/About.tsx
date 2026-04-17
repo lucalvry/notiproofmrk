@@ -33,11 +33,25 @@ const aboutSchema = [
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "NotiProof",
+    legalName: "Lucalvry LLC",
     url: "https://notiproof.com",
     logo: "https://notiproof.com/og-image.png",
     foundingDate: "2022",
     description: "NotiProof is a social proof and testimonial platform that helps businesses increase conversions with real-time notifications, review aggregation, and testimonial collection.",
     areaServed: "Worldwide",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "30 N Gould St, STE R",
+      addressLocality: "Sheridan",
+      addressRegion: "WY",
+      postalCode: "82801",
+      addressCountry: "US",
+    },
+    parentOrganization: {
+      "@type": "Organization",
+      name: "Lucalvry LLC",
+      legalName: "Lucalvry LLC",
+    },
     sameAs: [
       "https://twitter.com/notiproof",
       "https://www.linkedin.com/company/notiproof",
@@ -94,7 +108,7 @@ export default function AboutPage() {
               We believe that trust is the most important conversion factor online. Our mission is to help businesses build that trust through authentic social proof — real-time notifications, genuine customer testimonials, and transparent engagement data.
             </p>
             <p className="text-lg text-muted-foreground text-center">
-              NotiProof serves over 5,000 businesses worldwide, from solo entrepreneurs to enterprise teams. Every day, our platform processes millions of social proof interactions, helping businesses convert visitors into customers.
+              NotiProof serves over 5,000 businesses worldwide, from solo entrepreneurs to enterprise teams. Every day, our platform processes millions of social proof interactions, helping businesses convert visitors into customers. NotiProof is built and operated by Lucalvry LLC, a Wyoming limited liability company.
             </p>
           </div>
         </div>

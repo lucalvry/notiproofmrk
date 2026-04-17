@@ -165,7 +165,170 @@ export const allArticles = categories
   .filter((a, i, arr) => arr.findIndex((x) => x.href === a.href) === i)
   .sort((a, b) => new Date(b.isoDate).getTime() - new Date(a.isoDate).getTime());
 
-export const articleImages: Record<string, string> = {};
+// ===== Featured image registry — single source of truth for blog cards =====
+// Social Proof
+import imgSpGuide from "@/assets/featured-social-proof-guide.jpg";
+import imgSpWhat from "@/assets/featured-what-is-social-proof.jpg";
+import imgSpTypes from "@/assets/featured-types-social-proof.jpg";
+import imgSpPsych from "@/assets/featured-social-proof-psychology.jpg";
+import imgSpExamples from "@/assets/featured-social-proof-examples.jpg";
+import imgSpMarketing from "@/assets/featured-social-proof-marketing.jpg";
+import imgSpWebsites from "@/assets/featured-social-proof-websites.jpg";
+import imgSpReviewsBridge from "@/assets/featured-reviews-and-social-proof.jpg";
+import imgSpNotifications from "@/assets/featured-social-proof-notifications.jpg";
+import imgSpB2B from "@/assets/featured-social-proof-b2b-saas.jpg";
+import imgSpUgc from "@/assets/featured-ugc-social-proof.jpg";
+import imgSpLanding from "@/assets/featured-social-proof-landing-pages.jpg";
+import imgSpStats from "@/assets/featured-social-proof-statistics.jpg";
+import imgSpEcom from "@/assets/featured-social-proof-ecommerce.jpg";
+import imgSpLocal from "@/assets/featured-social-proof-local-business.jpg";
+import imgSpAgencies from "@/assets/featured-social-proof-agencies.jpg";
+import imgSpCoaches from "@/assets/featured-social-proof-coaches-creators.jpg";
+import imgSpRestaurants from "@/assets/featured-social-proof-restaurants.jpg";
+import imgSpAi from "@/assets/featured-ai-social-proof.jpg";
+import imgSpNegative from "@/assets/featured-negative-social-proof.jpg";
+import imgSpSocial from "@/assets/featured-social-proof-social-media.jpg";
+// Reviews
+import imgRvPillar from "@/assets/featured-reviews-pillar.jpg";
+import imgRvGoogle from "@/assets/featured-how-to-collect-google-reviews.jpg";
+import imgRvAgg from "@/assets/featured-review-aggregation-guide.jpg";
+import imgRvNeg from "@/assets/featured-responding-to-negative-reviews.jpg";
+import imgRvWidgets from "@/assets/featured-review-widgets-for-websites.jpg";
+import imgRvTrustpilot from "@/assets/featured-trustpilot-reviews.jpg";
+import imgRvG2 from "@/assets/featured-g2-reviews.jpg";
+import imgRvYelp from "@/assets/featured-yelp-reviews.jpg";
+import imgRvStats from "@/assets/featured-online-review-statistics.jpg";
+import imgRvEmbed from "@/assets/featured-embed-google-reviews.jpg";
+import imgRvFake from "@/assets/featured-fake-reviews-detection.jpg";
+import imgRvGen from "@/assets/featured-review-generation.jpg";
+import imgRvStar from "@/assets/featured-star-rating-psychology.jpg";
+// Conversion Analytics
+import imgCaPillar from "@/assets/featured-conversion-analytics-pillar.jpg";
+import imgCaAb from "@/assets/featured-ab-testing-social-proof.jpg";
+import imgCaBench from "@/assets/featured-conversion-rate-benchmarks.jpg";
+import imgCaRoi from "@/assets/featured-measuring-social-proof-roi.jpg";
+import imgCaHeat from "@/assets/featured-heatmap-analytics-guide.jpg";
+import imgCaTRoi from "@/assets/featured-testimonial-review-roi.jpg";
+// Website Trust
+import imgWtPillar from "@/assets/featured-website-trust-pillar.jpg";
+import imgWtSignals from "@/assets/featured-trust-signals-ecommerce.jpg";
+import imgWtBadges from "@/assets/featured-trust-badges-guide.jpg";
+import imgWtCred from "@/assets/featured-building-website-credibility.jpg";
+import imgWtFomo from "@/assets/featured-fomo-marketing-guide.jpg";
+import imgWtTesti from "@/assets/featured-testimonials-as-trust-signals.jpg";
+// Testimonials
+import imgTsPillar from "@/assets/featured-testimonials-pillar.jpg";
+import imgTsCollect from "@/assets/featured-how-to-collect-testimonials.jpg";
+import imgTsVideo from "@/assets/featured-video-testimonial-guide.jpg";
+import imgTsDesign from "@/assets/featured-testimonial-page-design.jpg";
+import imgTsEmail from "@/assets/featured-testimonial-request-email-templates.jpg";
+import imgTsVsText from "@/assets/featured-video-vs-text-testimonials.jpg";
+import imgTsAsk from "@/assets/featured-ask-video-testimonials.jpg";
+import imgTsExamples from "@/assets/featured-video-testimonial-examples.jpg";
+import imgTsSaas from "@/assets/featured-testimonials-for-saas.jpg";
+import imgTsCase from "@/assets/featured-case-study-vs-testimonial.jpg";
+import imgTsAb from "@/assets/featured-testimonial-ab-testing.jpg";
+import imgTsWall from "@/assets/featured-wall-of-love.jpg";
+// CRO
+import imgCroPillar from "@/assets/featured-cro-pillar.jpg";
+import imgCroLanding from "@/assets/featured-landing-page-optimization.jpg";
+import imgCroEcom from "@/assets/featured-ecommerce-cro.jpg";
+import imgCroSaas from "@/assets/featured-saas-cro.jpg";
+import imgCroCart from "@/assets/featured-cart-abandonment.jpg";
+import imgCroCta from "@/assets/featured-cta-optimization.jpg";
+import imgCroExit from "@/assets/featured-exit-intent.jpg";
+import imgCroProduct from "@/assets/featured-product-page-cro.jpg";
+import imgCroCheckout from "@/assets/featured-checkout-optimization.jpg";
+import imgCroPricing from "@/assets/featured-pricing-page-optimization.jpg";
+import imgCroMobile from "@/assets/featured-mobile-cro.jpg";
+import imgCroAtf from "@/assets/featured-above-the-fold.jpg";
+import imgCroAgency from "@/assets/featured-cro-for-agencies.jpg";
+import imgCroGa4 from "@/assets/featured-ga4-social-proof.jpg";
+
+export const articleImages: Record<string, string> = {
+  // Social Proof
+  "/resources/social-proof/": imgSpGuide,
+  "/resources/social-proof/what-is-social-proof/": imgSpWhat,
+  "/resources/social-proof/types-of-social-proof/": imgSpTypes,
+  "/resources/social-proof/social-proof-psychology/": imgSpPsych,
+  "/resources/social-proof/social-proof-example/": imgSpExamples,
+  "/resources/social-proof/social-proof-in-marketing/": imgSpMarketing,
+  "/resources/social-proof/social-proof-for-websites/": imgSpWebsites,
+  "/resources/social-proof/reviews-and-social-proof/": imgSpReviewsBridge,
+  "/resources/social-proof/social-proof-notifications-guide/": imgSpNotifications,
+  "/resources/social-proof/social-proof-b2b-saas/": imgSpB2B,
+  "/resources/social-proof/user-generated-content-social-proof/": imgSpUgc,
+  "/resources/social-proof/social-proof-for-landing-pages/": imgSpLanding,
+  "/resources/social-proof/social-proof-statistics/": imgSpStats,
+  "/resources/social-proof/social-proof-ecommerce/": imgSpEcom,
+  "/resources/social-proof/social-proof-local-business/": imgSpLocal,
+  "/resources/social-proof/social-proof-agencies/": imgSpAgencies,
+  "/resources/social-proof/social-proof-coaches-creators/": imgSpCoaches,
+  "/resources/social-proof/social-proof-restaurants/": imgSpRestaurants,
+  "/resources/social-proof/ai-generated-social-proof/": imgSpAi,
+  "/resources/social-proof/negative-social-proof/": imgSpNegative,
+  "/resources/social-proof/social-proof-social-media/": imgSpSocial,
+  // Reviews
+  "/resources/reviews/": imgRvPillar,
+  "/resources/reviews/how-to-collect-google-reviews/": imgRvGoogle,
+  "/resources/reviews/review-aggregation-guide/": imgRvAgg,
+  "/resources/reviews/responding-to-negative-reviews/": imgRvNeg,
+  "/resources/reviews/review-widgets-for-websites/": imgRvWidgets,
+  "/resources/reviews/trustpilot-reviews-guide/": imgRvTrustpilot,
+  "/resources/reviews/g2-reviews-guide/": imgRvG2,
+  "/resources/reviews/yelp-reviews-guide/": imgRvYelp,
+  "/resources/reviews/online-review-statistics/": imgRvStats,
+  "/resources/reviews/embed-google-reviews/": imgRvEmbed,
+  "/resources/reviews/fake-reviews-detection/": imgRvFake,
+  "/resources/reviews/review-generation-strategies/": imgRvGen,
+  "/resources/reviews/star-rating-psychology/": imgRvStar,
+  // Conversion Analytics
+  "/resources/conversion-analytics/": imgCaPillar,
+  "/resources/conversion-analytics/ab-testing-social-proof/": imgCaAb,
+  "/resources/conversion-analytics/conversion-rate-benchmarks/": imgCaBench,
+  "/resources/conversion-analytics/measuring-social-proof-roi/": imgCaRoi,
+  "/resources/conversion-analytics/heatmap-analytics-guide/": imgCaHeat,
+  "/resources/conversion-analytics/testimonial-review-roi/": imgCaTRoi,
+  // Website Trust
+  "/resources/website-trust/": imgWtPillar,
+  "/resources/website-trust/trust-signals-for-ecommerce/": imgWtSignals,
+  "/resources/website-trust/trust-badges-guide/": imgWtBadges,
+  "/resources/website-trust/building-website-credibility/": imgWtCred,
+  "/resources/website-trust/fomo-marketing-guide/": imgWtFomo,
+  "/resources/website-trust/testimonials-as-trust-signals/": imgWtTesti,
+  // Testimonials
+  "/resources/testimonials/": imgTsPillar,
+  "/resources/testimonials/how-to-collect-testimonials/": imgTsCollect,
+  "/resources/testimonials/video-testimonial-guide/": imgTsVideo,
+  "/resources/testimonials/testimonial-page-design/": imgTsDesign,
+  "/resources/testimonials/testimonial-request-email-templates/": imgTsEmail,
+  "/resources/testimonials/video-vs-text-testimonials/": imgTsVsText,
+  "/resources/testimonials/ask-for-video-testimonials/": imgTsAsk,
+  "/resources/testimonials/video-testimonial-examples/": imgTsExamples,
+  "/resources/testimonials/testimonials-for-saas/": imgTsSaas,
+  "/resources/testimonials/case-study-vs-testimonial/": imgTsCase,
+  "/resources/testimonials/testimonial-ab-testing/": imgTsAb,
+  "/resources/testimonials/wall-of-love-guide/": imgTsWall,
+  // CRO
+  "/resources/cro/": imgCroPillar,
+  "/resources/cro/landing-page-optimization/": imgCroLanding,
+  "/resources/cro/ecommerce-conversion-optimization/": imgCroEcom,
+  "/resources/cro/saas-conversion-optimization/": imgCroSaas,
+  "/resources/cro/cart-abandonment/": imgCroCart,
+  "/resources/cro/cta-optimization/": imgCroCta,
+  "/resources/cro/exit-intent-strategies/": imgCroExit,
+  "/resources/cro/product-page-cro/": imgCroProduct,
+  "/resources/cro/checkout-optimization/": imgCroCheckout,
+  "/resources/cro/pricing-page-optimization/": imgCroPricing,
+  "/resources/cro/mobile-cro/": imgCroMobile,
+  "/resources/cro/above-the-fold-optimization/": imgCroAtf,
+  "/resources/cro/cro-for-agencies/": imgCroAgency,
+  "/resources/cro/ga4-social-proof-tracking/": imgCroGa4,
+};
+
+export function getArticleImage(href: string): string | undefined {
+  return articleImages[href];
+}
 
 export function getCategoryById(id: string) {
   return categories.find((c) => c.id === id);

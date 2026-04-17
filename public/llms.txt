@@ -50,3 +50,5 @@ NotiProof is a SaaS platform that helps businesses boost website conversions thr
 - Website: https://notiproof.com
 - App: https://app.notiproof.com
 - Contact: https://notiproof.com/company/contact/
+- Legal entity: Lucalvry LLC, Wyoming USA (operates NotiProof)
+- Mailing address: 30 N Gould St, STE R, Sheridan, WY 82801

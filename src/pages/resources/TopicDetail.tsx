@@ -3,56 +3,7 @@ import { motion } from "framer-motion";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
 import ArticleCard from "@/components/ArticleCard";
-import { categories, categoryGradients, getCategoryById } from "@/data/blogCategories";
-import imgGuide from "@/assets/featured-social-proof-guide.jpg";
-import imgWhat from "@/assets/featured-what-is-social-proof.jpg";
-import imgTypes from "@/assets/featured-types-social-proof.jpg";
-import imgPsych from "@/assets/featured-social-proof-psychology.jpg";
-import imgExamples from "@/assets/featured-social-proof-examples.jpg";
-import imgMarketing from "@/assets/featured-social-proof-marketing.jpg";
-import imgWebsites from "@/assets/featured-social-proof-websites.jpg";
-import imgCollectReviews from "@/assets/featured-how-to-collect-google-reviews.jpg";
-import imgReviewAgg from "@/assets/featured-review-aggregation-guide.jpg";
-import imgNegReviews from "@/assets/featured-responding-to-negative-reviews.jpg";
-import imgReviewWidgets from "@/assets/featured-review-widgets-for-websites.jpg";
-import imgAbTesting from "@/assets/featured-ab-testing-social-proof.jpg";
-import imgBenchmarks from "@/assets/featured-conversion-rate-benchmarks.jpg";
-import imgMeasuringRoi from "@/assets/featured-measuring-social-proof-roi.jpg";
-import imgHeatmap from "@/assets/featured-heatmap-analytics-guide.jpg";
-import imgTrustSignals from "@/assets/featured-trust-signals-ecommerce.jpg";
-import imgTrustBadges from "@/assets/featured-trust-badges-guide.jpg";
-import imgCredibility from "@/assets/featured-building-website-credibility.jpg";
-import imgFomo from "@/assets/featured-fomo-marketing-guide.jpg";
-import imgCollectTestimonials from "@/assets/featured-how-to-collect-testimonials.jpg";
-import imgVideoTestimonials from "@/assets/featured-video-testimonial-guide.jpg";
-import imgTestimonialPage from "@/assets/featured-testimonial-page-design.jpg";
-import imgTestimonialEmail from "@/assets/featured-testimonial-request-email-templates.jpg";
-
-const articleImages: Record<string, string> = {
-  "/resources/social-proof/": imgGuide,
-  "/resources/social-proof/what-is-social-proof/": imgWhat,
-  "/resources/social-proof/types-of-social-proof/": imgTypes,
-  "/resources/social-proof/social-proof-psychology/": imgPsych,
-  "/resources/social-proof/social-proof-example/": imgExamples,
-  "/resources/social-proof/social-proof-in-marketing/": imgMarketing,
-  "/resources/social-proof/social-proof-for-websites/": imgWebsites,
-  "/resources/reviews/how-to-collect-google-reviews/": imgCollectReviews,
-  "/resources/reviews/review-aggregation-guide/": imgReviewAgg,
-  "/resources/reviews/responding-to-negative-reviews/": imgNegReviews,
-  "/resources/reviews/review-widgets-for-websites/": imgReviewWidgets,
-  "/resources/conversion-analytics/ab-testing-social-proof/": imgAbTesting,
-  "/resources/conversion-analytics/conversion-rate-benchmarks/": imgBenchmarks,
-  "/resources/conversion-analytics/measuring-social-proof-roi/": imgMeasuringRoi,
-  "/resources/conversion-analytics/heatmap-analytics-guide/": imgHeatmap,
-  "/resources/website-trust/trust-signals-for-ecommerce/": imgTrustSignals,
-  "/resources/website-trust/trust-badges-guide/": imgTrustBadges,
-  "/resources/website-trust/building-website-credibility/": imgCredibility,
-  "/resources/website-trust/fomo-marketing-guide/": imgFomo,
-  "/resources/testimonials/how-to-collect-testimonials/": imgCollectTestimonials,
-  "/resources/testimonials/video-testimonial-guide/": imgVideoTestimonials,
-  "/resources/testimonials/testimonial-page-design/": imgTestimonialPage,
-  "/resources/testimonials/testimonial-request-email-templates/": imgTestimonialEmail,
-};
+import { categoryGradients, getCategoryById, articleImages } from "@/data/blogCategories";
 
 // Map topic IDs to their pillar page hrefs
 const pillarLinks: Record<string, string> = {
@@ -61,6 +12,7 @@ const pillarLinks: Record<string, string> = {
   "conversion-analytics": "/resources/conversion-analytics/",
   "website-trust": "/resources/website-trust/",
   testimonials: "/resources/testimonials/",
+  cro: "/resources/cro/",
 };
 
 const fadeUp = { initial: { opacity: 0, y: 30 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true }, transition: { duration: 0.5 } };
@@ -133,27 +85,25 @@ export default function TopicDetail() {
         </div>
       </section>
 
-      {/* Key Topics / Sub-topic cards */}
+      {/* Featured Articles — image cards */}
       <section className="section-padding pt-4 pb-8">
         <div className="container-tight max-w-5xl">
-          <motion.h2 {...fadeUp} className="text-xl font-bold mb-4">Featured Articles</motion.h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {category.articles.slice(0, 4).map((a, i) => (
-              <motion.div
+          <motion.h2 {...fadeUp} className="text-xl font-bold mb-5">Featured Articles</motion.h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {category.articles.slice(0, 3).map((a, i) => (
+              <ArticleCard
                 key={a.href}
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.35, delay: i * 0.06 }}
-              >
-                <Link
-                  to={a.href}
-                  className="group block bg-card border border-border rounded-xl p-5 hover:shadow-md hover:border-primary/20 transition-all h-full"
-                >
-                  <h3 className="text-sm font-bold mb-1.5 group-hover:text-primary transition-colors">{a.title}</h3>
-                  <p className="text-xs text-muted-foreground leading-relaxed line-clamp-2">{a.desc}</p>
-                </Link>
-              </motion.div>
+                title={a.title}
+                href={a.href}
+                desc={a.desc}
+                readTime={a.readTime}
+                date={a.date}
+                author={a.author}
+                categoryTitle={category.title}
+                image={articleImages[a.href]}
+                gradient={categoryGradients[category.id]}
+                index={i}
+              />
             ))}
           </div>
         </div>

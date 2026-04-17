@@ -77,6 +77,17 @@ export default function ContactPage() {
                 <Button type="submit" size="lg" className="w-full">Send Message</Button>
               </form>
             </div>
+
+            <aside className="mt-8 bg-muted/40 border border-border rounded-xl p-6 text-sm">
+              <p className="font-semibold mb-2">Legal entity</p>
+              <ul className="space-y-1 text-muted-foreground">
+                <li><strong className="text-foreground">Company:</strong> Lucalvry LLC (operator of the NotiProof product)</li>
+                <li><strong className="text-foreground">Jurisdiction:</strong> Wyoming, United States</li>
+                <li><strong className="text-foreground">Mailing address:</strong> 30 N Gould St, STE R, Sheridan, WY 82801</li>
+                <li><strong className="text-foreground">Legal email:</strong> legal@notiproof.com</li>
+                <li><strong className="text-foreground">Privacy email:</strong> privacy@notiproof.com</li>
+              </ul>
+            </aside>
           </div>
         </div>
       </section>

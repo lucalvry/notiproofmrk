@@ -84,9 +84,14 @@ export default function Footer() {
           ))}
         </div>
         <div className="border-t border-dark-foreground/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-dark-foreground/40">
-            © {new Date().getFullYear()} NotiProof. All rights reserved.
-          </p>
+          <div className="text-center md:text-left space-y-1">
+            <p className="text-sm text-dark-foreground/40">
+              © {new Date().getFullYear()} Lucalvry LLC. NotiProof™ is a trademark of Lucalvry LLC. All rights reserved.
+            </p>
+            <p className="text-xs text-dark-foreground/30">
+              NotiProof™ is a product of Lucalvry LLC, a Wyoming limited liability company.
+            </p>
+          </div>
           <div className="flex gap-6">
             <a href="https://twitter.com/notiproof" target="_blank" className="text-dark-foreground/40 hover:text-dark-foreground/80 transition-colors" rel="noopener noreferrer" aria-label="Twitter">
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>

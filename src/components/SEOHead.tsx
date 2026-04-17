@@ -7,6 +7,8 @@ interface ArticleMeta {
   section?: string;
 }
 
+type LegalPageType = "PrivacyPolicy" | "TermsOfService" | "CollectionPage";
+
 interface SEOHeadProps {
   title: string;
   description: string;
@@ -18,6 +20,7 @@ interface SEOHeadProps {
   speakable?: string[];
   articleMeta?: ArticleMeta;
   ogType?: string;
+  pageType?: LegalPageType;
 }
 
 export default function SEOHead({
@@ -31,16 +34,17 @@ export default function SEOHead({
   speakable,
   articleMeta,
   ogType,
+  pageType,
 }: SEOHeadProps) {
   const fullTitle = title.includes("NotiProof") ? title : `${title} – NotiProof`;
   const canonicalUrl = canonical || (typeof window !== "undefined" ? window.location.href : "");
 
   const allSchemas: object[] = [];
 
-  // Default WebPage schema on every page
+  // Default WebPage schema on every page (typed for legal pages when pageType is provided)
   const webPageSchema: Record<string, unknown> = {
     "@context": "https://schema.org",
-    "@type": "WebPage",
+    "@type": pageType || "WebPage",
     name: fullTitle,
     description,
     url: canonicalUrl,

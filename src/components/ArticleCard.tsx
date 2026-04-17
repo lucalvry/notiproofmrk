@@ -12,13 +12,14 @@ interface ArticleCardProps {
   author: string;
   categoryTitle: string;
   image?: string;
+  imageAlt?: string;
   gradient?: string;
   index?: number;
 }
 
 export default function ArticleCard({
   title, href, desc, readTime, date, author, categoryTitle,
-  image, gradient = "from-primary/20 to-primary/10", index = 0,
+  image, imageAlt, gradient = "from-primary/20 to-primary/10", index = 0,
 }: ArticleCardProps) {
   return (
     <motion.div
@@ -32,7 +33,12 @@ export default function ArticleCard({
         className="group block bg-card border border-border rounded-xl overflow-hidden hover:shadow-lg hover:border-primary/20 transition-all h-full flex flex-col"
       >
         {image ? (
-          <img src={image} alt={title} className="aspect-[16/9] w-full object-cover" loading="lazy" />
+          <img
+            src={image}
+            alt={imageAlt || `${categoryTitle}: ${title}`}
+            className="aspect-[16/9] w-full object-cover group-hover:scale-[1.02] transition-transform duration-500"
+            loading="lazy"
+          />
         ) : (
           <div className={`aspect-[16/9] bg-gradient-to-br ${gradient} flex items-center justify-center`}>
             <span className="text-3xl opacity-30">📄</span>
