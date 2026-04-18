@@ -84,12 +84,34 @@ export default function PricingPage() {
   const [yearly, setYearly] = useState(false);
   const [activeTab, setActiveTab] = useState<"lifetime" | "subscription">("lifetime");
 
+  const offerExtras = {
+    shippingDetails: {
+      "@type": "OfferShippingDetails",
+      shippingRate: { "@type": "MonetaryAmount", value: 0, currency: "USD" },
+      shippingDestination: { "@type": "DefinedRegion", addressCountry: "WorldWide" },
+      deliveryTime: {
+        "@type": "ShippingDeliveryTime",
+        handlingTime: { "@type": "QuantitativeValue", minValue: 0, maxValue: 0, unitCode: "DAY" },
+        transitTime: { "@type": "QuantitativeValue", minValue: 0, maxValue: 0, unitCode: "DAY" },
+      },
+    },
+    hasMerchantReturnPolicy: {
+      "@type": "MerchantReturnPolicy",
+      applicableCountry: "US",
+      returnPolicyCategory: "https://schema.org/MerchantReturnFiniteReturnWindow",
+      merchantReturnDays: 30,
+      returnMethod: "https://schema.org/ReturnByMail",
+      returnFees: "https://schema.org/FreeReturn",
+    },
+  };
+
   const pricingSchema = [
     {
       "@context": "https://schema.org",
       "@type": "Product",
       name: "NotiProof",
       description: "Social proof and testimonial platform for increasing website conversions.",
+      image: "https://notiproof.com/og-image.png",
       brand: { "@type": "Brand", name: "NotiProof" },
       offers: [
         {
@@ -100,6 +122,7 @@ export default function PricingPage() {
           priceValidUntil: "2027-12-31",
           availability: "https://schema.org/InStock",
           url: "https://notiproof.com/pricing/",
+          ...offerExtras,
         },
         ...plans.map((p) => ({
           "@type": "Offer",
@@ -109,6 +132,7 @@ export default function PricingPage() {
           priceValidUntil: "2027-12-31",
           availability: "https://schema.org/InStock",
           url: "https://notiproof.com/pricing/",
+          ...offerExtras,
         })),
       ],
     },

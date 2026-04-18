@@ -23,6 +23,7 @@ const reviewSchema = [
     "@type": "Product",
     name: "NotiProof",
     description: "Social proof and testimonial platform for increasing website conversions.",
+    image: "https://notiproof.com/og-image.png",
     brand: { "@type": "Brand", name: "NotiProof" },
     url: "https://notiproof.com",
     aggregateRating: {
