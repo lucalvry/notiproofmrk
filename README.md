@@ -65,6 +65,16 @@ Deploy this project using your chosen static site host or platform.
 
 This site is built for modern web hosting and can be deployed to services like Vercel, Netlify, or any provider that supports Vite apps.
 
+## Post-deploy: notify search engines (IndexNow)
+
+After each Vercel deploy, ping Bing, Yandex, Seznam, and Naver to recrawl all sitemap URLs:
+
+```sh
+node scripts/submit-indexnow.js
+```
+
+The script reads URLs from a single source-of-truth list and POSTs them to `https://api.indexnow.org/indexnow`. Ownership is verified via the key file at `public/notiproof-indexnow-905adab9f38a727f66639d9432cba03b.txt`. Google does not consume IndexNow directly, but Bing recrawls indirectly nudge Googlebot.
+
 ## Learn more
 
 Project website: https://notiproof.com

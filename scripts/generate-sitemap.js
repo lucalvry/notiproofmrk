@@ -9,15 +9,17 @@ import { fileURLToPath } from 'url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DOMAIN = 'https://notiproof.com';
 
-// Differentiated lastmod dates by page type
+// Differentiated lastmod dates by page type. Bumped to today to signal
+// freshness after the prerender coverage fix — prompts Googlebot recrawl.
+const TODAY = new Date().toISOString().slice(0, 10);
 const dates = {
-  core: '2026-04-17',      // Homepage, pricing, product hub
-  product: '2026-04-17',   // Product feature pages
-  resource: '2026-04-17',  // Resource articles
-  comparison: '2026-04-17',// Comparison pages
-  legal: '2025-12-01',     // Privacy, terms
-  company: '2026-04-17',   // About, contact, careers
-  tool: '2026-04-17',      // Free tools
+  core: TODAY,        // Homepage, pricing, product hub
+  product: TODAY,     // Product feature pages
+  resource: TODAY,    // Resource articles
+  comparison: TODAY,  // Comparison pages
+  legal: '2025-12-01',// Privacy, terms (rarely change)
+  company: TODAY,     // About, contact, careers
+  tool: TODAY,        // Free tools
 };
 
 const d = (type) => dates[type] || dates.core;
