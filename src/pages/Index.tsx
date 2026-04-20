@@ -59,8 +59,13 @@ const homepageSchema = [
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     name: "NotiProof",
+    description: "NotiProof is the social proof and testimonial platform trusted by thousands of businesses. Show real-time notifications, collect testimonials, and boost conversions instantly.",
+    image: "https://notiproof.com/og-image.png",
+    url: "https://notiproof.com/",
+    brand: { "@type": "Organization", name: "NotiProof", url: "https://notiproof.com/" },
     applicationCategory: "BusinessApplication",
-    operatingSystem: "Web",
+    applicationSubCategory: "Marketing Software",
+    operatingSystem: "Web, Cloud",
     offers: {
       "@type": "AggregateOffer",
       lowPrice: "0",
@@ -73,6 +78,26 @@ const homepageSchema = [
       ratingValue: "4.9",
       reviewCount: "127",
     },
+    review: [
+      {
+        "@type": "Review",
+        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+        author: { "@type": "Person", name: "Jessica M." },
+        reviewBody: "NotiProof boosted our checkout conversions by 28% in the first month. The setup took less than 5 minutes and the support team is incredible.",
+      },
+      {
+        "@type": "Review",
+        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+        author: { "@type": "Person", name: "David K." },
+        reviewBody: "We tried Fomo and ProveSource before — NotiProof's video testimonial recorder and review aggregation make it the clear winner for SaaS.",
+      },
+      {
+        "@type": "Review",
+        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+        author: { "@type": "Person", name: "Anna P." },
+        reviewBody: "Real-time purchase alerts on our Shopify store added an extra $12k in monthly revenue. The lightweight script doesn't slow our site down at all.",
+      },
+    ],
   },
 ];
 

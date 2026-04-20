@@ -20,12 +20,15 @@ const testimonials = [
 const reviewSchema = [
   {
     "@context": "https://schema.org",
-    "@type": "Product",
+    "@type": "SoftwareApplication",
     name: "NotiProof",
     description: "Social proof and testimonial platform for increasing website conversions.",
     image: "https://notiproof.com/og-image.png",
-    brand: { "@type": "Brand", name: "NotiProof" },
-    url: "https://notiproof.com",
+    applicationCategory: "BusinessApplication",
+    applicationSubCategory: "Marketing Software",
+    operatingSystem: "Web, Cloud",
+    brand: { "@type": "Organization", name: "NotiProof", url: "https://notiproof.com/" },
+    url: "https://notiproof.com/",
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "5",

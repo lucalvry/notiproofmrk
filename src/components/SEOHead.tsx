@@ -85,6 +85,7 @@ export default function SEOHead({
         creditText: "NotiProof",
         copyrightNotice: `© ${currentYear} NotiProof`,
         license: "https://notiproof.com/legal/terms-of-service/",
+        acquireLicensePage: "https://notiproof.com/legal/terms-of-service/",
       },
     }),
     ...(relatedLink && relatedLink.length > 0 && { relatedLink }),

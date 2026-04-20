@@ -179,3 +179,14 @@ export const staticRoutes = [
   "/terms-of-service/",
   "/cookie-policy/",
 ];
+
+/**
+ * Legacy URLs kept alive as client-side redirects (meta refresh + Navigate).
+ * NOT included in the sitemap — only canonical destinations are.
+ * Used by scripts/check-prerender-coverage.js as an allowlist.
+ */
+export const redirectRoutes: Record<string, string> = {
+  "/features/": "/product/",
+  "/features/customizable-templates/": "/product/campaign-builder/",
+  "/author/olayinka/": "/resources/author/olayinka-olayokun/",
+};

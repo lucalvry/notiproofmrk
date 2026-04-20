@@ -398,6 +398,17 @@ const App = () => (
             {/* Redirects */}
             <Route path="/home/" element={<Navigate to="/" replace />} />
             <Route path="/home" element={<Navigate to="/" replace />} />
+
+            {/* Legacy /features/* redirects (preserve link equity for old GSC URLs) */}
+            <Route path="/features" element={<Navigate to="/product/" replace />} />
+            <Route path="/features/" element={<Navigate to="/product/" replace />} />
+            <Route path="/features/customizable-templates" element={<Navigate to="/product/campaign-builder/" replace />} />
+            <Route path="/features/customizable-templates/" element={<Navigate to="/product/campaign-builder/" replace />} />
+
+            {/* Legacy /author/* redirects → canonical author page */}
+            <Route path="/author/:slug" element={<Navigate to="/resources/author/olayinka-olayokun/" replace />} />
+            <Route path="/author/:slug/" element={<Navigate to="/resources/author/olayinka-olayokun/" replace />} />
+
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>

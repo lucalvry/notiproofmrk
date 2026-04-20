@@ -18,8 +18,11 @@ const prerenderPath = path.resolve(__dirname, '../src/entry-prerender.tsx');
 const manifestSrc = fs.readFileSync(manifestPath, 'utf-8');
 const prerenderSrc = fs.readFileSync(prerenderPath, 'utf-8');
 
-// Extract all string literals from staticRoutes array
-const manifestRoutes = [...manifestSrc.matchAll(/"(\/[^"]*)"/g)]
+// Extract the staticRoutes array body and pull literals only from it,
+// so redirect target values don't pollute the "must be prerendered" set.
+const staticRoutesMatch = manifestSrc.match(/staticRoutes\s*=\s*\[([\s\S]*?)\]/);
+const staticRoutesBody = staticRoutesMatch ? staticRoutesMatch[1] : '';
+const manifestRoutes = [...staticRoutesBody.matchAll(/"(\/[^"]*)"/g)]
   .map((m) => m[1])
   .filter((p) => p.startsWith('/'));
 
@@ -27,6 +30,12 @@ const manifestRoutes = [...manifestSrc.matchAll(/"(\/[^"]*)"/g)]
 const prerenderRoutes = new Set(
   [...prerenderSrc.matchAll(/path="(\/[^"]*)"/g)].map((m) => m[1])
 );
+
+// Extract redirect source paths from redirectRoutes — these are intentionally
+// in the prerender file but NOT in the sitemap manifest, so allowlist them.
+const redirectSources = [...manifestSrc.matchAll(/"(\/[^"]*)":\s*"\/[^"]*"/g)]
+  .map((m) => m[1]);
+redirectSources.forEach((r) => prerenderRoutes.add(r));
 
 const missing = manifestRoutes.filter((r) => !prerenderRoutes.has(r));
 

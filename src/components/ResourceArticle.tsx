@@ -105,6 +105,7 @@ export default function ResourceArticle({
         creditText: "NotiProof",
         copyrightNotice: `© ${new Date().getFullYear()} NotiProof`,
         license: "https://notiproof.com/legal/terms-of-service/",
+        acquireLicensePage: "https://notiproof.com/legal/terms-of-service/",
       }
     : undefined;
 

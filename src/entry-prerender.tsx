@@ -188,6 +188,16 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import CookiePolicy from "./pages/CookiePolicy";
 
+function RedirectStub({ to }: { to: string }) {
+  return (
+    <>
+      <meta httpEquiv="refresh" content={`0; url=${to}`} />
+      <link rel="canonical" href={`https://notiproof.com${to}`} />
+      <Navigate to={to} replace />
+    </>
+  );
+}
+
 function AppShell({ url, helmetContext }: { url: string; helmetContext: { helmet?: HelmetServerState } }) {
   const queryClient = new QueryClient();
 
@@ -381,6 +391,14 @@ function AppShell({ url, helmetContext }: { url: string; helmetContext: { helmet
 
                 <Route path="/home/" element={<Navigate to="/" replace />} />
                 <Route path="/home" element={<Navigate to="/" replace />} />
+
+                {/* Legacy /features/* redirects — emit meta refresh + canonical for crawlers */}
+                <Route path="/features/" element={<RedirectStub to="/product/" />} />
+                <Route path="/features/customizable-templates/" element={<RedirectStub to="/product/campaign-builder/" />} />
+
+                {/* Legacy /author/* redirect — emit meta refresh + canonical for crawlers */}
+                <Route path="/author/olayinka/" element={<RedirectStub to="/resources/author/olayinka-olayokun/" />} />
+
                 <Route path="*" element={<NotFound />} />
               </Route>
             </Routes>

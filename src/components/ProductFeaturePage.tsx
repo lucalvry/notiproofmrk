@@ -61,14 +61,30 @@ export default function ProductFeaturePage({
     })),
   };
 
+  const featureName = metaTitle.split("|")[0].split("–")[0].split("-")[0].trim();
   const softwareSchema = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    name: "NotiProof",
+    name: `NotiProof – ${featureName}`,
+    description: metaDescription,
+    image: "https://notiproof.com/og-image.png",
     applicationCategory: "BusinessApplication",
-    operatingSystem: "Web",
-    url: "https://notiproof.com",
-    offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+    applicationSubCategory: "Marketing Software",
+    operatingSystem: "Web, Cloud",
+    url: canonical,
+    brand: { "@type": "Organization", name: "NotiProof", url: "https://notiproof.com/" },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.9",
+      reviewCount: "127",
+    },
+    offers: {
+      "@type": "AggregateOffer",
+      lowPrice: "0",
+      highPrice: "380",
+      priceCurrency: "USD",
+      offerCount: "5",
+    },
   };
 
   const webPageSchema = {
