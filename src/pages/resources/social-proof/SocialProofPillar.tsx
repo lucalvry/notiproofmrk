@@ -50,7 +50,7 @@ export default function SocialProofPillar() {
       featuredImage={featuredImg}
       pillarLink={{ label: "Social Proof", href: "/resources/social-proof/" }}
       relatedArticles={clusterLinks}
-      speakable={["h1", "h2", "[data-speakable]"]}
+      speakable={["h1", "h2"]}
       schema={learningResourceSchema || undefined}
       content={
         <div className="space-y-8 text-foreground">

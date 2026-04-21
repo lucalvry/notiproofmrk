@@ -43,7 +43,7 @@ export default function ReviewsPillar() {
       tocSections={tocSections}
       relatedArticles={clusterLinks}
       featuredImage={featuredImg}
-      speakable={["h1", "h2", "[data-speakable]"]}
+      speakable={["h1", "h2"]}
       schema={learningResourceSchema || undefined}
       content={
         <div className="space-y-8 text-foreground">

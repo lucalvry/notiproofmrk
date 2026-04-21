@@ -72,7 +72,8 @@ export default function ProductFeaturePage({
     applicationSubCategory: "Marketing Software",
     operatingSystem: "Web, Cloud",
     url: canonical,
-    brand: { "@type": "Organization", name: "NotiProof", url: "https://notiproof.com/" },
+    publisher: { "@type": "Organization", name: "NotiProof", url: "https://notiproof.com/" },
+    creator: { "@type": "Organization", name: "NotiProof", url: "https://notiproof.com/" },
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "4.9",

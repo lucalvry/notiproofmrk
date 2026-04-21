@@ -27,7 +27,8 @@ const reviewSchema = [
     applicationCategory: "BusinessApplication",
     applicationSubCategory: "Marketing Software",
     operatingSystem: "Web, Cloud",
-    brand: { "@type": "Organization", name: "NotiProof", url: "https://notiproof.com/" },
+    publisher: { "@type": "Organization", name: "NotiProof", url: "https://notiproof.com/" },
+    creator: { "@type": "Organization", name: "NotiProof", url: "https://notiproof.com/" },
     url: "https://notiproof.com/",
     aggregateRating: {
       "@type": "AggregateRating",

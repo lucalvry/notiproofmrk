@@ -47,7 +47,7 @@ export default function CROPillar() {
       pillarLink={{ label: "CRO Guide", href: "/resources/cro/" }}
       featuredImage={featuredImg}
       relatedArticles={clusterLinks}
-      speakable={["h1", "h2", "[data-speakable]"]}
+      speakable={["h1", "h2"]}
       schema={learningResourceSchema || undefined}
       content={
         <div className="space-y-8 text-foreground">

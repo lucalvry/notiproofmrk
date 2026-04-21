@@ -399,6 +399,11 @@ function AppShell({ url, helmetContext }: { url: string; helmetContext: { helmet
                 {/* Legacy /author/* redirect — emit meta refresh + canonical for crawlers */}
                 <Route path="/author/olayinka/" element={<RedirectStub to="/resources/author/olayinka-olayokun/" />} />
 
+                {/* Legacy renamed-slug redirects — emit meta refresh + canonical for crawlers */}
+                <Route path="/resources/social-proof/social-proof-notifications/" element={<RedirectStub to="/resources/social-proof/social-proof-notifications-guide/" />} />
+                <Route path="/resources/cro/product-page-optimization/" element={<RedirectStub to="/resources/cro/product-page-cro/" />} />
+                <Route path="/resources/testimonials/wall-of-love/" element={<RedirectStub to="/resources/testimonials/wall-of-love-guide/" />} />
+
                 <Route path="*" element={<NotFound />} />
               </Route>
             </Routes>

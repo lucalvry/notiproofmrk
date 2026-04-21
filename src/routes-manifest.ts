@@ -189,4 +189,7 @@ export const redirectRoutes: Record<string, string> = {
   "/features/": "/product/",
   "/features/customizable-templates/": "/product/campaign-builder/",
   "/author/olayinka/": "/resources/author/olayinka-olayokun/",
+  "/resources/social-proof/social-proof-notifications/": "/resources/social-proof/social-proof-notifications-guide/",
+  "/resources/cro/product-page-optimization/": "/resources/cro/product-page-cro/",
+  "/resources/testimonials/wall-of-love/": "/resources/testimonials/wall-of-love-guide/",
 };

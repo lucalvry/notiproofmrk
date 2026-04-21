@@ -409,6 +409,11 @@ const App = () => (
             <Route path="/author/:slug" element={<Navigate to="/resources/author/olayinka-olayokun/" replace />} />
             <Route path="/author/:slug/" element={<Navigate to="/resources/author/olayinka-olayokun/" replace />} />
 
+            {/* Legacy renamed-slug redirects → current canonical URLs */}
+            <Route path="/resources/social-proof/social-proof-notifications/" element={<Navigate to="/resources/social-proof/social-proof-notifications-guide/" replace />} />
+            <Route path="/resources/cro/product-page-optimization/" element={<Navigate to="/resources/cro/product-page-cro/" replace />} />
+            <Route path="/resources/testimonials/wall-of-love/" element={<Navigate to="/resources/testimonials/wall-of-love-guide/" replace />} />
+
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>

@@ -58,19 +58,18 @@ export function buildLearningResourceSchema({ pillarName, description, url, date
     educationalLevel: "Beginner to Advanced",
     inLanguage: "en",
     teaches: {
-      "@type": "Thing",
+      "@type": "DefinedTerm",
       name: pillar.about.name,
       ...(pillar.about.sameAs && { sameAs: pillar.about.sameAs }),
     },
     about: {
-      "@type": "Thing",
+      "@type": "DefinedTerm",
       name: pillar.about.name,
       ...(pillar.about.sameAs && { sameAs: pillar.about.sameAs }),
     },
     provider: { "@type": "Organization", name: "NotiProof", url: DOMAIN },
     ...(dateModified && { dateModified }),
     hasPart,
-    numberOfCredits: publishedClusters.length,
   };
 
   const collectionPage = {
@@ -82,7 +81,7 @@ export function buildLearningResourceSchema({ pillarName, description, url, date
     inLanguage: "en",
     isPartOf: { "@type": "WebSite", name: "NotiProof", url: DOMAIN },
     about: {
-      "@type": "Thing",
+      "@type": "DefinedTerm",
       name: pillar.about.name,
       ...(pillar.about.sameAs && { sameAs: pillar.about.sameAs }),
     },

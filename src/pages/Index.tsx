@@ -62,7 +62,8 @@ const homepageSchema = [
     description: "NotiProof is the social proof and testimonial platform trusted by thousands of businesses. Show real-time notifications, collect testimonials, and boost conversions instantly.",
     image: "https://notiproof.com/og-image.png",
     url: "https://notiproof.com/",
-    brand: { "@type": "Organization", name: "NotiProof", url: "https://notiproof.com/" },
+    publisher: { "@type": "Organization", name: "NotiProof", url: "https://notiproof.com/" },
+    creator: { "@type": "Organization", name: "NotiProof", url: "https://notiproof.com/" },
     applicationCategory: "BusinessApplication",
     applicationSubCategory: "Marketing Software",
     operatingSystem: "Web, Cloud",
@@ -109,7 +110,7 @@ export default function HomePage() {
         description="NotiProof is the social proof and testimonial platform trusted by thousands of businesses. Show real-time notifications, collect testimonials, and boost conversions instantly."
         canonical="https://notiproof.com/"
         schema={homepageSchema}
-        speakable={["h1", "[data-speakable]"]}
+        speakable={["h1"]}
       />
 
       {/* Hero */}
