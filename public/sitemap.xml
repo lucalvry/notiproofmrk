@@ -325,6 +325,42 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://notiproof.com/resources/blog/social-proof/</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://notiproof.com/resources/blog/reviews/</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://notiproof.com/resources/blog/testimonials/</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://notiproof.com/resources/blog/cro/</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://notiproof.com/resources/blog/website-trust/</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://notiproof.com/resources/blog/conversion-analytics/</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://notiproof.com/resources/guides/</loc>
     <lastmod>2026-04-30</lastmod>
     <changefreq>weekly</changefreq>

@@ -93,6 +93,12 @@ const routes = [
   // Resources — Social Proof cluster
   { path: '/resources/', priority: '0.8', changefreq: 'weekly', lastmod: d('resource') },
   { path: '/resources/blog/', priority: '0.8', changefreq: 'weekly', lastmod: d('resource') },
+  { path: '/resources/blog/social-proof/', priority: '0.7', changefreq: 'weekly', lastmod: d('resource') },
+  { path: '/resources/blog/reviews/', priority: '0.7', changefreq: 'weekly', lastmod: d('resource') },
+  { path: '/resources/blog/testimonials/', priority: '0.7', changefreq: 'weekly', lastmod: d('resource') },
+  { path: '/resources/blog/cro/', priority: '0.7', changefreq: 'weekly', lastmod: d('resource') },
+  { path: '/resources/blog/website-trust/', priority: '0.7', changefreq: 'weekly', lastmod: d('resource') },
+  { path: '/resources/blog/conversion-analytics/', priority: '0.7', changefreq: 'weekly', lastmod: d('resource') },
   { path: '/resources/guides/', priority: '0.7', changefreq: 'weekly', lastmod: d('resource') },
   { path: '/resources/social-proof/', priority: '0.9', changefreq: 'weekly', lastmod: d('resource') },
   { path: '/resources/social-proof/what-is-social-proof/', priority: '0.8', changefreq: 'monthly', lastmod: '2026-02-20' },

@@ -1,4 +1,16 @@
 {
+  "redirects": [
+    { "source": "/case-studies/saas/", "destination": "/case-studies/saas-conversion/", "permanent": true },
+    { "source": "/case-studies/ecommerce/", "destination": "/case-studies/ecommerce-stylehaven/", "permanent": true },
+    { "source": "/case-studies/agency/", "destination": "/case-studies/agency-brightpath/", "permanent": true },
+    { "source": "/resources/social-proof/social-proof-landing-pages/", "destination": "/resources/social-proof/social-proof-for-landing-pages/", "permanent": true },
+    { "source": "/resources/social-proof/social-proof-examples/", "destination": "/resources/social-proof/social-proof-example/", "permanent": true },
+    { "source": "/resources/social-proof/social-proof-notifications/", "destination": "/resources/social-proof/social-proof-notifications-guide/", "permanent": true },
+    { "source": "/resources/cro/product-page-optimization/", "destination": "/resources/cro/product-page-cro/", "permanent": true },
+    { "source": "/resources/cro/ecommerce-cro/", "destination": "/resources/cro/ecommerce-conversion-optimization/", "permanent": true },
+    { "source": "/resources/cro/saas-cro/", "destination": "/resources/cro/saas-conversion-optimization/", "permanent": true },
+    { "source": "/resources/author/", "destination": "/resources/author/olayinka-olayokun/", "permanent": true }
+  ],
   "rewrites": [
     { "source": "/((?!.*\\.).*)", "destination": "/index.html" }
   ]

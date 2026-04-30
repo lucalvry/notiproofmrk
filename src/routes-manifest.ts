@@ -136,6 +136,14 @@ export const staticRoutes = [
   "/resources/website-trust/fomo-marketing-guide/",
   "/resources/website-trust/testimonials-as-trust-signals/",
 
+  // Resources — Blog topic pages (dynamic /resources/blog/:topicId/ — listed explicitly so they prerender with unique meta)
+  "/resources/blog/social-proof/",
+  "/resources/blog/reviews/",
+  "/resources/blog/testimonials/",
+  "/resources/blog/cro/",
+  "/resources/blog/website-trust/",
+  "/resources/blog/conversion-analytics/",
+
   // Resources — Other
   "/resources/help-center/",
   "/resources/glossary/",
@@ -190,7 +198,17 @@ export const redirectRoutes: Record<string, string> = {
   "/features/": "/product/",
   "/features/customizable-templates/": "/product/campaign-builder/",
   "/author/olayinka/": "/resources/author/olayinka-olayokun/",
+  "/resources/testimonials/wall-of-love/": "/resources/testimonials/wall-of-love-guide/",
+  // Below are now handled at HTTP level by vercel.json (301). Kept as allowlist entries
+  // so the prerender coverage check doesn't flag them as orphan URLs.
   "/resources/social-proof/social-proof-notifications/": "/resources/social-proof/social-proof-notifications-guide/",
   "/resources/cro/product-page-optimization/": "/resources/cro/product-page-cro/",
-  "/resources/testimonials/wall-of-love/": "/resources/testimonials/wall-of-love-guide/",
+  "/case-studies/saas/": "/case-studies/saas-conversion/",
+  "/case-studies/ecommerce/": "/case-studies/ecommerce-stylehaven/",
+  "/case-studies/agency/": "/case-studies/agency-brightpath/",
+  "/resources/social-proof/social-proof-landing-pages/": "/resources/social-proof/social-proof-for-landing-pages/",
+  "/resources/social-proof/social-proof-examples/": "/resources/social-proof/social-proof-example/",
+  "/resources/cro/ecommerce-cro/": "/resources/cro/ecommerce-conversion-optimization/",
+  "/resources/cro/saas-cro/": "/resources/cro/saas-conversion-optimization/",
+  "/resources/author/": "/resources/author/olayinka-olayokun/",
 };
