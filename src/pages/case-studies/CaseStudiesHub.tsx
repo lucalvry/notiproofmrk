@@ -1,4 +1,4 @@
-import { ArrowRight, ShoppingCart, Rocket, Briefcase, MapPin } from "lucide-react";
+import { ArrowRight, ShoppingCart, Rocket, Briefcase, MapPin, Info } from "lucide-react";
 import { Link } from "react-router-dom";
 import SEOHead from "@/components/SEOHead";
 import CTASection from "@/components/CTASection";
@@ -16,41 +16,41 @@ const caseStudies = [
   {
     icon: ShoppingCart,
     category: "E-commerce",
-    title: "How StyleHaven Increased Add-to-Cart Rate by 31%",
-    description: "A mid-market fashion store generated $42K/month in additional revenue with social proof notifications.",
-    metrics: ["+31% Add-to-Cart", "-22% Cart Abandonment", "1,448x ROI"],
+    title: "How a Mid-Market Fashion Retailer Lifted Add-to-Cart With Social Proof",
+    description: "An illustrative example of how a mid-market fashion store can lift add-to-cart rate and reduce cart abandonment using social proof notifications.",
+    metrics: ["Higher add-to-cart", "Lower cart abandonment", "Higher AOV"],
     href: "/case-studies/ecommerce-stylehaven/",
   },
   {
     icon: Rocket,
     category: "SaaS",
-    title: "How CloudMetrics Increased Trial Signups by 24%",
-    description: "A B2B analytics SaaS added $28K MRR using social proof notifications, video testimonials, and review aggregation.",
-    metrics: ["+24% Trial Signups", "+18% Trial-to-Paid", "560x ROI"],
+    title: "How a B2B SaaS Lifted Trial Signups With Social Proof",
+    description: "An illustrative example of how a B2B analytics SaaS can use social proof, video testimonials, and review aggregation to grow MRR.",
+    metrics: ["Higher trial signups", "Higher trial-to-paid", "Lower CAC"],
     href: "/case-studies/saas-conversion/",
   },
   {
     icon: Briefcase,
     category: "Agency",
-    title: "How BrightPath Agency Boosted Client Conversions by 47%",
-    description: "A digital marketing agency used NotiProof's white-label social proof across 32 client sites, delivering an average 4.2x ROI.",
-    metrics: ["+47% Client Conversions", "32 Client Sites", "4.2x Avg. ROI"],
+    title: "How a Digital Marketing Agency Boosted Client Conversions With White-Label Social Proof",
+    description: "An illustrative example of how a small digital marketing agency can use NotiProof's white-label social proof across many client sites at scale.",
+    metrics: ["Higher client conversions", "Multi-site dashboard", "Strong service ROI"],
     href: "/case-studies/agency-brightpath/",
   },
   {
     icon: MapPin,
     category: "Local Business",
-    title: "How GreenLeaf Landscaping Grew Leads by 58%",
-    description: "A local landscaping company increased lead form submissions by 58% and phone inquiries by 34% using social proof and review aggregation.",
-    metrics: ["+58% Lead Forms", "+34% Phone Calls", "4.9★ Avg. Rating"],
+    title: "How a Regional Landscaping Company Grew Leads With Social Proof & Reviews",
+    description: "An illustrative example of how a regional landscaping company can grow lead form submissions and phone inquiries using social proof and review aggregation.",
+    metrics: ["More lead forms", "More phone inquiries", "Stronger local SEO"],
     href: "/case-studies/local-business-greenleaf/",
   },
 ];
 
 const faqs = [
-  { q: "Are these real customer results?", a: "Yes. Every metric is based on actual customer data measured through NotiProof's analytics dashboard with A/B testing and control groups." },
-  { q: "How long does it take to see results?", a: "Most customers see measurable conversion lifts within the first 7–14 days after installing NotiProof." },
-  { q: "Can I get similar results for my business?", a: "Results vary by industry and implementation, but NotiProof customers typically see 10–35% conversion lifts. Start with the free plan to test on your site." },
+  { q: "Are these real customer results?", a: "No. These are illustrative scenarios modeled on common implementation patterns and industry CRO benchmarks — not records of specific named customers. We chose this format so the playbooks remain useful without overstating individual outcomes." },
+  { q: "How long does it take to see results?", a: "Most teams see measurable conversion lifts within the first 7–14 days of running social proof, in line with industry CRO benchmarks." },
+  { q: "Can I get similar results for my business?", a: "Results vary by industry, traffic, and implementation. Industry benchmarks for well-implemented social proof typically fall in the 10–35% conversion lift range. Start with the free plan to test on your own site." },
   { q: "Do I need a developer to set up NotiProof?", a: "No. NotiProof installs with one line of code and takes under 60 seconds. No developer needed." },
 ];
 
@@ -69,7 +69,7 @@ export default function CaseStudiesHub() {
     <>
       <SEOHead
         title="Case Studies – Real Results From NotiProof Customers"
-        description="See how businesses use NotiProof to increase conversions by 10-35%. Real case studies with quantified results from e-commerce, SaaS, agencies, and local businesses."
+        description="Illustrative case studies showing how teams across e-commerce, SaaS, agencies, and local businesses can use NotiProof to lift conversions, modeled on industry CRO benchmarks."
         canonical="https://notiproof.com/case-studies/"
         schema={[
           {
@@ -89,14 +89,19 @@ export default function CaseStudiesHub() {
 
       <section className="section-padding pt-4">
         <div className="container-tight">
-          <motion.div {...fadeUp} className="max-w-3xl mx-auto text-center mb-12">
+          <motion.div {...fadeUp} className="max-w-3xl mx-auto text-center mb-8">
             <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-4">
-              Customer <span className="text-gradient">Case Studies</span>
+              Illustrative <span className="text-gradient">Case Studies</span>
             </h1>
             <p className="text-lg text-muted-foreground">
-              Real businesses. Real results. See how NotiProof customers across e-commerce, SaaS, agencies, and local businesses are increasing conversions, revenue, and trust.
+              Playbooks for how teams across e-commerce, SaaS, agencies, and local businesses can use NotiProof to lift conversions, modeled on common implementation patterns and industry CRO benchmarks.
             </p>
           </motion.div>
+
+          <div className="max-w-3xl mx-auto mb-10 flex items-start gap-3 bg-muted/40 border border-border rounded-xl p-4 text-sm text-muted-foreground">
+            <Info className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+            <p>Illustrative examples based on common implementation patterns and industry CRO benchmarks. Not based on specific named customers.</p>
+          </div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {caseStudies.map((cs, i) => (

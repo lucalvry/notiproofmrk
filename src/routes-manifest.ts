@@ -140,6 +140,7 @@ export const staticRoutes = [
   "/resources/help-center/",
   "/resources/glossary/",
   "/resources/topical-map/",
+  "/resources/author/olayinka-olayokun/",
 
   // Comparisons
   "/comparisons/",

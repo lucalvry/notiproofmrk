@@ -113,10 +113,9 @@ export default function TestimonialsWidget() {
         { icon: Code, title: "One-Line Embed", desc: "Copy a single embed snippet and paste it anywhere. Works on WordPress, Shopify, Webflow, and custom sites." },
       ]}
       testimonial={{
-        quote: "The testimonial wall on our homepage increased our demo request rate by 24%. It's the first thing visitors see and it builds instant trust.",
-        name: "Michael Torres",
-        role: "VP of Marketing, DataSync",
-        metric: "+24% Demo Requests",
+        quote: "The testimonial wall on our homepage is the first thing visitors see and it builds instant trust before they even reach the demo form.",
+        name: "VP of Marketing",
+        role: "B2B SaaS company",
       }}
       useCases={[
         { title: "E-commerce", desc: "Show product reviews on product pages.", href: "/use-cases/ecommerce/" },

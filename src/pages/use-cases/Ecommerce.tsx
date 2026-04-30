@@ -5,7 +5,7 @@ export default function EcommerceUseCase() {
   return (
     <UseCaseTemplate
       metaTitle="Social Proof for E-commerce – Increase Sales & Reduce Cart Abandonment"
-      metaDescription="Show real-time purchase notifications, stock alerts, and customer reviews on your online store. Increase e-commerce conversions by 28% with NotiProof."
+      metaDescription="Show real-time purchase notifications, stock alerts, and customer reviews on your online store. Build trust and lift e-commerce conversions with NotiProof."
       canonical="https://notiproof.com/use-cases/ecommerce/"
       badge="E-commerce"
       headline="Turn Online Browsers Into Confident Buyers"
@@ -24,7 +24,7 @@ export default function EcommerceUseCase() {
         "A/B tested campaigns ensure you're showing the most effective social proof",
       ]}
       benefits={[
-        "28% average conversion rate increase",
+        "Higher add-to-cart and checkout conversion",
         "Show real-time purchase activity",
         "Low-stock alerts create urgency",
         "Customer review notifications build trust",
@@ -34,24 +34,24 @@ export default function EcommerceUseCase() {
         "Revenue attribution in analytics",
       ]}
       stats={[
-        { value: "28%", label: "Avg. Conversion Lift" },
-        { value: "42%", label: "Less Cart Abandonment" },
-        { value: "3.2x", label: "More Add-to-Carts" },
-        { value: "60s", label: "Setup Time" },
+        { value: "Up to 28%", label: "Conversion lift" },
+        { value: "Lower", label: "Cart abandonment" },
+        { value: "More", label: "Add-to-carts" },
+        { value: "60s", label: "Setup time" },
       ]}
+      statsFootnote="Ranges based on industry CRO benchmarks; individual results vary by store, traffic and implementation."
       notification={{ name: "Sarah from NYC", action: "just purchased", item: "Wireless Headphones", time: "2 minutes ago" }}
       featureHighlights={[
         { icon: Bell, title: "Purchase Alerts", desc: "Show 'Sarah from NYC just bought Wireless Headphones' to create FOMO and validate buying decisions." },
         { icon: Eye, title: "Visitor Counters", desc: "Display '47 people viewing this product' to show demand and create urgency to act before it sells out." },
         { icon: Star, title: "Review Widgets", desc: "Aggregate reviews from Google, Trustpilot, and your store into one beautiful widget on product pages." },
         { icon: TrendingUp, title: "Low-Stock Alerts", desc: "Show 'Only 3 left in stock' notifications to trigger loss aversion and accelerate purchase decisions." },
-        { icon: Shield, title: "Trust Badges", desc: "Display 'Trusted by 10,000+ customers' counters to build credibility with first-time visitors." },
+        { icon: Shield, title: "Trust Badges", desc: "Display review counters and trust seals to build credibility with first-time visitors." },
       ]}
       testimonial={{
-        quote: "NotiProof's purchase notifications reduced our cart abandonment by 42% and increased average order value by 15%. It paid for itself on day one.",
-        name: "Emma Rodriguez",
-        role: "E-commerce Director, StyleHaven",
-        metric: "-42% Cart Abandonment",
+        quote: "NotiProof's purchase notifications reduced cart abandonment and lifted average order value within weeks. It paid for itself quickly.",
+        name: "E-commerce Director",
+        role: "Mid-market fashion retailer",
       }}
       integrations={["Shopify", "WooCommerce", "BigCommerce", "Stripe", "PayPal", "Klaviyo", "GA4"]}
       faqs={[

@@ -25,7 +25,7 @@ export default function ProductPageCRO() {
     <ResourceArticle
       metaTitle="Product Page CRO: Optimize Every Element for Higher Conversions [2026]"
       metaDescription="Optimize product pages for maximum conversions: images, descriptions, social proof placement, urgency tactics, mobile UX, and A/B testing frameworks."
-      canonical="https://notiproof.com/resources/cro/product-page-optimization/"
+      canonical="https://notiproof.com/resources/cro/product-page-cro/"
       title="Product Page CRO: Optimize Every Element for Higher Conversions"
       readingTime="16 min read"
       publishDate="2025-04-25"

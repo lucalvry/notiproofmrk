@@ -25,6 +25,7 @@ interface UseCasePageProps {
   benefits: string[];
   solutions?: string[];
   stats: { value: string; label: string }[];
+  statsFootnote?: string;
   notification: { name: string; action: string; item: string; time: string };
   featureHighlights?: FeatureHighlight[];
   testimonial?: Testimonial;
@@ -43,7 +44,7 @@ const fadeUp = {
 
 export default function UseCaseTemplate({
   metaTitle, metaDescription, canonical, badge, headline, description, descriptionContent, icon: Icon,
-  painPoints, benefits, solutions, stats, notification, featureHighlights,
+  painPoints, benefits, solutions, stats, statsFootnote, notification, featureHighlights,
   testimonial, faqs, relatedUseCases, resourceLinks,
 }: UseCasePageProps) {
   const faqSchema = {
@@ -125,6 +126,11 @@ export default function UseCaseTemplate({
               </div>
             ))}
           </div>
+          {statsFootnote && (
+            <p className="text-xs text-muted-foreground text-center mt-6 max-w-2xl mx-auto">
+              {statsFootnote}
+            </p>
+          )}
         </div>
       </section>
 

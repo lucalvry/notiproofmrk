@@ -38,9 +38,9 @@ const pillarFaqs = [
 ];
 
 const stats = [
-  { icon: TrendingUp, stat: "10–35%", label: "Conversion increase" },
+  { icon: TrendingUp, stat: "No-code", label: "1-line install" },
   { icon: Zap, stat: "38+", label: "Platform integrations" },
-  { icon: Users, stat: "4,000+", label: "Websites powered" },
+  { icon: Users, stat: "Worldwide", label: "Conversion-focused teams" },
   { icon: Shield, stat: "GDPR", label: "Fully compliant" },
 ];
 
@@ -129,7 +129,7 @@ export default function ProductHub() {
             </div>
             <p className="text-xs text-muted-foreground flex items-center justify-center gap-1.5">
               <CheckCircle2 className="w-3.5 h-3.5 text-primary" />
-              Trusted by 4,000+ websites · No credit card required
+              No credit card required · Free forever plan
             </p>
           </motion.div>
         </div>

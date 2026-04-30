@@ -8,7 +8,7 @@ interface CTASectionProps {
 
 export default function CTASection({
   title = "Ready to Increase Your Conversions?",
-  description = "Join 4,000+ businesses using NotiProof to turn visitors into customers. Start free — no credit card required.",
+  description = "Start using NotiProof free today and turn visitors into customers with social proof. No credit card required.",
 }: CTASectionProps) {
   return (
     <section className="section-padding bg-dark text-dark-foreground">

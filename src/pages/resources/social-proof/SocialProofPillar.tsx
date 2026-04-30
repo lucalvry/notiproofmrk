@@ -17,10 +17,20 @@ const clusterLinks = [
   { title: "Social Proof Examples", href: "/resources/social-proof/social-proof-example/", desc: "Real examples from top brands." },
   { title: "Social Proof in Marketing", href: "/resources/social-proof/social-proof-in-marketing/", desc: "Strategies for marketers." },
   { title: "Social Proof for Websites", href: "/resources/social-proof/social-proof-for-websites/", desc: "Implementation guide for any website." },
-  { title: "Social Proof Notifications", href: "/resources/social-proof/social-proof-notifications/", desc: "Complete guide to real-time social proof popups." },
+  { title: "Social Proof Notifications Guide", href: "/resources/social-proof/social-proof-notifications-guide/", desc: "Complete guide to real-time social proof popups." },
   { title: "Social Proof for B2B & SaaS", href: "/resources/social-proof/social-proof-b2b-saas/", desc: "Industry-specific strategies for B2B." },
   { title: "User-Generated Content as Social Proof", href: "/resources/social-proof/user-generated-content-social-proof/", desc: "Leverage UGC for trust and conversions." },
-  { title: "Social Proof for Landing Pages", href: "/resources/social-proof/social-proof-landing-pages/", desc: "Optimize landing pages with social proof." },
+  { title: "Social Proof for Landing Pages", href: "/resources/social-proof/social-proof-for-landing-pages/", desc: "Optimize landing pages with social proof." },
+  { title: "Social Proof Statistics 2025", href: "/resources/social-proof/social-proof-statistics/", desc: "Latest data on social proof impact." },
+  { title: "Social Proof for E-commerce", href: "/resources/social-proof/social-proof-ecommerce/", desc: "Tactics tailored for online stores." },
+  { title: "Social Proof for Local Business", href: "/resources/social-proof/social-proof-local-business/", desc: "Local trust signals that drive foot traffic." },
+  { title: "Social Proof for Agencies", href: "/resources/social-proof/social-proof-agencies/", desc: "How agencies use social proof for client wins." },
+  { title: "Social Proof for Coaches & Creators", href: "/resources/social-proof/social-proof-coaches-creators/", desc: "Build credibility as a personal brand." },
+  { title: "Social Proof for Restaurants", href: "/resources/social-proof/social-proof-restaurants/", desc: "Restaurant-specific reputation tactics." },
+  { title: "AI-Generated Social Proof", href: "/resources/social-proof/ai-generated-social-proof/", desc: "Risks, ethics, and detection of AI fakes." },
+  { title: "Negative Social Proof", href: "/resources/social-proof/negative-social-proof/", desc: "Avoid the social proof backfire effect." },
+  { title: "Social Proof on Social Media", href: "/resources/social-proof/social-proof-social-media/", desc: "Leverage social platforms for proof." },
+  { title: "Reviews & Social Proof", href: "/resources/social-proof/reviews-and-social-proof/", desc: "How reviews fit into the social proof stack." },
 ];
 
 const tocSections = [

@@ -38,7 +38,7 @@ const integrationsList = [
   { name: "Klaviyo", category: "Marketing", desc: "E-commerce email marketing." },
   { name: "Drip", category: "Marketing", desc: "E-commerce CRM integration." },
   { name: "Omnisend", category: "Marketing", desc: "Omnichannel marketing sync." },
-  { name: "Zapier", category: "Automation", desc: "Connect with 5,000+ apps." },
+  { name: "Zapier", category: "Automation", desc: "Connect with thousands of apps via Zapier." },
   { name: "Make", category: "Automation", desc: "Visual workflow automation." },
   { name: "Pabbly", category: "Automation", desc: "Affordable automation platform." },
   { name: "n8n", category: "Automation", desc: "Self-hosted workflow automation." },

@@ -8,7 +8,7 @@ const fadeUp = { initial: { opacity: 0, y: 30 }, whileInView: { opacity: 1, y: 0
 const perks = [
   { icon: Globe, title: "Remote-First", desc: "Work from anywhere in the world. We're a distributed team across multiple time zones." },
   { icon: Heart, title: "Competitive Benefits", desc: "Health insurance, equipment budget, learning stipend, and generous PTO." },
-  { icon: Zap, title: "High Impact", desc: "Work on a product used by 5,000+ businesses. Ship features that matter." },
+  { icon: Zap, title: "High Impact", desc: "Work on a product used by businesses worldwide. Ship features that matter." },
   { icon: Briefcase, title: "Growth", desc: "We invest in your growth. Annual learning budgets, conference attendance, and mentorship." },
 ];
 

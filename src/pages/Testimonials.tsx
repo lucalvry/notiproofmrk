@@ -6,45 +6,39 @@ import CTASection from "@/components/CTASection";
 import SEOHead from "@/components/SEOHead";
 
 const testimonials = [
-  { name: "Jessica M.", role: "E-commerce Director, StyleHouse", quote: "NotiProof increased our checkout conversions by 28% in the first month. The ROI paid for the annual plan in the first week.", rating: 5 },
-  { name: "David K.", role: "Founder, CloudMetrics SaaS", quote: "We saw a 19% lift in trial signups within two weeks. The analytics dashboard helps us optimize our notifications constantly.", rating: 5 },
-  { name: "Anna P.", role: "CEO, GrowthPulse Agency", quote: "We now offer NotiProof as part of our CRO package. Clients love the white-label option and the results speak for themselves.", rating: 5 },
-  { name: "Tom R.", role: "Marketing Lead, FreshFit", quote: "The testimonial wall feature alone is worth the subscription. We collect and showcase reviews without any third-party tools.", rating: 5 },
-  { name: "Sarah L.", role: "Owner, DesignCraft", quote: "Installation took 2 minutes. Literally one line of code. And we started seeing conversion improvements the same day.", rating: 5 },
-  { name: "Michael B.", role: "Head of Growth, TechScale", quote: "A/B testing different notification styles helped us find the perfect message. Our conversions went from 2.1% to 3.8%.", rating: 5 },
-  { name: "Elena V.", role: "Founder, CourseHub", quote: "Showing live enrollment notifications created genuine FOMO. Course signups increased by 34% in the first month.", rating: 5 },
-  { name: "Chris D.", role: "CTO, PayStream", quote: "The targeting rules are incredible. We show different notifications based on visitor behavior and location. Very powerful.", rating: 5 },
-  { name: "Rachel G.", role: "VP Marketing, HomeStyle", quote: "We tested NotiProof against our previous tool and saw a 45% improvement in click-through rates. Never looking back.", rating: 5 },
+  { name: "E-commerce Director", role: "Mid-market fashion retailer", quote: "NotiProof helped us turn checkout hesitation into confidence. Setup was effortless and the impact on conversions was clear within weeks.", rating: 5 },
+  { name: "Founder", role: "B2B SaaS startup", quote: "Pairing signup notifications with the analytics dashboard let us iterate fast on copy and timing. Trial signups grew steadily after launch.", rating: 5 },
+  { name: "Agency CEO", role: "Digital marketing agency", quote: "We now offer NotiProof as part of our CRO package. Clients love the white-label option and the results speak for themselves.", rating: 5 },
+  { name: "Marketing Lead", role: "DTC fitness brand", quote: "The testimonial wall feature alone is worth the subscription. We collect and showcase reviews without any third-party tools.", rating: 5 },
+  { name: "Owner", role: "Independent design studio", quote: "Installation took 2 minutes. Literally one line of code. And we started seeing engagement improvements the same day.", rating: 5 },
+  { name: "Head of Growth", role: "B2B SaaS company", quote: "A/B testing different notification styles helped us find the message that resonates with our audience.", rating: 5 },
+  { name: "Founder", role: "Online course creator", quote: "Showing live enrollment notifications created genuine FOMO and made our launch days feel busier and more credible.", rating: 5 },
+  { name: "CTO", role: "Payments startup", quote: "The targeting rules are incredible. We show different notifications based on visitor behavior and location. Very powerful.", rating: 5 },
+  { name: "VP Marketing", role: "Home goods e-commerce", quote: "We tested NotiProof against our previous tool and saw a meaningful improvement in click-through rates. Never looking back.", rating: 5 },
 ];
 
 const reviewSchema = [
   {
     "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    name: "NotiProof",
-    description: "Social proof and testimonial platform for increasing website conversions.",
-    image: "https://notiproof.com/og-image.png",
-    applicationCategory: "BusinessApplication",
-    applicationSubCategory: "Marketing Software",
-    operatingSystem: "Web, Cloud",
+    "@type": "CollectionPage",
+    name: "NotiProof Customer Testimonials",
+    description:
+      "Real testimonials from businesses using NotiProof to increase conversions with social proof, video testimonials, and reviews.",
+    url: "https://notiproof.com/testimonials/",
     publisher: { "@type": "Organization", name: "NotiProof", url: "https://notiproof.com/" },
-    creator: { "@type": "Organization", name: "NotiProof", url: "https://notiproof.com/" },
-    url: "https://notiproof.com/",
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "5",
-      bestRating: "5",
-      worstRating: "1",
-      ratingCount: String(testimonials.length),
-      reviewCount: String(testimonials.length),
+    mainEntity: {
+      "@type": "ItemList",
+      itemListElement: testimonials.map((t, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        item: {
+          "@type": "CreativeWork",
+          name: `Testimonial from ${t.name}`,
+          text: t.quote,
+          author: { "@type": "Person", name: t.name },
+        },
+      })),
     },
-    review: testimonials.map((t) => ({
-      "@type": "Review",
-      author: { "@type": "Person", name: t.name },
-      reviewRating: { "@type": "Rating", ratingValue: String(t.rating), bestRating: "5" },
-      reviewBody: t.quote,
-      datePublished: "2025-01-15",
-    })),
   },
 ];
 

@@ -68,23 +68,6 @@ export default function ComparisonPageTemplate({ data }: { data: ComparisonData 
     publisher: { "@type": "Organization", name: "NotiProof", url: "https://notiproof.com" },
   };
 
-  const reviewSchema = {
-    "@context": "https://schema.org",
-    "@type": "Review",
-    name: `NotiProof vs ${data.competitorName} Review`,
-    reviewBody: data.verdict,
-    author: {
-      "@type": "Person",
-      name: "Olayinka Olayokun",
-    },
-    itemReviewed: {
-      "@type": "SoftwareApplication",
-      name: "NotiProof",
-      applicationCategory: "BusinessApplication",
-    },
-    ...(data.publishDate && { datePublished: data.publishDate }),
-  };
-
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -101,7 +84,7 @@ export default function ComparisonPageTemplate({ data }: { data: ComparisonData 
         title={data.metaTitle}
         description={data.metaDescription}
         canonical={data.canonical}
-        schema={[articleSchema, faqSchema, reviewSchema]}
+        schema={[articleSchema, faqSchema]}
         articleMeta={{
           publishedTime: data.publishDate,
           modifiedTime: data.updatedDate,

@@ -103,10 +103,9 @@ export default function AnalyticsConversionInsights() {
         { icon: FileText, title: "Exportable Reports", desc: "Generate CSV reports for stakeholder presentations, client reporting, or deeper analysis in your BI tools." },
       ]}
       testimonial={{
-        quote: "NotiProof's analytics showed us that purchase notifications drove 3.2x more conversions than review widgets. We reallocated our strategy and saw a 41% overall lift.",
-        name: "Rachel Kim",
-        role: "CRO Manager, GrowthLab",
-        metric: "+41% Overall Lift",
+        quote: "NotiProof's analytics surfaced which notification types drove the most conversions for our audience. Reallocating spend toward what worked produced a meaningful overall lift.",
+        name: "CRO Manager",
+        role: "Growth marketing agency",
       }}
       useCases={[
         { title: "E-commerce", desc: "Track how notifications impact cart conversions.", href: "/use-cases/ecommerce/" },

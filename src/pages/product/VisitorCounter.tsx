@@ -107,10 +107,9 @@ export default function VisitorCounter() {
         { icon: Gauge, title: "Zero Performance Impact", desc: "Lightweight server-side tracking with no cookies, no consent banners, and no page speed reduction." },
       ]}
       testimonial={{
-        quote: "Adding the visitor counter to our product pages increased urgency. Customers who saw '23 people viewing' converted 18% more often.",
-        name: "Lisa Chen",
-        role: "Head of E-commerce, UrbanThread",
-        metric: "+18% Conversion Rate",
+        quote: "Adding the visitor counter to our product pages created urgency. Customers who saw real-time activity were noticeably more likely to convert.",
+        name: "Head of E-commerce",
+        role: "Apparel DTC brand",
       }}
       useCases={[
         { title: "E-commerce", desc: "Show product page viewers to create urgency.", href: "/use-cases/ecommerce/" },

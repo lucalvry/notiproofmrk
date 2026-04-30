@@ -121,7 +121,7 @@ export default function ConversionRateCalculator() {
         </div>
       </section>
 
-      <CTASection title="Boost Your Conversion Rate" description="NotiProof customers see 10–35% conversion lifts with social proof notifications, testimonials, and reviews." />
+      <CTASection title="Boost Your Conversion Rate" description="Industry CRO benchmarks show 10–35% conversion lifts from well-implemented social proof, testimonials, and reviews." />
     </>
   );
 }

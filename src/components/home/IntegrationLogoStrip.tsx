@@ -70,7 +70,7 @@ export default function IntegrationLogoStrip() {
     <section className="py-10 border-y border-border bg-surface">
       <div className="container-tight text-center">
         <p className="text-sm font-medium text-muted-foreground mb-6">
-          Trusted by 4,000+ conversion-focused teams worldwide
+          Trusted by conversion-focused teams worldwide
         </p>
         <div className="flex flex-wrap justify-center items-center gap-x-8 gap-y-4 text-muted-foreground/40 hover:[&>*]:text-muted-foreground transition-colors">
           {logos.map((l) => (

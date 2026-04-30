@@ -17,6 +17,10 @@ const footerLinks = {
     { label: "SaaS", href: "/use-cases/saas-social-proof-tools-drive-sign-ups/" },
     { label: "Agencies", href: "/use-cases/social-proof-for-marketing-agencies-impress-clients/" },
     { label: "Local Business", href: "/use-cases/local-business-social-proof-convert-website-visitors/" },
+    { label: "E-commerce Case Study", href: "/case-studies/ecommerce/" },
+    { label: "SaaS Case Study", href: "/case-studies/saas/" },
+    { label: "Agency Case Study", href: "/case-studies/agency/" },
+    { label: "All Case Studies →", href: "/case-studies/" },
   ],
   Integrations: [
     { label: "Shopify", href: "/integrations/shopify/" },
@@ -24,23 +28,48 @@ const footerLinks = {
     { label: "WooCommerce", href: "/integrations/woocommerce/" },
     { label: "Webflow", href: "/integrations/webflow/" },
     { label: "Wix", href: "/integrations/wix/" },
-    { label: "Zapier", href: "/integrations/zapier/" },
+    { label: "Squarespace", href: "/integrations/squarespace/" },
+    { label: "BigCommerce", href: "/integrations/bigcommerce/" },
+    { label: "HubSpot", href: "/integrations/hubspot/" },
     { label: "Stripe", href: "/integrations/stripe/" },
+    { label: "Zapier", href: "/integrations/zapier/" },
+    { label: "GoHighLevel", href: "/integrations/gohighlevel/" },
     { label: "All Integrations →", href: "/integrations/" },
+  ],
+  "Free Tools": [
+    { label: "A/B Test Calculator", href: "/free-tools/ab-test-calculator/" },
+    { label: "ROI Calculator", href: "/free-tools/social-proof-roi-calculator/" },
+    { label: "Trust Score Checker", href: "/free-tools/website-trust-score-checker/" },
+    { label: "Conversion Rate Calc", href: "/free-tools/conversion-rate-calculator/" },
+    { label: "Cart Abandonment Calc", href: "/free-tools/cart-abandonment-calculator/" },
+    { label: "Social Proof Audit", href: "/free-tools/social-proof-audit-checklist/" },
+    { label: "Review Response Gen", href: "/free-tools/review-response-generator/" },
+    { label: "All Free Tools →", href: "/free-tools/" },
+  ],
+  Compare: [
+    { label: "vs Fomo", href: "/comparisons/notiproof-vs-fomo/" },
+    { label: "vs TrustPulse", href: "/comparisons/notiproof-vs-trustpulse/" },
+    { label: "vs Proof", href: "/comparisons/notiproof-vs-proof/" },
+    { label: "vs ProveSource", href: "/comparisons/notiproof-vs-provesource/" },
+    { label: "vs Yotpo", href: "/comparisons/notiproof-vs-yotpo/" },
+    { label: "vs Trustmary", href: "/comparisons/notiproof-vs-trustmary/" },
+    { label: "Pricing Comparison", href: "/comparisons/social-proof-pricing-comparison/" },
+    { label: "All Comparisons →", href: "/comparisons/" },
   ],
   Resources: [
     { label: "Blog", href: "/resources/blog/" },
+    { label: "Guides Hub", href: "/resources/guides/" },
     { label: "Help Center", href: "/resources/help-center/" },
     { label: "Glossary", href: "/resources/glossary/" },
-    { label: "Free Tools", href: "/free-tools/" },
-    { label: "Comparisons", href: "/comparisons/" },
-    { label: "Case Studies", href: "/case-studies/" },
+    { label: "Topical Map", href: "/resources/topical-map/" },
+    { label: "Resources Hub", href: "/resources/" },
   ],
   Company: [
     { label: "About", href: "/company/about/" },
     { label: "Contact", href: "/company/contact/" },
     { label: "Careers", href: "/company/careers/" },
-    { label: "Testimonials", href: "/testimonials/" },
+    { label: "Company Hub", href: "/company/" },
+    { label: "Customer Testimonials", href: "/testimonials/" },
     { label: "Pricing", href: "/pricing/" },
     { label: "Privacy Policy", href: "/privacy-policy/" },
     { label: "Terms of Service", href: "/terms-of-service/" },
@@ -52,19 +81,21 @@ export default function Footer() {
   return (
     <footer className="bg-dark text-dark-foreground" role="contentinfo">
       <div className="container-tight section-padding">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-7 gap-8 mb-12">
-          {/* Brand column — spans 2 */}
-          <div className="col-span-2">
-            <Link to="/">
-              <img src={logo} alt="NotiProof — Social Proof & Testimonial Platform" className="h-8 mb-4 brightness-0 invert" />
-            </Link>
-            <p className="text-sm font-semibold text-dark-foreground/80 mb-2">
-              NotiProof — Social Proof & Testimonial Platform
-            </p>
-            <p className="text-sm text-dark-foreground/60 max-w-xs mb-6">
-              Increase website conversions by 10–35% with real-time social proof notifications, testimonial collection, review aggregation, and trust widgets. Trusted by 4,000+ businesses worldwide.
-            </p>
-          </div>
+        {/* Brand row */}
+        <div className="mb-10 max-w-2xl">
+          <Link to="/">
+            <img src={logo} alt="NotiProof — Social Proof & Testimonial Platform" className="h-8 mb-4 brightness-0 invert" />
+          </Link>
+          <p className="text-sm font-semibold text-dark-foreground/80 mb-2">
+            NotiProof — Social Proof & Testimonial Platform
+          </p>
+          <p className="text-sm text-dark-foreground/60 mb-2">
+            Increase website conversions with real-time social proof notifications, testimonial collection, review aggregation, and trust widgets. Built for conversion-focused teams worldwide.
+          </p>
+        </div>
+
+        {/* Link columns — 7 columns on desktop, wraps responsively */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-8 mb-12">
           {Object.entries(footerLinks).map(([title, links]) => (
             <div key={title}>
               <h4 className="text-sm font-semibold mb-4">{title}</h4>

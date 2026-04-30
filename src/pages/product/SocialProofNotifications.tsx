@@ -19,7 +19,7 @@ const deepDive = (
 
     <h2 id="notification-types">What Types of Notifications Convert Best?</h2>
     <p>
-      The most effective notification type depends on your business model, but purchase alerts consistently outperform other formats in e-commerce. NotiProof's internal data across 4,000+ websites shows clear performance differences by notification type.
+      The most effective notification type depends on your business model, but purchase alerts consistently outperform other formats in e-commerce. Across teams using NotiProof, performance varies meaningfully by notification type.
     </p>
     <StatCallout stat="17% avg. conversion lift" context="Recent purchase notifications on product pages — the highest-performing notification type." />
     <p>
@@ -110,14 +110,14 @@ const tocSections = [
 export default function SocialProofNotifications() {
   return (
     <ProductFeaturePage
-      title="Social Proof Notifications"
-      metaTitle="Social Proof Notifications – Real-Time Purchase & Signup Alerts"
-      metaDescription="Show real-time purchase alerts, signup notifications, and activity feeds on your website. Increase conversions by 10-35% with NotiProof social proof notifications."
+      title="Social Proof Notifications Software"
+      metaTitle="Social Proof Notifications Software – Real-Time Conversion Boost"
+      metaDescription="Social proof notifications software that displays real-time purchase, signup, and activity alerts. Increase conversions 10-35%. Try NotiProof free — 1-line install."
       canonical="https://notiproof.com/product/social-proof-notifications/"
-      headline="Real-Time Social Proof Notifications That Convert"
-      description="Display live purchase alerts, signup notifications, and activity feeds to create urgency, build trust, and increase conversions by 10–35%."
+      headline="Social Proof Notifications Software That Converts"
+      description="Display live purchase alerts, signup notifications, and activity feeds to create urgency, build trust, and lift conversions."
       descriptionContent={
-        <p>Display live purchase alerts, signup notifications, and activity feeds to create urgency, build trust, and increase conversions by 10–35%. NotiProof's <Link to="/product/campaign-builder/">Campaign Builder</Link> lets you A/B test different notification types, while our <Link to="/product/analytics-conversion-insights/">analytics dashboard</Link> measures exact conversion lift. Learn <Link to="/resources/social-proof/what-is-social-proof/">what social proof is</Link> and why it works.</p>
+        <p>Display live purchase alerts, signup notifications, and activity feeds to create urgency, build trust, and lift conversions. NotiProof's <Link to="/product/campaign-builder/">Campaign Builder</Link> lets you A/B test different notification types, while our <Link to="/product/analytics-conversion-insights/">analytics dashboard</Link> measures exact conversion lift. Learn <Link to="/resources/social-proof/what-is-social-proof/">what social proof is</Link> and why it works.</p>
       }
       icon={Bell}
       benefits={[
@@ -153,10 +153,9 @@ export default function SocialProofNotifications() {
         { icon: BarChart3, title: "Conversion Tracking", desc: "Measure exactly how many conversions each notification drives with built-in attribution analytics." },
       ]}
       testimonial={{
-        quote: "We added NotiProof notifications to our product pages and saw a 31% increase in add-to-cart rate within the first week.",
-        name: "Emma Rodriguez",
-        role: "E-commerce Director, StyleHaven",
-        metric: "+31% Add-to-Cart Rate",
+        quote: "We added NotiProof notifications to our product pages and saw a clear lift in add-to-cart rate within the first week of launch.",
+        name: "E-commerce Director",
+        role: "Mid-market fashion retailer",
       }}
       useCases={[
         { title: "E-commerce Stores", desc: "Show recent purchases to drive FOMO and urgency.", href: "/use-cases/ecommerce/" },

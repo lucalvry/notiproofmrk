@@ -347,6 +347,7 @@ function AppShell({ url, helmetContext }: { url: string; helmetContext: { helmet
                 <Route path="/resources/help-center/" element={<HelpCenter />} />
                 <Route path="/resources/glossary/" element={<Glossary />} />
                 <Route path="/resources/topical-map/" element={<TopicalMapPage />} />
+                <Route path="/resources/author/olayinka-olayokun/" element={<AuthorProfile />} />
                 <Route path="/resources/author/:slug/" element={<AuthorProfile />} />
 
                 <Route path="/social-proof-notifications/" element={<Navigate to="/product/social-proof-notifications/" replace />} />

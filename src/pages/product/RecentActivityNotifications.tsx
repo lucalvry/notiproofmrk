@@ -116,10 +116,9 @@ export default function RecentActivityNotifications() {
         { icon: Shield, title: "Privacy First", desc: "Anonymize customer names, show only first name and city, or use 'Someone from [City]' format." },
       ]}
       testimonial={{
-        quote: "The activity feed made our SaaS landing page feel 10x more credible. Trial signups jumped 22% in the first month.",
-        name: "David Park",
-        role: "Growth Lead, CloudMetrics",
-        metric: "+22% Trial Signups",
+        quote: "The activity feed made our SaaS landing page feel far more credible. Trial signups grew noticeably after we shipped it on the pricing page.",
+        name: "Growth Lead",
+        role: "B2B SaaS startup",
       }}
       useCases={[
         { title: "E-commerce", desc: "Show recent purchases and add-to-cart activity.", href: "/use-cases/ecommerce/" },

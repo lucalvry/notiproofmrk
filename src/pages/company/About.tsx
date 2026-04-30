@@ -17,7 +17,7 @@ const values = [
 const milestones = [
   { year: "2022", event: "NotiProof founded with a mission to democratize social proof" },
   { year: "2023", event: "Launched testimonial collection, video recording, and review aggregation" },
-  { year: "2024", event: "Reached 5,000+ active businesses, 38+ integrations, and $2M+ ARR" },
+  { year: "2024", event: "Reached thousands of active businesses worldwide and expanded to 38+ integrations" },
   { year: "2025", event: "Expanded with AI testimonial analysis, campaign builder, and agency tools" },
 ];
 
@@ -108,7 +108,7 @@ export default function AboutPage() {
               We believe that trust is the most important conversion factor online. Our mission is to help businesses build that trust through authentic social proof — real-time notifications, genuine customer testimonials, and transparent engagement data.
             </p>
             <p className="text-lg text-muted-foreground text-center">
-              NotiProof serves over 5,000 businesses worldwide, from solo entrepreneurs to enterprise teams. Every day, our platform processes millions of social proof interactions, helping businesses convert visitors into customers. NotiProof is built and operated by Lucalvry LLC, a Wyoming limited liability company.
+              NotiProof is used by businesses worldwide, from solo entrepreneurs to enterprise teams. Every day, our platform processes social proof interactions that help businesses convert visitors into customers. NotiProof is built and operated by Lucalvry LLC, a Wyoming limited liability company.
             </p>
           </div>
         </div>
@@ -142,26 +142,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="py-12">
-        <div className="container-tight text-center">
-          <h2 className="text-xl font-bold mb-6">NotiProof by the Numbers</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {[
-              { value: "5,000+", label: "Active Businesses" },
-              { value: "38+", label: "Integrations" },
-              { value: "10M+", label: "Monthly Notifications" },
-              { value: "99.9%", label: "Uptime SLA" },
-            ].map((s) => (
-              <div key={s.label}>
-                <p className="text-3xl font-extrabold text-primary">{s.value}</p>
-                <p className="text-sm text-muted-foreground">{s.label}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <CTASection title="Ready to Join 5,000+ Businesses?" description="Start using NotiProof today and see the difference social proof makes." />
+      <CTASection title="Ready to grow conversions with social proof?" description="Start using NotiProof today and see the difference social proof makes." />
     </>
   );
 }

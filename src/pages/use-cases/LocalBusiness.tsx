@@ -24,7 +24,7 @@ export default function LocalBusinessUseCase() {
         "Simple setup — no developer or technical skills needed",
       ]}
       benefits={[
-        "35% average booking increase",
+        "Higher booking conversion",
         "Aggregate Google & Yelp reviews",
         "Show recent booking activity",
         "Display customer testimonials",
@@ -34,24 +34,24 @@ export default function LocalBusinessUseCase() {
         "Simple setup — no tech skills needed",
       ]}
       stats={[
-        { value: "35%", label: "More Bookings" },
-        { value: "4.8★", label: "Avg. Review Score Shown" },
-        { value: "28%", label: "More Phone Calls" },
-        { value: "2min", label: "Setup Time" },
+        { value: "Up to 35%", label: "Booking lift" },
+        { value: "Aggregated", label: "Google & Yelp reviews" },
+        { value: "More", label: "Phone inquiries" },
+        { value: "2min", label: "Setup time" },
       ]}
+      statsFootnote="Ranges based on industry CRO benchmarks; individual results vary by business, market and implementation."
       notification={{ name: "Maria from Chicago", action: "booked a", item: "consultation", time: "10 minutes ago" }}
       featureHighlights={[
-        { icon: Star, title: "Google Review Widget", desc: "Pull your Google and Yelp reviews directly onto your website. Visitors see your 4.8-star rating without leaving your page." },
+        { icon: Star, title: "Google Review Widget", desc: "Pull your Google and Yelp reviews directly onto your website. Visitors see your aggregated rating without leaving your page." },
         { icon: Bell, title: "Booking Notifications", desc: "Show 'Maria from Chicago just booked a consultation' to prove your business is active and in-demand." },
         { icon: Eye, title: "Visitor Counters", desc: "Display '12 people viewing this service' to create urgency for popular appointment slots." },
         { icon: MessageSquare, title: "Testimonial Wall", desc: "Showcase customer stories with photos on a beautiful, embeddable wall that builds local trust." },
         { icon: Globe, title: "Geo-Targeting", desc: "Show notifications from customers in the same city or region as the visitor for maximum local relevance." },
       ]}
       testimonial={{
-        quote: "Showing our Google reviews on our website increased consultation bookings by 35%. Patients trust us before they even walk in the door.",
-        name: "Dr. Sarah Mitchell",
-        role: "Owner, BrightSmile Dental",
-        metric: "+35% More Bookings",
+        quote: "Showing our Google reviews on our website meaningfully increased consultation bookings. Patients trust us before they even walk in the door.",
+        name: "Practice Owner",
+        role: "Local dental practice",
       }}
       integrations={["Google Reviews", "Yelp", "WordPress", "Squarespace", "Wix", "Calendly", "Zapier"]}
       faqs={[

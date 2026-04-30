@@ -15,6 +15,7 @@ const clusterLinks = [
   { title: "Conversion Rate Benchmarks", href: "/resources/conversion-analytics/conversion-rate-benchmarks/", desc: "2025 benchmarks by industry." },
   { title: "Measuring Social Proof ROI", href: "/resources/conversion-analytics/measuring-social-proof-roi/", desc: "Formulas and attribution models." },
   { title: "Heatmap Analytics Guide", href: "/resources/conversion-analytics/heatmap-analytics-guide/", desc: "Optimize placement with heatmaps." },
+  { title: "Testimonial & Review ROI", href: "/resources/conversion-analytics/testimonial-review-roi/", desc: "Quantify the revenue impact of testimonials." },
 ];
 
 const tocSections = [

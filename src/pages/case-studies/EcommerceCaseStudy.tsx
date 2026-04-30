@@ -1,4 +1,4 @@
-import { ArrowRight, TrendingUp, Clock, DollarSign, ShoppingCart } from "lucide-react";
+import { ArrowRight, TrendingUp, Clock, ShoppingCart, Info } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import SEOHead from "@/components/SEOHead";
@@ -13,16 +13,16 @@ const fadeUp = {
 };
 
 const metrics = [
-  { icon: TrendingUp, value: "+31%", label: "Add-to-Cart Rate" },
-  { icon: DollarSign, value: "$42,000", label: "Additional Monthly Revenue" },
-  { icon: Clock, value: "5 min", label: "Setup Time" },
-  { icon: ShoppingCart, value: "-22%", label: "Cart Abandonment" },
+  { icon: TrendingUp, value: "20–30%", label: "Add-to-cart lift (typical range)" },
+  { icon: ShoppingCart, value: "Lower", label: "Cart abandonment" },
+  { icon: Clock, value: "5 min", label: "Setup time" },
+  { icon: TrendingUp, value: "Higher", label: "Average order value" },
 ];
 
 const schema = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "How StyleHaven Increased Add-to-Cart Rate by 31% With NotiProof",
+  headline: "How a Mid-Market Fashion Retailer Lifted Add-to-Cart With Social Proof",
   datePublished: "2025-03-15",
   author: { "@type": "Person", name: "Olayinka Olayokun", url: "https://notiproof.com/resources/author/olayinka-olayokun/" },
   publisher: { "@type": "Organization", name: "NotiProof", url: "https://notiproof.com" },
@@ -32,30 +32,35 @@ export default function EcommerceCaseStudy() {
   return (
     <>
       <SEOHead
-        title="Case Study: StyleHaven +31% Add-to-Cart Rate"
-        description="How StyleHaven used NotiProof social proof notifications to increase add-to-cart rate by 31% and generate $42K in additional monthly revenue."
+        title="E-commerce Case Study – Lifting Add-to-Cart With Social Proof"
+        description="An illustrative case study showing how a mid-market fashion retailer can use social proof notifications to lift add-to-cart rate and reduce cart abandonment."
         canonical="https://notiproof.com/case-studies/ecommerce-stylehaven/"
         schema={schema}
       />
 
       <section className="section-padding pt-4">
         <div className="container-tight">
-          <motion.div {...fadeUp} className="max-w-3xl mx-auto mb-12">
+          <motion.div {...fadeUp} className="max-w-3xl mx-auto mb-6">
             <Link to="/case-studies/" className="text-sm text-muted-foreground hover:text-primary mb-4 inline-block">← All Case Studies</Link>
             <span className="inline-block text-xs font-bold bg-primary/10 text-primary px-3 py-1 rounded-full mb-4">E-commerce</span>
             <h1 className="text-3xl md:text-4xl font-extrabold leading-tight mb-4">
-              How StyleHaven Increased Add-to-Cart Rate by <span className="text-gradient">31%</span> With NotiProof
+              How a Mid-Market Fashion Retailer Lifted Add-to-Cart With <span className="text-gradient">Social Proof</span>
             </h1>
             <p className="text-lg text-muted-foreground">
-              StyleHaven, a mid-market fashion e-commerce store doing $1.2M/year in revenue, was struggling with low conversion rates despite strong traffic. Here's how social proof notifications changed their trajectory.
+              An illustrative example of how a mid-market fashion e-commerce store can use real-time purchase notifications to overcome low conversion rates despite strong traffic.
             </p>
           </motion.div>
+
+          <div className="max-w-3xl mx-auto mb-10 flex items-start gap-3 bg-muted/40 border border-border rounded-xl p-4 text-sm text-muted-foreground">
+            <Info className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+            <p>Illustrative example based on common implementation patterns and industry CRO benchmarks. Not based on a specific named customer.</p>
+          </div>
 
           <motion.div {...fadeUp} className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto mb-16">
             {metrics.map((m) => (
               <div key={m.label} className="bg-card border border-border rounded-2xl p-6 text-center">
                 <m.icon className="w-6 h-6 text-primary mx-auto mb-2" />
-                <p className="text-3xl font-extrabold text-primary">{m.value}</p>
+                <p className="text-2xl font-extrabold text-primary">{m.value}</p>
                 <p className="text-sm text-muted-foreground mt-1">{m.label}</p>
               </div>
             ))}
@@ -63,39 +68,38 @@ export default function EcommerceCaseStudy() {
 
           <div className="max-w-3xl mx-auto prose prose-lg">
             <h2 className="text-2xl font-bold mt-8 mb-4">The Challenge</h2>
-            <p className="text-muted-foreground">StyleHaven was generating 45,000 monthly visitors to their Shopify store, but their add-to-cart rate was stuck at 8.2% — well below the industry average of 10.3% for fashion e-commerce. Despite investing in paid ads, email marketing, and influencer partnerships, conversion rates remained flat for six months.</p>
-            <p className="text-muted-foreground">Emma Rodriguez, E-commerce Director, identified the core issue: "First-time visitors had no reason to trust us. We had great products and competitive pricing, but new visitors couldn't see that other people were buying from us."</p>
+            <p className="text-muted-foreground">A mid-market fashion retailer is generating tens of thousands of monthly visitors to their Shopify store, but their add-to-cart rate sits below the industry average for fashion e-commerce. Despite investing in paid ads, email marketing, and influencer partnerships, conversion rates remain flat for months.</p>
+            <p className="text-muted-foreground">The core issue is trust: first-time visitors have no signal that other shoppers are buying. Great products and competitive pricing aren't visible to a brand-new visitor.</p>
 
             <h2 className="text-2xl font-bold mt-8 mb-4">The Solution</h2>
-            <p className="text-muted-foreground">StyleHaven implemented NotiProof's <Link to="/product/social-proof-notifications/" className="text-primary font-semibold hover:underline">social proof notifications</Link> on their product pages, showing real-time purchase alerts to visitors. The setup took 5 minutes — one line of JavaScript added to their Shopify theme.</p>
-            <p className="text-muted-foreground">They configured three notification types:</p>
+            <p className="text-muted-foreground">The retailer implements NotiProof's <Link to="/product/social-proof-notifications/" className="text-primary font-semibold hover:underline">social proof notifications</Link> on product pages, showing real-time purchase alerts to visitors. Setup is one line of JavaScript added to the Shopify theme.</p>
+            <p className="text-muted-foreground">They configure three notification types:</p>
             <ul className="text-muted-foreground space-y-2">
               <li><strong className="text-foreground">Purchase alerts</strong> on product pages — "Sarah from Austin just purchased this item"</li>
               <li><strong className="text-foreground">Visitor counts</strong> on collection pages — "142 people are viewing this category"</li>
-              <li><strong className="text-foreground">Review notifications</strong> on the homepage — pulling from their aggregated Google and Trustpilot reviews</li>
+              <li><strong className="text-foreground">Review notifications</strong> on the homepage — pulling from aggregated Google and Trustpilot reviews</li>
             </ul>
 
             <h2 className="text-2xl font-bold mt-8 mb-4">The Results</h2>
-            <p className="text-muted-foreground">Within the first week, add-to-cart rate jumped from 8.2% to 10.7% — a <strong className="text-foreground">31% increase</strong>. After a month of optimization using NotiProof's <Link to="/product/campaign-builder/" className="text-primary font-semibold hover:underline">A/B testing</Link>, they achieved:</p>
+            <p className="text-muted-foreground">Within the first weeks, add-to-cart rate moves into the typical 20–30% lift range that <Link to="/resources/cro/" className="text-primary font-semibold hover:underline">industry CRO benchmarks</Link> show for well-implemented social proof. After a month of optimization with NotiProof's <Link to="/product/campaign-builder/" className="text-primary font-semibold hover:underline">A/B testing</Link>, expected outcomes include:</p>
             <ul className="text-muted-foreground space-y-2">
-              <li>Add-to-cart rate: 8.2% → 10.7% (+31%)</li>
-              <li>Cart abandonment: 71% → 55% (-22%)</li>
-              <li>Average order value: $67 → $73 (+9%)</li>
-              <li>Monthly revenue increase: +$42,000</li>
-              <li>ROI on NotiProof investment: 1,448x</li>
+              <li>Higher add-to-cart rate</li>
+              <li>Lower cart abandonment</li>
+              <li>Higher average order value</li>
+              <li>Meaningful incremental monthly revenue</li>
             </ul>
 
             <h2 className="text-2xl font-bold mt-8 mb-4">Key Takeaways</h2>
             <ol className="text-muted-foreground space-y-2">
               <li><strong className="text-foreground">Social proof works fastest on product pages</strong> — that's where purchase intent is highest and trust is most needed.</li>
-              <li><strong className="text-foreground">Real data beats fake urgency</strong> — StyleHaven used real purchase data, not fabricated notifications, which built genuine trust.</li>
-              <li><strong className="text-foreground">A/B testing is essential</strong> — their best-performing notification style was discovered through testing, not assumed.</li>
-              <li><strong className="text-foreground">5 minutes of setup can transform your business</strong> — the ROI from a single line of code exceeded their entire ad budget.</li>
+              <li><strong className="text-foreground">Real data beats fake urgency</strong> — using real purchase data, not fabricated notifications, builds genuine trust.</li>
+              <li><strong className="text-foreground">A/B testing is essential</strong> — best-performing notification styles are discovered through testing, not assumed.</li>
+              <li><strong className="text-foreground">5 minutes of setup can transform a store</strong> — the ROI from a single line of code can exceed the entire ad budget.</li>
             </ol>
           </div>
 
           <motion.div {...fadeUp} className="text-center mt-12">
-            <p className="text-muted-foreground mb-4">Want results like StyleHaven?</p>
+            <p className="text-muted-foreground mb-4">Ready to apply this playbook to your store?</p>
             <Button variant="hero" size="xl" asChild>
               <a href="https://app.notiproof.com/signup">Get Started Free <ArrowRight className="w-5 h-5" /></a>
             </Button>
@@ -107,7 +111,7 @@ export default function EcommerceCaseStudy() {
             <div className="grid sm:grid-cols-2 gap-4">
               <Link to="/case-studies/saas-conversion/" className="bg-card border border-border rounded-xl p-5 hover:border-primary/30 transition-all">
                 <span className="text-xs font-bold text-primary">SaaS</span>
-                <p className="font-semibold mt-1">How CloudMetrics Increased Trial Signups by 24%</p>
+                <p className="font-semibold mt-1">How a B2B SaaS Lifted Trial Signups With Social Proof</p>
               </Link>
               <Link to="/use-cases/ecommerce/" className="bg-card border border-border rounded-xl p-5 hover:border-primary/30 transition-all">
                 <span className="text-xs font-bold text-primary">Use Case</span>

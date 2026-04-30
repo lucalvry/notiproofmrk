@@ -34,12 +34,13 @@ export default function AgenciesUseCase() {
         "Dedicated agency support",
       ]}
       stats={[
-        { value: "35%", label: "Avg. Client Conversion Lift" },
-        { value: "5x", label: "Service ROI" },
-        { value: "92%", label: "Client Retention" },
-        { value: "50+", label: "Agency Partners" },
+        { value: "Higher", label: "Avg. client conversion lift" },
+        { value: "Strong", label: "Service ROI" },
+        { value: "Better", label: "Client retention" },
+        { value: "Multi-site", label: "Dashboard" },
       ]}
-      notification={{ name: "Agency client", action: "saw 32% more", item: "conversions", time: "this week" }}
+      statsFootnote="Outcomes based on industry CRO benchmarks; individual results vary by client, vertical and implementation."
+      notification={{ name: "Agency client", action: "saw more", item: "conversions", time: "this week" }}
       featureHighlights={[
         { icon: Palette, title: "White-Label Branding", desc: "Remove NotiProof branding entirely. Your logo, your colors, your domain — clients see only your agency brand." },
         { icon: Users, title: "Multi-Client Dashboard", desc: "Manage all client sites from one login. Switch between accounts, deploy campaigns, and monitor results centrally." },
@@ -48,10 +49,9 @@ export default function AgenciesUseCase() {
         { icon: Settings, title: "Scalable Deployment", desc: "Deploy NotiProof across new client sites in minutes. Template campaigns for fast onboarding." },
       ]}
       testimonial={{
-        quote: "NotiProof became our highest-margin CRO service. We charge clients $500/month and deliver 35%+ conversion lifts. The ROI reports sell themselves.",
-        name: "Mark Stevens",
-        role: "Founder, ConvertLab Agency",
-        metric: "$500/mo Revenue Per Client",
+        quote: "NotiProof became a high-margin CRO add-on for us. We bundle it into client retainers and the conversion reports sell themselves.",
+        name: "Agency Founder",
+        role: "Digital marketing agency",
       }}
       integrations={["White Label", "API", "Webhooks", "GA4", "WordPress", "Shopify", "HubSpot"]}
       faqs={[

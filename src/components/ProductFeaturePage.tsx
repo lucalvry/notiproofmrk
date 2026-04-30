@@ -74,17 +74,13 @@ export default function ProductFeaturePage({
     url: canonical,
     publisher: { "@type": "Organization", name: "NotiProof", url: "https://notiproof.com/" },
     creator: { "@type": "Organization", name: "NotiProof", url: "https://notiproof.com/" },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.9",
-      reviewCount: "127",
-    },
     offers: {
       "@type": "AggregateOffer",
       lowPrice: "0",
       highPrice: "380",
       priceCurrency: "USD",
       offerCount: "5",
+      seller: { "@type": "Organization", name: "NotiProof" },
     },
   };
 
@@ -128,7 +124,7 @@ export default function ProductFeaturePage({
               </div>
               <p className="text-xs text-muted-foreground flex items-center gap-1.5">
                 <CheckCircle2 className="w-3.5 h-3.5 text-primary" />
-                Trusted by 4,000+ websites · No credit card required
+                No credit card required · Free forever plan
               </p>
               {lastUpdated && (
                 <p className="text-xs text-muted-foreground mt-2">

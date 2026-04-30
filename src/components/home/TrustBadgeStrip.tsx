@@ -1,9 +1,9 @@
-import { Star, Globe, Puzzle } from "lucide-react";
+import { Zap, ShieldCheck, Puzzle } from "lucide-react";
 
 const badges = [
-  { icon: Star, label: "4.9/5 on G2", highlight: "4.9/5" },
-  { icon: Globe, label: "4,000+ websites", highlight: "4,000+" },
-  { icon: Puzzle, label: "38+ integrations", highlight: "38+" },
+  { icon: Zap, label: "No-code setup" },
+  { icon: ShieldCheck, label: "GDPR-ready" },
+  { icon: Puzzle, label: "38+ integrations" },
 ];
 
 export default function TrustBadgeStrip() {

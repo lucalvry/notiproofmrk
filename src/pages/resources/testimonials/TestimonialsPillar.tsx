@@ -15,6 +15,13 @@ const clusterLinks = [
   { title: "Video Testimonials: Complete Guide", href: "/resources/testimonials/video-testimonial-guide/", desc: "Record and display video testimonials." },
   { title: "Testimonial Page Design Guide", href: "/resources/testimonials/testimonial-page-design/", desc: "Layouts and design for maximum trust." },
   { title: "Testimonial Request Email Templates", href: "/resources/testimonials/testimonial-request-email-templates/", desc: "Email templates that get 3–5× more replies." },
+  { title: "Video vs Text Testimonials", href: "/resources/testimonials/video-vs-text-testimonials/", desc: "Which format converts better and when." },
+  { title: "How to Ask for Video Testimonials", href: "/resources/testimonials/ask-for-video-testimonials/", desc: "Scripts and outreach for video requests." },
+  { title: "Video Testimonial Examples", href: "/resources/testimonials/video-testimonial-examples/", desc: "Real-world examples that drive conversions." },
+  { title: "Testimonials for SaaS", href: "/resources/testimonials/testimonials-for-saas/", desc: "B2B SaaS testimonial strategy and templates." },
+  { title: "Case Study vs Testimonial", href: "/resources/testimonials/case-study-vs-testimonial/", desc: "When to use each format for maximum impact." },
+  { title: "Testimonial A/B Testing", href: "/resources/testimonials/testimonial-ab-testing/", desc: "Test placement, format, and copy systematically." },
+  { title: "Wall of Love Guide", href: "/resources/testimonials/wall-of-love-guide/", desc: "Build a high-impact testimonial wall." },
 ];
 
 const tocSections = [

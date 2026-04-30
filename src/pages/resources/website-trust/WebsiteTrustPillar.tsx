@@ -15,6 +15,7 @@ const clusterLinks = [
   { title: "Trust Badges Guide", href: "/resources/website-trust/trust-badges-guide/", desc: "Which badges matter and where to place them." },
   { title: "Building Website Credibility", href: "/resources/website-trust/building-website-credibility/", desc: "Build trust from scratch with zero reviews." },
   { title: "FOMO Marketing Guide", href: "/resources/website-trust/fomo-marketing-guide/", desc: "Ethical urgency with counters and alerts." },
+  { title: "Testimonials as Trust Signals", href: "/resources/website-trust/testimonials-as-trust-signals/", desc: "How testimonials reinforce credibility." },
 ];
 
 const tocSections = [

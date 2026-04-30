@@ -2,7 +2,7 @@
 
 > Social proof and testimonial platform that increases website conversions by 10–35%.
 
-NotiProof is a SaaS platform that helps businesses boost website conversions through real-time social proof notifications, testimonial collection, review aggregation, and visitor engagement tools. Trusted by 2,000+ conversion-focused teams worldwide.
+NotiProof is a SaaS platform that helps businesses boost website conversions through real-time social proof notifications, testimonial collection, review aggregation, and visitor engagement tools. Built for conversion-focused teams worldwide.
 
 ## Core Product
 

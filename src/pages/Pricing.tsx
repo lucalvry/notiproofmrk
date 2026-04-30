@@ -107,17 +107,21 @@ export default function PricingPage() {
           availability: "https://schema.org/InStock",
           url: "https://notiproof.com/pricing/",
           category: "subscription",
+          seller: { "@type": "Organization", name: "NotiProof" },
         },
-        ...plans.map((p) => ({
-          "@type": "Offer",
-          name: p.name,
-          price: yearly ? p.yearly : p.monthly,
-          priceCurrency: "USD",
-          priceValidUntil: "2027-12-31",
-          availability: "https://schema.org/InStock",
-          url: "https://notiproof.com/pricing/",
-          category: "subscription",
-        })),
+        ...plans
+          .filter((p) => (yearly ? p.yearly : p.monthly) > 0)
+          .map((p) => ({
+            "@type": "Offer",
+            name: p.name,
+            price: yearly ? p.yearly : p.monthly,
+            priceCurrency: "USD",
+            priceValidUntil: "2027-12-31",
+            availability: "https://schema.org/InStock",
+            url: "https://notiproof.com/pricing/",
+            category: "subscription",
+            seller: { "@type": "Organization", name: "NotiProof" },
+          })),
       ],
     },
     {

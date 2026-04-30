@@ -25,7 +25,7 @@ export default function WallOfLoveGuide() {
     <ResourceArticle
       metaTitle="Wall of Love: How to Build a Testimonial Wall That Converts [2026]"
       metaDescription="Learn how to design, curate, and build a testimonial wall of love that drives conversions. Layout strategies, content curation, mixed media, and technical implementation."
-      canonical="https://notiproof.com/resources/testimonials/wall-of-love/"
+      canonical="https://notiproof.com/resources/testimonials/wall-of-love-guide/"
       title="Wall of Love: How to Build a Testimonial Wall That Converts"
       readingTime="13 min read"
       publishDate="2025-05-21"

@@ -5,7 +5,7 @@ export default function SaaSUseCase() {
   return (
     <UseCaseTemplate
       metaTitle="Social Proof Tools for SaaS – Drive Trial Signups & Conversions"
-      metaDescription="Use social proof notifications, testimonials, and visitor counts to drive SaaS trial signups. Increase free-to-paid conversion rates by 19% with NotiProof."
+      metaDescription="Use social proof notifications, testimonials, and visitor counts to drive SaaS trial signups and improve free-to-paid conversion with NotiProof."
       canonical="https://notiproof.com/use-cases/saas-social-proof-tools-drive-sign-ups/"
       badge="SaaS"
       headline="Drive SaaS Trial Signups With Social Proof"
@@ -24,7 +24,7 @@ export default function SaaSUseCase() {
         "A/B tested messaging optimizes which proof points convert best",
       ]}
       benefits={[
-        "19% average trial signup lift",
+        "Higher trial signup conversion",
         "Show real-time signup activity",
         "Display user milestones and achievements",
         "Showcase customer testimonials",
@@ -34,24 +34,24 @@ export default function SaaSUseCase() {
         "Measure trial-to-paid conversion impact",
       ]}
       stats={[
-        { value: "19%", label: "Avg. Signup Lift" },
-        { value: "2.8x", label: "More Free Trials" },
-        { value: "34%", label: "Faster Conversion" },
-        { value: "5min", label: "Integration Time" },
+        { value: "Up to 19%", label: "Trial signup lift" },
+        { value: "More", label: "Free trials started" },
+        { value: "Faster", label: "Trial-to-paid path" },
+        { value: "5min", label: "Integration time" },
       ]}
+      statsFootnote="Ranges based on industry CRO benchmarks; individual results vary by product, traffic and implementation."
       notification={{ name: "James from London", action: "started a trial of", item: "Pro Plan", time: "5 minutes ago" }}
       featureHighlights={[
         { icon: Bell, title: "Signup Notifications", desc: "Show 'James from London just started a trial' to prove real people are actively signing up." },
-        { icon: Users, title: "Active User Counts", desc: "Display '2,400+ teams use NotiProof' to establish credibility through wisdom of the crowd." },
+        { icon: Users, title: "Active User Counts", desc: "Display active team counts to establish credibility through wisdom of the crowd." },
         { icon: Star, title: "Review Aggregation", desc: "Pull G2, Capterra, and Trustpilot reviews directly onto your landing pages for third-party validation." },
         { icon: BarChart3, title: "Conversion Analytics", desc: "Measure exactly which social proof elements drive the most trial signups and paid conversions." },
         { icon: Zap, title: "Smart Targeting", desc: "Show different proof on your homepage vs pricing page — signup alerts for awareness, testimonials for decision." },
       ]}
       testimonial={{
-        quote: "Adding signup notifications to our pricing page increased trial starts by 19%. The analytics showed us exactly which notification type performed best.",
-        name: "David Park",
-        role: "Growth Lead, CloudMetrics",
-        metric: "+19% Trial Signups",
+        quote: "Adding signup notifications to our pricing page produced a clear lift in trial starts. The analytics dashboard showed us exactly which notification type performed best.",
+        name: "Growth Lead",
+        role: "B2B analytics SaaS",
       }}
       integrations={["Stripe", "HubSpot", "Segment", "Zapier", "Intercom", "Mixpanel", "GA4"]}
       faqs={[

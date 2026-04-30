@@ -29,7 +29,7 @@ const homepageSchema = [
     name: "NotiProof",
     url: "https://notiproof.com",
     logo: "https://notiproof.com/notiproof-logo.png",
-    description: "Social proof and testimonial platform that increases website conversions by 10–35%.",
+    description: "Social proof and testimonial platform that helps teams lift website conversions with real-time notifications, testimonials, and reviews.",
     foundingDate: "2024",
     areaServed: "Worldwide",
     knowsAbout: [
@@ -74,31 +74,6 @@ const homepageSchema = [
       priceCurrency: "USD",
       offerCount: "5",
     },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.9",
-      reviewCount: "127",
-    },
-    review: [
-      {
-        "@type": "Review",
-        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-        author: { "@type": "Person", name: "Jessica M." },
-        reviewBody: "NotiProof boosted our checkout conversions by 28% in the first month. The setup took less than 5 minutes and the support team is incredible.",
-      },
-      {
-        "@type": "Review",
-        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-        author: { "@type": "Person", name: "David K." },
-        reviewBody: "We tried Fomo and ProveSource before — NotiProof's video testimonial recorder and review aggregation make it the clear winner for SaaS.",
-      },
-      {
-        "@type": "Review",
-        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-        author: { "@type": "Person", name: "Anna P." },
-        reviewBody: "Real-time purchase alerts on our Shopify store added an extra $12k in monthly revenue. The lightweight script doesn't slow our site down at all.",
-      },
-    ],
   },
 ];
 
@@ -106,8 +81,8 @@ export default function HomePage() {
   return (
     <>
       <SEOHead
-        title="NotiProof – Increase Website Conversions by 10–35% With Real-Time Social Proof"
-        description="NotiProof is the social proof and testimonial platform trusted by thousands of businesses. Show real-time notifications, collect testimonials, and boost conversions instantly."
+        title="NotiProof – Real-Time Social Proof, Testimonials & Reviews to Lift Conversions"
+        description="NotiProof is the social proof and testimonial platform built for conversion-focused teams. Show real-time notifications, collect testimonials, and boost conversions instantly."
         canonical="https://notiproof.com/"
         schema={homepageSchema}
         speakable={["h1"]}

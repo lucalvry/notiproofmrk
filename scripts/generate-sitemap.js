@@ -110,6 +110,11 @@ const routes = [
   { path: '/resources/social-proof/ai-generated-social-proof/', priority: '0.8', changefreq: 'monthly', lastmod: '2026-03-01' },
   { path: '/resources/social-proof/negative-social-proof/', priority: '0.8', changefreq: 'monthly', lastmod: '2026-03-10' },
   { path: '/resources/social-proof/social-proof-social-media/', priority: '0.8', changefreq: 'monthly', lastmod: '2026-03-15' },
+  { path: '/resources/social-proof/social-proof-b2b-saas/', priority: '0.8', changefreq: 'monthly', lastmod: '2026-04-15' },
+  { path: '/resources/social-proof/social-proof-notifications-guide/', priority: '0.8', changefreq: 'monthly', lastmod: '2026-04-15' },
+  { path: '/resources/social-proof/reviews-and-social-proof/', priority: '0.8', changefreq: 'monthly', lastmod: '2026-04-15' },
+  { path: '/resources/social-proof/user-generated-content-social-proof/', priority: '0.8', changefreq: 'monthly', lastmod: '2026-04-15' },
+  { path: '/resources/social-proof/social-proof-for-landing-pages/', priority: '0.8', changefreq: 'monthly', lastmod: '2026-04-15' },
 
   // Resources — Reviews cluster
   { path: '/resources/reviews/', priority: '0.8', changefreq: 'monthly', lastmod: d('resource') },
@@ -198,6 +203,7 @@ const routes = [
   // Legal
   { path: '/privacy-policy/', priority: '0.3', changefreq: 'yearly', lastmod: d('legal') },
   { path: '/terms-of-service/', priority: '0.3', changefreq: 'yearly', lastmod: d('legal') },
+  { path: '/cookie-policy/', priority: '0.3', changefreq: 'yearly', lastmod: d('legal') },
 ];
 
 const xml = `<?xml version="1.0" encoding="UTF-8"?>

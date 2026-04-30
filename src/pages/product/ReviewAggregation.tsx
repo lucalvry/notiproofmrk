@@ -108,10 +108,9 @@ export default function ReviewAggregation() {
         { icon: Layers, title: "Multi-Platform Unified", desc: "Reviews from Google, Trustpilot, G2, Capterra, Yelp, Facebook, and more — all in one place." },
       ]}
       testimonial={{
-        quote: "Aggregating our Google and G2 reviews on our homepage increased trust immediately. Our demo request rate jumped 27% in the first month.",
-        name: "James Okonkwo",
-        role: "Head of Growth, ProStack",
-        metric: "+27% Demo Requests",
+        quote: "Aggregating our Google and G2 reviews on our homepage built trust immediately. Demo requests trended up after launch.",
+        name: "Head of Growth",
+        role: "B2B SaaS company",
       }}
       useCases={[
         { title: "E-commerce", desc: "Showcase product reviews from multiple marketplaces.", href: "/use-cases/ecommerce/" },

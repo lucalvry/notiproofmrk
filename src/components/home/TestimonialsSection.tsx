@@ -12,36 +12,24 @@ const fadeUp = {
 const testimonials = [
   {
     quote:
-      "NotiProof increased our checkout conversions by 28% in the first month. The ROI paid for a full year within the first week.",
-    highlight: "28%",
-    name: "Jessica M.",
-    role: "E-commerce Director",
-    company: "StyleHaus (50-person DTC brand)",
-    initials: "JM",
-    metric: "+28% checkout conversions",
-    timeframe: "First 30 days",
+      "NotiProof helped us turn checkout hesitation into confidence. Setup was effortless and the impact on conversions was clear within weeks.",
+    name: "E-commerce Director",
+    company: "Mid-market DTC brand",
+    initials: "ED",
   },
   {
     quote:
-      "We saw a 19% lift in trial signups within two weeks. The A/B testing dashboard helped us optimize notification timing for maximum impact.",
-    highlight: "19%",
-    name: "David K.",
-    role: "Co-Founder & CEO",
-    company: "MetricFlow (B2B SaaS, Series A)",
-    initials: "DK",
-    metric: "+19% trial signups",
-    timeframe: "First 14 days",
+      "The A/B testing dashboard helped us dial in notification timing and copy. Trial signups grew steadily after we shipped social proof on the pricing page.",
+    name: "Co-Founder & CEO",
+    company: "B2B SaaS startup",
+    initials: "CE",
   },
   {
     quote:
-      "We now offer NotiProof as part of our CRO services. Clients love the results — 34% more leads on average across 12 client sites.",
-    highlight: "34%",
-    name: "Anna P.",
-    role: "Founder",
-    company: "GrowthLab Agency (200+ clients)",
-    initials: "AP",
-    metric: "+34% lead generation",
-    timeframe: "Across 12 client sites",
+      "We now offer NotiProof as part of our CRO services. Clients love the results, and the white-label setup makes it feel native to their brand.",
+    name: "Agency Founder",
+    company: "Digital marketing agency",
+    initials: "AF",
   },
 ];
 
@@ -51,8 +39,8 @@ export default function TestimonialsSection() {
       <div className="container-tight">
         <SectionHeading
           badge="Testimonials"
-          title="Over 4,000+ websites trust NotiProof"
-          description="See what conversion-focused teams are saying."
+          title="Trusted by conversion-focused teams"
+          description="See what teams using NotiProof are saying."
         />
 
         <div className="grid md:grid-cols-3 gap-6">
@@ -74,13 +62,6 @@ export default function TestimonialsSection() {
               <p className="text-foreground leading-relaxed mb-4 flex-1">
                 "{t.quote}"
               </p>
-              {/* Metric badge */}
-              <div className="flex items-center gap-2 mb-4">
-                <span className="inline-block bg-primary/10 text-primary text-xs font-bold px-2.5 py-1 rounded-full">
-                  {t.metric}
-                </span>
-                <span className="text-xs text-muted-foreground">{t.timeframe}</span>
-              </div>
               <div className="flex items-center gap-3 pt-4 border-t border-border">
                 <div className="w-10 h-10 rounded-full bg-primary/10 text-primary font-bold text-sm flex items-center justify-center">
                   {t.initials}
@@ -88,7 +69,7 @@ export default function TestimonialsSection() {
                 <div>
                   <p className="font-semibold text-sm">{t.name}</p>
                   <p className="text-xs text-muted-foreground">
-                    {t.role}, {t.company}
+                    {t.company}
                   </p>
                 </div>
               </div>

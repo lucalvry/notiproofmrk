@@ -116,7 +116,7 @@ export default function SocialProofROICalculator() {
         </div>
       </section>
 
-      <CTASection title="Start Boosting Conversions Today" description="NotiProof customers see 10-35% conversion lifts with social proof notifications, testimonials, and reviews." />
+      <CTASection title="Start Boosting Conversions Today" description="Industry CRO benchmarks show 10–35% conversion lifts from well-implemented social proof, testimonials, and reviews." />
     </>
   );
 }

@@ -15,6 +15,14 @@ const clusterLinks = [
   { title: "Review Aggregation Guide", href: "/resources/reviews/review-aggregation-guide/", desc: "Combine reviews from multiple platforms." },
   { title: "Responding to Negative Reviews", href: "/resources/reviews/responding-to-negative-reviews/", desc: "Templates and strategies for negative feedback." },
   { title: "Best Review Widgets for Websites", href: "/resources/reviews/review-widgets-for-websites/", desc: "Widget types, placement, and design guide." },
+  { title: "Trustpilot Reviews Guide", href: "/resources/reviews/trustpilot-reviews-guide/", desc: "Set up, optimize, and embed Trustpilot reviews." },
+  { title: "G2 Reviews Guide", href: "/resources/reviews/g2-reviews-guide/", desc: "Win the B2B SaaS review game on G2." },
+  { title: "Yelp Reviews Guide", href: "/resources/reviews/yelp-reviews-guide/", desc: "Master Yelp for local business growth." },
+  { title: "Embed Google Reviews on Your Website", href: "/resources/reviews/embed-google-reviews/", desc: "Step-by-step embed guide with widget options." },
+  { title: "Online Review Statistics 2025", href: "/resources/reviews/online-review-statistics/", desc: "Latest data on review impact and consumer behavior." },
+  { title: "Star Rating Psychology", href: "/resources/reviews/star-rating-psychology/", desc: "Why 4.7 outperforms 5.0 and other rating insights." },
+  { title: "Detecting Fake Reviews", href: "/resources/reviews/fake-reviews-detection/", desc: "Spot and handle fake reviews on every platform." },
+  { title: "Review Generation Strategies", href: "/resources/reviews/review-generation-strategies/", desc: "Proven systems to multiply review velocity." },
 ];
 
 const tocSections = [

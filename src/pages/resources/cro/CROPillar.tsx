@@ -17,6 +17,13 @@ const clusterLinks = [
   { title: "Cart Abandonment Solutions", href: "/resources/cro/cart-abandonment/", desc: "Recover lost revenue with proven cart recovery strategies." },
   { title: "CTA Optimization Guide", href: "/resources/cro/cta-optimization/", desc: "Button copy, color, placement, and psychology." },
   { title: "Exit Intent Strategies", href: "/resources/cro/exit-intent-strategies/", desc: "Recover leaving visitors with smart exit-intent triggers." },
+  { title: "Product Page CRO", href: "/resources/cro/product-page-cro/", desc: "Optimize product pages for higher conversions." },
+  { title: "Checkout Optimization", href: "/resources/cro/checkout-optimization/", desc: "Reduce checkout friction and abandonment." },
+  { title: "Pricing Page Optimization", href: "/resources/cro/pricing-page-optimization/", desc: "Design pricing pages that convert visitors." },
+  { title: "Mobile CRO Guide", href: "/resources/cro/mobile-cro/", desc: "Mobile-first conversion optimization tactics." },
+  { title: "Above the Fold Optimization", href: "/resources/cro/above-the-fold-optimization/", desc: "Maximize the impact of the first screen visitors see." },
+  { title: "CRO for Agencies", href: "/resources/cro/cro-for-agencies/", desc: "How agencies deliver CRO services to clients." },
+  { title: "GA4 Social Proof Tracking", href: "/resources/cro/ga4-social-proof-tracking/", desc: "Track social proof events in Google Analytics 4." },
 ];
 
 const tocSections = [
