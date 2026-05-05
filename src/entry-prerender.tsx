@@ -58,6 +58,7 @@ import Careers from "./pages/company/Careers";
 // Resources hub
 import ResourcesHub from "./pages/resources/ResourcesHub";
 import Blog from "./pages/resources/Blog";
+import TopicDetail from "./pages/resources/TopicDetail";
 import GuidesHub from "./pages/resources/GuidesHub";
 
 // Social Proof cluster
@@ -257,6 +258,12 @@ function AppShell({ url, helmetContext }: { url: string; helmetContext: { helmet
                 {/* Resources */}
                 <Route path="/resources/" element={<ResourcesHub />} />
                 <Route path="/resources/blog/" element={<Blog />} />
+                <Route path="/resources/blog/social-proof/" element={<TopicDetail />} />
+                <Route path="/resources/blog/reviews/" element={<TopicDetail />} />
+                <Route path="/resources/blog/testimonials/" element={<TopicDetail />} />
+                <Route path="/resources/blog/cro/" element={<TopicDetail />} />
+                <Route path="/resources/blog/website-trust/" element={<TopicDetail />} />
+                <Route path="/resources/blog/conversion-analytics/" element={<TopicDetail />} />
                 <Route path="/resources/guides/" element={<GuidesHub />} />
 
                 {/* Social Proof cluster */}
