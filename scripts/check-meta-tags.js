@@ -38,7 +38,9 @@ for (const file of htmlFiles) {
   const html = fs.readFileSync(file, "utf-8");
   const rel = path.relative(distDir, file);
 
-  const head = (html.match(/<head[\s\S]*?<\/head>/i)?.[0]) || html;
+  const headRaw = (html.match(/<head[\s\S]*?<\/head>/i)?.[0]) || html;
+  // Strip HTML comments so example tag names inside warning comments don't trigger false positives.
+  const head = headRaw.replace(/<!--[\s\S]*?-->/g, "");
 
   const descCount = (head.match(/<meta[^>]+name=["']description["'][^>]*>/gi) || []).length;
   const titleCount = (head.match(/<title[^>]*>[\s\S]*?<\/title>/gi) || []).length;
