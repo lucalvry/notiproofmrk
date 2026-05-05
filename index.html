@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="manifest" href="/manifest.json" />
+    <!--
+      WARNING: Do NOT add <title>, <meta name="description">, <meta property="og:*">,
+      or <link rel="canonical"> tags here. All route-level SEO tags are managed
+      per-page by src/components/SEOHead.tsx via react-helmet-async. Adding them
+      here will produce duplicate tags on every prerendered page (Ahrefs/Search
+      Console will flag it) and the build-time check in scripts/check-meta-tags.js
+      will fail the deploy.
+    -->
     <title>NotiProof</title>
     <meta name="description" content="NotiProof helps businesses lift conversions with real-time social proof notifications, testimonials, and review aggregation." />
     <meta name="theme-color" content="#f97316" />
